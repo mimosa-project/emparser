@@ -1,0 +1,2 @@
+# amparser
+Adhoc Mizar parser
