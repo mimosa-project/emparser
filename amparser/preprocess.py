@@ -203,8 +203,80 @@ class Lexer:
         Returns:
             list[str]: tokens
         """
+
+        class LexerStateMachine:
+            def __init__(self, parent):
+                self.next_is_variable = 'no'
+                self.nest_level = 0
+                self.nest2variables = {0: set()}
+                self.parent = parent
+            
+            def cut(self, line):
+                call_functions = None
+                if self.next_is_variable == 'yes':
+                    call_functions = [self.cut_identifier]
+                elif self.next_is_variable in ['maybe', 'no']:
+                    call_functions = [
+                        self.cut_special_symbol,
+                        self.cut_symbol,
+                        self.cut_reserved_word,
+                        self.cut_numeral,
+                        self.cut_identifier
+                    ]
+                for func in call_functions:
+                    res = func(line)
+                    if res:
+                        return res
+
+            def cut_special_symbol(self, line):
+                res = self.parent.cut_special_symbol(line)
+                if self.next_is_variable == 'maybe':
+                    if res is not None and res[0] == ',':
+                        self.next_is_variable = 'yes'
+                    else:
+                        self.next_is_variable = 'no'
+                        res = None
+                return res
+
+            def cut_symbol(self, line):
+                res = self.parent.cut_symbol(line)
+                if res is not None:
+                    for variables in self.nest2variables.values():
+                        if res[0] in variables:
+                            # The same name as declared variable
+                            # -> it is not symbol name
+                            return None
+                return res
+
+            def cut_reserved_word(self, line):
+                res = self.parent.cut_reserved_word(line)
+                if res is not None:
+                    if res[0] in ['let', 'given', 'for', 'consider', 'ex', 'reserve']:
+                        self.next_is_variable = 'yes'
+                    elif res[0] in ['definition', 'registration', 'notation', 'scheme',
+                        'case', 'suppose', 'hereby', 'now', 'proof']:
+                        self.nest_level += 1
+                        self.nest2variables[self.nest_level] = set()
+                    elif res[0] == 'end':
+                        del self.nest2variables[self.nest_level]
+                        self.nest_level -= 1
+                return res
+            
+            def cut_numeral(self, line):
+                return self.parent.cut_numeral(line)
+            
+            def cut_identifier(self, line):
+                res = self.parent.cut_identifier(line)
+                if self.next_is_variable == 'yes':
+                    assert res is not None
+                    self.nest2variables[self.nest_level].add(res[0])
+                    self.next_is_variable = 'maybe'
+                return res
+            
+        stateMachine = LexerStateMachine(self)
         tokens = []
 
+        next_is_variable = 'no'
         for line in lines:
             line.rstrip()
             while line:
@@ -212,35 +284,9 @@ class Lexer:
                 if not line:
                     continue
                 
-                res = self.cut_special_symbol(line)
-                if res:
-                    tokens.append(res[0])
-                    line = res[1]
-                    continue
-
-                res = self.cut_symbol(line)
-                if res:
-                    tokens.append(res[0])
-                    line = res[1]
-                    continue
-                
-                res = self.cut_reserved_word(line)
-                if res:
-                    tokens.append(res[0])
-                    line = res[1]
-                    continue
-
-                res = self.cut_numeral(line)
-                if res:
-                    tokens.append(res[0])
-                    line = res[1]
-                    continue
-
-                res = self.cut_identifier(line)
-                if res:
-                    tokens.append(res[0])
-                    line = res[1]
-                    continue
+                res = stateMachine.cut(line)
+                tokens.append(res[0])
+                line = res[1]
 
         return tokens
 

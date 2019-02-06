@@ -181,7 +181,6 @@ class LexerTest(unittest.TestCase):
         res1 = self.lexer.lex(case1)
         self.assertEqual(expect1, res1)
 
-
         case2 = [
             "theorem",
             "((for r,s,t holds (r * s) * t = r * (s * t)) & ex t st for s1 holds s1",

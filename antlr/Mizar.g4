@@ -184,9 +184,9 @@ radix_type : mode_symbol ( 'of' term_expression_list ) ?
     | structure_symbol ( 'over' term_expression_list ) ? ;
 type_expression_list : type_expression ( ',' type_expression ) * ;
 term_expression : '(' term_expression ')'
-    | term_expression functor_symbol arguments ?    // left recursion repaired
-    | functor_symbol arguments ?    // left recursion repaired
-    | '(' term_expression_list ')' ? functor_symbol arguments ?    // left recursion repaired
+    | term_expression functor_symbol arguments ?  // left recursion repaired
+    | '(' term_expression_list ')' functor_symbol arguments ?  // left recursion repaired
+    | functor_symbol arguments ?       // left recursion repaired
     | left_functor_bracket term_expression_list right_functor_bracket
     | functor_identifier '(' term_expression_list ? ')'
     | structure_symbol '(#' term_expression_list '#)'
@@ -200,8 +200,7 @@ term_expression : '(' term_expression ')'
     | 'the' selector_symbol
     | 'the' type_expression
     | private_definition_parameter
-    | 'it' ;    
-term_expression_impl : ;
+    | 'it' ;
 arguments : term_expression | '(' term_expression_list ')' ;
 adjective_arguments : term_expression_list | '(' term_expression_list ')' ;
 term_expression_list : term_expression ( ',' term_expression ) * ;
@@ -223,3 +222,4 @@ FILE_NAME :  [A-Z] [_A-Z0-9] [_A-Z0-9] [_A-Z0-9] [_A-Z0-9] ( [_A-Z0-9] ? ) ( [_A
 IDENTIFIER : [_'a-zA-Z] ['a-zA-Z0-9] * ;
 NUMERAL : '0' | ( [1-9] [0-9] * ) ;
 WHITE_SPACE : ('\r' | '\n' | '\t' | ' ') -> skip ;
+
