@@ -1,8 +1,8 @@
 # -*- coding: utf-8 -*-
 
-"""Preprocess module for Adhoc Mizar Parser (emparser).
+"""Preprocess module for Extended Mizar Parser (emparser).
 
-This module is used for preprocess for Adhoc Mizar Parser.
+This module is used for preprocess for Extended Mizar Parser.
 Preprocess means the process before ANTLR parser.
 
 Example:
