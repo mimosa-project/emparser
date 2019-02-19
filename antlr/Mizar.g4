@@ -6,7 +6,7 @@ grammar Mizar;
 article : environment_declaration text_proper ;
 
 // Environment
-environment_declaration : 'environ' { directive } ;
+environment_declaration : 'environ' directive * ;
 directive : vocabulary_directive | library_directive | requirement_directive ;
 vocabulary_directive : 'vocabularies' vocabulary_name ( ',' vocabulary_name ) * ';' ;
 vocabulary_name : FILE_NAME ;
