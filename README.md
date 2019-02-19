@@ -1,5 +1,5 @@
-# amparser
-Adhoc Mizar parser
+# emparser
+Extended Mizar parser
 
 ## test
 > python setup.py test
