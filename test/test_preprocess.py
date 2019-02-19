@@ -218,13 +218,13 @@ class LexerTest(unittest.TestCase):
             "__O_*", "t", "=", "s1", "&", "t", "__O_*", "s1",
             "=", "s1", "&", "ex", "s2", "st", "s1", "__O_*", "s2",
              "=", "t", "&", "s2", "__O_*", "s1", "=", "t", ")",
-             "implies", "S", "is", "__M_Group"
+             "implies", "S", "is", "__M_Group", ";"
         ]
         
         expect2 = [
             "theorem ( ( for r , s , t holds ( r __O_* s ) __O_* t = r __O_* ( s __O_* t ) )",
             "& ex t st for s1 holds s1 __O_* t = s1 & t __O_* s1 = s1 & ex s2 st s1 __O_* s2",
-            "= t & s2 __O_* s1 = t ) implies S is __M_Group"
+            "= t & s2 __O_* s1 = t ) implies S is __M_Group ;"
         ]
 
         res2 = self.lexer.connect_list2lines(case2)
