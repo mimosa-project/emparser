@@ -1,4 +1,4 @@
-# Generated from c:\dev\mimosa-project\amparser\antlr\Mizar.g4 by ANTLR 4.7.1
+# Generated from c:\dev\mimosa-project\emparser\antlr\Mizar.g4 by ANTLR 4.7.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .MizarParser import MizarParser

@@ -5,7 +5,7 @@
 import os
 import unittest
 import pprint
-from amparser.preprocess import Lexer
+from emparser.preprocess import Lexer
 
 VOC_FILE = os.path.dirname(__file__) + '/data/mml.vct'
 
