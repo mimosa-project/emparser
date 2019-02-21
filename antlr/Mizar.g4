@@ -25,7 +25,7 @@ reservation_segment : reserved_identifiers 'for' type_expression ;
 reserved_identifiers : reserved_identifier (',' reserved_identifier ) ;
 reserved_identifier: IDENTIFIER ;
 definitional_item : definitional_block ';' ;
-registration_item : registration_block '; ';
+registration_item : registration_block ';';
 notation_item : notation_block ';' ;
 definitional_block : 'definition' ( definition_item | definition | redefinition ) * 'end' ;
 registration_block : 'registration' ( loci_declaration | cluster_registration | identify_registration | property_registration | reduction_registration | auxiliary_item ) * 'end' ;
