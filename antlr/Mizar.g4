@@ -1,7 +1,6 @@
 // Define a grammar called Hello
 grammar Mizar;
 
-
 // Article
 article : environment_declaration text_proper ;
 
@@ -20,9 +19,9 @@ requirement : FILE_NAME ;
 text_proper : section + ;
 section : 'begin' text_item * ;
 text_item : reservation | definitional_item | registration_item | notation_item | theorem | scheme_item | auxiliary_item ;
-reservation : 'reserve' reservation_segment (',' reservation_segment)* ';' ;
+reservation : 'reserve' reservation_segment (',' reservation_segment) * ';' ;
 reservation_segment : reserved_identifiers 'for' type_expression ;
-reserved_identifiers : reserved_identifier (',' reserved_identifier ) ;
+reserved_identifiers : reserved_identifier (',' reserved_identifier ) *;
 reserved_identifier: IDENTIFIER ;
 definitional_item : definitional_block ';' ;
 registration_item : registration_block ';';
