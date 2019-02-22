@@ -53,7 +53,8 @@ IDENTIFIER_REG = re.compile(r"^[a-zA-Z_'][\w']*", re.ASCII)
 """re: Regex object to specify idenfifier in Mizar language.
 """
 
-NOT_BOUNDARY_REG = re.compile(r"^[\w']{2}", re.ASCII)
+# NOT_BOUNDARY_REG = re.compile(r"^[\w']{2}", re.ASCII)
+NOT_BOUNDARY_REG = re.compile(r"^[a-zA-Z0-9]{2}", re.ASCII)
 """re: Regex object to check if two character is boundary in Mizar language.
 """
 
@@ -115,12 +116,19 @@ class Lexer:
             voc_file (str): path for mml.vct file, which is located in
                 the directory that includes mizar binaries.
         """
+        self.symbol_dict = {}
+        
+        # load special symbols in advance
+        for symbols in SPECIAL_SYMBOLS.values():
+            for name in symbols:
+                self.symbol_dict[name] = {'type': 'special'}
+
+        # load symbols from voc_file
         lines = None
         with open(voc_file) as f:
             lines = f.readlines()
             assert len(lines) > 0
         
-        self.symbol_dict = {}
         ignore_next_line = False
         for line in lines:
             line = line.rstrip()
@@ -201,23 +209,24 @@ class Lexer:
             lines (list[str]): lines to be processed
 
         Returns:
-            list[str]: tokens
+            list[list[str]]: tokens list
         """
 
         class LexerStateMachine:
             def __init__(self, parent):
                 self.next_is_variable = 'no'
+                self.next_for_is_relevant_to_variable = True
+                self.is_environment_part = False
                 self.nest_level = 0
                 self.nest2variables = {0: set()}
                 self.parent = parent
-            
+       
             def cut(self, line):
                 call_functions = None
                 if self.next_is_variable == 'yes':
                     call_functions = [self.cut_identifier]
                 elif self.next_is_variable in ['maybe', 'no']:
                     call_functions = [
-                        self.cut_special_symbol,
                         self.cut_symbol,
                         self.cut_reserved_word,
                         self.cut_numeral,
@@ -227,31 +236,53 @@ class Lexer:
                     res = func(line)
                     if res:
                         return res
+                
+                # error
+                print("Error in LexerStateMachine.cut: " + line)
+                return None
 
-            def cut_special_symbol(self, line):
-                res = self.parent.cut_special_symbol(line)
+            def is_special_symbol(self, symbol):
+                i = len(symbol)
+                return i in SPECIAL_SYMBOLS and symbol in SPECIAL_SYMBOLS[i]
+
+            def cut_symbol(self, line):
+                res = self.parent.cut_symbol(line)
+                if self.is_environment_part and res is not None:
+                    if res[0] not in [',', ';']:
+                        return None
+
+                # variable flag maintenance
                 if self.next_is_variable == 'maybe':
                     if res is not None and res[0] == ',':
                         self.next_is_variable = 'yes'
                     else:
                         self.next_is_variable = 'no'
-                        res = None
-                return res
 
-            def cut_symbol(self, line):
-                res = self.parent.cut_symbol(line)
+                if not self.next_for_is_relevant_to_variable:
+                    if res is not None and res[0] == ';':
+                        self.next_for_is_relevant_to_variable = True
+
                 if res is not None:
                     for variables in self.nest2variables.values():
                         if res[0] in variables:
                             # The same name as declared variable
                             # -> it is not symbol name
                             return None
+
                 return res
 
             def cut_reserved_word(self, line):
                 res = self.parent.cut_reserved_word(line)
                 if res is not None:
-                    if res[0] in ['let', 'given', 'for', 'consider', 'ex', 'reserve']:
+                    if res[0] in ['synonym', 'antonym', 'cluster', 'reserve']:
+                        self.next_for_is_relevant_to_variable = False
+                    elif res[0] == 'for' and self.next_for_is_relevant_to_variable:
+                        self.next_is_variable = 'yes'
+                    elif res[0] == 'environ':
+                        self.is_environment_part = True
+                    elif res[0] == 'begin':
+                        self.is_environment_part = False
+                    elif res[0] in ['let', 'given', 'consider', 'ex', 'reserve']:
                         self.next_is_variable = 'yes'
                     elif res[0] in ['definition', 'registration', 'notation', 'scheme',
                         'case', 'suppose', 'hereby', 'now', 'proof']:
@@ -274,10 +305,10 @@ class Lexer:
                 return res
             
         stateMachine = LexerStateMachine(self)
-        tokens = []
+        tokens_list = []
 
-        next_is_variable = 'no'
         for line in lines:
+            tokens = []
             line.rstrip()
             while line:
                 line = line.lstrip()
@@ -287,8 +318,9 @@ class Lexer:
                 res = stateMachine.cut(line)
                 tokens.append(res[0])
                 line = res[1]
+            tokens_list.append(tokens)
 
-        return tokens
+        return tokens_list
 
     def connect_list2lines(self, a):
         """connect string list and convert to lines.
@@ -380,12 +412,14 @@ class Lexer:
 
         i = length
         while i > 0:
-            if chunk[:i] not in self.len2symbol[i]:
+            if i not in self.len2symbol or \
+            chunk[:i] not in self.len2symbol[i]:
                 # symbol is not appeared
                 i -= 1
                 continue
 
-            if i != length and not self.is_word_boundary(chunk[i-1], chunk[i]):
+            if i != length and \
+            not self.is_word_boundary(chunk[i-1], chunk[i]):
                 # substring cannot be divided as symbol
                 i -= 1
                 continue
@@ -393,30 +427,16 @@ class Lexer:
             # symbol is found
             symbol = chunk[:i]
             attrs = self.symbol_dict[symbol]
-            prefix = '__' + attrs['type']
-            if 'priority' in attrs:
-                prefix += attrs['priority']
-            prefix += '_'
-            symbol = prefix + symbol
+            if attrs['type'] != 'special':
+                prefix = '__' + attrs['type']
+                if 'priority' in attrs:
+                    prefix += attrs['priority']
+                prefix += '_'
+                symbol = prefix + symbol
 
             return symbol, line[i:]
 
         # not found
-        return None
-
-    def cut_special_symbol(self, line):
-        """Cut special symbol from the left side of line.
-
-        Args:
-            line (str): line to be cut
-
-        Returns:
-            (str, str): special symbol and the rest of line if found
-            None: Otherwise
-        """
-        for i in SPECIAL_SYMBOLS:
-            if line[:i] in SPECIAL_SYMBOLS[i]:
-                return line[:i], line[i:]
         return None
 
     def cut_reserved_word(self, line):

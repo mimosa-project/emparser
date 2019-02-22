@@ -25,9 +25,11 @@ class LexerTest(unittest.TestCase):
 
     def test_load_symbol_dict(self):
         # pprint.pprint(self.lexer.symbol_dict)
-        self.assertEqual(len(self.lexer.symbol_dict), 9214)
+        self.assertEqual(len(self.lexer.symbol_dict), 9240)
         self.assertEqual(self.lexer.symbol_dict['zeros'],
             {'filename': 'PRVECT_1', 'type': 'O'})
+        self.assertEqual(self.lexer.symbol_dict[','],
+            {'type': 'special'})
 
     def test_bulid_len2symbol(self):
         # pprint.pprint(self.lexer.len2symbol)
@@ -60,10 +62,10 @@ class LexerTest(unittest.TestCase):
     def test_is_word_boundary(self):
         cases = [
             [('a', 'b'), False],
-            [('_', 'b'), False],
+            [('_', 'b'), True],
             [('a', '0'), False],
-            [("'", 'b'), False],
-            [('a', "'"), False],
+            [("'", 'b'), True],
+            [('a', "'"), True],
             [('a', '('), True],
             [(')', 'b'), True],
             [(')', '('), True],
@@ -78,25 +80,20 @@ class LexerTest(unittest.TestCase):
             [".abc def ghi", ("__O100_.", "abc def ghi")],
             ["..abc def ghi", ("__O100_..", "abc def ghi")],
             ["||..abc def ghi", ("__K_||..", "abc def ghi")],
-            ["abss def ghi", None]
+            ["abss def ghi", None],
+            [",;:abc||def", (",", ";:abc||def")],
+            [",||;:abcdef", (",", "||;:abcdef")],
+            ["$1,abcdef",    ("$1", ",abcdef")],
+            ["...||abcdef", ("...", "||abcdef")],
+            ["||abcdef",    ('__O100_||', 'abcdef')],
+            ["= a", ('=', ' a')],
+            ["& sup I in I;", ('&', ' sup I in I;')]
         ]
 
         for case in cases:
             res = self.lexer.cut_symbol(case[0])
             self.assertEqual(res, case[1])
 
-    def test_cut_special_symbol(self):
-        cases = [
-            [",;:abc||def", (",", ";:abc||def")],
-            [",||;:abcdef", (",", "||;:abcdef")],
-            ["$1abcdef",    ("$1", "abcdef")],
-            ["...||abcdef", ("...", "||abcdef")],
-            ["||abcdef",    None],
-        ]
-
-        for case in cases:
-            res = self.lexer.cut_special_symbol(case[0])
-            self.assertEqual(res, case[1])
 
     def test_cut_reserved_word(self):
         cases = [
@@ -172,11 +169,11 @@ class LexerTest(unittest.TestCase):
             "holds ex_sup_of I, T & sup I in I;"
         ]
 
-        expect1 = ["theorem",
-            "for", "T", "being", "__V_Noetherian", "__M_sup-Semilattice",
-            "for", "I", "being", "__M_Ideal", "of", "T",
-            "holds", "__R_ex_sup_of", "I", ",", "T", "&", "__O200_sup",
-            "I", "__R_in", "I", ";"]
+        expect1 = [["theorem"],
+            ["for", "T", "being", "__V_Noetherian", "__M_sup-Semilattice",
+            "for", "I", "being", "__M_Ideal", "of", "T"],
+            ["holds", "__R_ex_sup_of", "I", ",", "T", "&", "__O200_sup",
+            "I", "__R_in", "I", ";"]]
         
         res1 = self.lexer.lex(case1)
         self.assertEqual(expect1, res1)
@@ -187,15 +184,15 @@ class LexerTest(unittest.TestCase):
             "* t = s1 & t * s1 = s1 & ex s2 st s1 * s2 = t & s2 * s1 = t) implies S is Group;"
         ]
 
-        expect2 = ["theorem",
-            "(", "(", "for", "r", ",", "s", ",", "t", "holds",
+        expect2 = [["theorem"],
+            ["(", "(", "for", "r", ",", "s", ",", "t", "holds",
             "(", "r", "__O_*", "s", ")", "__O_*", "t",
             "=", "r", "__O_*", "(", "s", "__O_*", "t", ")", ")",
-            "&", "ex", "t", "st", "for", "s1", "holds", "s1",
-            "__O_*", "t", "=", "s1", "&", "t", "__O_*", "s1",
+            "&", "ex", "t", "st", "for", "s1", "holds", "s1"],
+            ["__O_*", "t", "=", "s1", "&", "t", "__O_*", "s1",
             "=", "s1", "&", "ex", "s2", "st", "s1", "__O_*", "s2",
              "=", "t", "&", "s2", "__O_*", "s1", "=", "t", ")",
-             "implies", "S", "is", "__M_Group", ";"]
+             "implies", "S", "is", "__M_Group", ";"]]
 
         res2 = self.lexer.lex(case2)
         self.assertEqual(expect2, res2)
