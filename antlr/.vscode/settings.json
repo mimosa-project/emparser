@@ -2,7 +2,7 @@
     "antlr4.generation": {
         "mode": "external",
         "language": "Python3",
-        "listeners": false,
-        "visitors": true
+        "listeners": true,
+        "visitors": false
     }
 }
