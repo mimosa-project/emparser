@@ -917,222 +917,221 @@ class MizarParser ( Parser ):
                       "FILE_NAME", "IDENTIFIER", "NUMERAL", "WHITE_SPACE" ]
 
     RULE_article = 0
-    RULE_environment_declaration = 1
+    RULE_environmentDeclaration = 1
     RULE_directive = 2
-    RULE_vocabulary_directive = 3
-    RULE_vocabulary_name = 4
-    RULE_library_directive = 5
-    RULE_article_name = 6
-    RULE_requirement_directive = 7
+    RULE_vocabularyDirective = 3
+    RULE_vocabularyName = 4
+    RULE_libraryDirective = 5
+    RULE_articleName = 6
+    RULE_requirementDirective = 7
     RULE_requirement = 8
-    RULE_text_proper = 9
+    RULE_textProper = 9
     RULE_section = 10
-    RULE_text_item = 11
+    RULE_textItem = 11
     RULE_reservation = 12
-    RULE_reservation_segment = 13
-    RULE_reserved_identifiers = 14
-    RULE_reserved_identifier = 15
-    RULE_definitional_item = 16
-    RULE_registration_item = 17
-    RULE_notation_item = 18
-    RULE_definitional_block = 19
-    RULE_registration_block = 20
-    RULE_notation_block = 21
-    RULE_definition_item = 22
-    RULE_notation_declaration = 23
-    RULE_loci_declaration = 24
-    RULE_permissive_assumption = 25
+    RULE_reservationSegment = 13
+    RULE_reservedIdentifiers = 14
+    RULE_reservedIdentifier = 15
+    RULE_definitionalItem = 16
+    RULE_registrationItem = 17
+    RULE_notationItem = 18
+    RULE_definitionalBlock = 19
+    RULE_registrationBlock = 20
+    RULE_notationBlock = 21
+    RULE_definitionItem = 22
+    RULE_notationDeclaration = 23
+    RULE_lociDeclaration = 24
+    RULE_permissiveAssumption = 25
     RULE_definition = 26
     RULE_redefinition = 27
-    RULE_structure_definition = 28
+    RULE_structureDefinition = 28
     RULE_ancestors = 29
-    RULE_structure_symbol = 30
+    RULE_structureSymbol = 30
     RULE_loci = 31
     RULE_fields = 32
     RULE_locus = 33
-    RULE_variable_identifier = 34
-    RULE_field_segment = 35
-    RULE_selector_symbol = 36
+    RULE_variableIdentifier = 34
+    RULE_fieldSegment = 35
+    RULE_selectorSymbol = 36
     RULE_specification = 37
-    RULE_mode_definition = 38
-    RULE_mode_pattern = 39
-    RULE_mode_symbol = 40
-    RULE_mode_synonym = 41
+    RULE_modeDefinition = 38
+    RULE_modePattern = 39
+    RULE_modeSymbol = 40
+    RULE_modeSynonym = 41
     RULE_definiens = 42
-    RULE_simple_definiens = 43
-    RULE_label_identifier = 44
-    RULE_conditional_definiens = 45
-    RULE_partial_definiens_list = 46
-    RULE_partial_definiens = 47
-    RULE_mode_property = 48
-    RULE_functor_definition = 49
-    RULE_functor_pattern = 50
-    RULE_functor_property = 51
-    RULE_functor_synonym = 52
-    RULE_functor_loci = 53
-    RULE_functor_symbol = 54
-    RULE_left_functor_bracket = 55
-    RULE_right_functor_bracket = 56
-    RULE_predicate_definition = 57
-    RULE_predicate_pattern = 58
-    RULE_predicate_property = 59
-    RULE_predicate_synonym = 60
-    RULE_predicate_antonym = 61
-    RULE_predicate_symbol = 62
-    RULE_attribute_definition = 63
-    RULE_attribute_pattern = 64
-    RULE_attribute_synonym = 65
-    RULE_attribute_antonym = 66
-    RULE_attribute_symbol = 67
-    RULE_attribute_loci = 68
-    RULE_cluster_registration = 69
-    RULE_existential_registration = 70
-    RULE_adjective_cluster = 71
+    RULE_simpleDefiniens = 43
+    RULE_labelIdentifier = 44
+    RULE_conditionalDefiniens = 45
+    RULE_partialDefiniensList = 46
+    RULE_partialDefiniens = 47
+    RULE_modeProperty = 48
+    RULE_functorDefinition = 49
+    RULE_functorPattern = 50
+    RULE_functorProperty = 51
+    RULE_functorSynonym = 52
+    RULE_functorLoci = 53
+    RULE_functorSymbol = 54
+    RULE_leftFunctorBracket = 55
+    RULE_rightFunctorBracket = 56
+    RULE_predicateDefinition = 57
+    RULE_predicatePattern = 58
+    RULE_predicateProperty = 59
+    RULE_predicateSynonym = 60
+    RULE_predicateAntonym = 61
+    RULE_predicateSymbol = 62
+    RULE_attributeDefinition = 63
+    RULE_attributePattern = 64
+    RULE_attributeSynonym = 65
+    RULE_attributeAntonym = 66
+    RULE_attributeSymbol = 67
+    RULE_attributeLoci = 68
+    RULE_clusterRegistration = 69
+    RULE_existentialRegistration = 70
+    RULE_adjectiveCluster = 71
     RULE_adjective = 72
-    RULE_conditional_registration = 73
-    RULE_functorial_registration = 74
-    RULE_identify_registration = 75
-    RULE_property_registration = 76
-    RULE_reduction_registration = 77
-    RULE_correctness_conditions = 78
-    RULE_correctness_condition = 79
+    RULE_conditionalRegistration = 73
+    RULE_functorialRegistration = 74
+    RULE_identifyRegistration = 75
+    RULE_propertyRegistration = 76
+    RULE_reductionRegistration = 77
+    RULE_correctnessConditions = 78
+    RULE_correctnessCondition = 79
     RULE_theorem = 80
-    RULE_scheme_item = 81
-    RULE_scheme_block = 82
-    RULE_scheme_identifier = 83
-    RULE_scheme_parameters = 84
-    RULE_scheme_conclusion = 85
-    RULE_scheme_premise = 86
-    RULE_scheme_segment = 87
-    RULE_predicate_segment = 88
-    RULE_predicate_identifier = 89
-    RULE_functor_segment = 90
-    RULE_functor_identifier = 91
-    RULE_auxiliary_item = 92
-    RULE_private_definition = 93
-    RULE_constant_definition = 94
-    RULE_equating_list = 95
+    RULE_schemeItem = 81
+    RULE_schemeBlock = 82
+    RULE_schemeIdentifier = 83
+    RULE_schemeParameters = 84
+    RULE_schemeConclusion = 85
+    RULE_schemePremise = 86
+    RULE_schemeSegment = 87
+    RULE_predicateSegment = 88
+    RULE_predicateIdentifier = 89
+    RULE_functorSegment = 90
+    RULE_functorIdentifier = 91
+    RULE_auxiliaryItem = 92
+    RULE_privateDefinition = 93
+    RULE_constantDefinition = 94
+    RULE_equatingList = 95
     RULE_equating = 96
-    RULE_private_functor_definition = 97
-    RULE_private_predicate_definition = 98
-    RULE_private_functor_pattern = 99
-    RULE_private_predicate_pattern = 100
+    RULE_privateFunctorDefinition = 97
+    RULE_privatePredicateDefinition = 98
+    RULE_privateFunctorPattern = 99
+    RULE_privatePredicatePattern = 100
     RULE_reasoning = 101
-    RULE_case_list = 102
+    RULE_caseList = 102
     RULE_case = 103
-    RULE_suppose_list = 104
+    RULE_supposeList = 104
     RULE_suppose = 105
-    RULE_reasoning_item = 106
-    RULE_skeleton_item = 107
+    RULE_reasoningItem = 106
+    RULE_skeletonItem = 107
     RULE_generalization = 108
     RULE_assumption = 109
-    RULE_single_assumption = 110
-    RULE_collective_assumption = 111
-    RULE_existential_assumption = 112
+    RULE_singleAssumption = 110
+    RULE_collectiveAssumption = 111
+    RULE_existentialAssumption = 112
     RULE_conclusion = 113
-    RULE_diffuse_conclusion = 114
+    RULE_diffuseConclusion = 114
     RULE_exemplification = 115
     RULE_example = 116
     RULE_statement = 117
-    RULE_linkable_statement = 118
-    RULE_compact_statement = 119
-    RULE_choice_statement = 120
-    RULE_type_changing_statement = 121
-    RULE_type_change_list = 122
-    RULE_iterative_equality = 123
-    RULE_diffuse_statement = 124
+    RULE_linkableStatement = 118
+    RULE_compactStatement = 119
+    RULE_choiceStatement = 120
+    RULE_typeChangingStatement = 121
+    RULE_typeChangeList = 122
+    RULE_iterativeEquality = 123
+    RULE_diffuseStatement = 124
     RULE_justification = 125
-    RULE_simple_justification = 126
+    RULE_simpleJustification = 126
     RULE_proof = 127
-    RULE_straightforward_justification = 128
-    RULE_scheme_justification = 129
+    RULE_straightforwardJustification = 128
+    RULE_schemeJustification = 129
     RULE_references = 130
     RULE_reference = 131
-    RULE_scheme_reference = 132
-    RULE_local_reference = 133
-    RULE_local_scheme_reference = 134
-    RULE_library_reference = 135
-    RULE_library_scheme_reference = 136
-    RULE_theorem_number = 137
-    RULE_definition_number = 138
-    RULE_scheme_number = 139
+    RULE_schemeReference = 132
+    RULE_localReference = 133
+    RULE_localSchemeReference = 134
+    RULE_libraryReference = 135
+    RULE_librarySchemeReference = 136
+    RULE_theoremNumber = 137
+    RULE_definitionNumber = 138
+    RULE_schemeNumber = 139
     RULE_conditions = 140
     RULE_proposition = 141
     RULE_sentence = 142
-    RULE_formula_expression = 143
-    RULE_atomic_formula_expression = 144
-    RULE_quantified_formula_expression = 145
-    RULE_qualified_variables = 146
-    RULE_implicitly_qualified_variables = 147
-    RULE_explicitly_qualified_variables = 148
-    RULE_qualified_segment = 149
+    RULE_formulaExpression = 143
+    RULE_atomicFormulaExpression = 144
+    RULE_quantifiedFormulaExpression = 145
+    RULE_qualifiedVariables = 146
+    RULE_implicitlyQualifiedVariables = 147
+    RULE_explicitlyQualifiedVariables = 148
+    RULE_qualifiedSegment = 149
     RULE_variables = 150
     RULE_qualification = 151
-    RULE_type_expression = 152
-    RULE_structure_type_expression = 153
-    RULE_radix_type = 154
-    RULE_type_expression_list = 155
-    RULE_term_expression = 156
+    RULE_typeExpression = 152
+    RULE_structureTypeExpression = 153
+    RULE_radixType = 154
+    RULE_typeExpressionList = 155
+    RULE_termExpression = 156
     RULE_arguments = 157
-    RULE_adjective_arguments = 158
-    RULE_term_expression_list = 159
+    RULE_adjectiveArguments = 158
+    RULE_termExpressionList = 159
     RULE_postqualification = 160
-    RULE_postqualifying_segment = 161
-    RULE_postqualified_variable = 162
-    RULE_private_definition_parameter = 163
+    RULE_postqualifyingSegment = 161
+    RULE_postqualifiedVariable = 162
+    RULE_privateDefinitionParameter = 163
 
-    ruleNames =  [ "article", "environment_declaration", "directive", "vocabulary_directive", 
-                   "vocabulary_name", "library_directive", "article_name", 
-                   "requirement_directive", "requirement", "text_proper", 
-                   "section", "text_item", "reservation", "reservation_segment", 
-                   "reserved_identifiers", "reserved_identifier", "definitional_item", 
-                   "registration_item", "notation_item", "definitional_block", 
-                   "registration_block", "notation_block", "definition_item", 
-                   "notation_declaration", "loci_declaration", "permissive_assumption", 
-                   "definition", "redefinition", "structure_definition", 
-                   "ancestors", "structure_symbol", "loci", "fields", "locus", 
-                   "variable_identifier", "field_segment", "selector_symbol", 
-                   "specification", "mode_definition", "mode_pattern", "mode_symbol", 
-                   "mode_synonym", "definiens", "simple_definiens", "label_identifier", 
-                   "conditional_definiens", "partial_definiens_list", "partial_definiens", 
-                   "mode_property", "functor_definition", "functor_pattern", 
-                   "functor_property", "functor_synonym", "functor_loci", 
-                   "functor_symbol", "left_functor_bracket", "right_functor_bracket", 
-                   "predicate_definition", "predicate_pattern", "predicate_property", 
-                   "predicate_synonym", "predicate_antonym", "predicate_symbol", 
-                   "attribute_definition", "attribute_pattern", "attribute_synonym", 
-                   "attribute_antonym", "attribute_symbol", "attribute_loci", 
-                   "cluster_registration", "existential_registration", "adjective_cluster", 
-                   "adjective", "conditional_registration", "functorial_registration", 
-                   "identify_registration", "property_registration", "reduction_registration", 
-                   "correctness_conditions", "correctness_condition", "theorem", 
-                   "scheme_item", "scheme_block", "scheme_identifier", "scheme_parameters", 
-                   "scheme_conclusion", "scheme_premise", "scheme_segment", 
-                   "predicate_segment", "predicate_identifier", "functor_segment", 
-                   "functor_identifier", "auxiliary_item", "private_definition", 
-                   "constant_definition", "equating_list", "equating", "private_functor_definition", 
-                   "private_predicate_definition", "private_functor_pattern", 
-                   "private_predicate_pattern", "reasoning", "case_list", 
-                   "case", "suppose_list", "suppose", "reasoning_item", 
-                   "skeleton_item", "generalization", "assumption", "single_assumption", 
-                   "collective_assumption", "existential_assumption", "conclusion", 
-                   "diffuse_conclusion", "exemplification", "example", "statement", 
-                   "linkable_statement", "compact_statement", "choice_statement", 
-                   "type_changing_statement", "type_change_list", "iterative_equality", 
-                   "diffuse_statement", "justification", "simple_justification", 
-                   "proof", "straightforward_justification", "scheme_justification", 
-                   "references", "reference", "scheme_reference", "local_reference", 
-                   "local_scheme_reference", "library_reference", "library_scheme_reference", 
-                   "theorem_number", "definition_number", "scheme_number", 
-                   "conditions", "proposition", "sentence", "formula_expression", 
-                   "atomic_formula_expression", "quantified_formula_expression", 
-                   "qualified_variables", "implicitly_qualified_variables", 
-                   "explicitly_qualified_variables", "qualified_segment", 
-                   "variables", "qualification", "type_expression", "structure_type_expression", 
-                   "radix_type", "type_expression_list", "term_expression", 
-                   "arguments", "adjective_arguments", "term_expression_list", 
-                   "postqualification", "postqualifying_segment", "postqualified_variable", 
-                   "private_definition_parameter" ]
+    ruleNames =  [ "article", "environmentDeclaration", "directive", "vocabularyDirective", 
+                   "vocabularyName", "libraryDirective", "articleName", 
+                   "requirementDirective", "requirement", "textProper", 
+                   "section", "textItem", "reservation", "reservationSegment", 
+                   "reservedIdentifiers", "reservedIdentifier", "definitionalItem", 
+                   "registrationItem", "notationItem", "definitionalBlock", 
+                   "registrationBlock", "notationBlock", "definitionItem", 
+                   "notationDeclaration", "lociDeclaration", "permissiveAssumption", 
+                   "definition", "redefinition", "structureDefinition", 
+                   "ancestors", "structureSymbol", "loci", "fields", "locus", 
+                   "variableIdentifier", "fieldSegment", "selectorSymbol", 
+                   "specification", "modeDefinition", "modePattern", "modeSymbol", 
+                   "modeSynonym", "definiens", "simpleDefiniens", "labelIdentifier", 
+                   "conditionalDefiniens", "partialDefiniensList", "partialDefiniens", 
+                   "modeProperty", "functorDefinition", "functorPattern", 
+                   "functorProperty", "functorSynonym", "functorLoci", "functorSymbol", 
+                   "leftFunctorBracket", "rightFunctorBracket", "predicateDefinition", 
+                   "predicatePattern", "predicateProperty", "predicateSynonym", 
+                   "predicateAntonym", "predicateSymbol", "attributeDefinition", 
+                   "attributePattern", "attributeSynonym", "attributeAntonym", 
+                   "attributeSymbol", "attributeLoci", "clusterRegistration", 
+                   "existentialRegistration", "adjectiveCluster", "adjective", 
+                   "conditionalRegistration", "functorialRegistration", 
+                   "identifyRegistration", "propertyRegistration", "reductionRegistration", 
+                   "correctnessConditions", "correctnessCondition", "theorem", 
+                   "schemeItem", "schemeBlock", "schemeIdentifier", "schemeParameters", 
+                   "schemeConclusion", "schemePremise", "schemeSegment", 
+                   "predicateSegment", "predicateIdentifier", "functorSegment", 
+                   "functorIdentifier", "auxiliaryItem", "privateDefinition", 
+                   "constantDefinition", "equatingList", "equating", "privateFunctorDefinition", 
+                   "privatePredicateDefinition", "privateFunctorPattern", 
+                   "privatePredicatePattern", "reasoning", "caseList", "case", 
+                   "supposeList", "suppose", "reasoningItem", "skeletonItem", 
+                   "generalization", "assumption", "singleAssumption", "collectiveAssumption", 
+                   "existentialAssumption", "conclusion", "diffuseConclusion", 
+                   "exemplification", "example", "statement", "linkableStatement", 
+                   "compactStatement", "choiceStatement", "typeChangingStatement", 
+                   "typeChangeList", "iterativeEquality", "diffuseStatement", 
+                   "justification", "simpleJustification", "proof", "straightforwardJustification", 
+                   "schemeJustification", "references", "reference", "schemeReference", 
+                   "localReference", "localSchemeReference", "libraryReference", 
+                   "librarySchemeReference", "theoremNumber", "definitionNumber", 
+                   "schemeNumber", "conditions", "proposition", "sentence", 
+                   "formulaExpression", "atomicFormulaExpression", "quantifiedFormulaExpression", 
+                   "qualifiedVariables", "implicitlyQualifiedVariables", 
+                   "explicitlyQualifiedVariables", "qualifiedSegment", "variables", 
+                   "qualification", "typeExpression", "structureTypeExpression", 
+                   "radixType", "typeExpressionList", "termExpression", 
+                   "arguments", "adjectiveArguments", "termExpressionList", 
+                   "postqualification", "postqualifyingSegment", "postqualifiedVariable", 
+                   "privateDefinitionParameter" ]
 
     EOF = Token.EOF
     T__0=1
@@ -1294,22 +1293,24 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def environment_declaration(self):
-            return self.getTypedRuleContext(MizarParser.Environment_declarationContext,0)
+        def environmentDeclaration(self):
+            return self.getTypedRuleContext(MizarParser.EnvironmentDeclarationContext,0)
 
 
-        def text_proper(self):
-            return self.getTypedRuleContext(MizarParser.Text_properContext,0)
+        def textProper(self):
+            return self.getTypedRuleContext(MizarParser.TextProperContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_article
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitArticle" ):
-                return visitor.visitArticle(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterArticle" ):
+                listener.enterArticle(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitArticle" ):
+                listener.exitArticle(self)
 
 
 
@@ -1321,9 +1322,9 @@ class MizarParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 328
-            self.environment_declaration()
+            self.environmentDeclaration()
             self.state = 329
-            self.text_proper()
+            self.textProper()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -1332,7 +1333,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Environment_declarationContext(ParserRuleContext):
+    class EnvironmentDeclarationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1346,21 +1347,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_environment_declaration
+            return MizarParser.RULE_environmentDeclaration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEnvironment_declaration" ):
-                return visitor.visitEnvironment_declaration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEnvironmentDeclaration" ):
+                listener.enterEnvironmentDeclaration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEnvironmentDeclaration" ):
+                listener.exitEnvironmentDeclaration(self)
 
 
 
 
-    def environment_declaration(self):
+    def environmentDeclaration(self):
 
-        localctx = MizarParser.Environment_declarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 2, self.RULE_environment_declaration)
+        localctx = MizarParser.EnvironmentDeclarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 2, self.RULE_environmentDeclaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1390,26 +1393,28 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def vocabulary_directive(self):
-            return self.getTypedRuleContext(MizarParser.Vocabulary_directiveContext,0)
+        def vocabularyDirective(self):
+            return self.getTypedRuleContext(MizarParser.VocabularyDirectiveContext,0)
 
 
-        def library_directive(self):
-            return self.getTypedRuleContext(MizarParser.Library_directiveContext,0)
+        def libraryDirective(self):
+            return self.getTypedRuleContext(MizarParser.LibraryDirectiveContext,0)
 
 
-        def requirement_directive(self):
-            return self.getTypedRuleContext(MizarParser.Requirement_directiveContext,0)
+        def requirementDirective(self):
+            return self.getTypedRuleContext(MizarParser.RequirementDirectiveContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_directive
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDirective" ):
-                return visitor.visitDirective(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDirective" ):
+                listener.enterDirective(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDirective" ):
+                listener.exitDirective(self)
 
 
 
@@ -1425,17 +1430,17 @@ class MizarParser ( Parser ):
             if token in [MizarParser.T__1]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 338
-                self.vocabulary_directive()
+                self.vocabularyDirective()
                 pass
             elif token in [MizarParser.T__4, MizarParser.T__5, MizarParser.T__6, MizarParser.T__7, MizarParser.T__8, MizarParser.T__9, MizarParser.T__10, MizarParser.T__11]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 339
-                self.library_directive()
+                self.libraryDirective()
                 pass
             elif token in [MizarParser.T__12]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 340
-                self.requirement_directive()
+                self.requirementDirective()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -1448,42 +1453,44 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Vocabulary_directiveContext(ParserRuleContext):
+    class VocabularyDirectiveContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def vocabulary_name(self, i:int=None):
+        def vocabularyName(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Vocabulary_nameContext)
+                return self.getTypedRuleContexts(MizarParser.VocabularyNameContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Vocabulary_nameContext,i)
+                return self.getTypedRuleContext(MizarParser.VocabularyNameContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_vocabulary_directive
+            return MizarParser.RULE_vocabularyDirective
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVocabulary_directive" ):
-                return visitor.visitVocabulary_directive(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVocabularyDirective" ):
+                listener.enterVocabularyDirective(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVocabularyDirective" ):
+                listener.exitVocabularyDirective(self)
 
 
 
 
-    def vocabulary_directive(self):
+    def vocabularyDirective(self):
 
-        localctx = MizarParser.Vocabulary_directiveContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 6, self.RULE_vocabulary_directive)
+        localctx = MizarParser.VocabularyDirectiveContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 6, self.RULE_vocabularyDirective)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 343
             self.match(MizarParser.T__1)
             self.state = 344
-            self.vocabulary_name()
+            self.vocabularyName()
             self.state = 349
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -1491,7 +1498,7 @@ class MizarParser ( Parser ):
                 self.state = 345
                 self.match(MizarParser.T__2)
                 self.state = 346
-                self.vocabulary_name()
+                self.vocabularyName()
                 self.state = 351
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -1506,7 +1513,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Vocabulary_nameContext(ParserRuleContext):
+    class VocabularyNameContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1516,21 +1523,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.FILE_NAME, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_vocabulary_name
+            return MizarParser.RULE_vocabularyName
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVocabulary_name" ):
-                return visitor.visitVocabulary_name(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVocabularyName" ):
+                listener.enterVocabularyName(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVocabularyName" ):
+                listener.exitVocabularyName(self)
 
 
 
 
-    def vocabulary_name(self):
+    def vocabularyName(self):
 
-        localctx = MizarParser.Vocabulary_nameContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 8, self.RULE_vocabulary_name)
+        localctx = MizarParser.VocabularyNameContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 8, self.RULE_vocabularyName)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 354
@@ -1543,35 +1552,37 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Library_directiveContext(ParserRuleContext):
+    class LibraryDirectiveContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def article_name(self, i:int=None):
+        def articleName(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Article_nameContext)
+                return self.getTypedRuleContexts(MizarParser.ArticleNameContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Article_nameContext,i)
+                return self.getTypedRuleContext(MizarParser.ArticleNameContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_library_directive
+            return MizarParser.RULE_libraryDirective
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibrary_directive" ):
-                return visitor.visitLibrary_directive(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLibraryDirective" ):
+                listener.enterLibraryDirective(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLibraryDirective" ):
+                listener.exitLibraryDirective(self)
 
 
 
 
-    def library_directive(self):
+    def libraryDirective(self):
 
-        localctx = MizarParser.Library_directiveContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 10, self.RULE_library_directive)
+        localctx = MizarParser.LibraryDirectiveContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 10, self.RULE_libraryDirective)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1583,7 +1594,7 @@ class MizarParser ( Parser ):
                 self._errHandler.reportMatch(self)
                 self.consume()
             self.state = 357
-            self.article_name()
+            self.articleName()
             self.state = 362
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -1591,7 +1602,7 @@ class MizarParser ( Parser ):
                 self.state = 358
                 self.match(MizarParser.T__2)
                 self.state = 359
-                self.article_name()
+                self.articleName()
                 self.state = 364
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -1606,7 +1617,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Article_nameContext(ParserRuleContext):
+    class ArticleNameContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1616,21 +1627,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.FILE_NAME, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_article_name
+            return MizarParser.RULE_articleName
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitArticle_name" ):
-                return visitor.visitArticle_name(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterArticleName" ):
+                listener.enterArticleName(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitArticleName" ):
+                listener.exitArticleName(self)
 
 
 
 
-    def article_name(self):
+    def articleName(self):
 
-        localctx = MizarParser.Article_nameContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 12, self.RULE_article_name)
+        localctx = MizarParser.ArticleNameContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 12, self.RULE_articleName)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 367
@@ -1643,7 +1656,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Requirement_directiveContext(ParserRuleContext):
+    class RequirementDirectiveContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1657,21 +1670,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_requirement_directive
+            return MizarParser.RULE_requirementDirective
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRequirement_directive" ):
-                return visitor.visitRequirement_directive(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRequirementDirective" ):
+                listener.enterRequirementDirective(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRequirementDirective" ):
+                listener.exitRequirementDirective(self)
 
 
 
 
-    def requirement_directive(self):
+    def requirementDirective(self):
 
-        localctx = MizarParser.Requirement_directiveContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 14, self.RULE_requirement_directive)
+        localctx = MizarParser.RequirementDirectiveContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 14, self.RULE_requirementDirective)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1713,11 +1728,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_requirement
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRequirement" ):
-                return visitor.visitRequirement(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRequirement" ):
+                listener.enterRequirement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRequirement" ):
+                listener.exitRequirement(self)
 
 
 
@@ -1738,7 +1755,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Text_properContext(ParserRuleContext):
+    class TextProperContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1752,21 +1769,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_text_proper
+            return MizarParser.RULE_textProper
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitText_proper" ):
-                return visitor.visitText_proper(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTextProper" ):
+                listener.enterTextProper(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTextProper" ):
+                listener.exitTextProper(self)
 
 
 
 
-    def text_proper(self):
+    def textProper(self):
 
-        localctx = MizarParser.Text_properContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 18, self.RULE_text_proper)
+        localctx = MizarParser.TextProperContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 18, self.RULE_textProper)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -1796,21 +1815,23 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def text_item(self, i:int=None):
+        def textItem(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Text_itemContext)
+                return self.getTypedRuleContexts(MizarParser.TextItemContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Text_itemContext,i)
+                return self.getTypedRuleContext(MizarParser.TextItemContext,i)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_section
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSection" ):
-                return visitor.visitSection(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSection" ):
+                listener.enterSection(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSection" ):
+                listener.exitSection(self)
 
 
 
@@ -1829,7 +1850,7 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__14) | (1 << MizarParser.T__15) | (1 << MizarParser.T__16) | (1 << MizarParser.T__18) | (1 << MizarParser.T__19) | (1 << MizarParser.T__24) | (1 << MizarParser.T__34) | (1 << MizarParser.T__46) | (1 << MizarParser.T__47) | (1 << MizarParser.T__57))) != 0) or ((((_la - 74)) & ~0x3f) == 0 and ((1 << (_la - 74)) & ((1 << (MizarParser.T__73 - 74)) | (1 << (MizarParser.T__74 - 74)) | (1 << (MizarParser.T__78 - 74)) | (1 << (MizarParser.T__79 - 74)) | (1 << (MizarParser.T__80 - 74)) | (1 << (MizarParser.T__91 - 74)) | (1 << (MizarParser.T__92 - 74)) | (1 << (MizarParser.T__95 - 74)) | (1 << (MizarParser.T__106 - 74)) | (1 << (MizarParser.T__107 - 74)) | (1 << (MizarParser.T__108 - 74)) | (1 << (MizarParser.T__109 - 74)) | (1 << (MizarParser.T__110 - 74)) | (1 << (MizarParser.T__113 - 74)) | (1 << (MizarParser.T__116 - 74)) | (1 << (MizarParser.T__119 - 74)) | (1 << (MizarParser.T__122 - 74)) | (1 << (MizarParser.T__123 - 74)) | (1 << (MizarParser.T__124 - 74)) | (1 << (MizarParser.T__125 - 74)) | (1 << (MizarParser.T__126 - 74)) | (1 << (MizarParser.T__127 - 74)) | (1 << (MizarParser.T__128 - 74)) | (1 << (MizarParser.T__129 - 74)) | (1 << (MizarParser.T__130 - 74)) | (1 << (MizarParser.T__131 - 74)) | (1 << (MizarParser.PREDICATE_SYMBOL - 74)) | (1 << (MizarParser.FUNCTOR_SYMBOL - 74)) | (1 << (MizarParser.STRUCTURE_SYMBOL - 74)))) != 0) or ((((_la - 139)) & ~0x3f) == 0 and ((1 << (_la - 139)) & ((1 << (MizarParser.LEFT_FUNCTOR_SYMBOL - 139)) | (1 << (MizarParser.IDENTIFIER - 139)) | (1 << (MizarParser.NUMERAL - 139)))) != 0):
                 self.state = 388
-                self.text_item()
+                self.textItem()
                 self.state = 393
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -1842,7 +1863,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Text_itemContext(ParserRuleContext):
+    class TextItemContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -1852,46 +1873,48 @@ class MizarParser ( Parser ):
             return self.getTypedRuleContext(MizarParser.ReservationContext,0)
 
 
-        def definitional_item(self):
-            return self.getTypedRuleContext(MizarParser.Definitional_itemContext,0)
+        def definitionalItem(self):
+            return self.getTypedRuleContext(MizarParser.DefinitionalItemContext,0)
 
 
-        def registration_item(self):
-            return self.getTypedRuleContext(MizarParser.Registration_itemContext,0)
+        def registrationItem(self):
+            return self.getTypedRuleContext(MizarParser.RegistrationItemContext,0)
 
 
-        def notation_item(self):
-            return self.getTypedRuleContext(MizarParser.Notation_itemContext,0)
+        def notationItem(self):
+            return self.getTypedRuleContext(MizarParser.NotationItemContext,0)
 
 
         def theorem(self):
             return self.getTypedRuleContext(MizarParser.TheoremContext,0)
 
 
-        def scheme_item(self):
-            return self.getTypedRuleContext(MizarParser.Scheme_itemContext,0)
+        def schemeItem(self):
+            return self.getTypedRuleContext(MizarParser.SchemeItemContext,0)
 
 
-        def auxiliary_item(self):
-            return self.getTypedRuleContext(MizarParser.Auxiliary_itemContext,0)
+        def auxiliaryItem(self):
+            return self.getTypedRuleContext(MizarParser.AuxiliaryItemContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_text_item
+            return MizarParser.RULE_textItem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitText_item" ):
-                return visitor.visitText_item(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTextItem" ):
+                listener.enterTextItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTextItem" ):
+                listener.exitTextItem(self)
 
 
 
 
-    def text_item(self):
+    def textItem(self):
 
-        localctx = MizarParser.Text_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 22, self.RULE_text_item)
+        localctx = MizarParser.TextItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 22, self.RULE_textItem)
         try:
             self.state = 401
             self._errHandler.sync(self)
@@ -1904,17 +1927,17 @@ class MizarParser ( Parser ):
             elif token in [MizarParser.T__16]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 395
-                self.definitional_item()
+                self.definitionalItem()
                 pass
             elif token in [MizarParser.T__18]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 396
-                self.registration_item()
+                self.registrationItem()
                 pass
             elif token in [MizarParser.T__19]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 397
-                self.notation_item()
+                self.notationItem()
                 pass
             elif token in [MizarParser.T__73]:
                 self.enterOuterAlt(localctx, 5)
@@ -1924,12 +1947,12 @@ class MizarParser ( Parser ):
             elif token in [MizarParser.T__74]:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 399
-                self.scheme_item()
+                self.schemeItem()
                 pass
             elif token in [MizarParser.T__15, MizarParser.T__24, MizarParser.T__34, MizarParser.T__46, MizarParser.T__47, MizarParser.T__57, MizarParser.T__78, MizarParser.T__79, MizarParser.T__80, MizarParser.T__91, MizarParser.T__92, MizarParser.T__95, MizarParser.T__106, MizarParser.T__107, MizarParser.T__108, MizarParser.T__109, MizarParser.T__110, MizarParser.T__113, MizarParser.T__116, MizarParser.T__119, MizarParser.T__122, MizarParser.T__123, MizarParser.T__124, MizarParser.T__125, MizarParser.T__126, MizarParser.T__127, MizarParser.T__128, MizarParser.T__129, MizarParser.T__130, MizarParser.T__131, MizarParser.PREDICATE_SYMBOL, MizarParser.FUNCTOR_SYMBOL, MizarParser.STRUCTURE_SYMBOL, MizarParser.LEFT_FUNCTOR_SYMBOL, MizarParser.IDENTIFIER, MizarParser.NUMERAL]:
                 self.enterOuterAlt(localctx, 7)
                 self.state = 400
-                self.auxiliary_item()
+                self.auxiliaryItem()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -1948,21 +1971,23 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def reservation_segment(self, i:int=None):
+        def reservationSegment(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Reservation_segmentContext)
+                return self.getTypedRuleContexts(MizarParser.ReservationSegmentContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Reservation_segmentContext,i)
+                return self.getTypedRuleContext(MizarParser.ReservationSegmentContext,i)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_reservation
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReservation" ):
-                return visitor.visitReservation(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReservation" ):
+                listener.enterReservation(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReservation" ):
+                listener.exitReservation(self)
 
 
 
@@ -1977,7 +2002,7 @@ class MizarParser ( Parser ):
             self.state = 403
             self.match(MizarParser.T__14)
             self.state = 404
-            self.reservation_segment()
+            self.reservationSegment()
             self.state = 409
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -1985,7 +2010,7 @@ class MizarParser ( Parser ):
                 self.state = 405
                 self.match(MizarParser.T__2)
                 self.state = 406
-                self.reservation_segment()
+                self.reservationSegment()
                 self.state = 411
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -2000,44 +2025,46 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Reservation_segmentContext(ParserRuleContext):
+    class ReservationSegmentContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def reserved_identifiers(self):
-            return self.getTypedRuleContext(MizarParser.Reserved_identifiersContext,0)
+        def reservedIdentifiers(self):
+            return self.getTypedRuleContext(MizarParser.ReservedIdentifiersContext,0)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_reservation_segment
+            return MizarParser.RULE_reservationSegment
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReservation_segment" ):
-                return visitor.visitReservation_segment(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReservationSegment" ):
+                listener.enterReservationSegment(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReservationSegment" ):
+                listener.exitReservationSegment(self)
 
 
 
 
-    def reservation_segment(self):
+    def reservationSegment(self):
 
-        localctx = MizarParser.Reservation_segmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 26, self.RULE_reservation_segment)
+        localctx = MizarParser.ReservationSegmentContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 26, self.RULE_reservationSegment)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 414
-            self.reserved_identifiers()
+            self.reservedIdentifiers()
             self.state = 415
             self.match(MizarParser.T__15)
             self.state = 416
-            self.type_expression()
+            self.typeExpression()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -2046,40 +2073,42 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Reserved_identifiersContext(ParserRuleContext):
+    class ReservedIdentifiersContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def reserved_identifier(self, i:int=None):
+        def reservedIdentifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Reserved_identifierContext)
+                return self.getTypedRuleContexts(MizarParser.ReservedIdentifierContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Reserved_identifierContext,i)
+                return self.getTypedRuleContext(MizarParser.ReservedIdentifierContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_reserved_identifiers
+            return MizarParser.RULE_reservedIdentifiers
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReserved_identifiers" ):
-                return visitor.visitReserved_identifiers(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReservedIdentifiers" ):
+                listener.enterReservedIdentifiers(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReservedIdentifiers" ):
+                listener.exitReservedIdentifiers(self)
 
 
 
 
-    def reserved_identifiers(self):
+    def reservedIdentifiers(self):
 
-        localctx = MizarParser.Reserved_identifiersContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 28, self.RULE_reserved_identifiers)
+        localctx = MizarParser.ReservedIdentifiersContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 28, self.RULE_reservedIdentifiers)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 418
-            self.reserved_identifier()
+            self.reservedIdentifier()
             self.state = 423
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -2087,7 +2116,7 @@ class MizarParser ( Parser ):
                 self.state = 419
                 self.match(MizarParser.T__2)
                 self.state = 420
-                self.reserved_identifier()
+                self.reservedIdentifier()
                 self.state = 425
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -2100,7 +2129,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Reserved_identifierContext(ParserRuleContext):
+    class ReservedIdentifierContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2110,21 +2139,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.IDENTIFIER, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_reserved_identifier
+            return MizarParser.RULE_reservedIdentifier
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReserved_identifier" ):
-                return visitor.visitReserved_identifier(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReservedIdentifier" ):
+                listener.enterReservedIdentifier(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReservedIdentifier" ):
+                listener.exitReservedIdentifier(self)
 
 
 
 
-    def reserved_identifier(self):
+    def reservedIdentifier(self):
 
-        localctx = MizarParser.Reserved_identifierContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 30, self.RULE_reserved_identifier)
+        localctx = MizarParser.ReservedIdentifierContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 30, self.RULE_reservedIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 426
@@ -2137,36 +2168,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Definitional_itemContext(ParserRuleContext):
+    class DefinitionalItemContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def definitional_block(self):
-            return self.getTypedRuleContext(MizarParser.Definitional_blockContext,0)
+        def definitionalBlock(self):
+            return self.getTypedRuleContext(MizarParser.DefinitionalBlockContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_definitional_item
+            return MizarParser.RULE_definitionalItem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDefinitional_item" ):
-                return visitor.visitDefinitional_item(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDefinitionalItem" ):
+                listener.enterDefinitionalItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDefinitionalItem" ):
+                listener.exitDefinitionalItem(self)
 
 
 
 
-    def definitional_item(self):
+    def definitionalItem(self):
 
-        localctx = MizarParser.Definitional_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 32, self.RULE_definitional_item)
+        localctx = MizarParser.DefinitionalItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 32, self.RULE_definitionalItem)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 428
-            self.definitional_block()
+            self.definitionalBlock()
             self.state = 429
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -2177,36 +2210,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Registration_itemContext(ParserRuleContext):
+    class RegistrationItemContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def registration_block(self):
-            return self.getTypedRuleContext(MizarParser.Registration_blockContext,0)
+        def registrationBlock(self):
+            return self.getTypedRuleContext(MizarParser.RegistrationBlockContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_registration_item
+            return MizarParser.RULE_registrationItem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRegistration_item" ):
-                return visitor.visitRegistration_item(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRegistrationItem" ):
+                listener.enterRegistrationItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRegistrationItem" ):
+                listener.exitRegistrationItem(self)
 
 
 
 
-    def registration_item(self):
+    def registrationItem(self):
 
-        localctx = MizarParser.Registration_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 34, self.RULE_registration_item)
+        localctx = MizarParser.RegistrationItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 34, self.RULE_registrationItem)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 431
-            self.registration_block()
+            self.registrationBlock()
             self.state = 432
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -2217,36 +2252,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Notation_itemContext(ParserRuleContext):
+    class NotationItemContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def notation_block(self):
-            return self.getTypedRuleContext(MizarParser.Notation_blockContext,0)
+        def notationBlock(self):
+            return self.getTypedRuleContext(MizarParser.NotationBlockContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_notation_item
+            return MizarParser.RULE_notationItem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNotation_item" ):
-                return visitor.visitNotation_item(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterNotationItem" ):
+                listener.enterNotationItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitNotationItem" ):
+                listener.exitNotationItem(self)
 
 
 
 
-    def notation_item(self):
+    def notationItem(self):
 
-        localctx = MizarParser.Notation_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 36, self.RULE_notation_item)
+        localctx = MizarParser.NotationItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 36, self.RULE_notationItem)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 434
-            self.notation_block()
+            self.notationBlock()
             self.state = 435
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -2257,17 +2294,17 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Definitional_blockContext(ParserRuleContext):
+    class DefinitionalBlockContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def definition_item(self, i:int=None):
+        def definitionItem(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Definition_itemContext)
+                return self.getTypedRuleContexts(MizarParser.DefinitionItemContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Definition_itemContext,i)
+                return self.getTypedRuleContext(MizarParser.DefinitionItemContext,i)
 
 
         def definition(self, i:int=None):
@@ -2285,21 +2322,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_definitional_block
+            return MizarParser.RULE_definitionalBlock
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDefinitional_block" ):
-                return visitor.visitDefinitional_block(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDefinitionalBlock" ):
+                listener.enterDefinitionalBlock(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDefinitionalBlock" ):
+                listener.exitDefinitionalBlock(self)
 
 
 
 
-    def definitional_block(self):
+    def definitionalBlock(self):
 
-        localctx = MizarParser.Definitional_blockContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 38, self.RULE_definitional_block)
+        localctx = MizarParser.DefinitionalBlockContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 38, self.RULE_definitionalBlock)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2314,7 +2353,7 @@ class MizarParser ( Parser ):
                 token = self._input.LA(1)
                 if token in [MizarParser.T__15, MizarParser.T__20, MizarParser.T__24, MizarParser.T__34, MizarParser.T__46, MizarParser.T__47, MizarParser.T__57, MizarParser.T__78, MizarParser.T__79, MizarParser.T__80, MizarParser.T__85, MizarParser.T__86, MizarParser.T__91, MizarParser.T__92, MizarParser.T__95, MizarParser.T__106, MizarParser.T__107, MizarParser.T__108, MizarParser.T__109, MizarParser.T__110, MizarParser.T__113, MizarParser.T__116, MizarParser.T__119, MizarParser.T__122, MizarParser.T__123, MizarParser.T__124, MizarParser.T__125, MizarParser.T__126, MizarParser.T__127, MizarParser.T__128, MizarParser.T__129, MizarParser.T__130, MizarParser.T__131, MizarParser.PREDICATE_SYMBOL, MizarParser.FUNCTOR_SYMBOL, MizarParser.STRUCTURE_SYMBOL, MizarParser.LEFT_FUNCTOR_SYMBOL, MizarParser.IDENTIFIER, MizarParser.NUMERAL]:
                     self.state = 438
-                    self.definition_item()
+                    self.definitionItem()
                     pass
                 elif token in [MizarParser.T__23, MizarParser.T__30, MizarParser.T__40, MizarParser.T__50, MizarParser.T__58]:
                     self.state = 439
@@ -2341,70 +2380,72 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Registration_blockContext(ParserRuleContext):
+    class RegistrationBlockContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def loci_declaration(self, i:int=None):
+        def lociDeclaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Loci_declarationContext)
+                return self.getTypedRuleContexts(MizarParser.LociDeclarationContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Loci_declarationContext,i)
+                return self.getTypedRuleContext(MizarParser.LociDeclarationContext,i)
 
 
-        def cluster_registration(self, i:int=None):
+        def clusterRegistration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Cluster_registrationContext)
+                return self.getTypedRuleContexts(MizarParser.ClusterRegistrationContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Cluster_registrationContext,i)
+                return self.getTypedRuleContext(MizarParser.ClusterRegistrationContext,i)
 
 
-        def identify_registration(self, i:int=None):
+        def identifyRegistration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Identify_registrationContext)
+                return self.getTypedRuleContexts(MizarParser.IdentifyRegistrationContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Identify_registrationContext,i)
+                return self.getTypedRuleContext(MizarParser.IdentifyRegistrationContext,i)
 
 
-        def property_registration(self, i:int=None):
+        def propertyRegistration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Property_registrationContext)
+                return self.getTypedRuleContexts(MizarParser.PropertyRegistrationContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Property_registrationContext,i)
+                return self.getTypedRuleContext(MizarParser.PropertyRegistrationContext,i)
 
 
-        def reduction_registration(self, i:int=None):
+        def reductionRegistration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Reduction_registrationContext)
+                return self.getTypedRuleContexts(MizarParser.ReductionRegistrationContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Reduction_registrationContext,i)
+                return self.getTypedRuleContext(MizarParser.ReductionRegistrationContext,i)
 
 
-        def auxiliary_item(self, i:int=None):
+        def auxiliaryItem(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Auxiliary_itemContext)
+                return self.getTypedRuleContexts(MizarParser.AuxiliaryItemContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Auxiliary_itemContext,i)
+                return self.getTypedRuleContext(MizarParser.AuxiliaryItemContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_registration_block
+            return MizarParser.RULE_registrationBlock
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRegistration_block" ):
-                return visitor.visitRegistration_block(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRegistrationBlock" ):
+                listener.enterRegistrationBlock(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRegistrationBlock" ):
+                listener.exitRegistrationBlock(self)
 
 
 
 
-    def registration_block(self):
+    def registrationBlock(self):
 
-        localctx = MizarParser.Registration_blockContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 40, self.RULE_registration_block)
+        localctx = MizarParser.RegistrationBlockContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 40, self.RULE_registrationBlock)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2419,27 +2460,27 @@ class MizarParser ( Parser ):
                 token = self._input.LA(1)
                 if token in [MizarParser.T__20]:
                     self.state = 449
-                    self.loci_declaration()
+                    self.lociDeclaration()
                     pass
                 elif token in [MizarParser.T__59]:
                     self.state = 450
-                    self.cluster_registration()
+                    self.clusterRegistration()
                     pass
                 elif token in [MizarParser.T__61]:
                     self.state = 451
-                    self.identify_registration()
+                    self.identifyRegistration()
                     pass
                 elif token in [MizarParser.T__39]:
                     self.state = 452
-                    self.property_registration()
+                    self.propertyRegistration()
                     pass
                 elif token in [MizarParser.T__64]:
                     self.state = 453
-                    self.reduction_registration()
+                    self.reductionRegistration()
                     pass
                 elif token in [MizarParser.T__15, MizarParser.T__24, MizarParser.T__34, MizarParser.T__46, MizarParser.T__47, MizarParser.T__57, MizarParser.T__78, MizarParser.T__79, MizarParser.T__80, MizarParser.T__91, MizarParser.T__92, MizarParser.T__95, MizarParser.T__106, MizarParser.T__107, MizarParser.T__108, MizarParser.T__109, MizarParser.T__110, MizarParser.T__113, MizarParser.T__116, MizarParser.T__119, MizarParser.T__122, MizarParser.T__123, MizarParser.T__124, MizarParser.T__125, MizarParser.T__126, MizarParser.T__127, MizarParser.T__128, MizarParser.T__129, MizarParser.T__130, MizarParser.T__131, MizarParser.PREDICATE_SYMBOL, MizarParser.FUNCTOR_SYMBOL, MizarParser.STRUCTURE_SYMBOL, MizarParser.LEFT_FUNCTOR_SYMBOL, MizarParser.IDENTIFIER, MizarParser.NUMERAL]:
                     self.state = 454
-                    self.auxiliary_item()
+                    self.auxiliaryItem()
                     pass
                 else:
                     raise NoViableAltException(self)
@@ -2458,42 +2499,44 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Notation_blockContext(ParserRuleContext):
+    class NotationBlockContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def loci_declaration(self, i:int=None):
+        def lociDeclaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Loci_declarationContext)
+                return self.getTypedRuleContexts(MizarParser.LociDeclarationContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Loci_declarationContext,i)
+                return self.getTypedRuleContext(MizarParser.LociDeclarationContext,i)
 
 
-        def notation_declaration(self, i:int=None):
+        def notationDeclaration(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Notation_declarationContext)
+                return self.getTypedRuleContexts(MizarParser.NotationDeclarationContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Notation_declarationContext,i)
+                return self.getTypedRuleContext(MizarParser.NotationDeclarationContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_notation_block
+            return MizarParser.RULE_notationBlock
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNotation_block" ):
-                return visitor.visitNotation_block(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterNotationBlock" ):
+                listener.enterNotationBlock(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitNotationBlock" ):
+                listener.exitNotationBlock(self)
 
 
 
 
-    def notation_block(self):
+    def notationBlock(self):
 
-        localctx = MizarParser.Notation_blockContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 42, self.RULE_notation_block)
+        localctx = MizarParser.NotationBlockContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 42, self.RULE_notationBlock)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2508,11 +2551,11 @@ class MizarParser ( Parser ):
                 token = self._input.LA(1)
                 if token in [MizarParser.T__20]:
                     self.state = 463
-                    self.loci_declaration()
+                    self.lociDeclaration()
                     pass
                 elif token in [MizarParser.T__35, MizarParser.T__56]:
                     self.state = 464
-                    self.notation_declaration()
+                    self.notationDeclaration()
                     pass
                 else:
                     raise NoViableAltException(self)
@@ -2531,40 +2574,42 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Definition_itemContext(ParserRuleContext):
+    class DefinitionItemContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def loci_declaration(self):
-            return self.getTypedRuleContext(MizarParser.Loci_declarationContext,0)
+        def lociDeclaration(self):
+            return self.getTypedRuleContext(MizarParser.LociDeclarationContext,0)
 
 
-        def permissive_assumption(self):
-            return self.getTypedRuleContext(MizarParser.Permissive_assumptionContext,0)
+        def permissiveAssumption(self):
+            return self.getTypedRuleContext(MizarParser.PermissiveAssumptionContext,0)
 
 
-        def auxiliary_item(self):
-            return self.getTypedRuleContext(MizarParser.Auxiliary_itemContext,0)
+        def auxiliaryItem(self):
+            return self.getTypedRuleContext(MizarParser.AuxiliaryItemContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_definition_item
+            return MizarParser.RULE_definitionItem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDefinition_item" ):
-                return visitor.visitDefinition_item(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDefinitionItem" ):
+                listener.enterDefinitionItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDefinitionItem" ):
+                listener.exitDefinitionItem(self)
 
 
 
 
-    def definition_item(self):
+    def definitionItem(self):
 
-        localctx = MizarParser.Definition_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 44, self.RULE_definition_item)
+        localctx = MizarParser.DefinitionItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 44, self.RULE_definitionItem)
         try:
             self.state = 475
             self._errHandler.sync(self)
@@ -2572,17 +2617,17 @@ class MizarParser ( Parser ):
             if token in [MizarParser.T__20]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 472
-                self.loci_declaration()
+                self.lociDeclaration()
                 pass
             elif token in [MizarParser.T__85, MizarParser.T__86]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 473
-                self.permissive_assumption()
+                self.permissiveAssumption()
                 pass
             elif token in [MizarParser.T__15, MizarParser.T__24, MizarParser.T__34, MizarParser.T__46, MizarParser.T__47, MizarParser.T__57, MizarParser.T__78, MizarParser.T__79, MizarParser.T__80, MizarParser.T__91, MizarParser.T__92, MizarParser.T__95, MizarParser.T__106, MizarParser.T__107, MizarParser.T__108, MizarParser.T__109, MizarParser.T__110, MizarParser.T__113, MizarParser.T__116, MizarParser.T__119, MizarParser.T__122, MizarParser.T__123, MizarParser.T__124, MizarParser.T__125, MizarParser.T__126, MizarParser.T__127, MizarParser.T__128, MizarParser.T__129, MizarParser.T__130, MizarParser.T__131, MizarParser.PREDICATE_SYMBOL, MizarParser.FUNCTOR_SYMBOL, MizarParser.STRUCTURE_SYMBOL, MizarParser.LEFT_FUNCTOR_SYMBOL, MizarParser.IDENTIFIER, MizarParser.NUMERAL]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 474
-                self.auxiliary_item()
+                self.auxiliaryItem()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -2595,52 +2640,54 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Notation_declarationContext(ParserRuleContext):
+    class NotationDeclarationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def attribute_synonym(self):
-            return self.getTypedRuleContext(MizarParser.Attribute_synonymContext,0)
+        def attributeSynonym(self):
+            return self.getTypedRuleContext(MizarParser.AttributeSynonymContext,0)
 
 
-        def attribute_antonym(self):
-            return self.getTypedRuleContext(MizarParser.Attribute_antonymContext,0)
+        def attributeAntonym(self):
+            return self.getTypedRuleContext(MizarParser.AttributeAntonymContext,0)
 
 
-        def functor_synonym(self):
-            return self.getTypedRuleContext(MizarParser.Functor_synonymContext,0)
+        def functorSynonym(self):
+            return self.getTypedRuleContext(MizarParser.FunctorSynonymContext,0)
 
 
-        def mode_synonym(self):
-            return self.getTypedRuleContext(MizarParser.Mode_synonymContext,0)
+        def modeSynonym(self):
+            return self.getTypedRuleContext(MizarParser.ModeSynonymContext,0)
 
 
-        def predicate_synonym(self):
-            return self.getTypedRuleContext(MizarParser.Predicate_synonymContext,0)
+        def predicateSynonym(self):
+            return self.getTypedRuleContext(MizarParser.PredicateSynonymContext,0)
 
 
-        def predicate_antonym(self):
-            return self.getTypedRuleContext(MizarParser.Predicate_antonymContext,0)
+        def predicateAntonym(self):
+            return self.getTypedRuleContext(MizarParser.PredicateAntonymContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_notation_declaration
+            return MizarParser.RULE_notationDeclaration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitNotation_declaration" ):
-                return visitor.visitNotation_declaration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterNotationDeclaration" ):
+                listener.enterNotationDeclaration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitNotationDeclaration" ):
+                listener.exitNotationDeclaration(self)
 
 
 
 
-    def notation_declaration(self):
+    def notationDeclaration(self):
 
-        localctx = MizarParser.Notation_declarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 46, self.RULE_notation_declaration)
+        localctx = MizarParser.NotationDeclarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 46, self.RULE_notationDeclaration)
         try:
             self.state = 483
             self._errHandler.sync(self)
@@ -2648,37 +2695,37 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 477
-                self.attribute_synonym()
+                self.attributeSynonym()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 478
-                self.attribute_antonym()
+                self.attributeAntonym()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 479
-                self.functor_synonym()
+                self.functorSynonym()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 480
-                self.mode_synonym()
+                self.modeSynonym()
                 pass
 
             elif la_ == 5:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 481
-                self.predicate_synonym()
+                self.predicateSynonym()
                 pass
 
             elif la_ == 6:
                 self.enterOuterAlt(localctx, 6)
                 self.state = 482
-                self.predicate_antonym()
+                self.predicateAntonym()
                 pass
 
 
@@ -2690,14 +2737,14 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Loci_declarationContext(ParserRuleContext):
+    class LociDeclarationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def qualified_variables(self):
-            return self.getTypedRuleContext(MizarParser.Qualified_variablesContext,0)
+        def qualifiedVariables(self):
+            return self.getTypedRuleContext(MizarParser.QualifiedVariablesContext,0)
 
 
         def conditions(self):
@@ -2705,28 +2752,30 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_loci_declaration
+            return MizarParser.RULE_lociDeclaration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLoci_declaration" ):
-                return visitor.visitLoci_declaration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLociDeclaration" ):
+                listener.enterLociDeclaration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLociDeclaration" ):
+                listener.exitLociDeclaration(self)
 
 
 
 
-    def loci_declaration(self):
+    def lociDeclaration(self):
 
-        localctx = MizarParser.Loci_declarationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 48, self.RULE_loci_declaration)
+        localctx = MizarParser.LociDeclarationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 48, self.RULE_lociDeclaration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 485
             self.match(MizarParser.T__20)
             self.state = 486
-            self.qualified_variables()
+            self.qualifiedVariables()
             self.state = 489
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -2747,7 +2796,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Permissive_assumptionContext(ParserRuleContext):
+    class PermissiveAssumptionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -2758,21 +2807,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_permissive_assumption
+            return MizarParser.RULE_permissiveAssumption
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPermissive_assumption" ):
-                return visitor.visitPermissive_assumption(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPermissiveAssumption" ):
+                listener.enterPermissiveAssumption(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPermissiveAssumption" ):
+                listener.exitPermissiveAssumption(self)
 
 
 
 
-    def permissive_assumption(self):
+    def permissiveAssumption(self):
 
-        localctx = MizarParser.Permissive_assumptionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 50, self.RULE_permissive_assumption)
+        localctx = MizarParser.PermissiveAssumptionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 50, self.RULE_permissiveAssumption)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 493
@@ -2791,34 +2842,36 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def structure_definition(self):
-            return self.getTypedRuleContext(MizarParser.Structure_definitionContext,0)
+        def structureDefinition(self):
+            return self.getTypedRuleContext(MizarParser.StructureDefinitionContext,0)
 
 
-        def mode_definition(self):
-            return self.getTypedRuleContext(MizarParser.Mode_definitionContext,0)
+        def modeDefinition(self):
+            return self.getTypedRuleContext(MizarParser.ModeDefinitionContext,0)
 
 
-        def functor_definition(self):
-            return self.getTypedRuleContext(MizarParser.Functor_definitionContext,0)
+        def functorDefinition(self):
+            return self.getTypedRuleContext(MizarParser.FunctorDefinitionContext,0)
 
 
-        def predicate_definition(self):
-            return self.getTypedRuleContext(MizarParser.Predicate_definitionContext,0)
+        def predicateDefinition(self):
+            return self.getTypedRuleContext(MizarParser.PredicateDefinitionContext,0)
 
 
-        def attribute_definition(self):
-            return self.getTypedRuleContext(MizarParser.Attribute_definitionContext,0)
+        def attributeDefinition(self):
+            return self.getTypedRuleContext(MizarParser.AttributeDefinitionContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_definition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDefinition" ):
-                return visitor.visitDefinition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDefinition" ):
+                listener.enterDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDefinition" ):
+                listener.exitDefinition(self)
 
 
 
@@ -2834,27 +2887,27 @@ class MizarParser ( Parser ):
             if token in [MizarParser.T__23]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 495
-                self.structure_definition()
+                self.structureDefinition()
                 pass
             elif token in [MizarParser.T__30]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 496
-                self.mode_definition()
+                self.modeDefinition()
                 pass
             elif token in [MizarParser.T__40]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 497
-                self.functor_definition()
+                self.functorDefinition()
                 pass
             elif token in [MizarParser.T__50]:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 498
-                self.predicate_definition()
+                self.predicateDefinition()
                 pass
             elif token in [MizarParser.T__58]:
                 self.enterOuterAlt(localctx, 5)
                 self.state = 499
-                self.attribute_definition()
+                self.attributeDefinition()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -2873,30 +2926,32 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def mode_definition(self):
-            return self.getTypedRuleContext(MizarParser.Mode_definitionContext,0)
+        def modeDefinition(self):
+            return self.getTypedRuleContext(MizarParser.ModeDefinitionContext,0)
 
 
-        def functor_definition(self):
-            return self.getTypedRuleContext(MizarParser.Functor_definitionContext,0)
+        def functorDefinition(self):
+            return self.getTypedRuleContext(MizarParser.FunctorDefinitionContext,0)
 
 
-        def predicate_definition(self):
-            return self.getTypedRuleContext(MizarParser.Predicate_definitionContext,0)
+        def predicateDefinition(self):
+            return self.getTypedRuleContext(MizarParser.PredicateDefinitionContext,0)
 
 
-        def attribute_definition(self):
-            return self.getTypedRuleContext(MizarParser.Attribute_definitionContext,0)
+        def attributeDefinition(self):
+            return self.getTypedRuleContext(MizarParser.AttributeDefinitionContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_redefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRedefinition" ):
-                return visitor.visitRedefinition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRedefinition" ):
+                listener.enterRedefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRedefinition" ):
+                listener.exitRedefinition(self)
 
 
 
@@ -2914,19 +2969,19 @@ class MizarParser ( Parser ):
             token = self._input.LA(1)
             if token in [MizarParser.T__30]:
                 self.state = 503
-                self.mode_definition()
+                self.modeDefinition()
                 pass
             elif token in [MizarParser.T__40]:
                 self.state = 504
-                self.functor_definition()
+                self.functorDefinition()
                 pass
             elif token in [MizarParser.T__50]:
                 self.state = 505
-                self.predicate_definition()
+                self.predicateDefinition()
                 pass
             elif token in [MizarParser.T__58]:
                 self.state = 506
-                self.attribute_definition()
+                self.attributeDefinition()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -2939,14 +2994,14 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Structure_definitionContext(ParserRuleContext):
+    class StructureDefinitionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def structure_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Structure_symbolContext,0)
+        def structureSymbol(self):
+            return self.getTypedRuleContext(MizarParser.StructureSymbolContext,0)
 
 
         def fields(self):
@@ -2962,21 +3017,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_structure_definition
+            return MizarParser.RULE_structureDefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStructure_definition" ):
-                return visitor.visitStructure_definition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStructureDefinition" ):
+                listener.enterStructureDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStructureDefinition" ):
+                listener.exitStructureDefinition(self)
 
 
 
 
-    def structure_definition(self):
+    def structureDefinition(self):
 
-        localctx = MizarParser.Structure_definitionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 56, self.RULE_structure_definition)
+        localctx = MizarParser.StructureDefinitionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 56, self.RULE_structureDefinition)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -2995,7 +3052,7 @@ class MizarParser ( Parser ):
 
 
             self.state = 516
-            self.structure_symbol()
+            self.structureSymbol()
             self.state = 519
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -3028,21 +3085,23 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def structure_type_expression(self, i:int=None):
+        def structureTypeExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Structure_type_expressionContext)
+                return self.getTypedRuleContexts(MizarParser.StructureTypeExpressionContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Structure_type_expressionContext,i)
+                return self.getTypedRuleContext(MizarParser.StructureTypeExpressionContext,i)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_ancestors
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAncestors" ):
-                return visitor.visitAncestors(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAncestors" ):
+                listener.enterAncestors(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAncestors" ):
+                listener.exitAncestors(self)
 
 
 
@@ -3055,7 +3114,7 @@ class MizarParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 526
-            self.structure_type_expression()
+            self.structureTypeExpression()
             self.state = 531
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -3063,7 +3122,7 @@ class MizarParser ( Parser ):
                 self.state = 527
                 self.match(MizarParser.T__2)
                 self.state = 528
-                self.structure_type_expression()
+                self.structureTypeExpression()
                 self.state = 533
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3076,7 +3135,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Structure_symbolContext(ParserRuleContext):
+    class StructureSymbolContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3086,21 +3145,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.STRUCTURE_SYMBOL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_structure_symbol
+            return MizarParser.RULE_structureSymbol
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStructure_symbol" ):
-                return visitor.visitStructure_symbol(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStructureSymbol" ):
+                listener.enterStructureSymbol(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStructureSymbol" ):
+                listener.exitStructureSymbol(self)
 
 
 
 
-    def structure_symbol(self):
+    def structureSymbol(self):
 
-        localctx = MizarParser.Structure_symbolContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 60, self.RULE_structure_symbol)
+        localctx = MizarParser.StructureSymbolContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 60, self.RULE_structureSymbol)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 534
@@ -3129,11 +3190,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_loci
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLoci" ):
-                return visitor.visitLoci(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLoci" ):
+                listener.enterLoci(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLoci" ):
+                listener.exitLoci(self)
 
 
 
@@ -3173,21 +3236,23 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def field_segment(self, i:int=None):
+        def fieldSegment(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Field_segmentContext)
+                return self.getTypedRuleContexts(MizarParser.FieldSegmentContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Field_segmentContext,i)
+                return self.getTypedRuleContext(MizarParser.FieldSegmentContext,i)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_fields
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFields" ):
-                return visitor.visitFields(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFields" ):
+                listener.enterFields(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFields" ):
+                listener.exitFields(self)
 
 
 
@@ -3200,7 +3265,7 @@ class MizarParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 544
-            self.field_segment()
+            self.fieldSegment()
             self.state = 549
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -3208,7 +3273,7 @@ class MizarParser ( Parser ):
                 self.state = 545
                 self.match(MizarParser.T__2)
                 self.state = 546
-                self.field_segment()
+                self.fieldSegment()
                 self.state = 551
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3227,18 +3292,20 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def variable_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Variable_identifierContext,0)
+        def variableIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.VariableIdentifierContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_locus
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLocus" ):
-                return visitor.visitLocus(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLocus" ):
+                listener.enterLocus(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLocus" ):
+                listener.exitLocus(self)
 
 
 
@@ -3250,7 +3317,7 @@ class MizarParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 552
-            self.variable_identifier()
+            self.variableIdentifier()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -3259,7 +3326,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Variable_identifierContext(ParserRuleContext):
+    class VariableIdentifierContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3269,21 +3336,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.IDENTIFIER, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_variable_identifier
+            return MizarParser.RULE_variableIdentifier
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariable_identifier" ):
-                return visitor.visitVariable_identifier(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVariableIdentifier" ):
+                listener.enterVariableIdentifier(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVariableIdentifier" ):
+                listener.exitVariableIdentifier(self)
 
 
 
 
-    def variable_identifier(self):
+    def variableIdentifier(self):
 
-        localctx = MizarParser.Variable_identifierContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 68, self.RULE_variable_identifier)
+        localctx = MizarParser.VariableIdentifierContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 68, self.RULE_variableIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 554
@@ -3296,17 +3365,17 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Field_segmentContext(ParserRuleContext):
+    class FieldSegmentContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def selector_symbol(self, i:int=None):
+        def selectorSymbol(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Selector_symbolContext)
+                return self.getTypedRuleContexts(MizarParser.SelectorSymbolContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Selector_symbolContext,i)
+                return self.getTypedRuleContext(MizarParser.SelectorSymbolContext,i)
 
 
         def specification(self):
@@ -3314,26 +3383,28 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_field_segment
+            return MizarParser.RULE_fieldSegment
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitField_segment" ):
-                return visitor.visitField_segment(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFieldSegment" ):
+                listener.enterFieldSegment(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFieldSegment" ):
+                listener.exitFieldSegment(self)
 
 
 
 
-    def field_segment(self):
+    def fieldSegment(self):
 
-        localctx = MizarParser.Field_segmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 70, self.RULE_field_segment)
+        localctx = MizarParser.FieldSegmentContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 70, self.RULE_fieldSegment)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 556
-            self.selector_symbol()
+            self.selectorSymbol()
             self.state = 561
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -3341,7 +3412,7 @@ class MizarParser ( Parser ):
                 self.state = 557
                 self.match(MizarParser.T__2)
                 self.state = 558
-                self.selector_symbol()
+                self.selectorSymbol()
                 self.state = 563
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3356,7 +3427,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Selector_symbolContext(ParserRuleContext):
+    class SelectorSymbolContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3366,21 +3437,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.SELECTOR_SYMBOL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_selector_symbol
+            return MizarParser.RULE_selectorSymbol
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSelector_symbol" ):
-                return visitor.visitSelector_symbol(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSelectorSymbol" ):
+                listener.enterSelectorSymbol(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSelectorSymbol" ):
+                listener.exitSelectorSymbol(self)
 
 
 
 
-    def selector_symbol(self):
+    def selectorSymbol(self):
 
-        localctx = MizarParser.Selector_symbolContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 72, self.RULE_selector_symbol)
+        localctx = MizarParser.SelectorSymbolContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 72, self.RULE_selectorSymbol)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 566
@@ -3399,18 +3472,20 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_specification
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSpecification" ):
-                return visitor.visitSpecification(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSpecification" ):
+                listener.enterSpecification(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSpecification" ):
+                listener.exitSpecification(self)
 
 
 
@@ -3424,7 +3499,7 @@ class MizarParser ( Parser ):
             self.state = 568
             self.match(MizarParser.T__29)
             self.state = 569
-            self.type_expression()
+            self.typeExpression()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -3433,29 +3508,29 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Mode_definitionContext(ParserRuleContext):
+    class ModeDefinitionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def mode_pattern(self):
-            return self.getTypedRuleContext(MizarParser.Mode_patternContext,0)
+        def modePattern(self):
+            return self.getTypedRuleContext(MizarParser.ModePatternContext,0)
 
 
-        def correctness_conditions(self):
-            return self.getTypedRuleContext(MizarParser.Correctness_conditionsContext,0)
+        def correctnessConditions(self):
+            return self.getTypedRuleContext(MizarParser.CorrectnessConditionsContext,0)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
-        def mode_property(self, i:int=None):
+        def modeProperty(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Mode_propertyContext)
+                return self.getTypedRuleContexts(MizarParser.ModePropertyContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Mode_propertyContext,i)
+                return self.getTypedRuleContext(MizarParser.ModePropertyContext,i)
 
 
         def specification(self):
@@ -3467,28 +3542,30 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_mode_definition
+            return MizarParser.RULE_modeDefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMode_definition" ):
-                return visitor.visitMode_definition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterModeDefinition" ):
+                listener.enterModeDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitModeDefinition" ):
+                listener.exitModeDefinition(self)
 
 
 
 
-    def mode_definition(self):
+    def modeDefinition(self):
 
-        localctx = MizarParser.Mode_definitionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 76, self.RULE_mode_definition)
+        localctx = MizarParser.ModeDefinitionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 76, self.RULE_modeDefinition)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 571
             self.match(MizarParser.T__30)
             self.state = 572
-            self.mode_pattern()
+            self.modePattern()
             self.state = 586
             self._errHandler.sync(self)
             token = self._input.LA(1)
@@ -3514,13 +3591,13 @@ class MizarParser ( Parser ):
                 self.state = 580
                 self.match(MizarParser.T__3)
                 self.state = 581
-                self.correctness_conditions()
+                self.correctnessConditions()
                 pass
             elif token in [MizarParser.T__32]:
                 self.state = 582
                 self.match(MizarParser.T__32)
                 self.state = 583
-                self.type_expression()
+                self.typeExpression()
                 self.state = 584
                 self.match(MizarParser.T__3)
                 pass
@@ -3532,7 +3609,7 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             while _la==MizarParser.T__39:
                 self.state = 588
-                self.mode_property()
+                self.modeProperty()
                 self.state = 593
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3545,14 +3622,14 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Mode_patternContext(ParserRuleContext):
+    class ModePatternContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def mode_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Mode_symbolContext,0)
+        def modeSymbol(self):
+            return self.getTypedRuleContext(MizarParser.ModeSymbolContext,0)
 
 
         def loci(self):
@@ -3560,26 +3637,28 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_mode_pattern
+            return MizarParser.RULE_modePattern
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMode_pattern" ):
-                return visitor.visitMode_pattern(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterModePattern" ):
+                listener.enterModePattern(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitModePattern" ):
+                listener.exitModePattern(self)
 
 
 
 
-    def mode_pattern(self):
+    def modePattern(self):
 
-        localctx = MizarParser.Mode_patternContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 78, self.RULE_mode_pattern)
+        localctx = MizarParser.ModePatternContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 78, self.RULE_modePattern)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 594
-            self.mode_symbol()
+            self.modeSymbol()
             self.state = 597
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -3598,7 +3677,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Mode_symbolContext(ParserRuleContext):
+    class ModeSymbolContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3608,21 +3687,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.MODE_SYMBOL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_mode_symbol
+            return MizarParser.RULE_modeSymbol
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMode_symbol" ):
-                return visitor.visitMode_symbol(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterModeSymbol" ):
+                listener.enterModeSymbol(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitModeSymbol" ):
+                listener.exitModeSymbol(self)
 
 
 
 
-    def mode_symbol(self):
+    def modeSymbol(self):
 
-        localctx = MizarParser.Mode_symbolContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 80, self.RULE_mode_symbol)
+        localctx = MizarParser.ModeSymbolContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 80, self.RULE_modeSymbol)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -3641,45 +3722,47 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Mode_synonymContext(ParserRuleContext):
+    class ModeSynonymContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def mode_pattern(self, i:int=None):
+        def modePattern(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Mode_patternContext)
+                return self.getTypedRuleContexts(MizarParser.ModePatternContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Mode_patternContext,i)
+                return self.getTypedRuleContext(MizarParser.ModePatternContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_mode_synonym
+            return MizarParser.RULE_modeSynonym
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMode_synonym" ):
-                return visitor.visitMode_synonym(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterModeSynonym" ):
+                listener.enterModeSynonym(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitModeSynonym" ):
+                listener.exitModeSynonym(self)
 
 
 
 
-    def mode_synonym(self):
+    def modeSynonym(self):
 
-        localctx = MizarParser.Mode_synonymContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 82, self.RULE_mode_synonym)
+        localctx = MizarParser.ModeSynonymContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 82, self.RULE_modeSynonym)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 601
             self.match(MizarParser.T__35)
             self.state = 602
-            self.mode_pattern()
+            self.modePattern()
             self.state = 603
             self.match(MizarParser.T__15)
             self.state = 604
-            self.mode_pattern()
+            self.modePattern()
             self.state = 605
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -3696,22 +3779,24 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def simple_definiens(self):
-            return self.getTypedRuleContext(MizarParser.Simple_definiensContext,0)
+        def simpleDefiniens(self):
+            return self.getTypedRuleContext(MizarParser.SimpleDefiniensContext,0)
 
 
-        def conditional_definiens(self):
-            return self.getTypedRuleContext(MizarParser.Conditional_definiensContext,0)
+        def conditionalDefiniens(self):
+            return self.getTypedRuleContext(MizarParser.ConditionalDefiniensContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_definiens
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDefiniens" ):
-                return visitor.visitDefiniens(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDefiniens" ):
+                listener.enterDefiniens(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDefiniens" ):
+                listener.exitDefiniens(self)
 
 
 
@@ -3727,13 +3812,13 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 607
-                self.simple_definiens()
+                self.simpleDefiniens()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 608
-                self.conditional_definiens()
+                self.conditionalDefiniens()
                 pass
 
 
@@ -3745,7 +3830,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Simple_definiensContext(ParserRuleContext):
+    class SimpleDefiniensContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3755,30 +3840,32 @@ class MizarParser ( Parser ):
             return self.getTypedRuleContext(MizarParser.SentenceContext,0)
 
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
-        def label_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Label_identifierContext,0)
+        def labelIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.LabelIdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_simple_definiens
+            return MizarParser.RULE_simpleDefiniens
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSimple_definiens" ):
-                return visitor.visitSimple_definiens(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSimpleDefiniens" ):
+                listener.enterSimpleDefiniens(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSimpleDefiniens" ):
+                listener.exitSimpleDefiniens(self)
 
 
 
 
-    def simple_definiens(self):
+    def simpleDefiniens(self):
 
-        localctx = MizarParser.Simple_definiensContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 86, self.RULE_simple_definiens)
+        localctx = MizarParser.SimpleDefiniensContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 86, self.RULE_simpleDefiniens)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -3789,7 +3876,7 @@ class MizarParser ( Parser ):
                 self.state = 611
                 self.match(MizarParser.T__36)
                 self.state = 612
-                self.label_identifier()
+                self.labelIdentifier()
                 self.state = 613
                 self.match(MizarParser.T__36)
 
@@ -3804,7 +3891,7 @@ class MizarParser ( Parser ):
 
             elif la_ == 2:
                 self.state = 618
-                self.term_expression(0)
+                self.termExpression(0)
                 pass
 
 
@@ -3816,7 +3903,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Label_identifierContext(ParserRuleContext):
+    class LabelIdentifierContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -3826,21 +3913,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.IDENTIFIER, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_label_identifier
+            return MizarParser.RULE_labelIdentifier
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLabel_identifier" ):
-                return visitor.visitLabel_identifier(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLabelIdentifier" ):
+                listener.enterLabelIdentifier(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLabelIdentifier" ):
+                listener.exitLabelIdentifier(self)
 
 
 
 
-    def label_identifier(self):
+    def labelIdentifier(self):
 
-        localctx = MizarParser.Label_identifierContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 88, self.RULE_label_identifier)
+        localctx = MizarParser.LabelIdentifierContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 88, self.RULE_labelIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 621
@@ -3853,44 +3942,46 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Conditional_definiensContext(ParserRuleContext):
+    class ConditionalDefiniensContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def partial_definiens_list(self):
-            return self.getTypedRuleContext(MizarParser.Partial_definiens_listContext,0)
+        def partialDefiniensList(self):
+            return self.getTypedRuleContext(MizarParser.PartialDefiniensListContext,0)
 
 
-        def label_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Label_identifierContext,0)
+        def labelIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.LabelIdentifierContext,0)
 
 
         def sentence(self):
             return self.getTypedRuleContext(MizarParser.SentenceContext,0)
 
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_conditional_definiens
+            return MizarParser.RULE_conditionalDefiniens
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConditional_definiens" ):
-                return visitor.visitConditional_definiens(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterConditionalDefiniens" ):
+                listener.enterConditionalDefiniens(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitConditionalDefiniens" ):
+                listener.exitConditionalDefiniens(self)
 
 
 
 
-    def conditional_definiens(self):
+    def conditionalDefiniens(self):
 
-        localctx = MizarParser.Conditional_definiensContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 90, self.RULE_conditional_definiens)
+        localctx = MizarParser.ConditionalDefiniensContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 90, self.RULE_conditionalDefiniens)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -3901,13 +3992,13 @@ class MizarParser ( Parser ):
                 self.state = 623
                 self.match(MizarParser.T__36)
                 self.state = 624
-                self.label_identifier()
+                self.labelIdentifier()
                 self.state = 625
                 self.match(MizarParser.T__36)
 
 
             self.state = 629
-            self.partial_definiens_list()
+            self.partialDefiniensList()
             self.state = 635
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -3924,7 +4015,7 @@ class MizarParser ( Parser ):
 
                 elif la_ == 2:
                     self.state = 632
-                    self.term_expression(0)
+                    self.termExpression(0)
                     pass
 
 
@@ -3938,40 +4029,42 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Partial_definiens_listContext(ParserRuleContext):
+    class PartialDefiniensListContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def partial_definiens(self, i:int=None):
+        def partialDefiniens(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Partial_definiensContext)
+                return self.getTypedRuleContexts(MizarParser.PartialDefiniensContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Partial_definiensContext,i)
+                return self.getTypedRuleContext(MizarParser.PartialDefiniensContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_partial_definiens_list
+            return MizarParser.RULE_partialDefiniensList
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPartial_definiens_list" ):
-                return visitor.visitPartial_definiens_list(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPartialDefiniensList" ):
+                listener.enterPartialDefiniensList(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPartialDefiniensList" ):
+                listener.exitPartialDefiniensList(self)
 
 
 
 
-    def partial_definiens_list(self):
+    def partialDefiniensList(self):
 
-        localctx = MizarParser.Partial_definiens_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 92, self.RULE_partial_definiens_list)
+        localctx = MizarParser.PartialDefiniensListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 92, self.RULE_partialDefiniensList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 637
-            self.partial_definiens()
+            self.partialDefiniens()
             self.state = 642
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -3979,7 +4072,7 @@ class MizarParser ( Parser ):
                 self.state = 638
                 self.match(MizarParser.T__2)
                 self.state = 639
-                self.partial_definiens()
+                self.partialDefiniens()
                 self.state = 644
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -3992,7 +4085,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Partial_definiensContext(ParserRuleContext):
+    class PartialDefiniensContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4005,26 +4098,28 @@ class MizarParser ( Parser ):
                 return self.getTypedRuleContext(MizarParser.SentenceContext,i)
 
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_partial_definiens
+            return MizarParser.RULE_partialDefiniens
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPartial_definiens" ):
-                return visitor.visitPartial_definiens(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPartialDefiniens" ):
+                listener.enterPartialDefiniens(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPartialDefiniens" ):
+                listener.exitPartialDefiniens(self)
 
 
 
 
-    def partial_definiens(self):
+    def partialDefiniens(self):
 
-        localctx = MizarParser.Partial_definiensContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 94, self.RULE_partial_definiens)
+        localctx = MizarParser.PartialDefiniensContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 94, self.RULE_partialDefiniens)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 647
@@ -4037,7 +4132,7 @@ class MizarParser ( Parser ):
 
             elif la_ == 2:
                 self.state = 646
-                self.term_expression(0)
+                self.termExpression(0)
                 pass
 
 
@@ -4053,7 +4148,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Mode_propertyContext(ParserRuleContext):
+    class ModePropertyContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4064,21 +4159,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_mode_property
+            return MizarParser.RULE_modeProperty
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitMode_property" ):
-                return visitor.visitMode_property(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterModeProperty" ):
+                listener.enterModeProperty(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitModeProperty" ):
+                listener.exitModeProperty(self)
 
 
 
 
-    def mode_property(self):
+    def modeProperty(self):
 
-        localctx = MizarParser.Mode_propertyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 96, self.RULE_mode_property)
+        localctx = MizarParser.ModePropertyContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 96, self.RULE_modeProperty)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 652
@@ -4095,18 +4192,18 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Functor_definitionContext(ParserRuleContext):
+    class FunctorDefinitionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def functor_pattern(self):
-            return self.getTypedRuleContext(MizarParser.Functor_patternContext,0)
+        def functorPattern(self):
+            return self.getTypedRuleContext(MizarParser.FunctorPatternContext,0)
 
 
-        def correctness_conditions(self):
-            return self.getTypedRuleContext(MizarParser.Correctness_conditionsContext,0)
+        def correctnessConditions(self):
+            return self.getTypedRuleContext(MizarParser.CorrectnessConditionsContext,0)
 
 
         def specification(self):
@@ -4117,36 +4214,38 @@ class MizarParser ( Parser ):
             return self.getTypedRuleContext(MizarParser.DefiniensContext,0)
 
 
-        def functor_property(self, i:int=None):
+        def functorProperty(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Functor_propertyContext)
+                return self.getTypedRuleContexts(MizarParser.FunctorPropertyContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Functor_propertyContext,i)
+                return self.getTypedRuleContext(MizarParser.FunctorPropertyContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_functor_definition
+            return MizarParser.RULE_functorDefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctor_definition" ):
-                return visitor.visitFunctor_definition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctorDefinition" ):
+                listener.enterFunctorDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctorDefinition" ):
+                listener.exitFunctorDefinition(self)
 
 
 
 
-    def functor_definition(self):
+    def functorDefinition(self):
 
-        localctx = MizarParser.Functor_definitionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 98, self.RULE_functor_definition)
+        localctx = MizarParser.FunctorDefinitionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 98, self.RULE_functorDefinition)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 656
             self.match(MizarParser.T__40)
             self.state = 657
-            self.functor_pattern()
+            self.functorPattern()
             self.state = 659
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -4173,13 +4272,13 @@ class MizarParser ( Parser ):
             self.state = 665
             self.match(MizarParser.T__3)
             self.state = 666
-            self.correctness_conditions()
+            self.correctnessConditions()
             self.state = 670
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__42) | (1 << MizarParser.T__43) | (1 << MizarParser.T__44) | (1 << MizarParser.T__45))) != 0):
                 self.state = 667
-                self.functor_property()
+                self.functorProperty()
                 self.state = 672
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -4192,51 +4291,53 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Functor_patternContext(ParserRuleContext):
+    class FunctorPatternContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def functor_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Functor_symbolContext,0)
+        def functorSymbol(self):
+            return self.getTypedRuleContext(MizarParser.FunctorSymbolContext,0)
 
 
-        def functor_loci(self, i:int=None):
+        def functorLoci(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Functor_lociContext)
+                return self.getTypedRuleContexts(MizarParser.FunctorLociContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Functor_lociContext,i)
+                return self.getTypedRuleContext(MizarParser.FunctorLociContext,i)
 
 
-        def left_functor_bracket(self):
-            return self.getTypedRuleContext(MizarParser.Left_functor_bracketContext,0)
+        def leftFunctorBracket(self):
+            return self.getTypedRuleContext(MizarParser.LeftFunctorBracketContext,0)
 
 
         def loci(self):
             return self.getTypedRuleContext(MizarParser.LociContext,0)
 
 
-        def right_functor_bracket(self):
-            return self.getTypedRuleContext(MizarParser.Right_functor_bracketContext,0)
+        def rightFunctorBracket(self):
+            return self.getTypedRuleContext(MizarParser.RightFunctorBracketContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_functor_pattern
+            return MizarParser.RULE_functorPattern
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctor_pattern" ):
-                return visitor.visitFunctor_pattern(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctorPattern" ):
+                listener.enterFunctorPattern(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctorPattern" ):
+                listener.exitFunctorPattern(self)
 
 
 
 
-    def functor_pattern(self):
+    def functorPattern(self):
 
-        localctx = MizarParser.Functor_patternContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 100, self.RULE_functor_pattern)
+        localctx = MizarParser.FunctorPatternContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 100, self.RULE_functorPattern)
         self._la = 0 # Token type
         try:
             self.state = 684
@@ -4249,28 +4350,28 @@ class MizarParser ( Parser ):
                 _la = self._input.LA(1)
                 if _la==MizarParser.T__24 or _la==MizarParser.IDENTIFIER:
                     self.state = 673
-                    self.functor_loci()
+                    self.functorLoci()
 
 
                 self.state = 676
-                self.functor_symbol()
+                self.functorSymbol()
                 self.state = 678
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
                 if _la==MizarParser.T__24 or _la==MizarParser.IDENTIFIER:
                     self.state = 677
-                    self.functor_loci()
+                    self.functorLoci()
 
 
                 pass
             elif token in [MizarParser.T__46, MizarParser.T__47, MizarParser.LEFT_FUNCTOR_SYMBOL]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 680
-                self.left_functor_bracket()
+                self.leftFunctorBracket()
                 self.state = 681
                 self.loci()
                 self.state = 682
-                self.right_functor_bracket()
+                self.rightFunctorBracket()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -4283,7 +4384,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Functor_propertyContext(ParserRuleContext):
+    class FunctorPropertyContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4294,21 +4395,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_functor_property
+            return MizarParser.RULE_functorProperty
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctor_property" ):
-                return visitor.visitFunctor_property(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctorProperty" ):
+                listener.enterFunctorProperty(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctorProperty" ):
+                listener.exitFunctorProperty(self)
 
 
 
 
-    def functor_property(self):
+    def functorProperty(self):
 
-        localctx = MizarParser.Functor_propertyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 102, self.RULE_functor_property)
+        localctx = MizarParser.FunctorPropertyContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 102, self.RULE_functorProperty)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4331,45 +4434,47 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Functor_synonymContext(ParserRuleContext):
+    class FunctorSynonymContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def functor_pattern(self, i:int=None):
+        def functorPattern(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Functor_patternContext)
+                return self.getTypedRuleContexts(MizarParser.FunctorPatternContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Functor_patternContext,i)
+                return self.getTypedRuleContext(MizarParser.FunctorPatternContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_functor_synonym
+            return MizarParser.RULE_functorSynonym
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctor_synonym" ):
-                return visitor.visitFunctor_synonym(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctorSynonym" ):
+                listener.enterFunctorSynonym(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctorSynonym" ):
+                listener.exitFunctorSynonym(self)
 
 
 
 
-    def functor_synonym(self):
+    def functorSynonym(self):
 
-        localctx = MizarParser.Functor_synonymContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 104, self.RULE_functor_synonym)
+        localctx = MizarParser.FunctorSynonymContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 104, self.RULE_functorSynonym)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 690
             self.match(MizarParser.T__35)
             self.state = 691
-            self.functor_pattern()
+            self.functorPattern()
             self.state = 692
             self.match(MizarParser.T__15)
             self.state = 693
-            self.functor_pattern()
+            self.functorPattern()
             self.state = 694
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -4380,7 +4485,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Functor_lociContext(ParserRuleContext):
+    class FunctorLociContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4395,21 +4500,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_functor_loci
+            return MizarParser.RULE_functorLoci
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctor_loci" ):
-                return visitor.visitFunctor_loci(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctorLoci" ):
+                listener.enterFunctorLoci(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctorLoci" ):
+                listener.exitFunctorLoci(self)
 
 
 
 
-    def functor_loci(self):
+    def functorLoci(self):
 
-        localctx = MizarParser.Functor_lociContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 106, self.RULE_functor_loci)
+        localctx = MizarParser.FunctorLociContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 106, self.RULE_functorLoci)
         try:
             self.state = 701
             self._errHandler.sync(self)
@@ -4439,7 +4546,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Functor_symbolContext(ParserRuleContext):
+    class FunctorSymbolContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4449,21 +4556,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.FUNCTOR_SYMBOL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_functor_symbol
+            return MizarParser.RULE_functorSymbol
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctor_symbol" ):
-                return visitor.visitFunctor_symbol(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctorSymbol" ):
+                listener.enterFunctorSymbol(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctorSymbol" ):
+                listener.exitFunctorSymbol(self)
 
 
 
 
-    def functor_symbol(self):
+    def functorSymbol(self):
 
-        localctx = MizarParser.Functor_symbolContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 108, self.RULE_functor_symbol)
+        localctx = MizarParser.FunctorSymbolContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 108, self.RULE_functorSymbol)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 703
@@ -4476,7 +4585,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Left_functor_bracketContext(ParserRuleContext):
+    class LeftFunctorBracketContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4486,21 +4595,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.LEFT_FUNCTOR_SYMBOL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_left_functor_bracket
+            return MizarParser.RULE_leftFunctorBracket
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLeft_functor_bracket" ):
-                return visitor.visitLeft_functor_bracket(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLeftFunctorBracket" ):
+                listener.enterLeftFunctorBracket(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLeftFunctorBracket" ):
+                listener.exitLeftFunctorBracket(self)
 
 
 
 
-    def left_functor_bracket(self):
+    def leftFunctorBracket(self):
 
-        localctx = MizarParser.Left_functor_bracketContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 110, self.RULE_left_functor_bracket)
+        localctx = MizarParser.LeftFunctorBracketContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 110, self.RULE_leftFunctorBracket)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4519,7 +4630,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Right_functor_bracketContext(ParserRuleContext):
+    class RightFunctorBracketContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4529,21 +4640,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.RIGHT_FUNCTOR_SYMBOL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_right_functor_bracket
+            return MizarParser.RULE_rightFunctorBracket
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRight_functor_bracket" ):
-                return visitor.visitRight_functor_bracket(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRightFunctorBracket" ):
+                listener.enterRightFunctorBracket(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRightFunctorBracket" ):
+                listener.exitRightFunctorBracket(self)
 
 
 
 
-    def right_functor_bracket(self):
+    def rightFunctorBracket(self):
 
-        localctx = MizarParser.Right_functor_bracketContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 112, self.RULE_right_functor_bracket)
+        localctx = MizarParser.RightFunctorBracketContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 112, self.RULE_rightFunctorBracket)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4562,54 +4675,56 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Predicate_definitionContext(ParserRuleContext):
+    class PredicateDefinitionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def predicate_pattern(self):
-            return self.getTypedRuleContext(MizarParser.Predicate_patternContext,0)
+        def predicatePattern(self):
+            return self.getTypedRuleContext(MizarParser.PredicatePatternContext,0)
 
 
-        def correctness_conditions(self):
-            return self.getTypedRuleContext(MizarParser.Correctness_conditionsContext,0)
+        def correctnessConditions(self):
+            return self.getTypedRuleContext(MizarParser.CorrectnessConditionsContext,0)
 
 
         def definiens(self):
             return self.getTypedRuleContext(MizarParser.DefiniensContext,0)
 
 
-        def predicate_property(self, i:int=None):
+        def predicateProperty(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Predicate_propertyContext)
+                return self.getTypedRuleContexts(MizarParser.PredicatePropertyContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Predicate_propertyContext,i)
+                return self.getTypedRuleContext(MizarParser.PredicatePropertyContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_predicate_definition
+            return MizarParser.RULE_predicateDefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPredicate_definition" ):
-                return visitor.visitPredicate_definition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPredicateDefinition" ):
+                listener.enterPredicateDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPredicateDefinition" ):
+                listener.exitPredicateDefinition(self)
 
 
 
 
-    def predicate_definition(self):
+    def predicateDefinition(self):
 
-        localctx = MizarParser.Predicate_definitionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 114, self.RULE_predicate_definition)
+        localctx = MizarParser.PredicateDefinitionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 114, self.RULE_predicateDefinition)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 709
             self.match(MizarParser.T__50)
             self.state = 710
-            self.predicate_pattern()
+            self.predicatePattern()
             self.state = 713
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -4623,13 +4738,13 @@ class MizarParser ( Parser ):
             self.state = 715
             self.match(MizarParser.T__3)
             self.state = 716
-            self.correctness_conditions()
+            self.correctnessConditions()
             self.state = 720
             self._errHandler.sync(self)
             _la = self._input.LA(1)
             while (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__51) | (1 << MizarParser.T__52) | (1 << MizarParser.T__53) | (1 << MizarParser.T__54) | (1 << MizarParser.T__55))) != 0):
                 self.state = 717
-                self.predicate_property()
+                self.predicateProperty()
                 self.state = 722
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -4642,14 +4757,14 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Predicate_patternContext(ParserRuleContext):
+    class PredicatePatternContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def predicate_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Predicate_symbolContext,0)
+        def predicateSymbol(self):
+            return self.getTypedRuleContext(MizarParser.PredicateSymbolContext,0)
 
 
         def loci(self, i:int=None):
@@ -4660,21 +4775,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_predicate_pattern
+            return MizarParser.RULE_predicatePattern
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPredicate_pattern" ):
-                return visitor.visitPredicate_pattern(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPredicatePattern" ):
+                listener.enterPredicatePattern(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPredicatePattern" ):
+                listener.exitPredicatePattern(self)
 
 
 
 
-    def predicate_pattern(self):
+    def predicatePattern(self):
 
-        localctx = MizarParser.Predicate_patternContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 116, self.RULE_predicate_pattern)
+        localctx = MizarParser.PredicatePatternContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 116, self.RULE_predicatePattern)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4687,7 +4804,7 @@ class MizarParser ( Parser ):
 
 
             self.state = 726
-            self.predicate_symbol()
+            self.predicateSymbol()
             self.state = 728
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -4704,7 +4821,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Predicate_propertyContext(ParserRuleContext):
+    class PredicatePropertyContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4715,21 +4832,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_predicate_property
+            return MizarParser.RULE_predicateProperty
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPredicate_property" ):
-                return visitor.visitPredicate_property(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPredicateProperty" ):
+                listener.enterPredicateProperty(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPredicateProperty" ):
+                listener.exitPredicateProperty(self)
 
 
 
 
-    def predicate_property(self):
+    def predicateProperty(self):
 
-        localctx = MizarParser.Predicate_propertyContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 118, self.RULE_predicate_property)
+        localctx = MizarParser.PredicatePropertyContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 118, self.RULE_predicateProperty)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4752,45 +4871,47 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Predicate_synonymContext(ParserRuleContext):
+    class PredicateSynonymContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def predicate_pattern(self, i:int=None):
+        def predicatePattern(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Predicate_patternContext)
+                return self.getTypedRuleContexts(MizarParser.PredicatePatternContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Predicate_patternContext,i)
+                return self.getTypedRuleContext(MizarParser.PredicatePatternContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_predicate_synonym
+            return MizarParser.RULE_predicateSynonym
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPredicate_synonym" ):
-                return visitor.visitPredicate_synonym(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPredicateSynonym" ):
+                listener.enterPredicateSynonym(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPredicateSynonym" ):
+                listener.exitPredicateSynonym(self)
 
 
 
 
-    def predicate_synonym(self):
+    def predicateSynonym(self):
 
-        localctx = MizarParser.Predicate_synonymContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 120, self.RULE_predicate_synonym)
+        localctx = MizarParser.PredicateSynonymContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 120, self.RULE_predicateSynonym)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 734
             self.match(MizarParser.T__35)
             self.state = 735
-            self.predicate_pattern()
+            self.predicatePattern()
             self.state = 736
             self.match(MizarParser.T__15)
             self.state = 737
-            self.predicate_pattern()
+            self.predicatePattern()
             self.state = 738
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -4801,45 +4922,47 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Predicate_antonymContext(ParserRuleContext):
+    class PredicateAntonymContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def predicate_pattern(self, i:int=None):
+        def predicatePattern(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Predicate_patternContext)
+                return self.getTypedRuleContexts(MizarParser.PredicatePatternContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Predicate_patternContext,i)
+                return self.getTypedRuleContext(MizarParser.PredicatePatternContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_predicate_antonym
+            return MizarParser.RULE_predicateAntonym
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPredicate_antonym" ):
-                return visitor.visitPredicate_antonym(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPredicateAntonym" ):
+                listener.enterPredicateAntonym(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPredicateAntonym" ):
+                listener.exitPredicateAntonym(self)
 
 
 
 
-    def predicate_antonym(self):
+    def predicateAntonym(self):
 
-        localctx = MizarParser.Predicate_antonymContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 122, self.RULE_predicate_antonym)
+        localctx = MizarParser.PredicateAntonymContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 122, self.RULE_predicateAntonym)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 740
             self.match(MizarParser.T__56)
             self.state = 741
-            self.predicate_pattern()
+            self.predicatePattern()
             self.state = 742
             self.match(MizarParser.T__15)
             self.state = 743
-            self.predicate_pattern()
+            self.predicatePattern()
             self.state = 744
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -4850,7 +4973,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Predicate_symbolContext(ParserRuleContext):
+    class PredicateSymbolContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4860,21 +4983,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.PREDICATE_SYMBOL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_predicate_symbol
+            return MizarParser.RULE_predicateSymbol
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPredicate_symbol" ):
-                return visitor.visitPredicate_symbol(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPredicateSymbol" ):
+                listener.enterPredicateSymbol(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPredicateSymbol" ):
+                listener.exitPredicateSymbol(self)
 
 
 
 
-    def predicate_symbol(self):
+    def predicateSymbol(self):
 
-        localctx = MizarParser.Predicate_symbolContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 124, self.RULE_predicate_symbol)
+        localctx = MizarParser.PredicateSymbolContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 124, self.RULE_predicateSymbol)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4893,46 +5018,48 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Attribute_definitionContext(ParserRuleContext):
+    class AttributeDefinitionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def attribute_pattern(self):
-            return self.getTypedRuleContext(MizarParser.Attribute_patternContext,0)
+        def attributePattern(self):
+            return self.getTypedRuleContext(MizarParser.AttributePatternContext,0)
 
 
         def definiens(self):
             return self.getTypedRuleContext(MizarParser.DefiniensContext,0)
 
 
-        def correctness_conditions(self):
-            return self.getTypedRuleContext(MizarParser.Correctness_conditionsContext,0)
+        def correctnessConditions(self):
+            return self.getTypedRuleContext(MizarParser.CorrectnessConditionsContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_attribute_definition
+            return MizarParser.RULE_attributeDefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAttribute_definition" ):
-                return visitor.visitAttribute_definition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAttributeDefinition" ):
+                listener.enterAttributeDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAttributeDefinition" ):
+                listener.exitAttributeDefinition(self)
 
 
 
 
-    def attribute_definition(self):
+    def attributeDefinition(self):
 
-        localctx = MizarParser.Attribute_definitionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 126, self.RULE_attribute_definition)
+        localctx = MizarParser.AttributeDefinitionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 126, self.RULE_attributeDefinition)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 748
             self.match(MizarParser.T__58)
             self.state = 749
-            self.attribute_pattern()
+            self.attributePattern()
             self.state = 750
             self.match(MizarParser.T__31)
             self.state = 751
@@ -4940,7 +5067,7 @@ class MizarParser ( Parser ):
             self.state = 752
             self.match(MizarParser.T__3)
             self.state = 753
-            self.correctness_conditions()
+            self.correctnessConditions()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -4949,7 +5076,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Attribute_patternContext(ParserRuleContext):
+    class AttributePatternContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -4959,30 +5086,32 @@ class MizarParser ( Parser ):
             return self.getTypedRuleContext(MizarParser.LocusContext,0)
 
 
-        def attribute_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Attribute_symbolContext,0)
+        def attributeSymbol(self):
+            return self.getTypedRuleContext(MizarParser.AttributeSymbolContext,0)
 
 
-        def attribute_loci(self):
-            return self.getTypedRuleContext(MizarParser.Attribute_lociContext,0)
+        def attributeLoci(self):
+            return self.getTypedRuleContext(MizarParser.AttributeLociContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_attribute_pattern
+            return MizarParser.RULE_attributePattern
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAttribute_pattern" ):
-                return visitor.visitAttribute_pattern(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAttributePattern" ):
+                listener.enterAttributePattern(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAttributePattern" ):
+                listener.exitAttributePattern(self)
 
 
 
 
-    def attribute_pattern(self):
+    def attributePattern(self):
 
-        localctx = MizarParser.Attribute_patternContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 128, self.RULE_attribute_pattern)
+        localctx = MizarParser.AttributePatternContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 128, self.RULE_attributePattern)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -4995,11 +5124,11 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             if _la==MizarParser.T__24 or _la==MizarParser.IDENTIFIER:
                 self.state = 757
-                self.attribute_loci()
+                self.attributeLoci()
 
 
             self.state = 760
-            self.attribute_symbol()
+            self.attributeSymbol()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5008,45 +5137,47 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Attribute_synonymContext(ParserRuleContext):
+    class AttributeSynonymContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def attribute_pattern(self, i:int=None):
+        def attributePattern(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Attribute_patternContext)
+                return self.getTypedRuleContexts(MizarParser.AttributePatternContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Attribute_patternContext,i)
+                return self.getTypedRuleContext(MizarParser.AttributePatternContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_attribute_synonym
+            return MizarParser.RULE_attributeSynonym
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAttribute_synonym" ):
-                return visitor.visitAttribute_synonym(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAttributeSynonym" ):
+                listener.enterAttributeSynonym(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAttributeSynonym" ):
+                listener.exitAttributeSynonym(self)
 
 
 
 
-    def attribute_synonym(self):
+    def attributeSynonym(self):
 
-        localctx = MizarParser.Attribute_synonymContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 130, self.RULE_attribute_synonym)
+        localctx = MizarParser.AttributeSynonymContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 130, self.RULE_attributeSynonym)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 762
             self.match(MizarParser.T__35)
             self.state = 763
-            self.attribute_pattern()
+            self.attributePattern()
             self.state = 764
             self.match(MizarParser.T__15)
             self.state = 765
-            self.attribute_pattern()
+            self.attributePattern()
             self.state = 766
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -5057,45 +5188,47 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Attribute_antonymContext(ParserRuleContext):
+    class AttributeAntonymContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def attribute_pattern(self, i:int=None):
+        def attributePattern(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Attribute_patternContext)
+                return self.getTypedRuleContexts(MizarParser.AttributePatternContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Attribute_patternContext,i)
+                return self.getTypedRuleContext(MizarParser.AttributePatternContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_attribute_antonym
+            return MizarParser.RULE_attributeAntonym
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAttribute_antonym" ):
-                return visitor.visitAttribute_antonym(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAttributeAntonym" ):
+                listener.enterAttributeAntonym(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAttributeAntonym" ):
+                listener.exitAttributeAntonym(self)
 
 
 
 
-    def attribute_antonym(self):
+    def attributeAntonym(self):
 
-        localctx = MizarParser.Attribute_antonymContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 132, self.RULE_attribute_antonym)
+        localctx = MizarParser.AttributeAntonymContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 132, self.RULE_attributeAntonym)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 768
             self.match(MizarParser.T__56)
             self.state = 769
-            self.attribute_pattern()
+            self.attributePattern()
             self.state = 770
             self.match(MizarParser.T__15)
             self.state = 771
-            self.attribute_pattern()
+            self.attributePattern()
             self.state = 772
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -5106,7 +5239,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Attribute_symbolContext(ParserRuleContext):
+    class AttributeSymbolContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5116,21 +5249,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.ATTRIBUTE_SYMBOL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_attribute_symbol
+            return MizarParser.RULE_attributeSymbol
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAttribute_symbol" ):
-                return visitor.visitAttribute_symbol(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAttributeSymbol" ):
+                listener.enterAttributeSymbol(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAttributeSymbol" ):
+                listener.exitAttributeSymbol(self)
 
 
 
 
-    def attribute_symbol(self):
+    def attributeSymbol(self):
 
-        localctx = MizarParser.Attribute_symbolContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 134, self.RULE_attribute_symbol)
+        localctx = MizarParser.AttributeSymbolContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 134, self.RULE_attributeSymbol)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 774
@@ -5143,7 +5278,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Attribute_lociContext(ParserRuleContext):
+    class AttributeLociContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5154,21 +5289,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_attribute_loci
+            return MizarParser.RULE_attributeLoci
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAttribute_loci" ):
-                return visitor.visitAttribute_loci(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAttributeLoci" ):
+                listener.enterAttributeLoci(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAttributeLoci" ):
+                listener.exitAttributeLoci(self)
 
 
 
 
-    def attribute_loci(self):
+    def attributeLoci(self):
 
-        localctx = MizarParser.Attribute_lociContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 136, self.RULE_attribute_loci)
+        localctx = MizarParser.AttributeLociContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 136, self.RULE_attributeLoci)
         try:
             self.state = 781
             self._errHandler.sync(self)
@@ -5198,40 +5335,42 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Cluster_registrationContext(ParserRuleContext):
+    class ClusterRegistrationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def existential_registration(self):
-            return self.getTypedRuleContext(MizarParser.Existential_registrationContext,0)
+        def existentialRegistration(self):
+            return self.getTypedRuleContext(MizarParser.ExistentialRegistrationContext,0)
 
 
-        def conditional_registration(self):
-            return self.getTypedRuleContext(MizarParser.Conditional_registrationContext,0)
+        def conditionalRegistration(self):
+            return self.getTypedRuleContext(MizarParser.ConditionalRegistrationContext,0)
 
 
-        def functorial_registration(self):
-            return self.getTypedRuleContext(MizarParser.Functorial_registrationContext,0)
+        def functorialRegistration(self):
+            return self.getTypedRuleContext(MizarParser.FunctorialRegistrationContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_cluster_registration
+            return MizarParser.RULE_clusterRegistration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCluster_registration" ):
-                return visitor.visitCluster_registration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterClusterRegistration" ):
+                listener.enterClusterRegistration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitClusterRegistration" ):
+                listener.exitClusterRegistration(self)
 
 
 
 
-    def cluster_registration(self):
+    def clusterRegistration(self):
 
-        localctx = MizarParser.Cluster_registrationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 138, self.RULE_cluster_registration)
+        localctx = MizarParser.ClusterRegistrationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 138, self.RULE_clusterRegistration)
         try:
             self.state = 786
             self._errHandler.sync(self)
@@ -5239,19 +5378,19 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 783
-                self.existential_registration()
+                self.existentialRegistration()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 784
-                self.conditional_registration()
+                self.conditionalRegistration()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 785
-                self.functorial_registration()
+                self.functorialRegistration()
                 pass
 
 
@@ -5263,54 +5402,56 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Existential_registrationContext(ParserRuleContext):
+    class ExistentialRegistrationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def adjective_cluster(self):
-            return self.getTypedRuleContext(MizarParser.Adjective_clusterContext,0)
+        def adjectiveCluster(self):
+            return self.getTypedRuleContext(MizarParser.AdjectiveClusterContext,0)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
-        def correctness_conditions(self):
-            return self.getTypedRuleContext(MizarParser.Correctness_conditionsContext,0)
+        def correctnessConditions(self):
+            return self.getTypedRuleContext(MizarParser.CorrectnessConditionsContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_existential_registration
+            return MizarParser.RULE_existentialRegistration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExistential_registration" ):
-                return visitor.visitExistential_registration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExistentialRegistration" ):
+                listener.enterExistentialRegistration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExistentialRegistration" ):
+                listener.exitExistentialRegistration(self)
 
 
 
 
-    def existential_registration(self):
+    def existentialRegistration(self):
 
-        localctx = MizarParser.Existential_registrationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 140, self.RULE_existential_registration)
+        localctx = MizarParser.ExistentialRegistrationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 140, self.RULE_existentialRegistration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 788
             self.match(MizarParser.T__59)
             self.state = 789
-            self.adjective_cluster()
+            self.adjectiveCluster()
             self.state = 790
             self.match(MizarParser.T__15)
             self.state = 791
-            self.type_expression()
+            self.typeExpression()
             self.state = 792
             self.match(MizarParser.T__3)
             self.state = 793
-            self.correctness_conditions()
+            self.correctnessConditions()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5319,7 +5460,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Adjective_clusterContext(ParserRuleContext):
+    class AdjectiveClusterContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5333,21 +5474,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_adjective_cluster
+            return MizarParser.RULE_adjectiveCluster
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAdjective_cluster" ):
-                return visitor.visitAdjective_cluster(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAdjectiveCluster" ):
+                listener.enterAdjectiveCluster(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAdjectiveCluster" ):
+                listener.exitAdjectiveCluster(self)
 
 
 
 
-    def adjective_cluster(self):
+    def adjectiveCluster(self):
 
-        localctx = MizarParser.Adjective_clusterContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 142, self.RULE_adjective_cluster)
+        localctx = MizarParser.AdjectiveClusterContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 142, self.RULE_adjectiveCluster)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 798
@@ -5375,22 +5518,24 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def attribute_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Attribute_symbolContext,0)
+        def attributeSymbol(self):
+            return self.getTypedRuleContext(MizarParser.AttributeSymbolContext,0)
 
 
-        def adjective_arguments(self):
-            return self.getTypedRuleContext(MizarParser.Adjective_argumentsContext,0)
+        def adjectiveArguments(self):
+            return self.getTypedRuleContext(MizarParser.AdjectiveArgumentsContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_adjective
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAdjective" ):
-                return visitor.visitAdjective(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAdjective" ):
+                listener.enterAdjective(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAdjective" ):
+                listener.exitAdjective(self)
 
 
 
@@ -5415,11 +5560,11 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__24) | (1 << MizarParser.T__46) | (1 << MizarParser.T__47))) != 0) or ((((_la - 117)) & ~0x3f) == 0 and ((1 << (_la - 117)) & ((1 << (MizarParser.T__116 - 117)) | (1 << (MizarParser.T__119 - 117)) | (1 << (MizarParser.T__122 - 117)) | (1 << (MizarParser.T__123 - 117)) | (1 << (MizarParser.T__124 - 117)) | (1 << (MizarParser.T__125 - 117)) | (1 << (MizarParser.T__126 - 117)) | (1 << (MizarParser.T__127 - 117)) | (1 << (MizarParser.T__128 - 117)) | (1 << (MizarParser.T__129 - 117)) | (1 << (MizarParser.T__130 - 117)) | (1 << (MizarParser.T__131 - 117)) | (1 << (MizarParser.FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.STRUCTURE_SYMBOL - 117)) | (1 << (MizarParser.LEFT_FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.IDENTIFIER - 117)) | (1 << (MizarParser.NUMERAL - 117)))) != 0):
                 self.state = 804
-                self.adjective_arguments()
+                self.adjectiveArguments()
 
 
             self.state = 807
-            self.attribute_symbol()
+            self.attributeSymbol()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5428,61 +5573,63 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Conditional_registrationContext(ParserRuleContext):
+    class ConditionalRegistrationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def adjective_cluster(self, i:int=None):
+        def adjectiveCluster(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Adjective_clusterContext)
+                return self.getTypedRuleContexts(MizarParser.AdjectiveClusterContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Adjective_clusterContext,i)
+                return self.getTypedRuleContext(MizarParser.AdjectiveClusterContext,i)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
-        def correctness_conditions(self):
-            return self.getTypedRuleContext(MizarParser.Correctness_conditionsContext,0)
+        def correctnessConditions(self):
+            return self.getTypedRuleContext(MizarParser.CorrectnessConditionsContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_conditional_registration
+            return MizarParser.RULE_conditionalRegistration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConditional_registration" ):
-                return visitor.visitConditional_registration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterConditionalRegistration" ):
+                listener.enterConditionalRegistration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitConditionalRegistration" ):
+                listener.exitConditionalRegistration(self)
 
 
 
 
-    def conditional_registration(self):
+    def conditionalRegistration(self):
 
-        localctx = MizarParser.Conditional_registrationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 146, self.RULE_conditional_registration)
+        localctx = MizarParser.ConditionalRegistrationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 146, self.RULE_conditionalRegistration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 809
             self.match(MizarParser.T__59)
             self.state = 810
-            self.adjective_cluster()
+            self.adjectiveCluster()
             self.state = 811
             self.match(MizarParser.T__29)
             self.state = 812
-            self.adjective_cluster()
+            self.adjectiveCluster()
             self.state = 813
             self.match(MizarParser.T__15)
             self.state = 814
-            self.type_expression()
+            self.typeExpression()
             self.state = 815
             self.match(MizarParser.T__3)
             self.state = 816
-            self.correctness_conditions()
+            self.correctnessConditions()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5491,55 +5638,57 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Functorial_registrationContext(ParserRuleContext):
+    class FunctorialRegistrationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
-        def adjective_cluster(self):
-            return self.getTypedRuleContext(MizarParser.Adjective_clusterContext,0)
+        def adjectiveCluster(self):
+            return self.getTypedRuleContext(MizarParser.AdjectiveClusterContext,0)
 
 
-        def correctness_conditions(self):
-            return self.getTypedRuleContext(MizarParser.Correctness_conditionsContext,0)
+        def correctnessConditions(self):
+            return self.getTypedRuleContext(MizarParser.CorrectnessConditionsContext,0)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_functorial_registration
+            return MizarParser.RULE_functorialRegistration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctorial_registration" ):
-                return visitor.visitFunctorial_registration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctorialRegistration" ):
+                listener.enterFunctorialRegistration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctorialRegistration" ):
+                listener.exitFunctorialRegistration(self)
 
 
 
 
-    def functorial_registration(self):
+    def functorialRegistration(self):
 
-        localctx = MizarParser.Functorial_registrationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 148, self.RULE_functorial_registration)
+        localctx = MizarParser.FunctorialRegistrationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 148, self.RULE_functorialRegistration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 818
             self.match(MizarParser.T__59)
             self.state = 819
-            self.term_expression(0)
+            self.termExpression(0)
             self.state = 820
             self.match(MizarParser.T__29)
             self.state = 821
-            self.adjective_cluster()
+            self.adjectiveCluster()
             self.state = 824
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -5547,13 +5696,13 @@ class MizarParser ( Parser ):
                 self.state = 822
                 self.match(MizarParser.T__15)
                 self.state = 823
-                self.type_expression()
+                self.typeExpression()
 
 
             self.state = 826
             self.match(MizarParser.T__3)
             self.state = 827
-            self.correctness_conditions()
+            self.correctnessConditions()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5562,21 +5711,21 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Identify_registrationContext(ParserRuleContext):
+    class IdentifyRegistrationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def functor_pattern(self, i:int=None):
+        def functorPattern(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Functor_patternContext)
+                return self.getTypedRuleContexts(MizarParser.FunctorPatternContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Functor_patternContext,i)
+                return self.getTypedRuleContext(MizarParser.FunctorPatternContext,i)
 
 
-        def correctness_conditions(self):
-            return self.getTypedRuleContext(MizarParser.Correctness_conditionsContext,0)
+        def correctnessConditions(self):
+            return self.getTypedRuleContext(MizarParser.CorrectnessConditionsContext,0)
 
 
         def locus(self, i:int=None):
@@ -5587,32 +5736,34 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_identify_registration
+            return MizarParser.RULE_identifyRegistration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIdentify_registration" ):
-                return visitor.visitIdentify_registration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIdentifyRegistration" ):
+                listener.enterIdentifyRegistration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIdentifyRegistration" ):
+                listener.exitIdentifyRegistration(self)
 
 
 
 
-    def identify_registration(self):
+    def identifyRegistration(self):
 
-        localctx = MizarParser.Identify_registrationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 150, self.RULE_identify_registration)
+        localctx = MizarParser.IdentifyRegistrationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 150, self.RULE_identifyRegistration)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 829
             self.match(MizarParser.T__61)
             self.state = 830
-            self.functor_pattern()
+            self.functorPattern()
             self.state = 831
             self.match(MizarParser.T__62)
             self.state = 832
-            self.functor_pattern()
+            self.functorPattern()
             self.state = 847
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -5646,7 +5797,7 @@ class MizarParser ( Parser ):
             self.state = 849
             self.match(MizarParser.T__3)
             self.state = 850
-            self.correctness_conditions()
+            self.correctnessConditions()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5655,14 +5806,14 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Property_registrationContext(ParserRuleContext):
+    class PropertyRegistrationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
         def justification(self):
@@ -5670,21 +5821,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_property_registration
+            return MizarParser.RULE_propertyRegistration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProperty_registration" ):
-                return visitor.visitProperty_registration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPropertyRegistration" ):
+                listener.enterPropertyRegistration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPropertyRegistration" ):
+                listener.exitPropertyRegistration(self)
 
 
 
 
-    def property_registration(self):
+    def propertyRegistration(self):
 
-        localctx = MizarParser.Property_registrationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 152, self.RULE_property_registration)
+        localctx = MizarParser.PropertyRegistrationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 152, self.RULE_propertyRegistration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 852
@@ -5692,7 +5845,7 @@ class MizarParser ( Parser ):
             self.state = 853
             self.match(MizarParser.T__33)
             self.state = 854
-            self.type_expression()
+            self.typeExpression()
             self.state = 855
             self.justification()
             self.state = 856
@@ -5705,53 +5858,55 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Reduction_registrationContext(ParserRuleContext):
+    class ReductionRegistrationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def term_expression(self, i:int=None):
+        def termExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Term_expressionContext)
+                return self.getTypedRuleContexts(MizarParser.TermExpressionContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Term_expressionContext,i)
+                return self.getTypedRuleContext(MizarParser.TermExpressionContext,i)
 
 
-        def correctness_conditions(self):
-            return self.getTypedRuleContext(MizarParser.Correctness_conditionsContext,0)
+        def correctnessConditions(self):
+            return self.getTypedRuleContext(MizarParser.CorrectnessConditionsContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_reduction_registration
+            return MizarParser.RULE_reductionRegistration
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReduction_registration" ):
-                return visitor.visitReduction_registration(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReductionRegistration" ):
+                listener.enterReductionRegistration(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReductionRegistration" ):
+                listener.exitReductionRegistration(self)
 
 
 
 
-    def reduction_registration(self):
+    def reductionRegistration(self):
 
-        localctx = MizarParser.Reduction_registrationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 154, self.RULE_reduction_registration)
+        localctx = MizarParser.ReductionRegistrationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 154, self.RULE_reductionRegistration)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 858
             self.match(MizarParser.T__64)
             self.state = 859
-            self.term_expression(0)
+            self.termExpression(0)
             self.state = 860
             self.match(MizarParser.T__65)
             self.state = 861
-            self.term_expression(0)
+            self.termExpression(0)
             self.state = 862
             self.match(MizarParser.T__3)
             self.state = 863
-            self.correctness_conditions()
+            self.correctnessConditions()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5760,17 +5915,17 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Correctness_conditionsContext(ParserRuleContext):
+    class CorrectnessConditionsContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def correctness_condition(self, i:int=None):
+        def correctnessCondition(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Correctness_conditionContext)
+                return self.getTypedRuleContexts(MizarParser.CorrectnessConditionContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Correctness_conditionContext,i)
+                return self.getTypedRuleContext(MizarParser.CorrectnessConditionContext,i)
 
 
         def justification(self):
@@ -5778,21 +5933,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_correctness_conditions
+            return MizarParser.RULE_correctnessConditions
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCorrectness_conditions" ):
-                return visitor.visitCorrectness_conditions(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCorrectnessConditions" ):
+                listener.enterCorrectnessConditions(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCorrectnessConditions" ):
+                listener.exitCorrectnessConditions(self)
 
 
 
 
-    def correctness_conditions(self):
+    def correctnessConditions(self):
 
-        localctx = MizarParser.Correctness_conditionsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 156, self.RULE_correctness_conditions)
+        localctx = MizarParser.CorrectnessConditionsContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 156, self.RULE_correctnessConditions)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -5801,7 +5958,7 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             while ((((_la - 68)) & ~0x3f) == 0 and ((1 << (_la - 68)) & ((1 << (MizarParser.T__67 - 68)) | (1 << (MizarParser.T__68 - 68)) | (1 << (MizarParser.T__69 - 68)) | (1 << (MizarParser.T__70 - 68)) | (1 << (MizarParser.T__71 - 68)) | (1 << (MizarParser.T__72 - 68)))) != 0):
                 self.state = 865
-                self.correctness_condition()
+                self.correctnessCondition()
                 self.state = 870
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -5826,7 +5983,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Correctness_conditionContext(ParserRuleContext):
+    class CorrectnessConditionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -5837,21 +5994,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_correctness_condition
+            return MizarParser.RULE_correctnessCondition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCorrectness_condition" ):
-                return visitor.visitCorrectness_condition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCorrectnessCondition" ):
+                listener.enterCorrectnessCondition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCorrectnessCondition" ):
+                listener.exitCorrectnessCondition(self)
 
 
 
 
-    def correctness_condition(self):
+    def correctnessCondition(self):
 
-        localctx = MizarParser.Correctness_conditionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 158, self.RULE_correctness_condition)
+        localctx = MizarParser.CorrectnessConditionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 158, self.RULE_correctnessCondition)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -5880,18 +6039,20 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def compact_statement(self):
-            return self.getTypedRuleContext(MizarParser.Compact_statementContext,0)
+        def compactStatement(self):
+            return self.getTypedRuleContext(MizarParser.CompactStatementContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_theorem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTheorem" ):
-                return visitor.visitTheorem(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTheorem" ):
+                listener.enterTheorem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTheorem" ):
+                listener.exitTheorem(self)
 
 
 
@@ -5905,7 +6066,7 @@ class MizarParser ( Parser ):
             self.state = 881
             self.match(MizarParser.T__73)
             self.state = 882
-            self.compact_statement()
+            self.compactStatement()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -5914,36 +6075,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_itemContext(ParserRuleContext):
+    class SchemeItemContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def scheme_block(self):
-            return self.getTypedRuleContext(MizarParser.Scheme_blockContext,0)
+        def schemeBlock(self):
+            return self.getTypedRuleContext(MizarParser.SchemeBlockContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_item
+            return MizarParser.RULE_schemeItem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_item" ):
-                return visitor.visitScheme_item(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemeItem" ):
+                listener.enterSchemeItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemeItem" ):
+                listener.exitSchemeItem(self)
 
 
 
 
-    def scheme_item(self):
+    def schemeItem(self):
 
-        localctx = MizarParser.Scheme_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 162, self.RULE_scheme_item)
+        localctx = MizarParser.SchemeItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 162, self.RULE_schemeItem)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 884
-            self.scheme_block()
+            self.schemeBlock()
             self.state = 885
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -5954,68 +6117,70 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_blockContext(ParserRuleContext):
+    class SchemeBlockContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def scheme_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Scheme_identifierContext,0)
+        def schemeIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.SchemeIdentifierContext,0)
 
 
-        def scheme_parameters(self):
-            return self.getTypedRuleContext(MizarParser.Scheme_parametersContext,0)
+        def schemeParameters(self):
+            return self.getTypedRuleContext(MizarParser.SchemeParametersContext,0)
 
 
-        def scheme_conclusion(self):
-            return self.getTypedRuleContext(MizarParser.Scheme_conclusionContext,0)
+        def schemeConclusion(self):
+            return self.getTypedRuleContext(MizarParser.SchemeConclusionContext,0)
 
 
         def reasoning(self):
             return self.getTypedRuleContext(MizarParser.ReasoningContext,0)
 
 
-        def scheme_premise(self, i:int=None):
+        def schemePremise(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Scheme_premiseContext)
+                return self.getTypedRuleContexts(MizarParser.SchemePremiseContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Scheme_premiseContext,i)
+                return self.getTypedRuleContext(MizarParser.SchemePremiseContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_block
+            return MizarParser.RULE_schemeBlock
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_block" ):
-                return visitor.visitScheme_block(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemeBlock" ):
+                listener.enterSchemeBlock(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemeBlock" ):
+                listener.exitSchemeBlock(self)
 
 
 
 
-    def scheme_block(self):
+    def schemeBlock(self):
 
-        localctx = MizarParser.Scheme_blockContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 164, self.RULE_scheme_block)
+        localctx = MizarParser.SchemeBlockContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 164, self.RULE_schemeBlock)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 887
             self.match(MizarParser.T__74)
             self.state = 888
-            self.scheme_identifier()
+            self.schemeIdentifier()
             self.state = 889
             self.match(MizarParser.T__46)
             self.state = 890
-            self.scheme_parameters()
+            self.schemeParameters()
             self.state = 891
             self.match(MizarParser.T__48)
             self.state = 892
             self.match(MizarParser.T__36)
             self.state = 893
-            self.scheme_conclusion()
+            self.schemeConclusion()
             self.state = 903
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -6023,7 +6188,7 @@ class MizarParser ( Parser ):
                 self.state = 894
                 self.match(MizarParser.T__75)
                 self.state = 895
-                self.scheme_premise()
+                self.schemePremise()
                 self.state = 900
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -6031,7 +6196,7 @@ class MizarParser ( Parser ):
                     self.state = 896
                     self.match(MizarParser.T__76)
                     self.state = 897
-                    self.scheme_premise()
+                    self.schemePremise()
                     self.state = 902
                     self._errHandler.sync(self)
                     _la = self._input.LA(1)
@@ -6057,7 +6222,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_identifierContext(ParserRuleContext):
+    class SchemeIdentifierContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6067,21 +6232,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.IDENTIFIER, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_identifier
+            return MizarParser.RULE_schemeIdentifier
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_identifier" ):
-                return visitor.visitScheme_identifier(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemeIdentifier" ):
+                listener.enterSchemeIdentifier(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemeIdentifier" ):
+                listener.exitSchemeIdentifier(self)
 
 
 
 
-    def scheme_identifier(self):
+    def schemeIdentifier(self):
 
-        localctx = MizarParser.Scheme_identifierContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 166, self.RULE_scheme_identifier)
+        localctx = MizarParser.SchemeIdentifierContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 166, self.RULE_schemeIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 909
@@ -6094,40 +6261,42 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_parametersContext(ParserRuleContext):
+    class SchemeParametersContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def scheme_segment(self, i:int=None):
+        def schemeSegment(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Scheme_segmentContext)
+                return self.getTypedRuleContexts(MizarParser.SchemeSegmentContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Scheme_segmentContext,i)
+                return self.getTypedRuleContext(MizarParser.SchemeSegmentContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_parameters
+            return MizarParser.RULE_schemeParameters
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_parameters" ):
-                return visitor.visitScheme_parameters(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemeParameters" ):
+                listener.enterSchemeParameters(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemeParameters" ):
+                listener.exitSchemeParameters(self)
 
 
 
 
-    def scheme_parameters(self):
+    def schemeParameters(self):
 
-        localctx = MizarParser.Scheme_parametersContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 168, self.RULE_scheme_parameters)
+        localctx = MizarParser.SchemeParametersContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 168, self.RULE_schemeParameters)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 911
-            self.scheme_segment()
+            self.schemeSegment()
             self.state = 916
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -6135,7 +6304,7 @@ class MizarParser ( Parser ):
                 self.state = 912
                 self.match(MizarParser.T__2)
                 self.state = 913
-                self.scheme_segment()
+                self.schemeSegment()
                 self.state = 918
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -6148,7 +6317,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_conclusionContext(ParserRuleContext):
+    class SchemeConclusionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6159,21 +6328,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_conclusion
+            return MizarParser.RULE_schemeConclusion
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_conclusion" ):
-                return visitor.visitScheme_conclusion(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemeConclusion" ):
+                listener.enterSchemeConclusion(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemeConclusion" ):
+                listener.exitSchemeConclusion(self)
 
 
 
 
-    def scheme_conclusion(self):
+    def schemeConclusion(self):
 
-        localctx = MizarParser.Scheme_conclusionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 170, self.RULE_scheme_conclusion)
+        localctx = MizarParser.SchemeConclusionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 170, self.RULE_schemeConclusion)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 919
@@ -6186,7 +6357,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_premiseContext(ParserRuleContext):
+    class SchemePremiseContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6197,21 +6368,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_premise
+            return MizarParser.RULE_schemePremise
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_premise" ):
-                return visitor.visitScheme_premise(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemePremise" ):
+                listener.enterSchemePremise(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemePremise" ):
+                listener.exitSchemePremise(self)
 
 
 
 
-    def scheme_premise(self):
+    def schemePremise(self):
 
-        localctx = MizarParser.Scheme_premiseContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 172, self.RULE_scheme_premise)
+        localctx = MizarParser.SchemePremiseContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 172, self.RULE_schemePremise)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 921
@@ -6224,36 +6397,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_segmentContext(ParserRuleContext):
+    class SchemeSegmentContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def predicate_segment(self):
-            return self.getTypedRuleContext(MizarParser.Predicate_segmentContext,0)
+        def predicateSegment(self):
+            return self.getTypedRuleContext(MizarParser.PredicateSegmentContext,0)
 
 
-        def functor_segment(self):
-            return self.getTypedRuleContext(MizarParser.Functor_segmentContext,0)
+        def functorSegment(self):
+            return self.getTypedRuleContext(MizarParser.FunctorSegmentContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_segment
+            return MizarParser.RULE_schemeSegment
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_segment" ):
-                return visitor.visitScheme_segment(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemeSegment" ):
+                listener.enterSchemeSegment(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemeSegment" ):
+                listener.exitSchemeSegment(self)
 
 
 
 
-    def scheme_segment(self):
+    def schemeSegment(self):
 
-        localctx = MizarParser.Scheme_segmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 174, self.RULE_scheme_segment)
+        localctx = MizarParser.SchemeSegmentContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 174, self.RULE_schemeSegment)
         try:
             self.state = 925
             self._errHandler.sync(self)
@@ -6261,13 +6436,13 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 923
-                self.predicate_segment()
+                self.predicateSegment()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 924
-                self.functor_segment()
+                self.functorSegment()
                 pass
 
 
@@ -6279,44 +6454,46 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Predicate_segmentContext(ParserRuleContext):
+    class PredicateSegmentContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def predicate_identifier(self, i:int=None):
+        def predicateIdentifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Predicate_identifierContext)
+                return self.getTypedRuleContexts(MizarParser.PredicateIdentifierContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Predicate_identifierContext,i)
+                return self.getTypedRuleContext(MizarParser.PredicateIdentifierContext,i)
 
 
-        def type_expression_list(self):
-            return self.getTypedRuleContext(MizarParser.Type_expression_listContext,0)
+        def typeExpressionList(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionListContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_predicate_segment
+            return MizarParser.RULE_predicateSegment
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPredicate_segment" ):
-                return visitor.visitPredicate_segment(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPredicateSegment" ):
+                listener.enterPredicateSegment(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPredicateSegment" ):
+                listener.exitPredicateSegment(self)
 
 
 
 
-    def predicate_segment(self):
+    def predicateSegment(self):
 
-        localctx = MizarParser.Predicate_segmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 176, self.RULE_predicate_segment)
+        localctx = MizarParser.PredicateSegmentContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 176, self.RULE_predicateSegment)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 927
-            self.predicate_identifier()
+            self.predicateIdentifier()
             self.state = 932
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -6324,7 +6501,7 @@ class MizarParser ( Parser ):
                 self.state = 928
                 self.match(MizarParser.T__2)
                 self.state = 929
-                self.predicate_identifier()
+                self.predicateIdentifier()
                 self.state = 934
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -6336,7 +6513,7 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__24) | (1 << MizarParser.T__34) | (1 << MizarParser.T__46) | (1 << MizarParser.T__47) | (1 << MizarParser.T__60))) != 0) or ((((_la - 117)) & ~0x3f) == 0 and ((1 << (_la - 117)) & ((1 << (MizarParser.T__116 - 117)) | (1 << (MizarParser.T__119 - 117)) | (1 << (MizarParser.T__122 - 117)) | (1 << (MizarParser.T__123 - 117)) | (1 << (MizarParser.T__124 - 117)) | (1 << (MizarParser.T__125 - 117)) | (1 << (MizarParser.T__126 - 117)) | (1 << (MizarParser.T__127 - 117)) | (1 << (MizarParser.T__128 - 117)) | (1 << (MizarParser.T__129 - 117)) | (1 << (MizarParser.T__130 - 117)) | (1 << (MizarParser.T__131 - 117)) | (1 << (MizarParser.FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.MODE_SYMBOL - 117)) | (1 << (MizarParser.STRUCTURE_SYMBOL - 117)) | (1 << (MizarParser.ATTRIBUTE_SYMBOL - 117)) | (1 << (MizarParser.LEFT_FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.IDENTIFIER - 117)) | (1 << (MizarParser.NUMERAL - 117)))) != 0):
                 self.state = 936
-                self.type_expression_list()
+                self.typeExpressionList()
 
 
             self.state = 939
@@ -6349,7 +6526,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Predicate_identifierContext(ParserRuleContext):
+    class PredicateIdentifierContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6359,21 +6536,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.IDENTIFIER, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_predicate_identifier
+            return MizarParser.RULE_predicateIdentifier
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPredicate_identifier" ):
-                return visitor.visitPredicate_identifier(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPredicateIdentifier" ):
+                listener.enterPredicateIdentifier(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPredicateIdentifier" ):
+                listener.exitPredicateIdentifier(self)
 
 
 
 
-    def predicate_identifier(self):
+    def predicateIdentifier(self):
 
-        localctx = MizarParser.Predicate_identifierContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 178, self.RULE_predicate_identifier)
+        localctx = MizarParser.PredicateIdentifierContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 178, self.RULE_predicateIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 941
@@ -6386,48 +6565,50 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Functor_segmentContext(ParserRuleContext):
+    class FunctorSegmentContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def functor_identifier(self, i:int=None):
+        def functorIdentifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Functor_identifierContext)
+                return self.getTypedRuleContexts(MizarParser.FunctorIdentifierContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Functor_identifierContext,i)
+                return self.getTypedRuleContext(MizarParser.FunctorIdentifierContext,i)
 
 
         def specification(self):
             return self.getTypedRuleContext(MizarParser.SpecificationContext,0)
 
 
-        def type_expression_list(self):
-            return self.getTypedRuleContext(MizarParser.Type_expression_listContext,0)
+        def typeExpressionList(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionListContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_functor_segment
+            return MizarParser.RULE_functorSegment
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctor_segment" ):
-                return visitor.visitFunctor_segment(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctorSegment" ):
+                listener.enterFunctorSegment(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctorSegment" ):
+                listener.exitFunctorSegment(self)
 
 
 
 
-    def functor_segment(self):
+    def functorSegment(self):
 
-        localctx = MizarParser.Functor_segmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 180, self.RULE_functor_segment)
+        localctx = MizarParser.FunctorSegmentContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 180, self.RULE_functorSegment)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 943
-            self.functor_identifier()
+            self.functorIdentifier()
             self.state = 948
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -6435,7 +6616,7 @@ class MizarParser ( Parser ):
                 self.state = 944
                 self.match(MizarParser.T__2)
                 self.state = 945
-                self.functor_identifier()
+                self.functorIdentifier()
                 self.state = 950
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -6447,7 +6628,7 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__24) | (1 << MizarParser.T__34) | (1 << MizarParser.T__46) | (1 << MizarParser.T__47) | (1 << MizarParser.T__60))) != 0) or ((((_la - 117)) & ~0x3f) == 0 and ((1 << (_la - 117)) & ((1 << (MizarParser.T__116 - 117)) | (1 << (MizarParser.T__119 - 117)) | (1 << (MizarParser.T__122 - 117)) | (1 << (MizarParser.T__123 - 117)) | (1 << (MizarParser.T__124 - 117)) | (1 << (MizarParser.T__125 - 117)) | (1 << (MizarParser.T__126 - 117)) | (1 << (MizarParser.T__127 - 117)) | (1 << (MizarParser.T__128 - 117)) | (1 << (MizarParser.T__129 - 117)) | (1 << (MizarParser.T__130 - 117)) | (1 << (MizarParser.T__131 - 117)) | (1 << (MizarParser.FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.MODE_SYMBOL - 117)) | (1 << (MizarParser.STRUCTURE_SYMBOL - 117)) | (1 << (MizarParser.ATTRIBUTE_SYMBOL - 117)) | (1 << (MizarParser.LEFT_FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.IDENTIFIER - 117)) | (1 << (MizarParser.NUMERAL - 117)))) != 0):
                 self.state = 952
-                self.type_expression_list()
+                self.typeExpressionList()
 
 
             self.state = 955
@@ -6462,7 +6643,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Functor_identifierContext(ParserRuleContext):
+    class FunctorIdentifierContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6472,21 +6653,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.IDENTIFIER, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_functor_identifier
+            return MizarParser.RULE_functorIdentifier
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFunctor_identifier" ):
-                return visitor.visitFunctor_identifier(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFunctorIdentifier" ):
+                listener.enterFunctorIdentifier(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFunctorIdentifier" ):
+                listener.exitFunctorIdentifier(self)
 
 
 
 
-    def functor_identifier(self):
+    def functorIdentifier(self):
 
-        localctx = MizarParser.Functor_identifierContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 182, self.RULE_functor_identifier)
+        localctx = MizarParser.FunctorIdentifierContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 182, self.RULE_functorIdentifier)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 958
@@ -6499,7 +6682,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Auxiliary_itemContext(ParserRuleContext):
+    class AuxiliaryItemContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6509,26 +6692,28 @@ class MizarParser ( Parser ):
             return self.getTypedRuleContext(MizarParser.StatementContext,0)
 
 
-        def private_definition(self):
-            return self.getTypedRuleContext(MizarParser.Private_definitionContext,0)
+        def privateDefinition(self):
+            return self.getTypedRuleContext(MizarParser.PrivateDefinitionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_auxiliary_item
+            return MizarParser.RULE_auxiliaryItem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAuxiliary_item" ):
-                return visitor.visitAuxiliary_item(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAuxiliaryItem" ):
+                listener.enterAuxiliaryItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAuxiliaryItem" ):
+                listener.exitAuxiliaryItem(self)
 
 
 
 
-    def auxiliary_item(self):
+    def auxiliaryItem(self):
 
-        localctx = MizarParser.Auxiliary_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 184, self.RULE_auxiliary_item)
+        localctx = MizarParser.AuxiliaryItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 184, self.RULE_auxiliaryItem)
         try:
             self.state = 962
             self._errHandler.sync(self)
@@ -6541,7 +6726,7 @@ class MizarParser ( Parser ):
             elif token in [MizarParser.T__34, MizarParser.T__78, MizarParser.T__79]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 961
-                self.private_definition()
+                self.privateDefinition()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -6554,40 +6739,42 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Private_definitionContext(ParserRuleContext):
+    class PrivateDefinitionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def constant_definition(self):
-            return self.getTypedRuleContext(MizarParser.Constant_definitionContext,0)
+        def constantDefinition(self):
+            return self.getTypedRuleContext(MizarParser.ConstantDefinitionContext,0)
 
 
-        def private_functor_definition(self):
-            return self.getTypedRuleContext(MizarParser.Private_functor_definitionContext,0)
+        def privateFunctorDefinition(self):
+            return self.getTypedRuleContext(MizarParser.PrivateFunctorDefinitionContext,0)
 
 
-        def private_predicate_definition(self):
-            return self.getTypedRuleContext(MizarParser.Private_predicate_definitionContext,0)
+        def privatePredicateDefinition(self):
+            return self.getTypedRuleContext(MizarParser.PrivatePredicateDefinitionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_private_definition
+            return MizarParser.RULE_privateDefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrivate_definition" ):
-                return visitor.visitPrivate_definition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrivateDefinition" ):
+                listener.enterPrivateDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrivateDefinition" ):
+                listener.exitPrivateDefinition(self)
 
 
 
 
-    def private_definition(self):
+    def privateDefinition(self):
 
-        localctx = MizarParser.Private_definitionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 186, self.RULE_private_definition)
+        localctx = MizarParser.PrivateDefinitionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 186, self.RULE_privateDefinition)
         try:
             self.state = 967
             self._errHandler.sync(self)
@@ -6595,17 +6782,17 @@ class MizarParser ( Parser ):
             if token in [MizarParser.T__34]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 964
-                self.constant_definition()
+                self.constantDefinition()
                 pass
             elif token in [MizarParser.T__78]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 965
-                self.private_functor_definition()
+                self.privateFunctorDefinition()
                 pass
             elif token in [MizarParser.T__79]:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 966
-                self.private_predicate_definition()
+                self.privatePredicateDefinition()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -6618,38 +6805,40 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Constant_definitionContext(ParserRuleContext):
+    class ConstantDefinitionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def equating_list(self):
-            return self.getTypedRuleContext(MizarParser.Equating_listContext,0)
+        def equatingList(self):
+            return self.getTypedRuleContext(MizarParser.EquatingListContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_constant_definition
+            return MizarParser.RULE_constantDefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConstant_definition" ):
-                return visitor.visitConstant_definition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterConstantDefinition" ):
+                listener.enterConstantDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitConstantDefinition" ):
+                listener.exitConstantDefinition(self)
 
 
 
 
-    def constant_definition(self):
+    def constantDefinition(self):
 
-        localctx = MizarParser.Constant_definitionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 188, self.RULE_constant_definition)
+        localctx = MizarParser.ConstantDefinitionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 188, self.RULE_constantDefinition)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 969
             self.match(MizarParser.T__34)
             self.state = 970
-            self.equating_list()
+            self.equatingList()
             self.state = 971
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -6660,7 +6849,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Equating_listContext(ParserRuleContext):
+    class EquatingListContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -6674,21 +6863,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_equating_list
+            return MizarParser.RULE_equatingList
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEquating_list" ):
-                return visitor.visitEquating_list(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEquatingList" ):
+                listener.enterEquatingList(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEquatingList" ):
+                listener.exitEquatingList(self)
 
 
 
 
-    def equating_list(self):
+    def equatingList(self):
 
-        localctx = MizarParser.Equating_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 190, self.RULE_equating_list)
+        localctx = MizarParser.EquatingListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 190, self.RULE_equatingList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -6720,22 +6911,24 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def variable_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Variable_identifierContext,0)
+        def variableIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.VariableIdentifierContext,0)
 
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_equating
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitEquating" ):
-                return visitor.visitEquating(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterEquating" ):
+                listener.enterEquating(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitEquating" ):
+                listener.exitEquating(self)
 
 
 
@@ -6747,11 +6940,11 @@ class MizarParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 981
-            self.variable_identifier()
+            self.variableIdentifier()
             self.state = 982
             self.match(MizarParser.T__57)
             self.state = 983
-            self.term_expression(0)
+            self.termExpression(0)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -6760,46 +6953,48 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Private_functor_definitionContext(ParserRuleContext):
+    class PrivateFunctorDefinitionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def private_functor_pattern(self):
-            return self.getTypedRuleContext(MizarParser.Private_functor_patternContext,0)
+        def privateFunctorPattern(self):
+            return self.getTypedRuleContext(MizarParser.PrivateFunctorPatternContext,0)
 
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_private_functor_definition
+            return MizarParser.RULE_privateFunctorDefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrivate_functor_definition" ):
-                return visitor.visitPrivate_functor_definition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrivateFunctorDefinition" ):
+                listener.enterPrivateFunctorDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrivateFunctorDefinition" ):
+                listener.exitPrivateFunctorDefinition(self)
 
 
 
 
-    def private_functor_definition(self):
+    def privateFunctorDefinition(self):
 
-        localctx = MizarParser.Private_functor_definitionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 194, self.RULE_private_functor_definition)
+        localctx = MizarParser.PrivateFunctorDefinitionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 194, self.RULE_privateFunctorDefinition)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 985
             self.match(MizarParser.T__78)
             self.state = 986
-            self.private_functor_pattern()
+            self.privateFunctorPattern()
             self.state = 987
             self.match(MizarParser.T__57)
             self.state = 988
-            self.term_expression(0)
+            self.termExpression(0)
             self.state = 989
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -6810,14 +7005,14 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Private_predicate_definitionContext(ParserRuleContext):
+    class PrivatePredicateDefinitionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def private_predicate_pattern(self):
-            return self.getTypedRuleContext(MizarParser.Private_predicate_patternContext,0)
+        def privatePredicatePattern(self):
+            return self.getTypedRuleContext(MizarParser.PrivatePredicatePatternContext,0)
 
 
         def sentence(self):
@@ -6825,27 +7020,29 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_private_predicate_definition
+            return MizarParser.RULE_privatePredicateDefinition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrivate_predicate_definition" ):
-                return visitor.visitPrivate_predicate_definition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrivatePredicateDefinition" ):
+                listener.enterPrivatePredicateDefinition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrivatePredicateDefinition" ):
+                listener.exitPrivatePredicateDefinition(self)
 
 
 
 
-    def private_predicate_definition(self):
+    def privatePredicateDefinition(self):
 
-        localctx = MizarParser.Private_predicate_definitionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 196, self.RULE_private_predicate_definition)
+        localctx = MizarParser.PrivatePredicateDefinitionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 196, self.RULE_privatePredicateDefinition)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 991
             self.match(MizarParser.T__79)
             self.state = 992
-            self.private_predicate_pattern()
+            self.privatePredicatePattern()
             self.state = 993
             self.match(MizarParser.T__31)
             self.state = 994
@@ -6860,41 +7057,43 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Private_functor_patternContext(ParserRuleContext):
+    class PrivateFunctorPatternContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def functor_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Functor_identifierContext,0)
+        def functorIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.FunctorIdentifierContext,0)
 
 
-        def type_expression_list(self):
-            return self.getTypedRuleContext(MizarParser.Type_expression_listContext,0)
+        def typeExpressionList(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionListContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_private_functor_pattern
+            return MizarParser.RULE_privateFunctorPattern
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrivate_functor_pattern" ):
-                return visitor.visitPrivate_functor_pattern(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrivateFunctorPattern" ):
+                listener.enterPrivateFunctorPattern(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrivateFunctorPattern" ):
+                listener.exitPrivateFunctorPattern(self)
 
 
 
 
-    def private_functor_pattern(self):
+    def privateFunctorPattern(self):
 
-        localctx = MizarParser.Private_functor_patternContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 198, self.RULE_private_functor_pattern)
+        localctx = MizarParser.PrivateFunctorPatternContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 198, self.RULE_privateFunctorPattern)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 997
-            self.functor_identifier()
+            self.functorIdentifier()
             self.state = 998
             self.match(MizarParser.T__24)
             self.state = 1000
@@ -6902,7 +7101,7 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__24) | (1 << MizarParser.T__34) | (1 << MizarParser.T__46) | (1 << MizarParser.T__47) | (1 << MizarParser.T__60))) != 0) or ((((_la - 117)) & ~0x3f) == 0 and ((1 << (_la - 117)) & ((1 << (MizarParser.T__116 - 117)) | (1 << (MizarParser.T__119 - 117)) | (1 << (MizarParser.T__122 - 117)) | (1 << (MizarParser.T__123 - 117)) | (1 << (MizarParser.T__124 - 117)) | (1 << (MizarParser.T__125 - 117)) | (1 << (MizarParser.T__126 - 117)) | (1 << (MizarParser.T__127 - 117)) | (1 << (MizarParser.T__128 - 117)) | (1 << (MizarParser.T__129 - 117)) | (1 << (MizarParser.T__130 - 117)) | (1 << (MizarParser.T__131 - 117)) | (1 << (MizarParser.FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.MODE_SYMBOL - 117)) | (1 << (MizarParser.STRUCTURE_SYMBOL - 117)) | (1 << (MizarParser.ATTRIBUTE_SYMBOL - 117)) | (1 << (MizarParser.LEFT_FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.IDENTIFIER - 117)) | (1 << (MizarParser.NUMERAL - 117)))) != 0):
                 self.state = 999
-                self.type_expression_list()
+                self.typeExpressionList()
 
 
             self.state = 1002
@@ -6915,41 +7114,43 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Private_predicate_patternContext(ParserRuleContext):
+    class PrivatePredicatePatternContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def predicate_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Predicate_identifierContext,0)
+        def predicateIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.PredicateIdentifierContext,0)
 
 
-        def type_expression_list(self):
-            return self.getTypedRuleContext(MizarParser.Type_expression_listContext,0)
+        def typeExpressionList(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionListContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_private_predicate_pattern
+            return MizarParser.RULE_privatePredicatePattern
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrivate_predicate_pattern" ):
-                return visitor.visitPrivate_predicate_pattern(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrivatePredicatePattern" ):
+                listener.enterPrivatePredicatePattern(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrivatePredicatePattern" ):
+                listener.exitPrivatePredicatePattern(self)
 
 
 
 
-    def private_predicate_pattern(self):
+    def privatePredicatePattern(self):
 
-        localctx = MizarParser.Private_predicate_patternContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 200, self.RULE_private_predicate_pattern)
+        localctx = MizarParser.PrivatePredicatePatternContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 200, self.RULE_privatePredicatePattern)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1004
-            self.predicate_identifier()
+            self.predicateIdentifier()
             self.state = 1005
             self.match(MizarParser.T__47)
             self.state = 1007
@@ -6957,7 +7158,7 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__24) | (1 << MizarParser.T__34) | (1 << MizarParser.T__46) | (1 << MizarParser.T__47) | (1 << MizarParser.T__60))) != 0) or ((((_la - 117)) & ~0x3f) == 0 and ((1 << (_la - 117)) & ((1 << (MizarParser.T__116 - 117)) | (1 << (MizarParser.T__119 - 117)) | (1 << (MizarParser.T__122 - 117)) | (1 << (MizarParser.T__123 - 117)) | (1 << (MizarParser.T__124 - 117)) | (1 << (MizarParser.T__125 - 117)) | (1 << (MizarParser.T__126 - 117)) | (1 << (MizarParser.T__127 - 117)) | (1 << (MizarParser.T__128 - 117)) | (1 << (MizarParser.T__129 - 117)) | (1 << (MizarParser.T__130 - 117)) | (1 << (MizarParser.T__131 - 117)) | (1 << (MizarParser.FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.MODE_SYMBOL - 117)) | (1 << (MizarParser.STRUCTURE_SYMBOL - 117)) | (1 << (MizarParser.ATTRIBUTE_SYMBOL - 117)) | (1 << (MizarParser.LEFT_FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.IDENTIFIER - 117)) | (1 << (MizarParser.NUMERAL - 117)))) != 0):
                 self.state = 1006
-                self.type_expression_list()
+                self.typeExpressionList()
 
 
             self.state = 1009
@@ -6976,33 +7177,35 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def reasoning_item(self, i:int=None):
+        def reasoningItem(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Reasoning_itemContext)
+                return self.getTypedRuleContexts(MizarParser.ReasoningItemContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Reasoning_itemContext,i)
+                return self.getTypedRuleContext(MizarParser.ReasoningItemContext,i)
 
 
-        def simple_justification(self):
-            return self.getTypedRuleContext(MizarParser.Simple_justificationContext,0)
+        def simpleJustification(self):
+            return self.getTypedRuleContext(MizarParser.SimpleJustificationContext,0)
 
 
-        def case_list(self):
-            return self.getTypedRuleContext(MizarParser.Case_listContext,0)
+        def caseList(self):
+            return self.getTypedRuleContext(MizarParser.CaseListContext,0)
 
 
-        def suppose_list(self):
-            return self.getTypedRuleContext(MizarParser.Suppose_listContext,0)
+        def supposeList(self):
+            return self.getTypedRuleContext(MizarParser.SupposeListContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_reasoning
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReasoning" ):
-                return visitor.visitReasoning(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReasoning" ):
+                listener.enterReasoning(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReasoning" ):
+                listener.exitReasoning(self)
 
 
 
@@ -7020,7 +7223,7 @@ class MizarParser ( Parser ):
             while _alt!=2 and _alt!=ATN.INVALID_ALT_NUMBER:
                 if _alt==1:
                     self.state = 1011
-                    self.reasoning_item() 
+                    self.reasoningItem() 
                 self.state = 1016
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,75,self._ctx)
@@ -7042,7 +7245,7 @@ class MizarParser ( Parser ):
                 self.state = 1021
                 self.match(MizarParser.T__82)
                 self.state = 1022
-                self.simple_justification()
+                self.simpleJustification()
                 self.state = 1023
                 self.match(MizarParser.T__3)
                 self.state = 1026
@@ -7050,11 +7253,11 @@ class MizarParser ( Parser ):
                 token = self._input.LA(1)
                 if token in [MizarParser.T__83]:
                     self.state = 1024
-                    self.case_list()
+                    self.caseList()
                     pass
                 elif token in [MizarParser.T__84]:
                     self.state = 1025
-                    self.suppose_list()
+                    self.supposeList()
                     pass
                 else:
                     raise NoViableAltException(self)
@@ -7069,7 +7272,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Case_listContext(ParserRuleContext):
+    class CaseListContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7083,21 +7286,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_case_list
+            return MizarParser.RULE_caseList
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCase_list" ):
-                return visitor.visitCase_list(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCaseList" ):
+                listener.enterCaseList(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCaseList" ):
+                listener.exitCaseList(self)
 
 
 
 
-    def case_list(self):
+    def caseList(self):
 
-        localctx = MizarParser.Case_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 204, self.RULE_case_list)
+        localctx = MizarParser.CaseListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 204, self.RULE_caseList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -7142,11 +7347,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_case
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCase" ):
-                return visitor.visitCase(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCase" ):
+                listener.enterCase(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCase" ):
+                listener.exitCase(self)
 
 
 
@@ -7189,7 +7396,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Suppose_listContext(ParserRuleContext):
+    class SupposeListContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7203,21 +7410,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_suppose_list
+            return MizarParser.RULE_supposeList
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSuppose_list" ):
-                return visitor.visitSuppose_list(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSupposeList" ):
+                listener.enterSupposeList(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSupposeList" ):
+                listener.exitSupposeList(self)
 
 
 
 
-    def suppose_list(self):
+    def supposeList(self):
 
-        localctx = MizarParser.Suppose_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 208, self.RULE_suppose_list)
+        localctx = MizarParser.SupposeListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 208, self.RULE_supposeList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -7262,11 +7471,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_suppose
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSuppose" ):
-                return visitor.visitSuppose(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSuppose" ):
+                listener.enterSuppose(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSuppose" ):
+                listener.exitSuppose(self)
 
 
 
@@ -7309,36 +7520,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Reasoning_itemContext(ParserRuleContext):
+    class ReasoningItemContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def auxiliary_item(self):
-            return self.getTypedRuleContext(MizarParser.Auxiliary_itemContext,0)
+        def auxiliaryItem(self):
+            return self.getTypedRuleContext(MizarParser.AuxiliaryItemContext,0)
 
 
-        def skeleton_item(self):
-            return self.getTypedRuleContext(MizarParser.Skeleton_itemContext,0)
+        def skeletonItem(self):
+            return self.getTypedRuleContext(MizarParser.SkeletonItemContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_reasoning_item
+            return MizarParser.RULE_reasoningItem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReasoning_item" ):
-                return visitor.visitReasoning_item(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReasoningItem" ):
+                listener.enterReasoningItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReasoningItem" ):
+                listener.exitReasoningItem(self)
 
 
 
 
-    def reasoning_item(self):
+    def reasoningItem(self):
 
-        localctx = MizarParser.Reasoning_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 212, self.RULE_reasoning_item)
+        localctx = MizarParser.ReasoningItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 212, self.RULE_reasoningItem)
         try:
             self.state = 1062
             self._errHandler.sync(self)
@@ -7346,12 +7559,12 @@ class MizarParser ( Parser ):
             if token in [MizarParser.T__15, MizarParser.T__24, MizarParser.T__34, MizarParser.T__46, MizarParser.T__47, MizarParser.T__57, MizarParser.T__78, MizarParser.T__79, MizarParser.T__80, MizarParser.T__91, MizarParser.T__92, MizarParser.T__95, MizarParser.T__106, MizarParser.T__107, MizarParser.T__108, MizarParser.T__109, MizarParser.T__110, MizarParser.T__113, MizarParser.T__116, MizarParser.T__119, MizarParser.T__122, MizarParser.T__123, MizarParser.T__124, MizarParser.T__125, MizarParser.T__126, MizarParser.T__127, MizarParser.T__128, MizarParser.T__129, MizarParser.T__130, MizarParser.T__131, MizarParser.PREDICATE_SYMBOL, MizarParser.FUNCTOR_SYMBOL, MizarParser.STRUCTURE_SYMBOL, MizarParser.LEFT_FUNCTOR_SYMBOL, MizarParser.IDENTIFIER, MizarParser.NUMERAL]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1060
-                self.auxiliary_item()
+                self.auxiliaryItem()
                 pass
             elif token in [MizarParser.T__20, MizarParser.T__85, MizarParser.T__86, MizarParser.T__87, MizarParser.T__88, MizarParser.T__89, MizarParser.T__90]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1061
-                self.skeleton_item()
+                self.skeletonItem()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -7364,7 +7577,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Skeleton_itemContext(ParserRuleContext):
+    class SkeletonItemContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7387,21 +7600,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_skeleton_item
+            return MizarParser.RULE_skeletonItem
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSkeleton_item" ):
-                return visitor.visitSkeleton_item(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSkeletonItem" ):
+                listener.enterSkeletonItem(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSkeletonItem" ):
+                listener.exitSkeletonItem(self)
 
 
 
 
-    def skeleton_item(self):
+    def skeletonItem(self):
 
-        localctx = MizarParser.Skeleton_itemContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 214, self.RULE_skeleton_item)
+        localctx = MizarParser.SkeletonItemContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 214, self.RULE_skeletonItem)
         try:
             self.state = 1068
             self._errHandler.sync(self)
@@ -7443,8 +7658,8 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def qualified_variables(self):
-            return self.getTypedRuleContext(MizarParser.Qualified_variablesContext,0)
+        def qualifiedVariables(self):
+            return self.getTypedRuleContext(MizarParser.QualifiedVariablesContext,0)
 
 
         def conditions(self):
@@ -7454,11 +7669,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_generalization
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitGeneralization" ):
-                return visitor.visitGeneralization(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterGeneralization" ):
+                listener.enterGeneralization(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitGeneralization" ):
+                listener.exitGeneralization(self)
 
 
 
@@ -7473,7 +7690,7 @@ class MizarParser ( Parser ):
             self.state = 1070
             self.match(MizarParser.T__20)
             self.state = 1071
-            self.qualified_variables()
+            self.qualifiedVariables()
             self.state = 1074
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -7500,26 +7717,28 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def single_assumption(self):
-            return self.getTypedRuleContext(MizarParser.Single_assumptionContext,0)
+        def singleAssumption(self):
+            return self.getTypedRuleContext(MizarParser.SingleAssumptionContext,0)
 
 
-        def collective_assumption(self):
-            return self.getTypedRuleContext(MizarParser.Collective_assumptionContext,0)
+        def collectiveAssumption(self):
+            return self.getTypedRuleContext(MizarParser.CollectiveAssumptionContext,0)
 
 
-        def existential_assumption(self):
-            return self.getTypedRuleContext(MizarParser.Existential_assumptionContext,0)
+        def existentialAssumption(self):
+            return self.getTypedRuleContext(MizarParser.ExistentialAssumptionContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_assumption
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAssumption" ):
-                return visitor.visitAssumption(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAssumption" ):
+                listener.enterAssumption(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAssumption" ):
+                listener.exitAssumption(self)
 
 
 
@@ -7535,19 +7754,19 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1078
-                self.single_assumption()
+                self.singleAssumption()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1079
-                self.collective_assumption()
+                self.collectiveAssumption()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1080
-                self.existential_assumption()
+                self.existentialAssumption()
                 pass
 
 
@@ -7559,7 +7778,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Single_assumptionContext(ParserRuleContext):
+    class SingleAssumptionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7570,21 +7789,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_single_assumption
+            return MizarParser.RULE_singleAssumption
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSingle_assumption" ):
-                return visitor.visitSingle_assumption(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSingleAssumption" ):
+                listener.enterSingleAssumption(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSingleAssumption" ):
+                listener.exitSingleAssumption(self)
 
 
 
 
-    def single_assumption(self):
+    def singleAssumption(self):
 
-        localctx = MizarParser.Single_assumptionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 220, self.RULE_single_assumption)
+        localctx = MizarParser.SingleAssumptionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 220, self.RULE_singleAssumption)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1083
@@ -7601,7 +7822,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Collective_assumptionContext(ParserRuleContext):
+    class CollectiveAssumptionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -7612,21 +7833,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_collective_assumption
+            return MizarParser.RULE_collectiveAssumption
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCollective_assumption" ):
-                return visitor.visitCollective_assumption(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCollectiveAssumption" ):
+                listener.enterCollectiveAssumption(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCollectiveAssumption" ):
+                listener.exitCollectiveAssumption(self)
 
 
 
 
-    def collective_assumption(self):
+    def collectiveAssumption(self):
 
-        localctx = MizarParser.Collective_assumptionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 222, self.RULE_collective_assumption)
+        localctx = MizarParser.CollectiveAssumptionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 222, self.RULE_collectiveAssumption)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1087
@@ -7643,14 +7866,14 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Existential_assumptionContext(ParserRuleContext):
+    class ExistentialAssumptionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def qualified_variables(self):
-            return self.getTypedRuleContext(MizarParser.Qualified_variablesContext,0)
+        def qualifiedVariables(self):
+            return self.getTypedRuleContext(MizarParser.QualifiedVariablesContext,0)
 
 
         def conditions(self):
@@ -7658,28 +7881,30 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_existential_assumption
+            return MizarParser.RULE_existentialAssumption
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExistential_assumption" ):
-                return visitor.visitExistential_assumption(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExistentialAssumption" ):
+                listener.enterExistentialAssumption(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExistentialAssumption" ):
+                listener.exitExistentialAssumption(self)
 
 
 
 
-    def existential_assumption(self):
+    def existentialAssumption(self):
 
-        localctx = MizarParser.Existential_assumptionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 224, self.RULE_existential_assumption)
+        localctx = MizarParser.ExistentialAssumptionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 224, self.RULE_existentialAssumption)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1091
             self.match(MizarParser.T__86)
             self.state = 1092
-            self.qualified_variables()
+            self.qualifiedVariables()
             self.state = 1095
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -7706,26 +7931,28 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def compact_statement(self):
-            return self.getTypedRuleContext(MizarParser.Compact_statementContext,0)
+        def compactStatement(self):
+            return self.getTypedRuleContext(MizarParser.CompactStatementContext,0)
 
 
-        def iterative_equality(self):
-            return self.getTypedRuleContext(MizarParser.Iterative_equalityContext,0)
+        def iterativeEquality(self):
+            return self.getTypedRuleContext(MizarParser.IterativeEqualityContext,0)
 
 
-        def diffuse_conclusion(self):
-            return self.getTypedRuleContext(MizarParser.Diffuse_conclusionContext,0)
+        def diffuseConclusion(self):
+            return self.getTypedRuleContext(MizarParser.DiffuseConclusionContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_conclusion
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConclusion" ):
-                return visitor.visitConclusion(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterConclusion" ):
+                listener.enterConclusion(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitConclusion" ):
+                listener.exitConclusion(self)
 
 
 
@@ -7753,12 +7980,12 @@ class MizarParser ( Parser ):
                 la_ = self._interp.adaptivePredict(self._input,88,self._ctx)
                 if la_ == 1:
                     self.state = 1100
-                    self.compact_statement()
+                    self.compactStatement()
                     pass
 
                 elif la_ == 2:
                     self.state = 1101
-                    self.iterative_equality()
+                    self.iterativeEquality()
                     pass
 
 
@@ -7767,7 +7994,7 @@ class MizarParser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1104
-                self.diffuse_conclusion()
+                self.diffuseConclusion()
                 pass
 
 
@@ -7779,14 +8006,14 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Diffuse_conclusionContext(ParserRuleContext):
+    class DiffuseConclusionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def diffuse_statement(self):
-            return self.getTypedRuleContext(MizarParser.Diffuse_statementContext,0)
+        def diffuseStatement(self):
+            return self.getTypedRuleContext(MizarParser.DiffuseStatementContext,0)
 
 
         def reasoning(self):
@@ -7794,21 +8021,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_diffuse_conclusion
+            return MizarParser.RULE_diffuseConclusion
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDiffuse_conclusion" ):
-                return visitor.visitDiffuse_conclusion(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDiffuseConclusion" ):
+                listener.enterDiffuseConclusion(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDiffuseConclusion" ):
+                listener.exitDiffuseConclusion(self)
 
 
 
 
-    def diffuse_conclusion(self):
+    def diffuseConclusion(self):
 
-        localctx = MizarParser.Diffuse_conclusionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 228, self.RULE_diffuse_conclusion)
+        localctx = MizarParser.DiffuseConclusionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 228, self.RULE_diffuseConclusion)
         try:
             self.state = 1114
             self._errHandler.sync(self)
@@ -7818,7 +8047,7 @@ class MizarParser ( Parser ):
                 self.state = 1107
                 self.match(MizarParser.T__87)
                 self.state = 1108
-                self.diffuse_statement()
+                self.diffuseStatement()
                 pass
             elif token in [MizarParser.T__89]:
                 self.enterOuterAlt(localctx, 2)
@@ -7858,11 +8087,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_exemplification
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExemplification" ):
-                return visitor.visitExemplification(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExemplification" ):
+                listener.enterExemplification(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExemplification" ):
+                listener.exitExemplification(self)
 
 
 
@@ -7906,22 +8137,24 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
-        def variable_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Variable_identifierContext,0)
+        def variableIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.VariableIdentifierContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_example
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExample" ):
-                return visitor.visitExample(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExample" ):
+                listener.enterExample(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExample" ):
+                listener.exitExample(self)
 
 
 
@@ -7937,17 +8170,17 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1127
-                self.term_expression(0)
+                self.termExpression(0)
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1128
-                self.variable_identifier()
+                self.variableIdentifier()
                 self.state = 1129
                 self.match(MizarParser.T__57)
                 self.state = 1130
-                self.term_expression(0)
+                self.termExpression(0)
                 pass
 
 
@@ -7965,22 +8198,24 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def linkable_statement(self):
-            return self.getTypedRuleContext(MizarParser.Linkable_statementContext,0)
+        def linkableStatement(self):
+            return self.getTypedRuleContext(MizarParser.LinkableStatementContext,0)
 
 
-        def diffuse_statement(self):
-            return self.getTypedRuleContext(MizarParser.Diffuse_statementContext,0)
+        def diffuseStatement(self):
+            return self.getTypedRuleContext(MizarParser.DiffuseStatementContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_statement
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStatement" ):
-                return visitor.visitStatement(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStatement" ):
+                listener.enterStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStatement" ):
+                listener.exitStatement(self)
 
 
 
@@ -8005,13 +8240,13 @@ class MizarParser ( Parser ):
 
 
                 self.state = 1137
-                self.linkable_statement()
+                self.linkableStatement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1138
-                self.diffuse_statement()
+                self.diffuseStatement()
                 pass
 
 
@@ -8023,44 +8258,46 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Linkable_statementContext(ParserRuleContext):
+    class LinkableStatementContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def compact_statement(self):
-            return self.getTypedRuleContext(MizarParser.Compact_statementContext,0)
+        def compactStatement(self):
+            return self.getTypedRuleContext(MizarParser.CompactStatementContext,0)
 
 
-        def choice_statement(self):
-            return self.getTypedRuleContext(MizarParser.Choice_statementContext,0)
+        def choiceStatement(self):
+            return self.getTypedRuleContext(MizarParser.ChoiceStatementContext,0)
 
 
-        def type_changing_statement(self):
-            return self.getTypedRuleContext(MizarParser.Type_changing_statementContext,0)
+        def typeChangingStatement(self):
+            return self.getTypedRuleContext(MizarParser.TypeChangingStatementContext,0)
 
 
-        def iterative_equality(self):
-            return self.getTypedRuleContext(MizarParser.Iterative_equalityContext,0)
+        def iterativeEquality(self):
+            return self.getTypedRuleContext(MizarParser.IterativeEqualityContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_linkable_statement
+            return MizarParser.RULE_linkableStatement
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLinkable_statement" ):
-                return visitor.visitLinkable_statement(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLinkableStatement" ):
+                listener.enterLinkableStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLinkableStatement" ):
+                listener.exitLinkableStatement(self)
 
 
 
 
-    def linkable_statement(self):
+    def linkableStatement(self):
 
-        localctx = MizarParser.Linkable_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 236, self.RULE_linkable_statement)
+        localctx = MizarParser.LinkableStatementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 236, self.RULE_linkableStatement)
         try:
             self.state = 1145
             self._errHandler.sync(self)
@@ -8068,25 +8305,25 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1141
-                self.compact_statement()
+                self.compactStatement()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1142
-                self.choice_statement()
+                self.choiceStatement()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1143
-                self.type_changing_statement()
+                self.typeChangingStatement()
                 pass
 
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1144
-                self.iterative_equality()
+                self.iterativeEquality()
                 pass
 
 
@@ -8098,7 +8335,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Compact_statementContext(ParserRuleContext):
+    class CompactStatementContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8113,21 +8350,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_compact_statement
+            return MizarParser.RULE_compactStatement
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitCompact_statement" ):
-                return visitor.visitCompact_statement(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterCompactStatement" ):
+                listener.enterCompactStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitCompactStatement" ):
+                listener.exitCompactStatement(self)
 
 
 
 
-    def compact_statement(self):
+    def compactStatement(self):
 
-        localctx = MizarParser.Compact_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 238, self.RULE_compact_statement)
+        localctx = MizarParser.CompactStatementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 238, self.RULE_compactStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1147
@@ -8144,52 +8383,54 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Choice_statementContext(ParserRuleContext):
+    class ChoiceStatementContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def qualified_variables(self):
-            return self.getTypedRuleContext(MizarParser.Qualified_variablesContext,0)
+        def qualifiedVariables(self):
+            return self.getTypedRuleContext(MizarParser.QualifiedVariablesContext,0)
 
 
         def conditions(self):
             return self.getTypedRuleContext(MizarParser.ConditionsContext,0)
 
 
-        def simple_justification(self):
-            return self.getTypedRuleContext(MizarParser.Simple_justificationContext,0)
+        def simpleJustification(self):
+            return self.getTypedRuleContext(MizarParser.SimpleJustificationContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_choice_statement
+            return MizarParser.RULE_choiceStatement
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitChoice_statement" ):
-                return visitor.visitChoice_statement(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterChoiceStatement" ):
+                listener.enterChoiceStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitChoiceStatement" ):
+                listener.exitChoiceStatement(self)
 
 
 
 
-    def choice_statement(self):
+    def choiceStatement(self):
 
-        localctx = MizarParser.Choice_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 240, self.RULE_choice_statement)
+        localctx = MizarParser.ChoiceStatementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 240, self.RULE_choiceStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1151
             self.match(MizarParser.T__91)
             self.state = 1152
-            self.qualified_variables()
+            self.qualifiedVariables()
             self.state = 1153
             self.match(MizarParser.T__21)
             self.state = 1154
             self.conditions()
             self.state = 1155
-            self.simple_justification()
+            self.simpleJustification()
             self.state = 1156
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -8200,52 +8441,54 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Type_changing_statementContext(ParserRuleContext):
+    class TypeChangingStatementContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def type_change_list(self):
-            return self.getTypedRuleContext(MizarParser.Type_change_listContext,0)
+        def typeChangeList(self):
+            return self.getTypedRuleContext(MizarParser.TypeChangeListContext,0)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
-        def simple_justification(self):
-            return self.getTypedRuleContext(MizarParser.Simple_justificationContext,0)
+        def simpleJustification(self):
+            return self.getTypedRuleContext(MizarParser.SimpleJustificationContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_type_changing_statement
+            return MizarParser.RULE_typeChangingStatement
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitType_changing_statement" ):
-                return visitor.visitType_changing_statement(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeChangingStatement" ):
+                listener.enterTypeChangingStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeChangingStatement" ):
+                listener.exitTypeChangingStatement(self)
 
 
 
 
-    def type_changing_statement(self):
+    def typeChangingStatement(self):
 
-        localctx = MizarParser.Type_changing_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 242, self.RULE_type_changing_statement)
+        localctx = MizarParser.TypeChangingStatementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 242, self.RULE_typeChangingStatement)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1158
             self.match(MizarParser.T__92)
             self.state = 1159
-            self.type_change_list()
+            self.typeChangeList()
             self.state = 1160
             self.match(MizarParser.T__93)
             self.state = 1161
-            self.type_expression()
+            self.typeExpression()
             self.state = 1162
-            self.simple_justification()
+            self.simpleJustification()
             self.state = 1163
             self.match(MizarParser.T__3)
         except RecognitionException as re:
@@ -8256,7 +8499,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Type_change_listContext(ParserRuleContext):
+    class TypeChangeListContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8269,29 +8512,31 @@ class MizarParser ( Parser ):
                 return self.getTypedRuleContext(MizarParser.EquatingContext,i)
 
 
-        def variable_identifier(self, i:int=None):
+        def variableIdentifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Variable_identifierContext)
+                return self.getTypedRuleContexts(MizarParser.VariableIdentifierContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Variable_identifierContext,i)
+                return self.getTypedRuleContext(MizarParser.VariableIdentifierContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_type_change_list
+            return MizarParser.RULE_typeChangeList
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitType_change_list" ):
-                return visitor.visitType_change_list(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeChangeList" ):
+                listener.enterTypeChangeList(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeChangeList" ):
+                listener.exitTypeChangeList(self)
 
 
 
 
-    def type_change_list(self):
+    def typeChangeList(self):
 
-        localctx = MizarParser.Type_change_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 244, self.RULE_type_change_list)
+        localctx = MizarParser.TypeChangeListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 244, self.RULE_typeChangeList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -8305,7 +8550,7 @@ class MizarParser ( Parser ):
 
             elif la_ == 2:
                 self.state = 1166
-                self.variable_identifier()
+                self.variableIdentifier()
                 pass
 
 
@@ -8325,7 +8570,7 @@ class MizarParser ( Parser ):
 
                 elif la_ == 2:
                     self.state = 1171
-                    self.variable_identifier()
+                    self.variableIdentifier()
                     pass
 
 
@@ -8341,46 +8586,48 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Iterative_equalityContext(ParserRuleContext):
+    class IterativeEqualityContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def term_expression(self, i:int=None):
+        def termExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Term_expressionContext)
+                return self.getTypedRuleContexts(MizarParser.TermExpressionContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Term_expressionContext,i)
+                return self.getTypedRuleContext(MizarParser.TermExpressionContext,i)
 
 
-        def simple_justification(self, i:int=None):
+        def simpleJustification(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Simple_justificationContext)
+                return self.getTypedRuleContexts(MizarParser.SimpleJustificationContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Simple_justificationContext,i)
+                return self.getTypedRuleContext(MizarParser.SimpleJustificationContext,i)
 
 
-        def label_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Label_identifierContext,0)
+        def labelIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.LabelIdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_iterative_equality
+            return MizarParser.RULE_iterativeEquality
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitIterative_equality" ):
-                return visitor.visitIterative_equality(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterIterativeEquality" ):
+                listener.enterIterativeEquality(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitIterativeEquality" ):
+                listener.exitIterativeEquality(self)
 
 
 
 
-    def iterative_equality(self):
+    def iterativeEquality(self):
 
-        localctx = MizarParser.Iterative_equalityContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 246, self.RULE_iterative_equality)
+        localctx = MizarParser.IterativeEqualityContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 246, self.RULE_iterativeEquality)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -8389,19 +8636,19 @@ class MizarParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,99,self._ctx)
             if la_ == 1:
                 self.state = 1179
-                self.label_identifier()
+                self.labelIdentifier()
                 self.state = 1180
                 self.match(MizarParser.T__36)
 
 
             self.state = 1184
-            self.term_expression(0)
+            self.termExpression(0)
             self.state = 1185
             self.match(MizarParser.T__57)
             self.state = 1186
-            self.term_expression(0)
+            self.termExpression(0)
             self.state = 1187
-            self.simple_justification()
+            self.simpleJustification()
             self.state = 1192 
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -8409,9 +8656,9 @@ class MizarParser ( Parser ):
                 self.state = 1188
                 self.match(MizarParser.T__94)
                 self.state = 1189
-                self.term_expression(0)
+                self.termExpression(0)
                 self.state = 1190
-                self.simple_justification()
+                self.simpleJustification()
                 self.state = 1194 
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -8428,7 +8675,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Diffuse_statementContext(ParserRuleContext):
+    class DiffuseStatementContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8438,26 +8685,28 @@ class MizarParser ( Parser ):
             return self.getTypedRuleContext(MizarParser.ReasoningContext,0)
 
 
-        def label_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Label_identifierContext,0)
+        def labelIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.LabelIdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_diffuse_statement
+            return MizarParser.RULE_diffuseStatement
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDiffuse_statement" ):
-                return visitor.visitDiffuse_statement(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDiffuseStatement" ):
+                listener.enterDiffuseStatement(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDiffuseStatement" ):
+                listener.exitDiffuseStatement(self)
 
 
 
 
-    def diffuse_statement(self):
+    def diffuseStatement(self):
 
-        localctx = MizarParser.Diffuse_statementContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 248, self.RULE_diffuse_statement)
+        localctx = MizarParser.DiffuseStatementContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 248, self.RULE_diffuseStatement)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -8466,7 +8715,7 @@ class MizarParser ( Parser ):
             _la = self._input.LA(1)
             if _la==MizarParser.IDENTIFIER:
                 self.state = 1198
-                self.label_identifier()
+                self.labelIdentifier()
                 self.state = 1199
                 self.match(MizarParser.T__36)
 
@@ -8493,8 +8742,8 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def simple_justification(self):
-            return self.getTypedRuleContext(MizarParser.Simple_justificationContext,0)
+        def simpleJustification(self):
+            return self.getTypedRuleContext(MizarParser.SimpleJustificationContext,0)
 
 
         def proof(self):
@@ -8504,11 +8753,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_justification
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitJustification" ):
-                return visitor.visitJustification(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterJustification" ):
+                listener.enterJustification(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitJustification" ):
+                listener.exitJustification(self)
 
 
 
@@ -8524,7 +8775,7 @@ class MizarParser ( Parser ):
             if token in [MizarParser.T__3, MizarParser.T__96, MizarParser.T__97]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1208
-                self.simple_justification()
+                self.simpleJustification()
                 pass
             elif token in [MizarParser.T__77]:
                 self.enterOuterAlt(localctx, 2)
@@ -8542,36 +8793,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Simple_justificationContext(ParserRuleContext):
+    class SimpleJustificationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def straightforward_justification(self):
-            return self.getTypedRuleContext(MizarParser.Straightforward_justificationContext,0)
+        def straightforwardJustification(self):
+            return self.getTypedRuleContext(MizarParser.StraightforwardJustificationContext,0)
 
 
-        def scheme_justification(self):
-            return self.getTypedRuleContext(MizarParser.Scheme_justificationContext,0)
+        def schemeJustification(self):
+            return self.getTypedRuleContext(MizarParser.SchemeJustificationContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_simple_justification
+            return MizarParser.RULE_simpleJustification
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSimple_justification" ):
-                return visitor.visitSimple_justification(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSimpleJustification" ):
+                listener.enterSimpleJustification(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSimpleJustification" ):
+                listener.exitSimpleJustification(self)
 
 
 
 
-    def simple_justification(self):
+    def simpleJustification(self):
 
-        localctx = MizarParser.Simple_justificationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 252, self.RULE_simple_justification)
+        localctx = MizarParser.SimpleJustificationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 252, self.RULE_simpleJustification)
         try:
             self.state = 1214
             self._errHandler.sync(self)
@@ -8579,12 +8832,12 @@ class MizarParser ( Parser ):
             if token in [MizarParser.T__3, MizarParser.T__94, MizarParser.T__96]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1212
-                self.straightforward_justification()
+                self.straightforwardJustification()
                 pass
             elif token in [MizarParser.T__97]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1213
-                self.scheme_justification()
+                self.schemeJustification()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -8610,11 +8863,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_proof
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProof" ):
-                return visitor.visitProof(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterProof" ):
+                listener.enterProof(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitProof" ):
+                listener.exitProof(self)
 
 
 
@@ -8639,7 +8894,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Straightforward_justificationContext(ParserRuleContext):
+    class StraightforwardJustificationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -8650,21 +8905,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_straightforward_justification
+            return MizarParser.RULE_straightforwardJustification
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStraightforward_justification" ):
-                return visitor.visitStraightforward_justification(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStraightforwardJustification" ):
+                listener.enterStraightforwardJustification(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStraightforwardJustification" ):
+                listener.exitStraightforwardJustification(self)
 
 
 
 
-    def straightforward_justification(self):
+    def straightforwardJustification(self):
 
-        localctx = MizarParser.Straightforward_justificationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 256, self.RULE_straightforward_justification)
+        localctx = MizarParser.StraightforwardJustificationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 256, self.RULE_straightforwardJustification)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -8686,14 +8943,14 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_justificationContext(ParserRuleContext):
+    class SchemeJustificationContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def scheme_reference(self):
-            return self.getTypedRuleContext(MizarParser.Scheme_referenceContext,0)
+        def schemeReference(self):
+            return self.getTypedRuleContext(MizarParser.SchemeReferenceContext,0)
 
 
         def references(self):
@@ -8701,28 +8958,30 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_justification
+            return MizarParser.RULE_schemeJustification
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_justification" ):
-                return visitor.visitScheme_justification(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemeJustification" ):
+                listener.enterSchemeJustification(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemeJustification" ):
+                listener.exitSchemeJustification(self)
 
 
 
 
-    def scheme_justification(self):
+    def schemeJustification(self):
 
-        localctx = MizarParser.Scheme_justificationContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 258, self.RULE_scheme_justification)
+        localctx = MizarParser.SchemeJustificationContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 258, self.RULE_schemeJustification)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1224
             self.match(MizarParser.T__97)
             self.state = 1225
-            self.scheme_reference()
+            self.schemeReference()
             self.state = 1230
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -8759,11 +9018,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_references
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReferences" ):
-                return visitor.visitReferences(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReferences" ):
+                listener.enterReferences(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReferences" ):
+                listener.exitReferences(self)
 
 
 
@@ -8803,22 +9064,24 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def local_reference(self):
-            return self.getTypedRuleContext(MizarParser.Local_referenceContext,0)
+        def localReference(self):
+            return self.getTypedRuleContext(MizarParser.LocalReferenceContext,0)
 
 
-        def library_reference(self):
-            return self.getTypedRuleContext(MizarParser.Library_referenceContext,0)
+        def libraryReference(self):
+            return self.getTypedRuleContext(MizarParser.LibraryReferenceContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_reference
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitReference" ):
-                return visitor.visitReference(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterReference" ):
+                listener.enterReference(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitReference" ):
+                listener.exitReference(self)
 
 
 
@@ -8834,12 +9097,12 @@ class MizarParser ( Parser ):
             if token in [MizarParser.IDENTIFIER]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1240
-                self.local_reference()
+                self.localReference()
                 pass
             elif token in [MizarParser.FILE_NAME]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1241
-                self.library_reference()
+                self.libraryReference()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -8852,36 +9115,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_referenceContext(ParserRuleContext):
+    class SchemeReferenceContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def local_scheme_reference(self):
-            return self.getTypedRuleContext(MizarParser.Local_scheme_referenceContext,0)
+        def localSchemeReference(self):
+            return self.getTypedRuleContext(MizarParser.LocalSchemeReferenceContext,0)
 
 
-        def library_scheme_reference(self):
-            return self.getTypedRuleContext(MizarParser.Library_scheme_referenceContext,0)
+        def librarySchemeReference(self):
+            return self.getTypedRuleContext(MizarParser.LibrarySchemeReferenceContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_reference
+            return MizarParser.RULE_schemeReference
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_reference" ):
-                return visitor.visitScheme_reference(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemeReference" ):
+                listener.enterSchemeReference(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemeReference" ):
+                listener.exitSchemeReference(self)
 
 
 
 
-    def scheme_reference(self):
+    def schemeReference(self):
 
-        localctx = MizarParser.Scheme_referenceContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 264, self.RULE_scheme_reference)
+        localctx = MizarParser.SchemeReferenceContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 264, self.RULE_schemeReference)
         try:
             self.state = 1246
             self._errHandler.sync(self)
@@ -8889,12 +9154,12 @@ class MizarParser ( Parser ):
             if token in [MizarParser.IDENTIFIER]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1244
-                self.local_scheme_reference()
+                self.localSchemeReference()
                 pass
             elif token in [MizarParser.FILE_NAME]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1245
-                self.library_scheme_reference()
+                self.librarySchemeReference()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -8907,36 +9172,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Local_referenceContext(ParserRuleContext):
+    class LocalReferenceContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def label_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Label_identifierContext,0)
+        def labelIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.LabelIdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_local_reference
+            return MizarParser.RULE_localReference
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLocal_reference" ):
-                return visitor.visitLocal_reference(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLocalReference" ):
+                listener.enterLocalReference(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLocalReference" ):
+                listener.exitLocalReference(self)
 
 
 
 
-    def local_reference(self):
+    def localReference(self):
 
-        localctx = MizarParser.Local_referenceContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 266, self.RULE_local_reference)
+        localctx = MizarParser.LocalReferenceContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 266, self.RULE_localReference)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1248
-            self.label_identifier()
+            self.labelIdentifier()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -8945,36 +9212,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Local_scheme_referenceContext(ParserRuleContext):
+    class LocalSchemeReferenceContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def scheme_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Scheme_identifierContext,0)
+        def schemeIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.SchemeIdentifierContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_local_scheme_reference
+            return MizarParser.RULE_localSchemeReference
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLocal_scheme_reference" ):
-                return visitor.visitLocal_scheme_reference(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLocalSchemeReference" ):
+                listener.enterLocalSchemeReference(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLocalSchemeReference" ):
+                listener.exitLocalSchemeReference(self)
 
 
 
 
-    def local_scheme_reference(self):
+    def localSchemeReference(self):
 
-        localctx = MizarParser.Local_scheme_referenceContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 268, self.RULE_local_scheme_reference)
+        localctx = MizarParser.LocalSchemeReferenceContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 268, self.RULE_localSchemeReference)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1250
-            self.scheme_identifier()
+            self.schemeIdentifier()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -8983,50 +9252,52 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Library_referenceContext(ParserRuleContext):
+    class LibraryReferenceContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def article_name(self):
-            return self.getTypedRuleContext(MizarParser.Article_nameContext,0)
+        def articleName(self):
+            return self.getTypedRuleContext(MizarParser.ArticleNameContext,0)
 
 
-        def theorem_number(self, i:int=None):
+        def theoremNumber(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Theorem_numberContext)
+                return self.getTypedRuleContexts(MizarParser.TheoremNumberContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Theorem_numberContext,i)
+                return self.getTypedRuleContext(MizarParser.TheoremNumberContext,i)
 
 
-        def definition_number(self, i:int=None):
+        def definitionNumber(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Definition_numberContext)
+                return self.getTypedRuleContexts(MizarParser.DefinitionNumberContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Definition_numberContext,i)
+                return self.getTypedRuleContext(MizarParser.DefinitionNumberContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_library_reference
+            return MizarParser.RULE_libraryReference
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibrary_reference" ):
-                return visitor.visitLibrary_reference(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLibraryReference" ):
+                listener.enterLibraryReference(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLibraryReference" ):
+                listener.exitLibraryReference(self)
 
 
 
 
-    def library_reference(self):
+    def libraryReference(self):
 
-        localctx = MizarParser.Library_referenceContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 270, self.RULE_library_reference)
+        localctx = MizarParser.LibraryReferenceContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 270, self.RULE_libraryReference)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1252
-            self.article_name()
+            self.articleName()
             self.state = 1253
             self.match(MizarParser.T__36)
             self.state = 1257
@@ -9034,13 +9305,13 @@ class MizarParser ( Parser ):
             token = self._input.LA(1)
             if token in [MizarParser.NUMERAL]:
                 self.state = 1254
-                self.theorem_number()
+                self.theoremNumber()
                 pass
             elif token in [MizarParser.T__98]:
                 self.state = 1255
                 self.match(MizarParser.T__98)
                 self.state = 1256
-                self.definition_number()
+                self.definitionNumber()
                 pass
             else:
                 raise NoViableAltException(self)
@@ -9057,13 +9328,13 @@ class MizarParser ( Parser ):
                     token = self._input.LA(1)
                     if token in [MizarParser.NUMERAL]:
                         self.state = 1260
-                        self.theorem_number()
+                        self.theoremNumber()
                         pass
                     elif token in [MizarParser.T__98]:
                         self.state = 1261
                         self.match(MizarParser.T__98)
                         self.state = 1262
-                        self.definition_number()
+                        self.definitionNumber()
                         pass
                     else:
                         raise NoViableAltException(self)
@@ -9080,46 +9351,48 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Library_scheme_referenceContext(ParserRuleContext):
+    class LibrarySchemeReferenceContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def article_name(self):
-            return self.getTypedRuleContext(MizarParser.Article_nameContext,0)
+        def articleName(self):
+            return self.getTypedRuleContext(MizarParser.ArticleNameContext,0)
 
 
-        def scheme_number(self):
-            return self.getTypedRuleContext(MizarParser.Scheme_numberContext,0)
+        def schemeNumber(self):
+            return self.getTypedRuleContext(MizarParser.SchemeNumberContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_library_scheme_reference
+            return MizarParser.RULE_librarySchemeReference
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitLibrary_scheme_reference" ):
-                return visitor.visitLibrary_scheme_reference(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterLibrarySchemeReference" ):
+                listener.enterLibrarySchemeReference(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitLibrarySchemeReference" ):
+                listener.exitLibrarySchemeReference(self)
 
 
 
 
-    def library_scheme_reference(self):
+    def librarySchemeReference(self):
 
-        localctx = MizarParser.Library_scheme_referenceContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 272, self.RULE_library_scheme_reference)
+        localctx = MizarParser.LibrarySchemeReferenceContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 272, self.RULE_librarySchemeReference)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1270
-            self.article_name()
+            self.articleName()
             self.state = 1271
             self.match(MizarParser.T__36)
             self.state = 1272
             self.match(MizarParser.T__99)
             self.state = 1273
-            self.scheme_number()
+            self.schemeNumber()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -9128,7 +9401,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Theorem_numberContext(ParserRuleContext):
+    class TheoremNumberContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9138,21 +9411,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.NUMERAL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_theorem_number
+            return MizarParser.RULE_theoremNumber
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTheorem_number" ):
-                return visitor.visitTheorem_number(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTheoremNumber" ):
+                listener.enterTheoremNumber(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTheoremNumber" ):
+                listener.exitTheoremNumber(self)
 
 
 
 
-    def theorem_number(self):
+    def theoremNumber(self):
 
-        localctx = MizarParser.Theorem_numberContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 274, self.RULE_theorem_number)
+        localctx = MizarParser.TheoremNumberContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 274, self.RULE_theoremNumber)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1275
@@ -9165,7 +9440,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Definition_numberContext(ParserRuleContext):
+    class DefinitionNumberContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9175,21 +9450,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.NUMERAL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_definition_number
+            return MizarParser.RULE_definitionNumber
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitDefinition_number" ):
-                return visitor.visitDefinition_number(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterDefinitionNumber" ):
+                listener.enterDefinitionNumber(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitDefinitionNumber" ):
+                listener.exitDefinitionNumber(self)
 
 
 
 
-    def definition_number(self):
+    def definitionNumber(self):
 
-        localctx = MizarParser.Definition_numberContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 276, self.RULE_definition_number)
+        localctx = MizarParser.DefinitionNumberContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 276, self.RULE_definitionNumber)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1277
@@ -9202,7 +9479,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Scheme_numberContext(ParserRuleContext):
+    class SchemeNumberContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9212,21 +9489,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.NUMERAL, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_scheme_number
+            return MizarParser.RULE_schemeNumber
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitScheme_number" ):
-                return visitor.visitScheme_number(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSchemeNumber" ):
+                listener.enterSchemeNumber(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSchemeNumber" ):
+                listener.exitSchemeNumber(self)
 
 
 
 
-    def scheme_number(self):
+    def schemeNumber(self):
 
-        localctx = MizarParser.Scheme_numberContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 278, self.RULE_scheme_number)
+        localctx = MizarParser.SchemeNumberContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 278, self.RULE_schemeNumber)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1279
@@ -9255,11 +9534,13 @@ class MizarParser ( Parser ):
         def getRuleIndex(self):
             return MizarParser.RULE_conditions
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitConditions" ):
-                return visitor.visitConditions(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterConditions" ):
+                listener.enterConditions(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitConditions" ):
+                listener.exitConditions(self)
 
 
 
@@ -9305,18 +9586,20 @@ class MizarParser ( Parser ):
             return self.getTypedRuleContext(MizarParser.SentenceContext,0)
 
 
-        def label_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Label_identifierContext,0)
+        def labelIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.LabelIdentifierContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_proposition
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitProposition" ):
-                return visitor.visitProposition(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterProposition" ):
+                listener.enterProposition(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitProposition" ):
+                listener.exitProposition(self)
 
 
 
@@ -9332,7 +9615,7 @@ class MizarParser ( Parser ):
             la_ = self._interp.adaptivePredict(self._input,113,self._ctx)
             if la_ == 1:
                 self.state = 1290
-                self.label_identifier()
+                self.labelIdentifier()
                 self.state = 1291
                 self.match(MizarParser.T__36)
 
@@ -9353,18 +9636,20 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def formula_expression(self):
-            return self.getTypedRuleContext(MizarParser.Formula_expressionContext,0)
+        def formulaExpression(self):
+            return self.getTypedRuleContext(MizarParser.FormulaExpressionContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_sentence
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitSentence" ):
-                return visitor.visitSentence(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterSentence" ):
+                listener.enterSentence(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitSentence" ):
+                listener.exitSentence(self)
 
 
 
@@ -9376,7 +9661,7 @@ class MizarParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1297
-            self.formula_expression(0)
+            self.formulaExpression(0)
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -9385,45 +9670,47 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Formula_expressionContext(ParserRuleContext):
+    class FormulaExpressionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def formula_expression(self, i:int=None):
+        def formulaExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Formula_expressionContext)
+                return self.getTypedRuleContexts(MizarParser.FormulaExpressionContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Formula_expressionContext,i)
+                return self.getTypedRuleContext(MizarParser.FormulaExpressionContext,i)
 
 
-        def atomic_formula_expression(self):
-            return self.getTypedRuleContext(MizarParser.Atomic_formula_expressionContext,0)
+        def atomicFormulaExpression(self):
+            return self.getTypedRuleContext(MizarParser.AtomicFormulaExpressionContext,0)
 
 
-        def quantified_formula_expression(self):
-            return self.getTypedRuleContext(MizarParser.Quantified_formula_expressionContext,0)
+        def quantifiedFormulaExpression(self):
+            return self.getTypedRuleContext(MizarParser.QuantifiedFormulaExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_formula_expression
+            return MizarParser.RULE_formulaExpression
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitFormula_expression" ):
-                return visitor.visitFormula_expression(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterFormulaExpression" ):
+                listener.enterFormulaExpression(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitFormulaExpression" ):
+                listener.exitFormulaExpression(self)
 
 
 
-    def formula_expression(self, _p:int=0):
+    def formulaExpression(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = MizarParser.Formula_expressionContext(self, self._ctx, _parentState)
+        localctx = MizarParser.FormulaExpressionContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 286
-        self.enterRecursionRule(localctx, 286, self.RULE_formula_expression, _p)
+        self.enterRecursionRule(localctx, 286, self.RULE_formulaExpression, _p)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1310
@@ -9433,26 +9720,26 @@ class MizarParser ( Parser ):
                 self.state = 1300
                 self.match(MizarParser.T__24)
                 self.state = 1301
-                self.formula_expression(0)
+                self.formulaExpression(0)
                 self.state = 1302
                 self.match(MizarParser.T__25)
                 pass
 
             elif la_ == 2:
                 self.state = 1304
-                self.atomic_formula_expression()
+                self.atomicFormulaExpression()
                 pass
 
             elif la_ == 3:
                 self.state = 1305
-                self.quantified_formula_expression()
+                self.quantifiedFormulaExpression()
                 pass
 
             elif la_ == 4:
                 self.state = 1306
                 self.match(MizarParser.T__106)
                 self.state = 1307
-                self.formula_expression(3)
+                self.formulaExpression(3)
                 pass
 
             elif la_ == 5:
@@ -9479,8 +9766,8 @@ class MizarParser ( Parser ):
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,115,self._ctx)
                     if la_ == 1:
-                        localctx = MizarParser.Formula_expressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formula_expression)
+                        localctx = MizarParser.FormulaExpressionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formulaExpression)
                         self.state = 1312
                         if not self.precpred(self._ctx, 9):
                             from antlr4.error.Errors import FailedPredicateException
@@ -9488,12 +9775,12 @@ class MizarParser ( Parser ):
                         self.state = 1313
                         self.match(MizarParser.T__101)
                         self.state = 1314
-                        self.formula_expression(10)
+                        self.formulaExpression(10)
                         pass
 
                     elif la_ == 2:
-                        localctx = MizarParser.Formula_expressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formula_expression)
+                        localctx = MizarParser.FormulaExpressionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formulaExpression)
                         self.state = 1315
                         if not self.precpred(self._ctx, 8):
                             from antlr4.error.Errors import FailedPredicateException
@@ -9505,12 +9792,12 @@ class MizarParser ( Parser ):
                         self.state = 1318
                         self.match(MizarParser.T__101)
                         self.state = 1319
-                        self.formula_expression(9)
+                        self.formulaExpression(9)
                         pass
 
                     elif la_ == 3:
-                        localctx = MizarParser.Formula_expressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formula_expression)
+                        localctx = MizarParser.FormulaExpressionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formulaExpression)
                         self.state = 1320
                         if not self.precpred(self._ctx, 7):
                             from antlr4.error.Errors import FailedPredicateException
@@ -9518,12 +9805,12 @@ class MizarParser ( Parser ):
                         self.state = 1321
                         self.match(MizarParser.T__103)
                         self.state = 1322
-                        self.formula_expression(8)
+                        self.formulaExpression(8)
                         pass
 
                     elif la_ == 4:
-                        localctx = MizarParser.Formula_expressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formula_expression)
+                        localctx = MizarParser.FormulaExpressionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formulaExpression)
                         self.state = 1323
                         if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
@@ -9535,12 +9822,12 @@ class MizarParser ( Parser ):
                         self.state = 1326
                         self.match(MizarParser.T__103)
                         self.state = 1327
-                        self.formula_expression(7)
+                        self.formulaExpression(7)
                         pass
 
                     elif la_ == 5:
-                        localctx = MizarParser.Formula_expressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formula_expression)
+                        localctx = MizarParser.FormulaExpressionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formulaExpression)
                         self.state = 1328
                         if not self.precpred(self._ctx, 5):
                             from antlr4.error.Errors import FailedPredicateException
@@ -9548,12 +9835,12 @@ class MizarParser ( Parser ):
                         self.state = 1329
                         self.match(MizarParser.T__104)
                         self.state = 1330
-                        self.formula_expression(6)
+                        self.formulaExpression(6)
                         pass
 
                     elif la_ == 6:
-                        localctx = MizarParser.Formula_expressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formula_expression)
+                        localctx = MizarParser.FormulaExpressionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_formulaExpression)
                         self.state = 1331
                         if not self.precpred(self._ctx, 4):
                             from antlr4.error.Errors import FailedPredicateException
@@ -9561,7 +9848,7 @@ class MizarParser ( Parser ):
                         self.state = 1332
                         self.match(MizarParser.T__105)
                         self.state = 1333
-                        self.formula_expression(5)
+                        self.formulaExpression(5)
                         pass
 
              
@@ -9577,32 +9864,32 @@ class MizarParser ( Parser ):
             self.unrollRecursionContexts(_parentctx)
         return localctx
 
-    class Atomic_formula_expressionContext(ParserRuleContext):
+    class AtomicFormulaExpressionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def predicate_symbol(self, i:int=None):
+        def predicateSymbol(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Predicate_symbolContext)
+                return self.getTypedRuleContexts(MizarParser.PredicateSymbolContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Predicate_symbolContext,i)
+                return self.getTypedRuleContext(MizarParser.PredicateSymbolContext,i)
 
 
-        def term_expression_list(self, i:int=None):
+        def termExpressionList(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Term_expression_listContext)
+                return self.getTypedRuleContexts(MizarParser.TermExpressionListContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Term_expression_listContext,i)
+                return self.getTypedRuleContext(MizarParser.TermExpressionListContext,i)
 
 
-        def predicate_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Predicate_identifierContext,0)
+        def predicateIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.PredicateIdentifierContext,0)
 
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
         def adjective(self, i:int=None):
@@ -9612,26 +9899,28 @@ class MizarParser ( Parser ):
                 return self.getTypedRuleContext(MizarParser.AdjectiveContext,i)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_atomic_formula_expression
+            return MizarParser.RULE_atomicFormulaExpression
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAtomic_formula_expression" ):
-                return visitor.visitAtomic_formula_expression(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAtomicFormulaExpression" ):
+                listener.enterAtomicFormulaExpression(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAtomicFormulaExpression" ):
+                listener.exitAtomicFormulaExpression(self)
 
 
 
 
-    def atomic_formula_expression(self):
+    def atomicFormulaExpression(self):
 
-        localctx = MizarParser.Atomic_formula_expressionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 288, self.RULE_atomic_formula_expression)
+        localctx = MizarParser.AtomicFormulaExpressionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 288, self.RULE_atomicFormulaExpression)
         self._la = 0 # Token type
         try:
             self.state = 1380
@@ -9644,7 +9933,7 @@ class MizarParser ( Parser ):
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__24) | (1 << MizarParser.T__46) | (1 << MizarParser.T__47))) != 0) or ((((_la - 117)) & ~0x3f) == 0 and ((1 << (_la - 117)) & ((1 << (MizarParser.T__116 - 117)) | (1 << (MizarParser.T__119 - 117)) | (1 << (MizarParser.T__122 - 117)) | (1 << (MizarParser.T__123 - 117)) | (1 << (MizarParser.T__124 - 117)) | (1 << (MizarParser.T__125 - 117)) | (1 << (MizarParser.T__126 - 117)) | (1 << (MizarParser.T__127 - 117)) | (1 << (MizarParser.T__128 - 117)) | (1 << (MizarParser.T__129 - 117)) | (1 << (MizarParser.T__130 - 117)) | (1 << (MizarParser.T__131 - 117)) | (1 << (MizarParser.FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.STRUCTURE_SYMBOL - 117)) | (1 << (MizarParser.LEFT_FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.IDENTIFIER - 117)) | (1 << (MizarParser.NUMERAL - 117)))) != 0):
                     self.state = 1339
-                    self.term_expression_list()
+                    self.termExpressionList()
 
 
                 self.state = 1344
@@ -9663,13 +9952,13 @@ class MizarParser ( Parser ):
 
 
                 self.state = 1346
-                self.predicate_symbol()
+                self.predicateSymbol()
                 self.state = 1348
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,119,self._ctx)
                 if la_ == 1:
                     self.state = 1347
-                    self.term_expression_list()
+                    self.termExpressionList()
 
 
                 self.state = 1359
@@ -9693,9 +9982,9 @@ class MizarParser ( Parser ):
 
 
                         self.state = 1354
-                        self.predicate_symbol()
+                        self.predicateSymbol()
                         self.state = 1355
-                        self.term_expression_list() 
+                        self.termExpressionList() 
                     self.state = 1361
                     self._errHandler.sync(self)
                     _alt = self._interp.adaptivePredict(self._input,121,self._ctx)
@@ -9705,7 +9994,7 @@ class MizarParser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1362
-                self.predicate_identifier()
+                self.predicateIdentifier()
                 self.state = 1363
                 self.match(MizarParser.T__47)
                 self.state = 1365
@@ -9713,7 +10002,7 @@ class MizarParser ( Parser ):
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__24) | (1 << MizarParser.T__46) | (1 << MizarParser.T__47))) != 0) or ((((_la - 117)) & ~0x3f) == 0 and ((1 << (_la - 117)) & ((1 << (MizarParser.T__116 - 117)) | (1 << (MizarParser.T__119 - 117)) | (1 << (MizarParser.T__122 - 117)) | (1 << (MizarParser.T__123 - 117)) | (1 << (MizarParser.T__124 - 117)) | (1 << (MizarParser.T__125 - 117)) | (1 << (MizarParser.T__126 - 117)) | (1 << (MizarParser.T__127 - 117)) | (1 << (MizarParser.T__128 - 117)) | (1 << (MizarParser.T__129 - 117)) | (1 << (MizarParser.T__130 - 117)) | (1 << (MizarParser.T__131 - 117)) | (1 << (MizarParser.FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.STRUCTURE_SYMBOL - 117)) | (1 << (MizarParser.LEFT_FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.IDENTIFIER - 117)) | (1 << (MizarParser.NUMERAL - 117)))) != 0):
                     self.state = 1364
-                    self.term_expression_list()
+                    self.termExpressionList()
 
 
                 self.state = 1367
@@ -9723,7 +10012,7 @@ class MizarParser ( Parser ):
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1369
-                self.term_expression(0)
+                self.termExpression(0)
                 self.state = 1370
                 self.match(MizarParser.T__32)
                 self.state = 1372 
@@ -9745,11 +10034,11 @@ class MizarParser ( Parser ):
             elif la_ == 4:
                 self.enterOuterAlt(localctx, 4)
                 self.state = 1376
-                self.term_expression(0)
+                self.termExpression(0)
                 self.state = 1377
                 self.match(MizarParser.T__32)
                 self.state = 1378
-                self.type_expression()
+                self.typeExpression()
                 pass
 
 
@@ -9761,43 +10050,45 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Quantified_formula_expressionContext(ParserRuleContext):
+    class QuantifiedFormulaExpressionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def qualified_variables(self):
-            return self.getTypedRuleContext(MizarParser.Qualified_variablesContext,0)
+        def qualifiedVariables(self):
+            return self.getTypedRuleContext(MizarParser.QualifiedVariablesContext,0)
 
 
-        def formula_expression(self, i:int=None):
+        def formulaExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Formula_expressionContext)
+                return self.getTypedRuleContexts(MizarParser.FormulaExpressionContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Formula_expressionContext,i)
+                return self.getTypedRuleContext(MizarParser.FormulaExpressionContext,i)
 
 
-        def quantified_formula_expression(self):
-            return self.getTypedRuleContext(MizarParser.Quantified_formula_expressionContext,0)
+        def quantifiedFormulaExpression(self):
+            return self.getTypedRuleContext(MizarParser.QuantifiedFormulaExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_quantified_formula_expression
+            return MizarParser.RULE_quantifiedFormulaExpression
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQuantified_formula_expression" ):
-                return visitor.visitQuantified_formula_expression(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterQuantifiedFormulaExpression" ):
+                listener.enterQuantifiedFormulaExpression(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitQuantifiedFormulaExpression" ):
+                listener.exitQuantifiedFormulaExpression(self)
 
 
 
 
-    def quantified_formula_expression(self):
+    def quantifiedFormulaExpression(self):
 
-        localctx = MizarParser.Quantified_formula_expressionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 290, self.RULE_quantified_formula_expression)
+        localctx = MizarParser.QuantifiedFormulaExpressionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 290, self.RULE_quantifiedFormulaExpression)
         self._la = 0 # Token type
         try:
             self.state = 1398
@@ -9808,7 +10099,7 @@ class MizarParser ( Parser ):
                 self.state = 1382
                 self.match(MizarParser.T__15)
                 self.state = 1383
-                self.qualified_variables()
+                self.qualifiedVariables()
                 self.state = 1386
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -9816,7 +10107,7 @@ class MizarParser ( Parser ):
                     self.state = 1384
                     self.match(MizarParser.T__111)
                     self.state = 1385
-                    self.formula_expression(0)
+                    self.formulaExpression(0)
 
 
                 self.state = 1391
@@ -9826,11 +10117,11 @@ class MizarParser ( Parser ):
                     self.state = 1388
                     self.match(MizarParser.T__112)
                     self.state = 1389
-                    self.formula_expression(0)
+                    self.formulaExpression(0)
                     pass
                 elif token in [MizarParser.T__15, MizarParser.T__113]:
                     self.state = 1390
-                    self.quantified_formula_expression()
+                    self.quantifiedFormulaExpression()
                     pass
                 else:
                     raise NoViableAltException(self)
@@ -9841,11 +10132,11 @@ class MizarParser ( Parser ):
                 self.state = 1393
                 self.match(MizarParser.T__113)
                 self.state = 1394
-                self.qualified_variables()
+                self.qualifiedVariables()
                 self.state = 1395
                 self.match(MizarParser.T__111)
                 self.state = 1396
-                self.formula_expression(0)
+                self.formulaExpression(0)
                 pass
             else:
                 raise NoViableAltException(self)
@@ -9858,36 +10149,38 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Qualified_variablesContext(ParserRuleContext):
+    class QualifiedVariablesContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def implicitly_qualified_variables(self):
-            return self.getTypedRuleContext(MizarParser.Implicitly_qualified_variablesContext,0)
+        def implicitlyQualifiedVariables(self):
+            return self.getTypedRuleContext(MizarParser.ImplicitlyQualifiedVariablesContext,0)
 
 
-        def explicitly_qualified_variables(self):
-            return self.getTypedRuleContext(MizarParser.Explicitly_qualified_variablesContext,0)
+        def explicitlyQualifiedVariables(self):
+            return self.getTypedRuleContext(MizarParser.ExplicitlyQualifiedVariablesContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_qualified_variables
+            return MizarParser.RULE_qualifiedVariables
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQualified_variables" ):
-                return visitor.visitQualified_variables(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterQualifiedVariables" ):
+                listener.enterQualifiedVariables(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitQualifiedVariables" ):
+                listener.exitQualifiedVariables(self)
 
 
 
 
-    def qualified_variables(self):
+    def qualifiedVariables(self):
 
-        localctx = MizarParser.Qualified_variablesContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 292, self.RULE_qualified_variables)
+        localctx = MizarParser.QualifiedVariablesContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 292, self.RULE_qualifiedVariables)
         try:
             self.state = 1406
             self._errHandler.sync(self)
@@ -9895,23 +10188,23 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1400
-                self.implicitly_qualified_variables()
+                self.implicitlyQualifiedVariables()
                 pass
 
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1401
-                self.explicitly_qualified_variables()
+                self.explicitlyQualifiedVariables()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1402
-                self.explicitly_qualified_variables()
+                self.explicitlyQualifiedVariables()
                 self.state = 1403
                 self.match(MizarParser.T__2)
                 self.state = 1404
-                self.implicitly_qualified_variables()
+                self.implicitlyQualifiedVariables()
                 pass
 
 
@@ -9923,7 +10216,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Implicitly_qualified_variablesContext(ParserRuleContext):
+    class ImplicitlyQualifiedVariablesContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -9934,21 +10227,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_implicitly_qualified_variables
+            return MizarParser.RULE_implicitlyQualifiedVariables
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitImplicitly_qualified_variables" ):
-                return visitor.visitImplicitly_qualified_variables(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterImplicitlyQualifiedVariables" ):
+                listener.enterImplicitlyQualifiedVariables(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitImplicitlyQualifiedVariables" ):
+                listener.exitImplicitlyQualifiedVariables(self)
 
 
 
 
-    def implicitly_qualified_variables(self):
+    def implicitlyQualifiedVariables(self):
 
-        localctx = MizarParser.Implicitly_qualified_variablesContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 294, self.RULE_implicitly_qualified_variables)
+        localctx = MizarParser.ImplicitlyQualifiedVariablesContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 294, self.RULE_implicitlyQualifiedVariables)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1408
@@ -9961,39 +10256,41 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Explicitly_qualified_variablesContext(ParserRuleContext):
+    class ExplicitlyQualifiedVariablesContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def qualified_segment(self, i:int=None):
+        def qualifiedSegment(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Qualified_segmentContext)
+                return self.getTypedRuleContexts(MizarParser.QualifiedSegmentContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Qualified_segmentContext,i)
+                return self.getTypedRuleContext(MizarParser.QualifiedSegmentContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_explicitly_qualified_variables
+            return MizarParser.RULE_explicitlyQualifiedVariables
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitExplicitly_qualified_variables" ):
-                return visitor.visitExplicitly_qualified_variables(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterExplicitlyQualifiedVariables" ):
+                listener.enterExplicitlyQualifiedVariables(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitExplicitlyQualifiedVariables" ):
+                listener.exitExplicitlyQualifiedVariables(self)
 
 
 
 
-    def explicitly_qualified_variables(self):
+    def explicitlyQualifiedVariables(self):
 
-        localctx = MizarParser.Explicitly_qualified_variablesContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 296, self.RULE_explicitly_qualified_variables)
+        localctx = MizarParser.ExplicitlyQualifiedVariablesContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 296, self.RULE_explicitlyQualifiedVariables)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1410
-            self.qualified_segment()
+            self.qualifiedSegment()
             self.state = 1415
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,129,self._ctx)
@@ -10002,7 +10299,7 @@ class MizarParser ( Parser ):
                     self.state = 1411
                     self.match(MizarParser.T__2)
                     self.state = 1412
-                    self.qualified_segment() 
+                    self.qualifiedSegment() 
                 self.state = 1417
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,129,self._ctx)
@@ -10015,7 +10312,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Qualified_segmentContext(ParserRuleContext):
+    class QualifiedSegmentContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -10030,21 +10327,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_qualified_segment
+            return MizarParser.RULE_qualifiedSegment
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQualified_segment" ):
-                return visitor.visitQualified_segment(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterQualifiedSegment" ):
+                listener.enterQualifiedSegment(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitQualifiedSegment" ):
+                listener.exitQualifiedSegment(self)
 
 
 
 
-    def qualified_segment(self):
+    def qualifiedSegment(self):
 
-        localctx = MizarParser.Qualified_segmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 298, self.RULE_qualified_segment)
+        localctx = MizarParser.QualifiedSegmentContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 298, self.RULE_qualifiedSegment)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1418
@@ -10065,21 +10364,23 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def variable_identifier(self, i:int=None):
+        def variableIdentifier(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Variable_identifierContext)
+                return self.getTypedRuleContexts(MizarParser.VariableIdentifierContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Variable_identifierContext,i)
+                return self.getTypedRuleContext(MizarParser.VariableIdentifierContext,i)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_variables
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitVariables" ):
-                return visitor.visitVariables(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterVariables" ):
+                listener.enterVariables(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitVariables" ):
+                listener.exitVariables(self)
 
 
 
@@ -10092,7 +10393,7 @@ class MizarParser ( Parser ):
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1421
-            self.variable_identifier()
+            self.variableIdentifier()
             self.state = 1426
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -10100,7 +10401,7 @@ class MizarParser ( Parser ):
                 self.state = 1422
                 self.match(MizarParser.T__2)
                 self.state = 1423
-                self.variable_identifier()
+                self.variableIdentifier()
                 self.state = 1428
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -10119,18 +10420,20 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_qualification
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitQualification" ):
-                return visitor.visitQualification(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterQualification" ):
+                listener.enterQualification(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitQualification" ):
+                listener.exitQualification(self)
 
 
 
@@ -10150,7 +10453,7 @@ class MizarParser ( Parser ):
                 self._errHandler.reportMatch(self)
                 self.consume()
             self.state = 1430
-            self.type_expression()
+            self.typeExpression()
         except RecognitionException as re:
             localctx.exception = re
             self._errHandler.reportError(self, re)
@@ -10159,18 +10462,18 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Type_expressionContext(ParserRuleContext):
+    class TypeExpressionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def radix_type(self):
-            return self.getTypedRuleContext(MizarParser.Radix_typeContext,0)
+        def radixType(self):
+            return self.getTypedRuleContext(MizarParser.RadixTypeContext,0)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
         def adjective(self, i:int=None):
@@ -10181,21 +10484,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_type_expression
+            return MizarParser.RULE_typeExpression
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitType_expression" ):
-                return visitor.visitType_expression(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeExpression" ):
+                listener.enterTypeExpression(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeExpression" ):
+                listener.exitTypeExpression(self)
 
 
 
 
-    def type_expression(self):
+    def typeExpression(self):
 
-        localctx = MizarParser.Type_expressionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 304, self.RULE_type_expression)
+        localctx = MizarParser.TypeExpressionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 304, self.RULE_typeExpression)
         try:
             self.state = 1444
             self._errHandler.sync(self)
@@ -10205,7 +10510,7 @@ class MizarParser ( Parser ):
                 self.state = 1432
                 self.match(MizarParser.T__24)
                 self.state = 1433
-                self.radix_type()
+                self.radixType()
                 self.state = 1434
                 self.match(MizarParser.T__25)
                 pass
@@ -10227,13 +10532,13 @@ class MizarParser ( Parser ):
                     _alt = self._interp.adaptivePredict(self._input,131,self._ctx)
 
                 self.state = 1441
-                self.type_expression()
+                self.typeExpression()
                 pass
 
             elif la_ == 3:
                 self.enterOuterAlt(localctx, 3)
                 self.state = 1443
-                self.radix_type()
+                self.radixType()
                 pass
 
 
@@ -10245,40 +10550,42 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Structure_type_expressionContext(ParserRuleContext):
+    class StructureTypeExpressionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def structure_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Structure_symbolContext,0)
+        def structureSymbol(self):
+            return self.getTypedRuleContext(MizarParser.StructureSymbolContext,0)
 
 
-        def term_expression_list(self):
-            return self.getTypedRuleContext(MizarParser.Term_expression_listContext,0)
+        def termExpressionList(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionListContext,0)
 
 
-        def adjective_cluster(self):
-            return self.getTypedRuleContext(MizarParser.Adjective_clusterContext,0)
+        def adjectiveCluster(self):
+            return self.getTypedRuleContext(MizarParser.AdjectiveClusterContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_structure_type_expression
+            return MizarParser.RULE_structureTypeExpression
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitStructure_type_expression" ):
-                return visitor.visitStructure_type_expression(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterStructureTypeExpression" ):
+                listener.enterStructureTypeExpression(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitStructureTypeExpression" ):
+                listener.exitStructureTypeExpression(self)
 
 
 
 
-    def structure_type_expression(self):
+    def structureTypeExpression(self):
 
-        localctx = MizarParser.Structure_type_expressionContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 306, self.RULE_structure_type_expression)
+        localctx = MizarParser.StructureTypeExpressionContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 306, self.RULE_structureTypeExpression)
         self._la = 0 # Token type
         try:
             self.state = 1460
@@ -10289,7 +10596,7 @@ class MizarParser ( Parser ):
                 self.state = 1446
                 self.match(MizarParser.T__24)
                 self.state = 1447
-                self.structure_symbol()
+                self.structureSymbol()
                 self.state = 1450
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -10297,7 +10604,7 @@ class MizarParser ( Parser ):
                     self.state = 1448
                     self.match(MizarParser.T__26)
                     self.state = 1449
-                    self.term_expression_list()
+                    self.termExpressionList()
 
 
                 self.state = 1452
@@ -10307,9 +10614,9 @@ class MizarParser ( Parser ):
             elif la_ == 2:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1454
-                self.adjective_cluster()
+                self.adjectiveCluster()
                 self.state = 1455
-                self.structure_symbol()
+                self.structureSymbol()
                 self.state = 1458
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -10317,7 +10624,7 @@ class MizarParser ( Parser ):
                     self.state = 1456
                     self.match(MizarParser.T__26)
                     self.state = 1457
-                    self.term_expression_list()
+                    self.termExpressionList()
 
 
                 pass
@@ -10331,40 +10638,42 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Radix_typeContext(ParserRuleContext):
+    class RadixTypeContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def mode_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Mode_symbolContext,0)
+        def modeSymbol(self):
+            return self.getTypedRuleContext(MizarParser.ModeSymbolContext,0)
 
 
-        def term_expression_list(self):
-            return self.getTypedRuleContext(MizarParser.Term_expression_listContext,0)
+        def termExpressionList(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionListContext,0)
 
 
-        def structure_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Structure_symbolContext,0)
+        def structureSymbol(self):
+            return self.getTypedRuleContext(MizarParser.StructureSymbolContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_radix_type
+            return MizarParser.RULE_radixType
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitRadix_type" ):
-                return visitor.visitRadix_type(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterRadixType" ):
+                listener.enterRadixType(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitRadixType" ):
+                listener.exitRadixType(self)
 
 
 
 
-    def radix_type(self):
+    def radixType(self):
 
-        localctx = MizarParser.Radix_typeContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 308, self.RULE_radix_type)
+        localctx = MizarParser.RadixTypeContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 308, self.RULE_radixType)
         try:
             self.state = 1472
             self._errHandler.sync(self)
@@ -10372,7 +10681,7 @@ class MizarParser ( Parser ):
             if token in [MizarParser.T__34, MizarParser.MODE_SYMBOL]:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1462
-                self.mode_symbol()
+                self.modeSymbol()
                 self.state = 1465
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,136,self._ctx)
@@ -10380,14 +10689,14 @@ class MizarParser ( Parser ):
                     self.state = 1463
                     self.match(MizarParser.T__33)
                     self.state = 1464
-                    self.term_expression_list()
+                    self.termExpressionList()
 
 
                 pass
             elif token in [MizarParser.STRUCTURE_SYMBOL]:
                 self.enterOuterAlt(localctx, 2)
                 self.state = 1467
-                self.structure_symbol()
+                self.structureSymbol()
                 self.state = 1470
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,137,self._ctx)
@@ -10395,7 +10704,7 @@ class MizarParser ( Parser ):
                     self.state = 1468
                     self.match(MizarParser.T__26)
                     self.state = 1469
-                    self.term_expression_list()
+                    self.termExpressionList()
 
 
                 pass
@@ -10410,40 +10719,42 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Type_expression_listContext(ParserRuleContext):
+    class TypeExpressionListContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def type_expression(self, i:int=None):
+        def typeExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Type_expressionContext)
+                return self.getTypedRuleContexts(MizarParser.TypeExpressionContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Type_expressionContext,i)
+                return self.getTypedRuleContext(MizarParser.TypeExpressionContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_type_expression_list
+            return MizarParser.RULE_typeExpressionList
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitType_expression_list" ):
-                return visitor.visitType_expression_list(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTypeExpressionList" ):
+                listener.enterTypeExpressionList(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTypeExpressionList" ):
+                listener.exitTypeExpressionList(self)
 
 
 
 
-    def type_expression_list(self):
+    def typeExpressionList(self):
 
-        localctx = MizarParser.Type_expression_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 310, self.RULE_type_expression_list)
+        localctx = MizarParser.TypeExpressionListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 310, self.RULE_typeExpressionList)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1474
-            self.type_expression()
+            self.typeExpression()
             self.state = 1479
             self._errHandler.sync(self)
             _la = self._input.LA(1)
@@ -10451,7 +10762,7 @@ class MizarParser ( Parser ):
                 self.state = 1475
                 self.match(MizarParser.T__2)
                 self.state = 1476
-                self.type_expression()
+                self.typeExpression()
                 self.state = 1481
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -10464,46 +10775,46 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Term_expressionContext(ParserRuleContext):
+    class TermExpressionContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
-        def term_expression_list(self):
-            return self.getTypedRuleContext(MizarParser.Term_expression_listContext,0)
+        def termExpressionList(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionListContext,0)
 
 
-        def functor_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Functor_symbolContext,0)
+        def functorSymbol(self):
+            return self.getTypedRuleContext(MizarParser.FunctorSymbolContext,0)
 
 
         def arguments(self):
             return self.getTypedRuleContext(MizarParser.ArgumentsContext,0)
 
 
-        def left_functor_bracket(self):
-            return self.getTypedRuleContext(MizarParser.Left_functor_bracketContext,0)
+        def leftFunctorBracket(self):
+            return self.getTypedRuleContext(MizarParser.LeftFunctorBracketContext,0)
 
 
-        def right_functor_bracket(self):
-            return self.getTypedRuleContext(MizarParser.Right_functor_bracketContext,0)
+        def rightFunctorBracket(self):
+            return self.getTypedRuleContext(MizarParser.RightFunctorBracketContext,0)
 
 
-        def functor_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Functor_identifierContext,0)
+        def functorIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.FunctorIdentifierContext,0)
 
 
-        def structure_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Structure_symbolContext,0)
+        def structureSymbol(self):
+            return self.getTypedRuleContext(MizarParser.StructureSymbolContext,0)
 
 
-        def variable_identifier(self):
-            return self.getTypedRuleContext(MizarParser.Variable_identifierContext,0)
+        def variableIdentifier(self):
+            return self.getTypedRuleContext(MizarParser.VariableIdentifierContext,0)
 
 
         def sentence(self):
@@ -10520,36 +10831,38 @@ class MizarParser ( Parser ):
         def NUMERAL(self):
             return self.getToken(MizarParser.NUMERAL, 0)
 
-        def selector_symbol(self):
-            return self.getTypedRuleContext(MizarParser.Selector_symbolContext,0)
+        def selectorSymbol(self):
+            return self.getTypedRuleContext(MizarParser.SelectorSymbolContext,0)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
-        def private_definition_parameter(self):
-            return self.getTypedRuleContext(MizarParser.Private_definition_parameterContext,0)
+        def privateDefinitionParameter(self):
+            return self.getTypedRuleContext(MizarParser.PrivateDefinitionParameterContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_term_expression
+            return MizarParser.RULE_termExpression
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTerm_expression" ):
-                return visitor.visitTerm_expression(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTermExpression" ):
+                listener.enterTermExpression(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTermExpression" ):
+                listener.exitTermExpression(self)
 
 
 
-    def term_expression(self, _p:int=0):
+    def termExpression(self, _p:int=0):
         _parentctx = self._ctx
         _parentState = self.state
-        localctx = MizarParser.Term_expressionContext(self, self._ctx, _parentState)
+        localctx = MizarParser.TermExpressionContext(self, self._ctx, _parentState)
         _prevctx = localctx
         _startState = 312
-        self.enterRecursionRule(localctx, 312, self.RULE_term_expression, _p)
+        self.enterRecursionRule(localctx, 312, self.RULE_termExpression, _p)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -10560,7 +10873,7 @@ class MizarParser ( Parser ):
                 self.state = 1483
                 self.match(MizarParser.T__24)
                 self.state = 1484
-                self.term_expression(0)
+                self.termExpression(0)
                 self.state = 1485
                 self.match(MizarParser.T__25)
                 pass
@@ -10569,11 +10882,11 @@ class MizarParser ( Parser ):
                 self.state = 1487
                 self.match(MizarParser.T__24)
                 self.state = 1488
-                self.term_expression_list()
+                self.termExpressionList()
                 self.state = 1489
                 self.match(MizarParser.T__25)
                 self.state = 1490
-                self.functor_symbol()
+                self.functorSymbol()
                 self.state = 1492
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,140,self._ctx)
@@ -10586,7 +10899,7 @@ class MizarParser ( Parser ):
 
             elif la_ == 3:
                 self.state = 1494
-                self.functor_symbol()
+                self.functorSymbol()
                 self.state = 1496
                 self._errHandler.sync(self)
                 la_ = self._interp.adaptivePredict(self._input,141,self._ctx)
@@ -10599,16 +10912,16 @@ class MizarParser ( Parser ):
 
             elif la_ == 4:
                 self.state = 1498
-                self.left_functor_bracket()
+                self.leftFunctorBracket()
                 self.state = 1499
-                self.term_expression_list()
+                self.termExpressionList()
                 self.state = 1500
-                self.right_functor_bracket()
+                self.rightFunctorBracket()
                 pass
 
             elif la_ == 5:
                 self.state = 1502
-                self.functor_identifier()
+                self.functorIdentifier()
                 self.state = 1503
                 self.match(MizarParser.T__24)
                 self.state = 1505
@@ -10616,7 +10929,7 @@ class MizarParser ( Parser ):
                 _la = self._input.LA(1)
                 if (((_la) & ~0x3f) == 0 and ((1 << _la) & ((1 << MizarParser.T__24) | (1 << MizarParser.T__46) | (1 << MizarParser.T__47))) != 0) or ((((_la - 117)) & ~0x3f) == 0 and ((1 << (_la - 117)) & ((1 << (MizarParser.T__116 - 117)) | (1 << (MizarParser.T__119 - 117)) | (1 << (MizarParser.T__122 - 117)) | (1 << (MizarParser.T__123 - 117)) | (1 << (MizarParser.T__124 - 117)) | (1 << (MizarParser.T__125 - 117)) | (1 << (MizarParser.T__126 - 117)) | (1 << (MizarParser.T__127 - 117)) | (1 << (MizarParser.T__128 - 117)) | (1 << (MizarParser.T__129 - 117)) | (1 << (MizarParser.T__130 - 117)) | (1 << (MizarParser.T__131 - 117)) | (1 << (MizarParser.FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.STRUCTURE_SYMBOL - 117)) | (1 << (MizarParser.LEFT_FUNCTOR_SYMBOL - 117)) | (1 << (MizarParser.IDENTIFIER - 117)) | (1 << (MizarParser.NUMERAL - 117)))) != 0):
                     self.state = 1504
-                    self.term_expression_list()
+                    self.termExpressionList()
 
 
                 self.state = 1507
@@ -10625,11 +10938,11 @@ class MizarParser ( Parser ):
 
             elif la_ == 6:
                 self.state = 1509
-                self.structure_symbol()
+                self.structureSymbol()
                 self.state = 1510
                 self.match(MizarParser.T__27)
                 self.state = 1511
-                self.term_expression_list()
+                self.termExpressionList()
                 self.state = 1512
                 self.match(MizarParser.T__28)
                 pass
@@ -10638,23 +10951,23 @@ class MizarParser ( Parser ):
                 self.state = 1514
                 self.match(MizarParser.T__116)
                 self.state = 1515
-                self.structure_symbol()
+                self.structureSymbol()
                 self.state = 1516
                 self.match(MizarParser.T__33)
                 self.state = 1517
-                self.term_expression(11)
+                self.termExpression(11)
                 pass
 
             elif la_ == 8:
                 self.state = 1519
-                self.variable_identifier()
+                self.variableIdentifier()
                 pass
 
             elif la_ == 9:
                 self.state = 1520
                 self.match(MizarParser.T__46)
                 self.state = 1521
-                self.term_expression(0)
+                self.termExpression(0)
                 self.state = 1525
                 self._errHandler.sync(self)
                 _la = self._input.LA(1)
@@ -10683,7 +10996,7 @@ class MizarParser ( Parser ):
                 self.state = 1535
                 self.match(MizarParser.T__117)
                 self.state = 1536
-                self.term_expression(0)
+                self.termExpression(0)
                 self.state = 1540
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,144,self._ctx)
@@ -10706,30 +11019,30 @@ class MizarParser ( Parser ):
                 self.state = 1544
                 self.match(MizarParser.T__116)
                 self.state = 1545
-                self.selector_symbol()
+                self.selectorSymbol()
                 self.state = 1546
                 self.match(MizarParser.T__33)
                 self.state = 1547
-                self.term_expression(5)
+                self.termExpression(5)
                 pass
 
             elif la_ == 13:
                 self.state = 1549
                 self.match(MizarParser.T__116)
                 self.state = 1550
-                self.selector_symbol()
+                self.selectorSymbol()
                 pass
 
             elif la_ == 14:
                 self.state = 1551
                 self.match(MizarParser.T__116)
                 self.state = 1552
-                self.type_expression()
+                self.typeExpression()
                 pass
 
             elif la_ == 15:
                 self.state = 1553
-                self.private_definition_parameter()
+                self.privateDefinitionParameter()
                 pass
 
             elif la_ == 16:
@@ -10751,14 +11064,14 @@ class MizarParser ( Parser ):
                     self._errHandler.sync(self)
                     la_ = self._interp.adaptivePredict(self._input,147,self._ctx)
                     if la_ == 1:
-                        localctx = MizarParser.Term_expressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_term_expression)
+                        localctx = MizarParser.TermExpressionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_termExpression)
                         self.state = 1557
                         if not self.precpred(self._ctx, 17):
                             from antlr4.error.Errors import FailedPredicateException
                             raise FailedPredicateException(self, "self.precpred(self._ctx, 17)")
                         self.state = 1558
-                        self.functor_symbol()
+                        self.functorSymbol()
                         self.state = 1560
                         self._errHandler.sync(self)
                         la_ = self._interp.adaptivePredict(self._input,146,self._ctx)
@@ -10770,8 +11083,8 @@ class MizarParser ( Parser ):
                         pass
 
                     elif la_ == 2:
-                        localctx = MizarParser.Term_expressionContext(self, _parentctx, _parentState)
-                        self.pushNewRecursionContext(localctx, _startState, self.RULE_term_expression)
+                        localctx = MizarParser.TermExpressionContext(self, _parentctx, _parentState)
+                        self.pushNewRecursionContext(localctx, _startState, self.RULE_termExpression)
                         self.state = 1562
                         if not self.precpred(self._ctx, 6):
                             from antlr4.error.Errors import FailedPredicateException
@@ -10779,7 +11092,7 @@ class MizarParser ( Parser ):
                         self.state = 1563
                         self.match(MizarParser.T__118)
                         self.state = 1564
-                        self.type_expression()
+                        self.typeExpression()
                         pass
 
              
@@ -10801,22 +11114,24 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def term_expression(self):
-            return self.getTypedRuleContext(MizarParser.Term_expressionContext,0)
+        def termExpression(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionContext,0)
 
 
-        def term_expression_list(self):
-            return self.getTypedRuleContext(MizarParser.Term_expression_listContext,0)
+        def termExpressionList(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionListContext,0)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_arguments
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitArguments" ):
-                return visitor.visitArguments(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterArguments" ):
+                listener.enterArguments(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitArguments" ):
+                listener.exitArguments(self)
 
 
 
@@ -10832,7 +11147,7 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1570
-                self.term_expression(0)
+                self.termExpression(0)
                 pass
 
             elif la_ == 2:
@@ -10840,7 +11155,7 @@ class MizarParser ( Parser ):
                 self.state = 1571
                 self.match(MizarParser.T__24)
                 self.state = 1572
-                self.term_expression_list()
+                self.termExpressionList()
                 self.state = 1573
                 self.match(MizarParser.T__25)
                 pass
@@ -10854,32 +11169,34 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Adjective_argumentsContext(ParserRuleContext):
+    class AdjectiveArgumentsContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def term_expression_list(self):
-            return self.getTypedRuleContext(MizarParser.Term_expression_listContext,0)
+        def termExpressionList(self):
+            return self.getTypedRuleContext(MizarParser.TermExpressionListContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_adjective_arguments
+            return MizarParser.RULE_adjectiveArguments
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitAdjective_arguments" ):
-                return visitor.visitAdjective_arguments(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterAdjectiveArguments" ):
+                listener.enterAdjectiveArguments(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitAdjectiveArguments" ):
+                listener.exitAdjectiveArguments(self)
 
 
 
 
-    def adjective_arguments(self):
+    def adjectiveArguments(self):
 
-        localctx = MizarParser.Adjective_argumentsContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 316, self.RULE_adjective_arguments)
+        localctx = MizarParser.AdjectiveArgumentsContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 316, self.RULE_adjectiveArguments)
         try:
             self.state = 1582
             self._errHandler.sync(self)
@@ -10887,7 +11204,7 @@ class MizarParser ( Parser ):
             if la_ == 1:
                 self.enterOuterAlt(localctx, 1)
                 self.state = 1577
-                self.term_expression_list()
+                self.termExpressionList()
                 pass
 
             elif la_ == 2:
@@ -10895,7 +11212,7 @@ class MizarParser ( Parser ):
                 self.state = 1578
                 self.match(MizarParser.T__24)
                 self.state = 1579
-                self.term_expression_list()
+                self.termExpressionList()
                 self.state = 1580
                 self.match(MizarParser.T__25)
                 pass
@@ -10909,39 +11226,41 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Term_expression_listContext(ParserRuleContext):
+    class TermExpressionListContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def term_expression(self, i:int=None):
+        def termExpression(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Term_expressionContext)
+                return self.getTypedRuleContexts(MizarParser.TermExpressionContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Term_expressionContext,i)
+                return self.getTypedRuleContext(MizarParser.TermExpressionContext,i)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_term_expression_list
+            return MizarParser.RULE_termExpressionList
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitTerm_expression_list" ):
-                return visitor.visitTerm_expression_list(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterTermExpressionList" ):
+                listener.enterTermExpressionList(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitTermExpressionList" ):
+                listener.exitTermExpressionList(self)
 
 
 
 
-    def term_expression_list(self):
+    def termExpressionList(self):
 
-        localctx = MizarParser.Term_expression_listContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 318, self.RULE_term_expression_list)
+        localctx = MizarParser.TermExpressionListContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 318, self.RULE_termExpressionList)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1584
-            self.term_expression(0)
+            self.termExpression(0)
             self.state = 1589
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,151,self._ctx)
@@ -10950,7 +11269,7 @@ class MizarParser ( Parser ):
                     self.state = 1585
                     self.match(MizarParser.T__2)
                     self.state = 1586
-                    self.term_expression(0) 
+                    self.termExpression(0) 
                 self.state = 1591
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,151,self._ctx)
@@ -10969,21 +11288,23 @@ class MizarParser ( Parser ):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def postqualifying_segment(self, i:int=None):
+        def postqualifyingSegment(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Postqualifying_segmentContext)
+                return self.getTypedRuleContexts(MizarParser.PostqualifyingSegmentContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Postqualifying_segmentContext,i)
+                return self.getTypedRuleContext(MizarParser.PostqualifyingSegmentContext,i)
 
 
         def getRuleIndex(self):
             return MizarParser.RULE_postqualification
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPostqualification" ):
-                return visitor.visitPostqualification(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPostqualification" ):
+                listener.enterPostqualification(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPostqualification" ):
+                listener.exitPostqualification(self)
 
 
 
@@ -10997,7 +11318,7 @@ class MizarParser ( Parser ):
             self.state = 1592
             self.match(MizarParser.T__120)
             self.state = 1593
-            self.postqualifying_segment()
+            self.postqualifyingSegment()
             self.state = 1598
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,152,self._ctx)
@@ -11006,7 +11327,7 @@ class MizarParser ( Parser ):
                     self.state = 1594
                     self.match(MizarParser.T__2)
                     self.state = 1595
-                    self.postqualifying_segment() 
+                    self.postqualifyingSegment() 
                 self.state = 1600
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,152,self._ctx)
@@ -11019,44 +11340,46 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Postqualifying_segmentContext(ParserRuleContext):
+    class PostqualifyingSegmentContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
             self.parser = parser
 
-        def postqualified_variable(self, i:int=None):
+        def postqualifiedVariable(self, i:int=None):
             if i is None:
-                return self.getTypedRuleContexts(MizarParser.Postqualified_variableContext)
+                return self.getTypedRuleContexts(MizarParser.PostqualifiedVariableContext)
             else:
-                return self.getTypedRuleContext(MizarParser.Postqualified_variableContext,i)
+                return self.getTypedRuleContext(MizarParser.PostqualifiedVariableContext,i)
 
 
-        def type_expression(self):
-            return self.getTypedRuleContext(MizarParser.Type_expressionContext,0)
+        def typeExpression(self):
+            return self.getTypedRuleContext(MizarParser.TypeExpressionContext,0)
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_postqualifying_segment
+            return MizarParser.RULE_postqualifyingSegment
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPostqualifying_segment" ):
-                return visitor.visitPostqualifying_segment(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPostqualifyingSegment" ):
+                listener.enterPostqualifyingSegment(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPostqualifyingSegment" ):
+                listener.exitPostqualifyingSegment(self)
 
 
 
 
-    def postqualifying_segment(self):
+    def postqualifyingSegment(self):
 
-        localctx = MizarParser.Postqualifying_segmentContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 322, self.RULE_postqualifying_segment)
+        localctx = MizarParser.PostqualifyingSegmentContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 322, self.RULE_postqualifyingSegment)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1601
-            self.postqualified_variable()
+            self.postqualifiedVariable()
             self.state = 1606
             self._errHandler.sync(self)
             _alt = self._interp.adaptivePredict(self._input,153,self._ctx)
@@ -11065,7 +11388,7 @@ class MizarParser ( Parser ):
                     self.state = 1602
                     self.match(MizarParser.T__2)
                     self.state = 1603
-                    self.postqualified_variable() 
+                    self.postqualifiedVariable() 
                 self.state = 1608
                 self._errHandler.sync(self)
                 _alt = self._interp.adaptivePredict(self._input,153,self._ctx)
@@ -11082,7 +11405,7 @@ class MizarParser ( Parser ):
                     self._errHandler.reportMatch(self)
                     self.consume()
                 self.state = 1610
-                self.type_expression()
+                self.typeExpression()
 
 
         except RecognitionException as re:
@@ -11093,7 +11416,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Postqualified_variableContext(ParserRuleContext):
+    class PostqualifiedVariableContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11103,21 +11426,23 @@ class MizarParser ( Parser ):
             return self.getToken(MizarParser.IDENTIFIER, 0)
 
         def getRuleIndex(self):
-            return MizarParser.RULE_postqualified_variable
+            return MizarParser.RULE_postqualifiedVariable
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPostqualified_variable" ):
-                return visitor.visitPostqualified_variable(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPostqualifiedVariable" ):
+                listener.enterPostqualifiedVariable(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPostqualifiedVariable" ):
+                listener.exitPostqualifiedVariable(self)
 
 
 
 
-    def postqualified_variable(self):
+    def postqualifiedVariable(self):
 
-        localctx = MizarParser.Postqualified_variableContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 324, self.RULE_postqualified_variable)
+        localctx = MizarParser.PostqualifiedVariableContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 324, self.RULE_postqualifiedVariable)
         try:
             self.enterOuterAlt(localctx, 1)
             self.state = 1613
@@ -11130,7 +11455,7 @@ class MizarParser ( Parser ):
             self.exitRule()
         return localctx
 
-    class Private_definition_parameterContext(ParserRuleContext):
+    class PrivateDefinitionParameterContext(ParserRuleContext):
 
         def __init__(self, parser, parent:ParserRuleContext=None, invokingState:int=-1):
             super().__init__(parent, invokingState)
@@ -11138,21 +11463,23 @@ class MizarParser ( Parser ):
 
 
         def getRuleIndex(self):
-            return MizarParser.RULE_private_definition_parameter
+            return MizarParser.RULE_privateDefinitionParameter
 
-        def accept(self, visitor:ParseTreeVisitor):
-            if hasattr( visitor, "visitPrivate_definition_parameter" ):
-                return visitor.visitPrivate_definition_parameter(self)
-            else:
-                return visitor.visitChildren(self)
+        def enterRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "enterPrivateDefinitionParameter" ):
+                listener.enterPrivateDefinitionParameter(self)
+
+        def exitRule(self, listener:ParseTreeListener):
+            if hasattr( listener, "exitPrivateDefinitionParameter" ):
+                listener.exitPrivateDefinitionParameter(self)
 
 
 
 
-    def private_definition_parameter(self):
+    def privateDefinitionParameter(self):
 
-        localctx = MizarParser.Private_definition_parameterContext(self, self._ctx, self.state)
-        self.enterRule(localctx, 326, self.RULE_private_definition_parameter)
+        localctx = MizarParser.PrivateDefinitionParameterContext(self, self._ctx, self.state)
+        self.enterRule(localctx, 326, self.RULE_privateDefinitionParameter)
         self._la = 0 # Token type
         try:
             self.enterOuterAlt(localctx, 1)
@@ -11176,15 +11503,15 @@ class MizarParser ( Parser ):
     def sempred(self, localctx:RuleContext, ruleIndex:int, predIndex:int):
         if self._predicates == None:
             self._predicates = dict()
-        self._predicates[143] = self.formula_expression_sempred
-        self._predicates[156] = self.term_expression_sempred
+        self._predicates[143] = self.formulaExpression_sempred
+        self._predicates[156] = self.termExpression_sempred
         pred = self._predicates.get(ruleIndex, None)
         if pred is None:
             raise Exception("No predicate with index:" + str(ruleIndex))
         else:
             return pred(localctx, predIndex)
 
-    def formula_expression_sempred(self, localctx:Formula_expressionContext, predIndex:int):
+    def formulaExpression_sempred(self, localctx:FormulaExpressionContext, predIndex:int):
             if predIndex == 0:
                 return self.precpred(self._ctx, 9)
          
@@ -11209,7 +11536,7 @@ class MizarParser ( Parser ):
                 return self.precpred(self._ctx, 4)
          
 
-    def term_expression_sempred(self, localctx:Term_expressionContext, predIndex:int):
+    def termExpression_sempred(self, localctx:TermExpressionContext, predIndex:int):
             if predIndex == 6:
                 return self.precpred(self._ctx, 17)
          

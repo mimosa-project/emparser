@@ -2,211 +2,211 @@
 grammar Mizar;
 
 // Article
-article : environment_declaration text_proper ;
+article : environmentDeclaration textProper ;
 
 // Environment
-environment_declaration : 'environ' directive * ;
-directive : vocabulary_directive | library_directive | requirement_directive ;
-vocabulary_directive : 'vocabularies' vocabulary_name ( ',' vocabulary_name ) * ';' ;
-vocabulary_name : FILE_NAME ;
-library_directive : ( 'notations' | 'constructors' | 'registrations' | 'definitions' | 'expansions' | 'equalities' | 'theorems' | 'schemes' )
-    article_name ( ',' article_name ) * ';' ;
-article_name : FILE_NAME ;
-requirement_directive : 'requirements' requirement ( ',' requirement ) * ';' ;
+environmentDeclaration : 'environ' directive * ;
+directive : vocabularyDirective | libraryDirective | requirementDirective ;
+vocabularyDirective : 'vocabularies' vocabularyName ( ',' vocabularyName ) * ';' ;
+vocabularyName : FILE_NAME ;
+libraryDirective : ( 'notations' | 'constructors' | 'registrations' | 'definitions' | 'expansions' | 'equalities' | 'theorems' | 'schemes' )
+    articleName ( ',' articleName ) * ';' ;
+articleName : FILE_NAME ;
+requirementDirective : 'requirements' requirement ( ',' requirement ) * ';' ;
 requirement : FILE_NAME ;
 
 // Text Proper
-text_proper : section + ;
-section : 'begin' text_item * ;
-text_item : reservation | definitional_item | registration_item | notation_item | theorem | scheme_item | auxiliary_item ;
-reservation : 'reserve' reservation_segment (',' reservation_segment) * ';' ;
-reservation_segment : reserved_identifiers 'for' type_expression ;
-reserved_identifiers : reserved_identifier (',' reserved_identifier ) *;
-reserved_identifier: IDENTIFIER ;
-definitional_item : definitional_block ';' ;
-registration_item : registration_block ';';
-notation_item : notation_block ';' ;
-definitional_block : 'definition' ( definition_item | definition | redefinition ) * 'end' ;
-registration_block : 'registration' ( loci_declaration | cluster_registration | identify_registration | property_registration | reduction_registration | auxiliary_item ) * 'end' ;
-notation_block : 'notation' ( loci_declaration | notation_declaration ) * 'end' ;
-definition_item : loci_declaration | permissive_assumption | auxiliary_item ;
-notation_declaration : attribute_synonym | attribute_antonym | functor_synonym | mode_synonym | predicate_synonym | predicate_antonym ;
-loci_declaration : 'let' qualified_variables ( 'such' conditions ) ? ';' ;
-permissive_assumption : assumption ;
-definition : structure_definition | mode_definition | functor_definition | predicate_definition | attribute_definition ;
-redefinition : 'redefine' ( mode_definition | functor_definition | predicate_definition | attribute_definition ) ;
-structure_definition : 'struct' ( '(' ancestors ')' ) ? structure_symbol ( 'over' loci ) ? '(#' fields '#)' ';' ;
-ancestors : structure_type_expression ( ',' structure_type_expression ) * ;
-structure_symbol : STRUCTURE_SYMBOL ;
+textProper : section + ;
+section : 'begin' textItem * ;
+textItem : reservation | definitionalItem | registrationItem | notationItem | theorem | schemeItem | auxiliaryItem ;
+reservation : 'reserve' reservationSegment (',' reservationSegment) * ';' ;
+reservationSegment : reservedIdentifiers 'for' typeExpression ;
+reservedIdentifiers : reservedIdentifier (',' reservedIdentifier ) *;
+reservedIdentifier: IDENTIFIER ;
+definitionalItem : definitionalBlock ';' ;
+registrationItem : registrationBlock ';';
+notationItem : notationBlock ';' ;
+definitionalBlock : 'definition' ( definitionItem | definition | redefinition ) * 'end' ;
+registrationBlock : 'registration' ( lociDeclaration | clusterRegistration | identifyRegistration | propertyRegistration | reductionRegistration | auxiliaryItem ) * 'end' ;
+notationBlock : 'notation' ( lociDeclaration | notationDeclaration ) * 'end' ;
+definitionItem : lociDeclaration | permissiveAssumption | auxiliaryItem ;
+notationDeclaration : attributeSynonym | attributeAntonym | functorSynonym | modeSynonym | predicateSynonym | predicateAntonym ;
+lociDeclaration : 'let' qualifiedVariables ( 'such' conditions ) ? ';' ;
+permissiveAssumption : assumption ;
+definition : structureDefinition | modeDefinition | functorDefinition | predicateDefinition | attributeDefinition ;
+redefinition : 'redefine' ( modeDefinition | functorDefinition | predicateDefinition | attributeDefinition ) ;
+structureDefinition : 'struct' ( '(' ancestors ')' ) ? structureSymbol ( 'over' loci ) ? '(#' fields '#)' ';' ;
+ancestors : structureTypeExpression ( ',' structureTypeExpression ) * ;
+structureSymbol : STRUCTURE_SYMBOL ;
 loci : locus ( ',' locus ) * ;
-fields : field_segment ( ',' field_segment ) * ;
-locus : variable_identifier ;
-variable_identifier : IDENTIFIER ;
-field_segment : selector_symbol ( ',' selector_symbol ) * specification ;
-selector_symbol : SELECTOR_SYMBOL ;
-specification : '->' type_expression ;
-mode_definition : 'mode' mode_pattern ( specification ? ( 'means' definiens ) ? ';' correctness_conditions | 'is' type_expression ';' ) mode_property * ;
-mode_pattern : mode_symbol ( 'of' loci ) ? ;
-mode_symbol : MODE_SYMBOL | 'set' ;
-mode_synonym : 'synonym' mode_pattern 'for' mode_pattern ';' ;
-definiens : simple_definiens | conditional_definiens ;
-simple_definiens : ( ':' label_identifier ':' ) ? ( sentence | term_expression ) ;
-label_identifier : IDENTIFIER ;
-conditional_definiens : ( ':' label_identifier ':' ) ? partial_definiens_list ( 'otherwise' ( sentence | term_expression ) ) ? ;
-partial_definiens_list : partial_definiens ( ',' partial_definiens ) * ;
-partial_definiens : ( sentence | term_expression ) 'if' sentence ;
-mode_property : 'sethood' justification ';' ;
-functor_definition : 'func' functor_pattern specification ? ( ( 'means' | 'equals' ) definiens ) ? ';' correctness_conditions functor_property * ;
+fields : fieldSegment ( ',' fieldSegment ) * ;
+locus : variableIdentifier ;
+variableIdentifier : IDENTIFIER ;
+fieldSegment : selectorSymbol ( ',' selectorSymbol ) * specification ;
+selectorSymbol : SELECTOR_SYMBOL ;
+specification : '->' typeExpression ;
+modeDefinition : 'mode' modePattern ( specification ? ( 'means' definiens ) ? ';' correctnessConditions | 'is' typeExpression ';' ) modeProperty * ;
+modePattern : modeSymbol ( 'of' loci ) ? ;
+modeSymbol : MODE_SYMBOL | 'set' ;
+modeSynonym : 'synonym' modePattern 'for' modePattern ';' ;
+definiens : simpleDefiniens | conditionalDefiniens ;
+simpleDefiniens : ( ':' labelIdentifier ':' ) ? ( sentence | termExpression ) ;
+labelIdentifier : IDENTIFIER ;
+conditionalDefiniens : ( ':' labelIdentifier ':' ) ? partialDefiniensList ( 'otherwise' ( sentence | termExpression ) ) ? ;
+partialDefiniensList : partialDefiniens ( ',' partialDefiniens ) * ;
+partialDefiniens : ( sentence | termExpression ) 'if' sentence ;
+modeProperty : 'sethood' justification ';' ;
+functorDefinition : 'func' functorPattern specification ? ( ( 'means' | 'equals' ) definiens ) ? ';' correctnessConditions functorProperty * ;
 
 // FIXME : priority of operator
-functor_pattern : functor_loci ? functor_symbol functor_loci ? | left_functor_bracket loci right_functor_bracket ;
-functor_property : ( 'commutativity' | 'idempotence' | 'involutiveness' | 'projectivity' ) justification ';' ;
-functor_synonym : 'synonym' functor_pattern 'for' functor_pattern ';' ;
-functor_loci : locus | '(' loci ')' ;
-functor_symbol : FUNCTOR_SYMBOL ;
-left_functor_bracket : LEFT_FUNCTOR_SYMBOL | '{' | '[' ;
-right_functor_bracket : RIGHT_FUNCTOR_SYMBOL | '}' | ']' ;
-predicate_definition : 'pred' predicate_pattern ( 'means' definiens ) ? ';' correctness_conditions predicate_property * ;
-predicate_pattern :  loci ? predicate_symbol  loci ? ;
-predicate_property : ( 'symmetry' | 'asymmetry' | 'connectedness' | 'reflexivity' | 'irreflexivity' ) justification ';' ;
-predicate_synonym : 'synonym' predicate_pattern 'for' predicate_pattern ';' ;
-predicate_antonym : 'antonym' predicate_pattern 'for' predicate_pattern ';' ;
-predicate_symbol : PREDICATE_SYMBOL | '=' ;
-attribute_definition : 'attr' attribute_pattern 'means' definiens ';' correctness_conditions ;
-attribute_pattern : locus 'is' attribute_loci ? attribute_symbol ;
-attribute_synonym : 'synonym' attribute_pattern 'for' attribute_pattern ';' ;
-attribute_antonym : 'antonym' attribute_pattern 'for' attribute_pattern ';' ;
-attribute_symbol : ATTRIBUTE_SYMBOL ;
-attribute_loci : loci | '(' loci ')' ;
-cluster_registration : existential_registration | conditional_registration | functorial_registration ;
-existential_registration : 'cluster' adjective_cluster 'for' type_expression ';' correctness_conditions ;
-adjective_cluster : adjective * ;
-adjective : 'non' ? adjective_arguments ? attribute_symbol ;
-conditional_registration : 'cluster' adjective_cluster '->' adjective_cluster 'for' type_expression ';' correctness_conditions ;
-functorial_registration : 'cluster' term_expression '->' adjective_cluster ( 'for' type_expression ) ? ';' correctness_conditions ;
-identify_registration : 'identify' functor_pattern 'with' functor_pattern ( 'when' locus '=' locus ( ',' locus '=' locus ) * ) ? ';' correctness_conditions ;
-property_registration : 'sethood' 'of' type_expression justification ';' ;
-reduction_registration : 'reduce' term_expression 'to' term_expression ';' correctness_conditions ;
-correctness_conditions :  correctness_condition * ( 'correctness' justification ';' ) ? ;
-correctness_condition : ( 'existence' | 'uniqueness' | 'coherence' | 'compatibility' | 'consistency' | 'reducibility' ) justification ';' ;
-theorem : 'theorem' compact_statement ;
-scheme_item : scheme_block ';' ;
-scheme_block : 'scheme' scheme_identifier '{' scheme_parameters '}' ':' scheme_conclusion ( 'provided' scheme_premise ( 'and' scheme_premise ) * ) ? ( 'proof' | ';' ) reasoning 'end' ;
-scheme_identifier : IDENTIFIER ;
-scheme_parameters : scheme_segment ( ',' scheme_segment ) * ;
-scheme_conclusion : sentence ;
-scheme_premise : proposition ;
-scheme_segment : predicate_segment | functor_segment ;
-predicate_segment : predicate_identifier ( ',' predicate_identifier ) * '[' type_expression_list ? ']' ;
-predicate_identifier : IDENTIFIER ;
-functor_segment : functor_identifier ( ',' functor_identifier ) * '(' type_expression_list ? ')' specification ;
-functor_identifier : IDENTIFIER ;
-auxiliary_item : statement | private_definition ;
-private_definition : constant_definition | private_functor_definition | private_predicate_definition ;
-constant_definition : 'set' equating_list ';' ;
-equating_list : equating ( ',' equating ) * ;
-equating : variable_identifier '=' term_expression ;
-private_functor_definition : 'deffunc' private_functor_pattern '=' term_expression ';' ;
-private_predicate_definition : 'defpred' private_predicate_pattern 'means' sentence ';' ;
-private_functor_pattern : functor_identifier '(' type_expression_list ? ')' ;
-private_predicate_pattern : predicate_identifier '[' type_expression_list ? ']' ;
-reasoning : reasoning_item * ( 'then' ? 'per' 'cases' simple_justification ';' ( case_list | suppose_list ) ) ? ;
-case_list : case + ;
+functorPattern : functorLoci ? functorSymbol functorLoci ? | leftFunctorBracket loci rightFunctorBracket ;
+functorProperty : ( 'commutativity' | 'idempotence' | 'involutiveness' | 'projectivity' ) justification ';' ;
+functorSynonym : 'synonym' functorPattern 'for' functorPattern ';' ;
+functorLoci : locus | '(' loci ')' ;
+functorSymbol : FUNCTOR_SYMBOL ;
+leftFunctorBracket : LEFT_FUNCTOR_SYMBOL | '{' | '[' ;
+rightFunctorBracket : RIGHT_FUNCTOR_SYMBOL | '}' | ']' ;
+predicateDefinition : 'pred' predicatePattern ( 'means' definiens ) ? ';' correctnessConditions predicateProperty * ;
+predicatePattern :  loci ? predicateSymbol  loci ? ;
+predicateProperty : ( 'symmetry' | 'asymmetry' | 'connectedness' | 'reflexivity' | 'irreflexivity' ) justification ';' ;
+predicateSynonym : 'synonym' predicatePattern 'for' predicatePattern ';' ;
+predicateAntonym : 'antonym' predicatePattern 'for' predicatePattern ';' ;
+predicateSymbol : PREDICATE_SYMBOL | '=' ;
+attributeDefinition : 'attr' attributePattern 'means' definiens ';' correctnessConditions ;
+attributePattern : locus 'is' attributeLoci ? attributeSymbol ;
+attributeSynonym : 'synonym' attributePattern 'for' attributePattern ';' ;
+attributeAntonym : 'antonym' attributePattern 'for' attributePattern ';' ;
+attributeSymbol : ATTRIBUTE_SYMBOL ;
+attributeLoci : loci | '(' loci ')' ;
+clusterRegistration : existentialRegistration | conditionalRegistration | functorialRegistration ;
+existentialRegistration : 'cluster' adjectiveCluster 'for' typeExpression ';' correctnessConditions ;
+adjectiveCluster : adjective * ;
+adjective : 'non' ? adjectiveArguments ? attributeSymbol ;
+conditionalRegistration : 'cluster' adjectiveCluster '->' adjectiveCluster 'for' typeExpression ';' correctnessConditions ;
+functorialRegistration : 'cluster' termExpression '->' adjectiveCluster ( 'for' typeExpression ) ? ';' correctnessConditions ;
+identifyRegistration : 'identify' functorPattern 'with' functorPattern ( 'when' locus '=' locus ( ',' locus '=' locus ) * ) ? ';' correctnessConditions ;
+propertyRegistration : 'sethood' 'of' typeExpression justification ';' ;
+reductionRegistration : 'reduce' termExpression 'to' termExpression ';' correctnessConditions ;
+correctnessConditions :  correctnessCondition * ( 'correctness' justification ';' ) ? ;
+correctnessCondition : ( 'existence' | 'uniqueness' | 'coherence' | 'compatibility' | 'consistency' | 'reducibility' ) justification ';' ;
+theorem : 'theorem' compactStatement ;
+schemeItem : schemeBlock ';' ;
+schemeBlock : 'scheme' schemeIdentifier '{' schemeParameters '}' ':' schemeConclusion ( 'provided' schemePremise ( 'and' schemePremise ) * ) ? ( 'proof' | ';' ) reasoning 'end' ;
+schemeIdentifier : IDENTIFIER ;
+schemeParameters : schemeSegment ( ',' schemeSegment ) * ;
+schemeConclusion : sentence ;
+schemePremise : proposition ;
+schemeSegment : predicateSegment | functorSegment ;
+predicateSegment : predicateIdentifier ( ',' predicateIdentifier ) * '[' typeExpressionList ? ']' ;
+predicateIdentifier : IDENTIFIER ;
+functorSegment : functorIdentifier ( ',' functorIdentifier ) * '(' typeExpressionList ? ')' specification ;
+functorIdentifier : IDENTIFIER ;
+auxiliaryItem : statement | privateDefinition ;
+privateDefinition : constantDefinition | privateFunctorDefinition | privatePredicateDefinition ;
+constantDefinition : 'set' equatingList ';' ;
+equatingList : equating ( ',' equating ) * ;
+equating : variableIdentifier '=' termExpression ;
+privateFunctorDefinition : 'deffunc' privateFunctorPattern '=' termExpression ';' ;
+privatePredicateDefinition : 'defpred' privatePredicatePattern 'means' sentence ';' ;
+privateFunctorPattern : functorIdentifier '(' typeExpressionList ? ')' ;
+privatePredicatePattern : predicateIdentifier '[' typeExpressionList ? ']' ;
+reasoning : reasoningItem * ( 'then' ? 'per' 'cases' simpleJustification ';' ( caseList | supposeList ) ) ? ;
+caseList : case + ;
 case : 'case' ( proposition | conditions ) ';' reasoning 'end' ';' ;
-suppose_list : suppose + ;
+supposeList : suppose + ;
 suppose : 'suppose' ( proposition | conditions ) ';' reasoning 'end' ';' ;
-reasoning_item : auxiliary_item | skeleton_item ;
-skeleton_item : generalization | assumption | conclusion | exemplification ;
-generalization : 'let' qualified_variables ( 'such' conditions ) ? ';' ;
-assumption : single_assumption | collective_assumption | existential_assumption ;
-single_assumption : 'assume' proposition ';' ;
-collective_assumption : 'assume' conditions ';' ;
-existential_assumption : 'given' qualified_variables ( 'such' conditions ) ? ';' ;
-conclusion : ( 'thus' | 'hence' ) ( compact_statement | iterative_equality ) | diffuse_conclusion ;
-diffuse_conclusion : 'thus' diffuse_statement | 'hereby' reasoning 'end' ';' ;
+reasoningItem : auxiliaryItem | skeletonItem ;
+skeletonItem : generalization | assumption | conclusion | exemplification ;
+generalization : 'let' qualifiedVariables ( 'such' conditions ) ? ';' ;
+assumption : singleAssumption | collectiveAssumption | existentialAssumption ;
+singleAssumption : 'assume' proposition ';' ;
+collectiveAssumption : 'assume' conditions ';' ;
+existentialAssumption : 'given' qualifiedVariables ( 'such' conditions ) ? ';' ;
+conclusion : ( 'thus' | 'hence' ) ( compactStatement | iterativeEquality ) | diffuseConclusion ;
+diffuseConclusion : 'thus' diffuseStatement | 'hereby' reasoning 'end' ';' ;
 exemplification : 'take' example ( ',' example ) * ';' ;
-example : term_expression | variable_identifier '=' term_expression ;
-statement : 'then' ? linkable_statement | diffuse_statement ;
-linkable_statement : compact_statement | choice_statement | type_changing_statement | iterative_equality ;
-compact_statement : proposition justification ';' ;
-choice_statement : 'consider' qualified_variables 'such' conditions simple_justification ';' ;
-type_changing_statement : 'reconsider' type_change_list 'as' type_expression simple_justification ';' ;
-type_change_list : ( equating | variable_identifier ) ( ',' ( equating | variable_identifier ) ) * ;
-iterative_equality : ( label_identifier ':' ) ? term_expression '=' term_expression simple_justification ( '.=' term_expression simple_justification ) + ';' ;
-diffuse_statement : ( label_identifier ':' ) ? 'now' reasoning 'end' ';' ;
-justification : simple_justification | proof ;
-simple_justification : straightforward_justification | scheme_justification ;
+example : termExpression | variableIdentifier '=' termExpression ;
+statement : 'then' ? linkableStatement | diffuseStatement ;
+linkableStatement : compactStatement | choiceStatement | typeChangingStatement | iterativeEquality ;
+compactStatement : proposition justification ';' ;
+choiceStatement : 'consider' qualifiedVariables 'such' conditions simpleJustification ';' ;
+typeChangingStatement : 'reconsider' typeChangeList 'as' typeExpression simpleJustification ';' ;
+typeChangeList : ( equating | variableIdentifier ) ( ',' ( equating | variableIdentifier ) ) * ;
+iterativeEquality : ( labelIdentifier ':' ) ? termExpression '=' termExpression simpleJustification ( '.=' termExpression simpleJustification ) + ';' ;
+diffuseStatement : ( labelIdentifier ':' ) ? 'now' reasoning 'end' ';' ;
+justification : simpleJustification | proof ;
+simpleJustification : straightforwardJustification | schemeJustification ;
 proof : 'proof' reasoning 'end' ;
-straightforward_justification : ( 'by' references ) ? ;
-scheme_justification : 'from' scheme_reference ( '(' references ')' ) ? ;
+straightforwardJustification : ( 'by' references ) ? ;
+schemeJustification : 'from' schemeReference ( '(' references ')' ) ? ;
 references : reference ( ',' reference ) * ;
-reference : local_reference | library_reference ;
-scheme_reference : local_scheme_reference | library_scheme_reference ;
-local_reference : label_identifier ;
-local_scheme_reference : scheme_identifier ;
-library_reference : article_name ':' ( theorem_number | 'def' definition_number ) ( ',' ( theorem_number | 'def' definition_number ) ) * ;
-library_scheme_reference : article_name ':' 'sch' scheme_number ;
-theorem_number : NUMERAL ;
-definition_number : NUMERAL ;
-scheme_number : NUMERAL ;
+reference : localReference | libraryReference ;
+schemeReference : localSchemeReference | librarySchemeReference ;
+localReference : labelIdentifier ;
+localSchemeReference : schemeIdentifier ;
+libraryReference : articleName ':' ( theoremNumber | 'def' definitionNumber ) ( ',' ( theoremNumber | 'def' definitionNumber ) ) * ;
+librarySchemeReference : articleName ':' 'sch' schemeNumber ;
+theoremNumber : NUMERAL ;
+definitionNumber : NUMERAL ;
+schemeNumber : NUMERAL ;
 conditions : 'that' proposition ( 'and' proposition ) * ;
-proposition : ( label_identifier ':' ) ? sentence ;
-sentence : formula_expression ;
+proposition : ( labelIdentifier ':' ) ? sentence ;
+sentence : formulaExpression ;
 
 // expressions
-formula_expression : '(' formula_expression ')' | atomic_formula_expression | quantified_formula_expression
-    | formula_expression '&' formula_expression | formula_expression '&' '...' '&' formula_expression
-    | formula_expression 'or' formula_expression | formula_expression 'or' '...' 'or' formula_expression
-    | formula_expression 'implies' formula_expression | formula_expression 'iff' formula_expression | 'not' formula_expression | 'contradiction' | 'thesis' ;
+formulaExpression : '(' formulaExpression ')' | atomicFormulaExpression | quantifiedFormulaExpression
+    | formulaExpression '&' formulaExpression | formulaExpression '&' '...' '&' formulaExpression
+    | formulaExpression 'or' formulaExpression | formulaExpression 'or' '...' 'or' formulaExpression
+    | formulaExpression 'implies' formulaExpression | formulaExpression 'iff' formulaExpression| 'not' formulaExpression | 'contradiction' | 'thesis' ;
 
-atomic_formula_expression : term_expression_list ? ( ( 'does' | 'do' ) 'not' ) ? predicate_symbol
-                            term_expression_list ? ( ( ( 'does' | 'do' ) 'not' ) ? predicate_symbol term_expression_list ) *
-    | predicate_identifier '[' term_expression_list ? ']'
-    | term_expression 'is' adjective +
-    | term_expression 'is' type_expression ;
+atomicFormulaExpression : termExpressionList ? ( ( 'does' | 'do' ) 'not' ) ? predicateSymbol
+                            termExpressionList ? ( ( ( 'does' | 'do' ) 'not' ) ? predicateSymbol termExpressionList ) *
+    | predicateIdentifier '[' termExpressionList ? ']'
+    | termExpression 'is' adjective +
+    | termExpression 'is' typeExpression ;
 
-quantified_formula_expression : 'for' qualified_variables ( 'st' formula_expression ) ? ( 'holds' formula_expression | quantified_formula_expression )
-    | 'ex' qualified_variables 'st' formula_expression ;
+quantifiedFormulaExpression : 'for' qualifiedVariables ( 'st' formulaExpression ) ? ( 'holds' formulaExpression | quantifiedFormulaExpression )
+    | 'ex' qualifiedVariables 'st' formulaExpression ;
 
-qualified_variables : implicitly_qualified_variables | explicitly_qualified_variables | explicitly_qualified_variables ',' implicitly_qualified_variables ;
-implicitly_qualified_variables : variables ;
-explicitly_qualified_variables : qualified_segment ( ',' qualified_segment ) * ;
-qualified_segment : variables qualification ;
-variables : variable_identifier ( ',' variable_identifier ) * ;
-qualification : ( 'being' | 'be' ) type_expression ;
-type_expression : '(' radix_type ')'
-    | adjective + type_expression   // left recursion repaired
-    | radix_type ;
+qualifiedVariables : implicitlyQualifiedVariables | explicitlyQualifiedVariables | explicitlyQualifiedVariables ',' implicitlyQualifiedVariables ;
+implicitlyQualifiedVariables : variables ;
+explicitlyQualifiedVariables : qualifiedSegment ( ',' qualifiedSegment ) * ;
+qualifiedSegment : variables qualification ;
+variables : variableIdentifier ( ',' variableIdentifier ) * ;
+qualification : ( 'being' | 'be' ) typeExpression ;
+typeExpression : '(' radixType ')'
+    | adjective + typeExpression   // left recursion repaired
+    | radixType ;
 
-structure_type_expression : '(' structure_symbol ( 'over' term_expression_list ) ? ')' | adjective_cluster structure_symbol ( 'over' term_expression_list ) ? ;
-radix_type : mode_symbol ( 'of' term_expression_list ) ?
-    | structure_symbol ( 'over' term_expression_list ) ? ;
-type_expression_list : type_expression ( ',' type_expression ) * ;
-term_expression : '(' term_expression ')'
-    | term_expression functor_symbol arguments ?  // left recursion repaired
-    | '(' term_expression_list ')' functor_symbol arguments ?  // left recursion repaired
-    | functor_symbol arguments ?       // left recursion repaired
-    | left_functor_bracket term_expression_list right_functor_bracket
-    | functor_identifier '(' term_expression_list ? ')'
-    | structure_symbol '(#' term_expression_list '#)'
-    | 'the' structure_symbol 'of' term_expression
-    | variable_identifier
-    | '{' term_expression  postqualification * ':' sentence '}'
-    | 'the' 'set' 'of' 'all' term_expression postqualification *
+structureTypeExpression : '(' structureSymbol ( 'over' termExpressionList ) ? ')' | adjectiveCluster structureSymbol ( 'over' termExpressionList ) ? ;
+radixType : modeSymbol ( 'of' termExpressionList ) ?
+    | structureSymbol ( 'over' termExpressionList ) ? ;
+typeExpressionList : typeExpression ( ',' typeExpression ) * ;
+termExpression : '(' termExpression ')'
+    | termExpression functorSymbol arguments ?  // left recursion repaired
+    | '(' termExpressionList ')' functorSymbol arguments ?  // left recursion repaired
+    | functorSymbol arguments ?       // left recursion repaired
+    | leftFunctorBracket termExpressionList rightFunctorBracket
+    | functorIdentifier '(' termExpressionList ? ')'
+    | structureSymbol '(#' termExpressionList '#)'
+    | 'the' structureSymbol 'of' termExpression
+    | variableIdentifier
+    | '{' termExpression  postqualification * ':' sentence '}'
+    | 'the' 'set' 'of' 'all' termExpression postqualification *
     | NUMERAL
-    | term_expression 'qua' type_expression
-    | 'the' selector_symbol 'of' term_expression
-    | 'the' selector_symbol
-    | 'the' type_expression
-    | private_definition_parameter
+    | termExpression 'qua' typeExpression
+    | 'the' selectorSymbol 'of' termExpression
+    | 'the' selectorSymbol
+    | 'the' typeExpression
+    | privateDefinitionParameter
     | 'it' ;
-arguments : term_expression | '(' term_expression_list ')' ;
-adjective_arguments : term_expression_list | '(' term_expression_list ')' ;
-term_expression_list : term_expression ( ',' term_expression ) * ;
-postqualification : 'where' postqualifying_segment ( ',' postqualifying_segment ) * ;
-postqualifying_segment : postqualified_variable ( ',' postqualified_variable ) * ( ( 'is' | 'are' ) type_expression ) ? ;
-postqualified_variable : IDENTIFIER ;
-private_definition_parameter : '$1' | '$2' | '$3' | '$4' | '$5' | '$6' | '$7' | '$8' | '$9' | '$10' ;
+arguments : termExpression | '(' termExpressionList ')' ;
+adjectiveArguments : termExpressionList | '(' termExpressionList ')' ;
+termExpressionList : termExpression ( ',' termExpression ) * ;
+postqualification : 'where' postqualifyingSegment ( ',' postqualifyingSegment ) * ;
+postqualifyingSegment : postqualifiedVariable ( ',' postqualifiedVariable ) * ( ( 'is' | 'are' ) typeExpression ) ? ;
+postqualifiedVariable : IDENTIFIER ;
+privateDefinitionParameter : '$1' | '$2' | '$3' | '$4' | '$5' | '$6' | '$7' | '$8' | '$9' | '$10' ;
 
 // Tokens
 PREDICATE_SYMBOL : '__R' [!-~] + ;

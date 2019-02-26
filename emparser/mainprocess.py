@@ -15,9 +15,9 @@ Todo:
 
 from emparser.MizarLexer import MizarLexer
 from emparser.MizarParser import MizarParser
-from emparser.MizarVisitor import MizarVisitor
+from emparser.MizarXMLBuilder import MizarXMLBuilder
 import antlr4
-
+from antlr4.tree.Tree import *
 
 class Parser:
     def __init__(self):
@@ -26,12 +26,14 @@ class Parser:
     def parse(self, data:str, rule = 'article'):
         input = antlr4.InputStream(data)
         lexer = MizarLexer(input)
-        stream = antlr4.CommonTokenStream(lexer)
-        parser = MizarParser(stream)
+        tokens = antlr4.CommonTokenStream(lexer)
+        parser = MizarParser(tokens)
         tree = getattr(parser, rule)()
-        visitor = MizarVisitor()
-        result = visitor.visit(tree)
-        return result
+
+        xmlBuilder = MizarXMLBuilder()
+        walker = ParseTreeWalker()
+        walker.walk(xmlBuilder, tree)
+        return xmlBuilder.topNode
 
     def parse_theorem(self, data: str):
         return self.parse(data, 'theorem')
