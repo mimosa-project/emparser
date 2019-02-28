@@ -7,7 +7,8 @@ import unittest
 import pprint
 from emparser.preprocess import Lexer
 
-VOC_FILE = os.path.dirname(__file__) + '/data/mml.vct'
+DATA_DIR = os.path.dirname(__file__) + '/data'
+VOC_FILE = DATA_DIR + '/mml.vct'
 
 class LexerTest(unittest.TestCase):
     def setUp(self):
@@ -22,6 +23,15 @@ class LexerTest(unittest.TestCase):
         cls.lexer = Lexer()
         cls.lexer.load_symbol_dict(VOC_FILE)
         cls.lexer.build_len2symbol()
+    
+    def test_separate_env_and_text_proper(self):
+        filepath = DATA_DIR + '/ring_1.miz'
+        with open(filepath, 'r') as f:
+            lines = f.readlines()
+            env_lines, tp_lines = self.lexer.separate_env_and_text_proper(lines)
+        
+        self.assertEqual(len(env_lines), 40)
+        self.assertEqual(len(tp_lines), 1234-40)
 
     def test_load_symbol_dict(self):
         # pprint.pprint(self.lexer.symbol_dict)
@@ -131,6 +141,20 @@ class LexerTest(unittest.TestCase):
             res = self.lexer.cut_numeral(case[0])
             self.assertEqual(res, case[1])
 
+    def test_remove_comment_in_a_line(self):
+        cases = ["theorem :: ABCMIZ_0:1",
+            "holds ex_sup_of I, T & sup I in I; :: this is a comment",
+            ":: everything is comment"]
+        
+        expects = ["theorem ",
+            "holds ex_sup_of I, T & sup I in I; ",
+            ""]
+        
+        for case, expect in zip(cases, expects):
+            res = self.lexer.remove_comment_in_a_line(case)
+            self.assertEqual(res, expect)
+
+        
     def test_remove_comment(self):
         case1 = [
             "theorem :: ABCMIZ_0:1",

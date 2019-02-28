@@ -9,7 +9,10 @@ import xml.etree.ElementTree as ET
 from emparser.preprocess import Lexer
 from emparser.mainprocess import Parser
 
-VOC_FILE = os.path.dirname(__file__) + '/data/mml.vct'
+OUTPUT_DIR = os.path.dirname(__file__) + '/output'
+DATA_DIR = os.path.dirname(__file__) + '/data'
+VOC_FILE = DATA_DIR + '/mml.vct'
+
 
 
 class ParserTest(unittest.TestCase):
@@ -36,12 +39,10 @@ class ParserTest(unittest.TestCase):
         # print(ET.dump(xml_tree))
         from xml.dom import minidom
         xmlstr = minidom.parseString(ET.tostring(xml_tree)).toprettyxml(indent="   ")
-        print(xmlstr)
+        # print(xmlstr)
 
 
-"""
-
-        def test_parse_ring_1_miz(self):
+    def test_parse_ring_1_miz(self):
         filepath = os.path.dirname(__file__) + '/data/ring_1.miz'
 
         lines = None
@@ -49,20 +50,31 @@ class ParserTest(unittest.TestCase):
             lines = f.readlines()
             assert len(lines) > 0
 
-        lines = self.lexer.remove_comment(lines)
-        tokens_list = self.lexer.lex(lines)
+        env_lines, text_proper_lines = self.lexer.separate_env_and_text_proper(lines)
+
+        # env_lines
+        env_lines = self.lexer.remove_comment(env_lines)
+        tokens_list = self.lexer.lex(env_lines, is_environment_part=True)
         txt = '\n'.join([' '.join(tokens) for tokens in tokens_list])
-        xml_tree = self.parser.parse(txt)
+        env_xml_tree = self.parser.parse_environment(txt)
         from xml.dom import minidom
-        xmlstr = minidom.parseString(ET.tostring(xml_tree)).toprettyxml(indent="   ")
+        env_xmlstr = minidom.parseString(ET.tostring(env_xml_tree)).toprettyxml(indent="   ")
         
-        output_dir = os.path.dirname(__file__) + '/output'
-        if not os.path.exists(output_dir):
-            os.makedirs(output_dir)
+        if not os.path.exists(OUTPUT_DIR):
+            os.makedirs(OUTPUT_DIR)
 
-        output_path = output_dir + '/ring_1.xml'
+        output_path = OUTPUT_DIR + '/ring_1_env.xml'
         with open(output_path, 'w') as file:
-            file.write(xmlstr)
-        # print(xmlstr)
+            file.write(env_xmlstr)
 
- """
+        # text_proper_lines
+        text_proper_lines = self.lexer.remove_comment(text_proper_lines)
+        tokens_list = self.lexer.lex(text_proper_lines)
+        txt = '\n'.join([' '.join(tokens) for tokens in tokens_list])
+        tp_xml_tree = self.parser.parse_text_proper(txt)
+        from xml.dom import minidom
+        tp_xmlstr = minidom.parseString(ET.tostring(tp_xml_tree)).toprettyxml(indent="   ")
+
+        output_path = OUTPUT_DIR + '/ring_1_tp.xml'
+        with open(output_path, 'w') as file:
+            file.write(tp_xmlstr)

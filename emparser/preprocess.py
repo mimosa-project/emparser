@@ -62,6 +62,9 @@ NUMERAL_REG = re.compile(r"^[0-9]+", re.ASCII)
 """re: Regex object to specify idenfifier in Mizar language.
 """
 
+BEGIN_LINE_REG = re.compile(r"^\s*begin[;\s]", re.ASCII)
+"""re: Regex object to specify a line to start "begin" keyword in Mizar language.
+"""
 
 class Lexer:
     """Lexical Analyser for Adhoc Mizar Parser.
@@ -89,6 +92,34 @@ class Lexer:
     def __init__(self):
         self.symbol_dict = {}
         self.len2symbol = {}
+
+    def separate_env_and_text_proper(self, lines):
+        """Separate the envronment part and the text prpoer part of .miz file
+
+        This function searches "begin" keyword and separates two parts there.
+
+        Note:
+            If "begin" keyword starts after some word in the line,
+            this function returns wrong lists.
+            If a line that starts from "begin" keyword is not found,
+            this function consider every line is in the environment part.
+
+        Args:
+            lines (list[str]): 
+
+        Returns:
+            (list[str], list[str]): pair of environment part and text proper part
+        """
+
+        # Search "begin" keyword 
+        for i, line in enumerate(lines):
+            m = re.match(BEGIN_LINE_REG, line)
+            if m is not None:
+                # begin keyword is found
+                return lines[:i], lines[i:]
+        
+        # a line that starts from "begin" keyword is not found
+        return lines, []
 
     def load_symbol_dict(self, voc_file):
         """Load symbol dictonary from mml.vct file
@@ -192,17 +223,33 @@ class Lexer:
             else:
                 self.len2symbol[length].add(name)
     
-    def remove_comment(self, lines):
-        removed = []
-        for line in lines:
-            n = line.find('::')
-            if n >= 0:
-                removed.append(line[:n])
-            else:
-                removed.append(line)
-        return removed
+    def remove_comment_in_a_line(self, line):
+        """Remove comment in a line
 
-    def lex(self, lines):
+        Args:
+            line (str): a line which may or may not include comments
+        
+        Returns:
+            str: a line removed comment
+        """
+        n = line.find('::')
+        if n >= 0:
+            return line[:n]
+        else:
+            return line
+
+    def remove_comment(self, lines):
+        """Remove comment in lines
+
+        Args:
+            lines (list[str]): lines which may or may not include comments
+        
+        Returns:
+            list[str]: lines from which removed comment
+        """
+        return [self.remove_comment_in_a_line(line) for line in lines]
+
+    def lex(self, lines, is_environment_part=False):
         """Lexical analyzer.
 
         Args:
@@ -213,10 +260,10 @@ class Lexer:
         """
 
         class LexerStateMachine:
-            def __init__(self, parent):
+            def __init__(self, parent, is_environment_part=False):
                 self.next_is_variable = 'no'
                 self.next_for_is_relevant_to_variable = True
-                self.is_environment_part = False
+                self.is_environment_part = is_environment_part
                 self.nest_level = 0
                 self.nest2variables = {0: set()}
                 self.parent = parent
@@ -304,7 +351,7 @@ class Lexer:
                     self.next_is_variable = 'maybe'
                 return res
             
-        stateMachine = LexerStateMachine(self)
+        stateMachine = LexerStateMachine(self, is_environment_part)
         tokens_list = []
 
         for line in lines:

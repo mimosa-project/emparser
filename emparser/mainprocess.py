@@ -35,6 +35,12 @@ class Parser:
         walker.walk(xmlBuilder, tree)
         return xmlBuilder.topNode
 
+    def parse_environment(self, data: str):
+        return self.parse(data, 'environmentDeclaration')
+
+    def parse_text_proper(self, data: str):
+        return self.parse(data, 'textProper')
+
     def parse_theorem(self, data: str):
         return self.parse(data, 'theorem')
 
