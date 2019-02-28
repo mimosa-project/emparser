@@ -1,9 +1,9 @@
 # -*- coding: utf-8 -*-
 
 import xml.etree.ElementTree as ET
-from emparser.MizarLexer import MizarLexer
-from emparser.MizarParser import MizarParser
-from emparser.MizarListener import MizarListener
+from antlr.MizarLexer import MizarLexer
+from antlr.MizarParser import MizarParser
+from antlr.MizarListener import MizarListener
 from antlr4.tree.Tree import *
 from antlr4.ParserRuleContext import ParserRuleContext
 
