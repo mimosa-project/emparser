@@ -13,8 +13,8 @@ Todo:
 
 """
 
-from emparser.MizarLexer import MizarLexer
-from emparser.MizarParser import MizarParser
+from antlr.MizarLexer import MizarLexer
+from antlr.MizarParser import MizarParser
 from emparser.MizarXMLBuilder import MizarXMLBuilder
 import antlr4
 from antlr4.tree.Tree import *
