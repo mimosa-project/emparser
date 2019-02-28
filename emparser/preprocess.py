@@ -121,7 +121,7 @@ class Lexer:
         # a line that starts from "begin" keyword is not found
         return lines, []
 
-    def load_symbol_dict(self, voc_file):
+    def load_symbol_dict(self, mml_vct, miz_files=None):
         """Load symbol dictonary from mml.vct file
 
         This function read mml.vct and create symbol dictionary that includes
@@ -144,9 +144,13 @@ class Lexer:
         Rrun runs                       <-- some symbol may have two expression
 
         Args:
-            voc_file (str): path for mml.vct file, which is located in
+            mml_vct (str): path for mml.vct file, which is located in
                 the directory that includes mizar binaries.
+            miz_files (list[str]): Mizar filenames in which vocabularies are declared 
         """
+        if miz_files is not None:
+            miz_files = set(miz_files)
+        
         self.symbol_dict = {}
         
         # load special symbols in advance
@@ -156,20 +160,25 @@ class Lexer:
 
         # load symbols from voc_file
         lines = None
-        with open(voc_file) as f:
+        with open(mml_vct) as f:
             lines = f.readlines()
             assert len(lines) > 0
         
         ignore_next_line = False
+        ignore_this_file = False
         for line in lines:
             line = line.rstrip()
             if line[0] == "#":
                 filename = line[1:]
                 ignore_next_line = True
+                if miz_files and filename not in miz_files:
+                    ignore_this_file = True
+                else:
+                    ignore_this_file = False
             elif ignore_next_line:
                 # number of each type of symbols are written here -> ignore
                 ignore_next_line = False
-            elif len(line) > 0:
+            elif len(line) > 0 and not ignore_this_file:
                 # symbol is written in this line
                 self.load_symbol_in_line(line, filename)
     
