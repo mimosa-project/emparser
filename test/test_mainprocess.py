@@ -4,6 +4,7 @@
 
 import os
 import unittest
+import shutil
 from pprint import pprint
 import xml.etree.ElementTree as ET
 from emparser.preprocess import Lexer
@@ -19,9 +20,11 @@ class ParserTest(unittest.TestCase):
     def setUp(self):
         self.lexer = ParserTest.lexer
         self.parser = ParserTest.parser
-    
+        if not os.path.exists(OUTPUT_DIR):
+            os.makedirs(OUTPUT_DIR)
+
     def tearDown(self):
-        pass
+        shutil.rmtree(OUTPUT_DIR)
     
     @classmethod
     def setUpClass(cls):
@@ -41,8 +44,11 @@ class ParserTest(unittest.TestCase):
         xmlstr = minidom.parseString(ET.tostring(xml_tree)).toprettyxml(indent="   ")
         # print(xmlstr)
 
-
+'''
     def test_parse_ring_1_miz(self):
+        """This function is too heavy to call every time
+        Please comment out only if you want to test. 
+        """
         filepath = os.path.dirname(__file__) + '/data/ring_1.miz'
 
         lines = None
@@ -60,9 +66,6 @@ class ParserTest(unittest.TestCase):
         from xml.dom import minidom
         env_xmlstr = minidom.parseString(ET.tostring(env_xml_tree)).toprettyxml(indent="   ")
         
-        if not os.path.exists(OUTPUT_DIR):
-            os.makedirs(OUTPUT_DIR)
-
         output_path = OUTPUT_DIR + '/ring_1_env.xml'
         with open(output_path, 'w') as file:
             file.write(env_xmlstr)
@@ -78,3 +81,6 @@ class ParserTest(unittest.TestCase):
         output_path = OUTPUT_DIR + '/ring_1_tp.xml'
         with open(output_path, 'w') as file:
             file.write(tp_xmlstr)
+
+
+'''
