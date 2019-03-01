@@ -2,13 +2,10 @@
 """Test of preprocess module.
 """
 
-import os
 import unittest
 import pprint
 from emparser.preprocess import Lexer
-
-DATA_DIR = os.path.dirname(__file__) + '/data'
-MML_VCT = DATA_DIR + '/mml.vct'
+from test import common
 
 class LexerTest(unittest.TestCase):
     def setUp(self):
@@ -21,11 +18,11 @@ class LexerTest(unittest.TestCase):
     def setUpClass(cls):
         super(LexerTest, cls).setUpClass()
         cls.lexer = Lexer()
-        cls.lexer.load_symbol_dict(MML_VCT)
+        cls.lexer.load_symbol_dict(common.MML_VCT)
         cls.lexer.build_len2symbol()
     
     def test_separate_env_and_text_proper(self):
-        filepath = DATA_DIR + '/ring_1.miz'
+        filepath = common.DATA_DIR + '/ring_1.miz'
         with open(filepath, 'r') as f:
             lines = f.readlines()
             env_lines, tp_lines = self.lexer.separate_env_and_text_proper(lines)
@@ -35,14 +32,14 @@ class LexerTest(unittest.TestCase):
 
     def test_load_symbol_dict(self):
         # 1. load symbol in specified Mizar files
-        self.lexer.load_symbol_dict(MML_VCT, ["AFF_1", "AFF_2", "AFVECT0"])
+        self.lexer.load_symbol_dict(common.MML_VCT, ["AFF_1", "AFF_2", "AFVECT0"])
         # AFF_1 -> 1, AFF_2 -> 14, AFVECT0 -> 10
         # Special Symbol -> 26
         self.assertEqual(len(self.lexer.symbol_dict), 1 + 14 + 10 + 26)
 
         # 2. load all symbols in MML
         # pprint.pprint(self.lexer.symbol_dict)
-        self.lexer.load_symbol_dict(MML_VCT)
+        self.lexer.load_symbol_dict(common.MML_VCT)
         self.assertEqual(len(self.lexer.symbol_dict), 9240)
         self.assertEqual(self.lexer.symbol_dict['zeros'],
             {'filename': 'PRVECT_1', 'type': 'O'})
