@@ -10,7 +10,7 @@ from antlr4.ParserRuleContext import ParserRuleContext
 
 class MizarXMLBuilder(MizarListener):
     def __init__(self, position_map):
-        self.topNode = None
+        self.xmlTree = ET.ElementTree()
         self.xmlNodeStack = []
         self.position_map = position_map
 
@@ -46,7 +46,7 @@ class MizarXMLBuilder(MizarListener):
             aboveNode = self.xmlNodeStack[len(self.xmlNodeStack)-1]
             aboveNode.append(node)
         else:
-            self.topNode = node
+            self.xmlTree._setroot(node)
         self.xmlNodeStack.append(node)
 
     def exitEveryRule(self, ctx:ParserRuleContext):

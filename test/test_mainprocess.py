@@ -43,7 +43,7 @@ class ParserTest(unittest.TestCase):
         xml_tree = self.parser.parse_theorem(case1)
         # print(ET.dump(xml_tree))
         from xml.dom import minidom
-        xmlstr = minidom.parseString(ET.tostring(xml_tree)).toprettyxml(indent=" ")
+        xmlstr = minidom.parseString(ET.tostring(xml_tree.getroot())).toprettyxml(indent=" ")
         # print(xmlstr)
 
 '''
@@ -67,7 +67,7 @@ class ParserTest(unittest.TestCase):
         txt = '\n'.join(tokenized_lines)
         env_xml_tree = self.parser.parse_environment(txt, posotion_map)
         from xml.dom import minidom
-        env_xmlstr = minidom.parseString(ET.tostring(env_xml_tree)).toprettyxml(indent=" ")
+        env_xmlstr = minidom.parseString(ET.tostring(env_xml_tree.getroot())).toprettyxml(indent=" ")
         
         output_path = OUTPUT_DIR + '/ring_1_env.xml'
         with open(output_path, 'w') as file:
@@ -82,7 +82,7 @@ class ParserTest(unittest.TestCase):
         txt = '\n'.join(tokenized_lines)
         tp_xml_tree = self.parser.parse_text_proper(txt, posotion_map)
         from xml.dom import minidom
-        tp_xmlstr = minidom.parseString(ET.tostring(tp_xml_tree)).toprettyxml(indent=" ")
+        tp_xmlstr = minidom.parseString(ET.tostring(tp_xml_tree.getroot())).toprettyxml(indent=" ")
 
         output_path = OUTPUT_DIR + '/ring_1_tp.xml'
         with open(output_path, 'w') as file:
@@ -90,5 +90,5 @@ class ParserTest(unittest.TestCase):
 
         expect_path = EXPECT_DIR + '/ring_1_tp.xml'
         self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
-    
+
 '''

@@ -23,17 +23,17 @@ class EnvCSTHandler:
     extract information, manipulate CST, and so on.
     """
     @classmethod
-    def extract_vocablaries(cls, root):
+    def extract_vocablaries(cls, tree):
         """Extract vocabulary files from environment part
 
         Args:
-            env_root (ET.Element): root xml node of environment part,
+            tree (ET.ElementTree): xml tree of environment part,
                 which is produced by ANTLR-generated parser.
         
         Returns:
             list[str]: list of vocabulary Mizar files
         """
-        nodes = root.findall('.//vocabularyName')
+        nodes = tree.findall('.//vocabularyName')
         return [node.get('spelling') for node in nodes]
 
 
@@ -42,7 +42,14 @@ class BodyCSTHandler:
 
 
 class EnvCST2AST:
-    pass
+    """XML Converter from CST to AST of environment part.
+    
+    The purpose of this class is to provide converter from
+    CST (concrete syntax tree) to AST (abstract syntax tree)
+    for environment part. 
+    """
+    def convert(self, cst_tree):
+        pass
 
 
 class BodyCST2AST:
