@@ -15,11 +15,11 @@ Todo:
 
 import xml.etree.ElementTree as ET
 
-class CSTAnalyzer:
-    """CST (concrete syntax tree) Analyzer.
+class CSTHandler:
+    """CST (concrete syntax tree) Handler.
     
-    The purpose of this class is to analyze CST tree produced by ANTLR-generated
-    parser and extract information from it, and so on.
+    The purpose of this class is to handle CST tree produced by ANTLR-generated
+    parser. Its roles are: extract information, manipulate CST, and so on.
     """
     @classmethod
     def extract_vocablaries(cls, env_root):

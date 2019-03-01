@@ -5,28 +5,28 @@
 import os
 import unittest
 import pprint
-from emparser.postprocess import CSTAnalyzer
+from emparser.postprocess import CSTHandler
 import xml.etree.ElementTree as ET
 
 
 EXPECT_DIR = os.path.dirname(__file__) + '/expect'
 
-class CSTAnalyzerTest(unittest.TestCase):
+class CSTHandlerTest(unittest.TestCase):
     def setUp(self):
-        self.cst_analyzer = CSTAnalyzerTest.cst_analyzer
+        self.cst_handler = CSTHandlerTest.cst_handler
     
     def tearDown(self):
         pass
     
     @classmethod
     def setUpClass(cls):
-        super(CSTAnalyzerTest, cls).setUpClass()
-        cls.cst_analyzer = CSTAnalyzer()
+        super(CSTHandlerTest, cls).setUpClass()
+        cls.cst_handler = CSTHandler()
 
     def test_extract_vocablaries(self):
         env_xmlpath = EXPECT_DIR+ '/ring_1_env.xml'
         env_root = ET.parse(env_xmlpath)
-        vocabularies = CSTAnalyzer.extract_vocablaries(env_root)
+        vocabularies = CSTHandler.extract_vocablaries(env_root)
         expect = ['RLVECT_1', 'ALGSTR_0', 'XBOOLE_0', 'SUBSET_1', 'ARYTM_1', 'ARYTM_3',
             'SUPINF_2', 'RELAT_1', 'INT_2', 'CARD_FIL', 'TARSKI', 'GROUP_4', 'IDEAL_1', 'VECTSP_2',
             'GROUP_1', 'FUNCSDOM', 'EQREL_1', 'STRUCT_0', 'WAYBEL20', 'PARTFUN1', 'RELAT_2',
