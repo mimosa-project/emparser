@@ -15,14 +15,15 @@ Todo:
 
 import xml.etree.ElementTree as ET
 
-class CSTHandler:
-    """CST (concrete syntax tree) Handler.
+class EnvCSTHandler:
+    """Environment CST (concrete syntax tree) Handler.
     
-    The purpose of this class is to handle CST tree produced by ANTLR-generated
-    parser. Its roles are: extract information, manipulate CST, and so on.
+    The purpose of this class is to handle Envoronment part CST
+    produced by ANTLR-generated parser. Its roles are:
+    extract information, manipulate CST, and so on.
     """
     @classmethod
-    def extract_vocablaries(cls, env_root):
+    def extract_vocablaries(cls, root):
         """Extract vocabulary files from environment part
 
         Args:
@@ -32,5 +33,17 @@ class CSTHandler:
         Returns:
             list[str]: list of vocabulary Mizar files
         """
-        nodes = env_root.findall('.//vocabularyName')
+        nodes = root.findall('.//vocabularyName')
         return [node.get('spelling') for node in nodes]
+
+
+class BodyCSTHandler:
+    pass
+
+
+class EnvCST2AST:
+    pass
+
+
+class BodyCST2AST:
+    pass
