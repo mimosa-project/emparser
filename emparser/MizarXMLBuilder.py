@@ -9,9 +9,10 @@ from antlr4.ParserRuleContext import ParserRuleContext
 
 
 class MizarXMLBuilder(MizarListener):
-    def __init__(self):
+    def __init__(self, position_map):
         self.topNode = None
         self.xmlNodeStack = []
+        self.position_map = position_map
 
     def visitTerminal(self, node:TerminalNode):
         assert len(self.xmlNodeStack) > 0
@@ -22,8 +23,18 @@ class MizarXMLBuilder(MizarListener):
             xmlNode.set('spelling', node.getText())
             aboveXmlNode.append(xmlNode)
         else:
-            aboveXmlNode.set('spelling', node.getText())
-            # tag = MizarParser.symbolicNames[symbol.type]
+            xmlNode = aboveXmlNode
+            xmlNode.set('spelling', node.getText())
+        
+        if self.position_map:
+            # symbol.column is 0-origin
+            after_pos = (symbol.line, symbol.column+1)
+            if after_pos in self.position_map:
+                before_pos = self.position_map[after_pos]
+                xmlNode.set('line', str(before_pos[0]))
+                xmlNode.set('col', str(before_pos[1]))
+            else:
+                print("position {} not found".format(after_pos))
 
     def visitErrorNode(self, node:ErrorNode):
         pass

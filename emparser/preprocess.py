@@ -85,7 +85,7 @@ class Lexer:
         symbol_dict (dict[str, tuple[str]]): dictonary of symbol name and its properties.
                 The propeties are consist of type, file name, and priority.
                 the priority is optional.
-        len2symbol (dict[int, set[str]]): mapping of symbol length and symbol name. 
+        len2symbol (dict[int, set[str]]): mapping of symbol length and symbol name.
 
     """
 
@@ -258,14 +258,19 @@ class Lexer:
         """
         return [self.remove_comment_in_a_line(line) for line in lines]
 
-    def lex(self, lines, is_environment_part=False):
+    def lex(self, lines, is_environment_part=False,
+            first_line_number=1):
         """Lexical analyzer.
 
         Args:
             lines (list[str]): lines to be processed
+            is_environment_part (bool): if lines are environment part or not
+            first_line_number (int): line number of index zero
 
         Returns:
-            list[list[str]]: tokens list
+            list[str]: tokenized lines
+            (dict[(int,int), (int,int)]): line-column number mapping
+                between before and after lex() 
         """
 
         class LexerStateMachine:
@@ -278,6 +283,15 @@ class Lexer:
                 self.parent = parent
        
             def cut(self, line):
+                """Cut a left-most token in a line
+
+                Args:
+                    line (str): strings to cut
+
+                Returns:
+                    (str, str): left-most token and the rest of line if found
+                    None: otherwise (illegal)
+                """
                 call_functions = None
                 if self.next_is_variable == 'yes':
                     call_functions = [self.cut_identifier]
@@ -298,10 +312,27 @@ class Lexer:
                 return None
 
             def is_special_symbol(self, symbol):
+                """Check if it is a special symbol
+
+                Args:
+                    symbol (str): symbol to be checked
+
+                Returns:
+                    True if it is a special symbol, otherwise False
+                """
                 i = len(symbol)
                 return i in SPECIAL_SYMBOLS and symbol in SPECIAL_SYMBOLS[i]
 
             def cut_symbol(self, line):
+                """Cut a first token symbol in a line
+
+                Args:
+                    line (str): strings to cut symbol
+
+                Returns:
+                    (str, str): first token symbol and the rest of line if found
+                    None: otherwise
+                """
                 res = self.parent.cut_symbol(line)
                 if self.is_environment_part and res is not None:
                     if res[0] not in [',', ';']:
@@ -328,6 +359,15 @@ class Lexer:
                 return res
 
             def cut_reserved_word(self, line):
+                """Cut a first token reserved word in a line
+
+                Args:
+                    line (str): strings to cut reserved word
+
+                Returns:
+                    (str, str): first token reserved word and the rest of line if found
+                    None: otherwise
+                """
                 res = self.parent.cut_reserved_word(line)
                 if res is not None:
                     if res[0] in ['synonym', 'antonym', 'cluster', 'reserve']:
@@ -350,9 +390,27 @@ class Lexer:
                 return res
             
             def cut_numeral(self, line):
+                """Cut a first token numeral in a line
+
+                Args:
+                    line (str): strings to cut numeral
+
+                Returns:
+                    (str, str): first token numeral and the rest of line if found
+                    None: otherwise
+                """
                 return self.parent.cut_numeral(line)
             
             def cut_identifier(self, line):
+                """Cut a first token identifier in a line
+
+                Args:
+                    line (str): strings to cut identifier
+
+                Returns:
+                    (str, str): first token identifier and the rest of line if found
+                    None: otherwise
+                """
                 res = self.parent.cut_identifier(line)
                 if self.next_is_variable == 'yes':
                     assert res is not None
@@ -361,50 +419,35 @@ class Lexer:
                 return res
             
         stateMachine = LexerStateMachine(self, is_environment_part)
-        tokens_list = []
+        tokenized_lines = []
+        position_map = {}
 
-        for line in lines:
+        for i, line in enumerate(lines):
             tokens = []
-            line.rstrip()
-            while line:
-                line = line.lstrip()
-                if not line:
+
+            after_column = 1
+
+            buffer = line
+            while buffer:
+                buffer = buffer.lstrip()
+                if not buffer:
                     continue
                 
-                res = stateMachine.cut(line)
+                before_pos = (first_line_number+i, len(line) - len(buffer) + 1)
+                
+                res = stateMachine.cut(buffer)
                 tokens.append(res[0])
-                line = res[1]
-            tokens_list.append(tokens)
+                buffer = res[1]
 
-        return tokens_list
+                after_pos = (i+1, after_column)
+                after_column += len(res[0]) + 1
 
-    def connect_list2lines(self, a):
-        """connect string list and convert to lines.
+                position_map[after_pos] = before_pos
 
-        Args:
-            a (list[str]): list of words
+            tokenized_lines.append(' '.join(tokens))
 
-        Returns:
-            list[str]: lines, the maximum character numbers in each line
-                is less than or equal to 80.  
-        """
+        return (tokenized_lines, position_map)
 
-        lines = []
-
-        line = ""
-        for x in a:
-            if len(line) + len(x) < 80:
-                if line:
-                    line += " "
-                line += x
-            else:
-                lines.append(line)
-                line = x
-        if line:
-            lines.append(line)
-        
-        return lines
-    
     def read_until_space(self, line):
         """Read line until space.
 

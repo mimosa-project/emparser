@@ -23,24 +23,24 @@ class Parser:
     def __init__(self):
         pass
 
-    def parse(self, data:str, rule = 'article'):
-        input = antlr4.InputStream(data)
+    def parse(self, text:str, position_map=None, rule='article'):
+        input = antlr4.InputStream(text)
         lexer = MizarLexer(input)
         tokens = antlr4.CommonTokenStream(lexer)
         parser = MizarParser(tokens)
         tree = getattr(parser, rule)()
 
-        xmlBuilder = MizarXMLBuilder()
+        xmlBuilder = MizarXMLBuilder(position_map)
         walker = ParseTreeWalker()
         walker.walk(xmlBuilder, tree)
         return xmlBuilder.topNode
 
-    def parse_environment(self, data: str):
-        return self.parse(data, 'environmentDeclaration')
+    def parse_environment(self, text:str, position_map=None):
+        return self.parse(text, position_map, 'environmentDeclaration')
 
-    def parse_text_proper(self, data: str):
-        return self.parse(data, 'textProper')
+    def parse_text_proper(self, text:str, position_map=None):
+        return self.parse(text, position_map, 'textProper')
 
-    def parse_theorem(self, data: str):
-        return self.parse(data, 'theorem')
+    def parse_theorem(self, text:str, position_map=None):
+        return self.parse(text, position_map, 'theorem')
 

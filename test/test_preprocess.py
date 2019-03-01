@@ -202,14 +202,14 @@ class LexerTest(unittest.TestCase):
             "holds ex_sup_of I, T & sup I in I;"
         ]
 
-        expect1 = [["theorem"],
-            ["for", "T", "being", "__V_Noetherian", "__M_sup-Semilattice",
-            "for", "I", "being", "__M_Ideal", "of", "T"],
-            ["holds", "__R_ex_sup_of", "I", ",", "T", "&", "__O200_sup",
-            "I", "__R_in", "I", ";"]]
-        
-        res1 = self.lexer.lex(case1)
-        self.assertEqual(expect1, res1)
+        expect1 = [
+            "theorem",
+            "for T being __V_Noetherian __M_sup-Semilattice for I being __M_Ideal of T",
+            "holds __R_ex_sup_of I , T & __O200_sup I __R_in I ;"
+        ]
+        text1, pos_map1 = self.lexer.lex(case1)
+        self.assertEqual(expect1, text1)
+
 
         case2 = [
             "theorem",
@@ -217,50 +217,12 @@ class LexerTest(unittest.TestCase):
             "* t = s1 & t * s1 = s1 & ex s2 st s1 * s2 = t & s2 * s1 = t) implies S is Group;"
         ]
 
-        expect2 = [["theorem"],
-            ["(", "(", "for", "r", ",", "s", ",", "t", "holds",
-            "(", "r", "__O_*", "s", ")", "__O_*", "t",
-            "=", "r", "__O_*", "(", "s", "__O_*", "t", ")", ")",
-            "&", "ex", "t", "st", "for", "s1", "holds", "s1"],
-            ["__O_*", "t", "=", "s1", "&", "t", "__O_*", "s1",
-            "=", "s1", "&", "ex", "s2", "st", "s1", "__O_*", "s2",
-             "=", "t", "&", "s2", "__O_*", "s1", "=", "t", ")",
-             "implies", "S", "is", "__M_Group", ";"]]
-
-        res2 = self.lexer.lex(case2)
-        self.assertEqual(expect2, res2)
-
-    def test_connect_list2lines(self):
-        case1 = [
-            "theorem", "a", "b", "c", ";"
-        ]
-
-        expect1 = ["theorem a b c ;"]
-
-        res1 = self.lexer.connect_list2lines(case1)
-        self.assertEqual(expect1, res1)
-
-        case2 = ["theorem",
-            "(", "(", "for", "r", ",", "s", ",", "t", "holds",
-            "(", "r", "__O_*", "s", ")", "__O_*", "t",
-            "=", "r", "__O_*", "(", "s", "__O_*", "t", ")", ")",
-            "&", "ex", "t", "st", "for", "s1", "holds", "s1",
-            "__O_*", "t", "=", "s1", "&", "t", "__O_*", "s1",
-            "=", "s1", "&", "ex", "s2", "st", "s1", "__O_*", "s2",
-             "=", "t", "&", "s2", "__O_*", "s1", "=", "t", ")",
-             "implies", "S", "is", "__M_Group", ";"
-        ]
-        
         expect2 = [
-            "theorem ( ( for r , s , t holds ( r __O_* s ) __O_* t = r __O_* ( s __O_* t ) )",
-            "& ex t st for s1 holds s1 __O_* t = s1 & t __O_* s1 = s1 & ex s2 st s1 __O_* s2",
-            "= t & s2 __O_* s1 = t ) implies S is __M_Group ;"
+            "theorem",
+            "( ( for r , s , t holds ( r __O_* s ) __O_* t = r __O_* ( s __O_* t ) ) & ex t st for s1 holds s1",
+            "__O_* t = s1 & t __O_* s1 = s1 & ex s2 st s1 __O_* s2 = t & s2 __O_* s1 = t ) implies S is __M_Group ;"
         ]
 
-        res2 = self.lexer.connect_list2lines(case2)
-        self.assertEqual(expect2, res2)
 
-        case3 = [""]
-        expect3  = []
-        res3 = self.lexer.connect_list2lines(case3)
-        self.assertEqual(expect3, res3)
+        text2, pos_map2 = self.lexer.lex(case2)
+        self.assertEqual(expect2, text2)
