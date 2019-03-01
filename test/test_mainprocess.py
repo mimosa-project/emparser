@@ -46,7 +46,7 @@ class ParserTest(unittest.TestCase):
         xmlstr = minidom.parseString(ET.tostring(xml_tree)).toprettyxml(indent=" ")
         # print(xmlstr)
 
-    '''
+'''
 
     def test_parse_ring_1_miz(self):
         """This function is too heavy to call every time
@@ -91,4 +91,4 @@ class ParserTest(unittest.TestCase):
         expect_path = EXPECT_DIR + '/ring_1_tp.xml'
         self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
     
-    '''
+'''

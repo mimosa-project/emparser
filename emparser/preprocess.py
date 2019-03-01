@@ -3,7 +3,7 @@
 """Preprocess module for Extended Mizar Parser (emparser).
 
 This module is used for preprocess for Extended Mizar Parser.
-Preprocess means the process before ANTLR parser.
+Preprocess means the process before ANTLR-generated parser.
 
 Example:
     See test/test_preprocess
@@ -67,7 +67,7 @@ BEGIN_LINE_REG = re.compile(r"^\s*begin[;\s]", re.ASCII)
 """
 
 class Lexer:
-    """Lexical Analyser for Adhoc Mizar Parser.
+    """Lexical Analyser for Extended Mizar Parser.
     
     The purpose of this class is to read raw Mizar text and write modified
     Mizar-like text that is easier for ANTLR to analyze. The purpose is similar

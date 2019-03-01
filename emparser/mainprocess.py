@@ -3,7 +3,7 @@
 """Mainprocess module for Extended Mizar Parser (emparser).
 
 This module is used for mainprocess for Extended Mizar Parser.
-Mainprocess means the process of ANTLR parser.
+Mainprocess means the process of ANTLR-generated parser.
 
 Example:
     See test/test_mainprocess
