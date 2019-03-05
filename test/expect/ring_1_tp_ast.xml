@@ -48,7 +48,9 @@
   <variable col="12" line="563" spelling="y"/>
   <typeExpression>
    <modeSymbol col="18" line="563" spelling="Element"/>
-   <termExpression/>
+   <termExpression>
+    <functorSymbol col="30" line="563" spelling="/"/>
+   </termExpression>
   </typeExpression>
  </reservation>
  <theorem col="1" line="565" spelling="theorem"/>

@@ -15,9 +15,11 @@ from test import common
 
 def setUpModule():
     common.create_output_dir()
+    common.create_output2_dir()
 
 def tearDownModule():
     common.delete_output_dir()
+    common.delete_output2_dir()
 
 class CSTHandlerTest(unittest.TestCase):
     def setUp(self):
@@ -75,9 +77,11 @@ class CST2ASTTest(unittest.TestCase):
         ast_roots = self.converter.convert(cst_tree.getroot())
         self.assertEqual(len(ast_roots), 1)
         xmlstr = util.pretty_xml(ast_roots[0])
-        output_path = common.EXPECT_DIR + '/ring_1_tp_ast.xml'
+        output_path = common.OUTPUT_DIR + '/ring_1_tp_ast.xml'
+        # output_path = common.OUTPUT2_DIR + '/ring_1_tp_ast.xml'
+        # output_path = common.EXPECT_DIR + '/ring_1_tp_ast.xml'
         with open(output_path, 'w') as f:
             f.write(xmlstr)
         
-        # expect_path = common.EXPECT_DIR + '/ring_1_tp_ast.xml'
-        # self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
+        expect_path = common.EXPECT_DIR + '/ring_1_tp_ast.xml'
+        self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
