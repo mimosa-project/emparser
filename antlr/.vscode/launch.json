@@ -11,7 +11,7 @@
             "input": "theorem1.am1",
             // "input": "theorem2.am1",
             "grammar": "Mizar.g4",
-            "startRule": "text_item",
+            "startRule": "textItem",
             "printParseTree": true,
             "visualParseTree": true
         }

@@ -57,8 +57,6 @@ partialDefiniensList : partialDefiniens ( ',' partialDefiniens ) * ;
 partialDefiniens : ( sentence | termExpression ) 'if' sentence ;
 modeProperty : 'sethood' justification ';' ;
 functorDefinition : 'func' functorPattern specification ? ( ( 'means' | 'equals' ) definiens ) ? ';' correctnessConditions functorProperty * ;
-
-// FIXME : priority of operator
 functorPattern : functorLoci ? functorSymbol functorLoci ? | leftFunctorBracket loci rightFunctorBracket ;
 functorProperty : ( 'commutativity' | 'idempotence' | 'involutiveness' | 'projectivity' ) justification ';' ;
 functorSynonym : 'synonym' functorPattern 'for' functorPattern ';' ;
@@ -178,14 +176,14 @@ typeExpression : '(' radixType ')'
     | adjective + typeExpression   // left recursion repaired
     | radixType ;
 
-structureTypeExpression : '(' structureSymbol ( 'over' termExpressionList ) ? ')' | adjectiveCluster structureSymbol ( 'over' termExpressionList ) ? ;
+structureTypeExpression : '(' structureSymbol ( 'over' termExpressionList ) ? ')'
+    | adjectiveCluster structureSymbol ( 'over' termExpressionList ) ? ;
 radixType : modeSymbol ( 'of' termExpressionList ) ?
     | structureSymbol ( 'over' termExpressionList ) ? ;
 typeExpressionList : typeExpression ( ',' typeExpression ) * ;
+/* They are modified into termExpression, unitaryTerm and arguments
 termExpression : '(' termExpression ')'
-    | termExpression functorSymbol arguments ?  // left recursion repaired
-    | '(' termExpressionList ')' functorSymbol arguments ?  // left recursion repaired
-    | functorSymbol arguments ?       // left recursion repaired
+    | arguments ? functorSymbol arguments ?  // left recursion
     | leftFunctorBracket termExpressionList rightFunctorBracket
     | functorIdentifier '(' termExpressionList ? ')'
     | structureSymbol '(#' termExpressionList '#)'
@@ -201,6 +199,25 @@ termExpression : '(' termExpression ')'
     | privateDefinitionParameter
     | 'it' ;
 arguments : termExpression | '(' termExpressionList ')' ;
+*/
+termExpression : arguments ? (functorSymbol + arguments) * functorSymbol + arguments ?
+    | termExpression 'qua' typeExpression
+    | unitaryTerm ;
+unitaryTerm : '(' termExpression ')'
+    | leftFunctorBracket termExpressionList rightFunctorBracket
+    | functorIdentifier '(' termExpressionList ? ')'
+    | structureSymbol '(#' termExpressionList '#)'
+    | 'the' structureSymbol 'of' termExpression
+    | variableIdentifier
+    | '{' termExpression  postqualification * ':' sentence '}'
+    | 'the' 'set' 'of' 'all' termExpression postqualification *
+    | NUMERAL
+    | 'the' selectorSymbol 'of' termExpression
+    | 'the' selectorSymbol
+    | 'the' typeExpression
+    | privateDefinitionParameter
+    | 'it' ;
+arguments : unitaryTerm | '(' termExpressionList ')' ;
 adjectiveArguments : termExpressionList | '(' termExpressionList ')' ;
 termExpressionList : termExpression ( ',' termExpression ) * ;
 postqualification : 'where' postqualifyingSegment ( ',' postqualifyingSegment ) * ;
