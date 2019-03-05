@@ -13,7 +13,7 @@ Todo:
 
 """
 
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 from xml.dom import minidom
 
 

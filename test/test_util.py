@@ -4,7 +4,7 @@
 
 import unittest
 import filecmp
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 
 from emparser import util
 from test import common

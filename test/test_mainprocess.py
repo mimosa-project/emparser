@@ -5,7 +5,7 @@
 import unittest
 import filecmp
 from pprint import pprint
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 from emparser.preprocess import Lexer
 from emparser.mainprocess import Parser
 from emparser import util
@@ -38,9 +38,8 @@ class ParserTest(unittest.TestCase):
         case1 = "theorem ( ( for r , s , t holds ( r __O_* s ) __O_* t = r __O_* ( s __O_* t ) ) \n" + \
             "& ex t st for s1 holds s1 __O_* t = s1 & t __O_* s1 = s1 & ex s2 st s1 __O_* s2 \n" + \
             "= t & s2 __O_* s1 = t ) implies S is __M_Group ;"
-        xml_tree = self.parser.parse_theorem(case1)
-        # print(ET.dump(xml_tree))
-        util.pretty_xml(xml_tree.getroot())
+        xml_root = self.parser.parse_theorem(case1)
+        xmlstr = util.pretty_xml(xml_root)
         # print(xmlstr)
 
 '''
@@ -62,10 +61,11 @@ class ParserTest(unittest.TestCase):
         env_lines = self.lexer.remove_comment(env_lines)
         tokenized_lines, posotion_map = self.lexer.lex(env_lines, is_environment_part=True)
         txt = '\n'.join(tokenized_lines)
-        env_xml_tree = self.parser.parse_environment(txt, posotion_map)
-        env_xmlstr = util.pretty_xml(env_xml_tree.getroot())
+        env_xml_root = self.parser.parse_environment(txt, posotion_map)
+        env_xmlstr = util.pretty_xml(env_xml_root)
         
         output_path = common.OUTPUT_DIR + '/ring_1_env.xml'
+        # output_path = common.EXPECT_DIR + '/ring_1_env.xml'
         with open(output_path, 'w') as file:
             file.write(env_xmlstr)
 
@@ -76,10 +76,11 @@ class ParserTest(unittest.TestCase):
         text_proper_lines = self.lexer.remove_comment(text_proper_lines)
         tokenized_lines, posotion_map = self.lexer.lex(text_proper_lines, first_line_number=len(env_lines)+1)
         txt = '\n'.join(tokenized_lines)
-        tp_xml_tree = self.parser.parse_text_proper(txt, posotion_map)
-        tp_xmlstr = util.pretty_xml(tp_xml_tree.getroot())
+        tp_xml_root = self.parser.parse_text_proper(txt, posotion_map)
+        tp_xmlstr = util.pretty_xml(tp_xml_root)
 
         output_path = common.OUTPUT_DIR + '/ring_1_tp.xml'
+        # output_path = common.EXPECT_DIR + '/ring_1_tp.xml'
         with open(output_path, 'w') as file:
             file.write(tp_xmlstr)
 
