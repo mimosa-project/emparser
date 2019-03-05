@@ -20,16 +20,18 @@
  <reservation>
   <variable col="3" line="156" spelling="I"/>
   <typeExpression>
-   <modeSymbol col="9" line="156" spelling="Ideal"/>
-   <termExpression/>
-   <termExpression/>
+   <modeSymbol col="9" line="156" spelling="Ideal">
+    <termExpression/>
+    <termExpression/>
+   </modeSymbol>
   </typeExpression>
  </reservation>
  <reservation>
   <variable col="6" line="157" spelling="b"/>
   <typeExpression>
-   <modeSymbol col="12" line="157" spelling="Element"/>
-   <termExpression/>
+   <modeSymbol col="12" line="157" spelling="Element">
+    <termExpression/>
+   </modeSymbol>
   </typeExpression>
  </reservation>
  <auxiliary/>
@@ -47,10 +49,11 @@
   <variable col="9" line="563" spelling="x"/>
   <variable col="12" line="563" spelling="y"/>
   <typeExpression>
-   <modeSymbol col="18" line="563" spelling="Element"/>
-   <termExpression>
-    <functorSymbol col="30" line="563" spelling="/"/>
-   </termExpression>
+   <modeSymbol col="18" line="563" spelling="Element">
+    <termExpression>
+     <functorSymbol col="30" line="563" spelling="/"/>
+    </termExpression>
+   </modeSymbol>
   </typeExpression>
  </reservation>
  <theorem col="1" line="565" spelling="theorem"/>

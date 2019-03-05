@@ -53,6 +53,13 @@ class CST2AST:
     
     The purpose of this class is to provide converter from
     CST (concrete syntax tree) to AST (abstract syntax tree).
+
+    Naming rule :
+        convert_abc()   ->  create an unique top node in the function
+        _convert_abc()  ->  Do not create an unique top node in the function
+
+        node   -> AST node
+        _node  -> CST node
     """
     def convert(self, _root):
         """Convert CST to AST
@@ -70,7 +77,7 @@ class CST2AST:
         elif _root.tag == 'textProper':
             self.convert_text_proper(root, _root)
         elif _root.tag == 'textItem':
-            self.convert_text_item(root, _root)
+            self._convert_text_item(root, _root)
         else:
             print("There is no corresponding converter for {}".format(_root.tag))
         
@@ -113,7 +120,7 @@ class CST2AST:
     def convert_text_proper(self, parent, _text_proper):
         """Convert text proper part of CST to AST
 
-        Structure: ( sectionPragma <textItem> * ) * 
+        Structure: textProper / ( sectionPragma <textItem> * ) * 
             sectionPragma <- section/'begin'
             <textItem> <- section/textItem
 
@@ -127,9 +134,9 @@ class CST2AST:
             ET.SubElement(text_proper, 'sectionPragma', attrib=self.std_attrib(_begin))
             
             for _text_item in _section[1:]:
-                self.convert_text_item(text_proper, _text_item)
+                self._convert_text_item(text_proper, _text_item)
 
-    def convert_text_item(self, parent, _text_item):
+    def _convert_text_item(self, parent, _text_item):
         """Convert textItem CST to AST
 
         Structure: (<reservation> | <definitionalItem> | <registrationItem> |
@@ -141,7 +148,7 @@ class CST2AST:
         """
         for _child in _text_item:
             if _child.tag == 'reservation':
-                self.convert_reservation(parent, _child)
+                self._convert_reservation(parent, _child)
             elif _child.tag == 'definitionalItem':
                 self.convert_definitional_item(parent, _child)
             elif _child.tag == 'registrationItem':
@@ -149,7 +156,7 @@ class CST2AST:
             elif _child.tag == 'notationItem':
                 self.convert_notation(parent, _child)
             elif _child.tag == 'theorem':
-                self.convertTheorem(parent, _child)
+                self.convert_theorem(parent, _child)
             elif _child.tag == 'schemeItem':
                 self.convert_scheme(parent, _child)
             elif _child.tag == 'auxiliaryItem':
@@ -157,10 +164,10 @@ class CST2AST:
             else:
                 print("There is no corresponding converter for {}".format(_child.tag))
 
-    def convert_reservation(self, parent, _reservation):
+    def _convert_reservation(self, parent, _reservation):
         """Convert reservation CST to AST
 
-        Structure: reservation / (variable + <<typeExpression>>)
+        Structure: (reservation / (variable + <<typeExpression>>)) +
             reservation <- reservationSegment
             variable <- reservationSegment/reservedIdentifier
             <typeExpression> <- typeExpression
@@ -199,7 +206,7 @@ class CST2AST:
         _notation_keyword = _notation_block.find('./keyword[@spelling="notation"]')
         ET.SubElement(parent, 'notation', attrib=self.std_attrib(_notation_keyword))
 
-    def convertTheorem(self, parent, _theorem):
+    def convert_theorem(self, parent, _theorem):
         """Convert theorem CST to AST
 
         Args:
@@ -252,21 +259,24 @@ class CST2AST:
             parent (ET.Element): AST parent node
             _adjective (ET.Element): CST node
         """
+        adjective = ET.SubElement(parent, 'adjective')
+
         _non = _adjective.find('./keyword[@spelling="non"]')
         if _non is not None:
-            ET.SubElement(parent, 'attributeNegation', attrib=self.std_attrib(_non))
+            ET.SubElement(adjective, 'attributeNegation', attrib=self.std_attrib(_non))
         
         _term_expressions = _adjective.findall('./adjectiveArguments/termExpressionList/termExpression')
         for _term_expression in _term_expressions:
-            self.convert_term_expression(parent, _term_expression)
+            self.convert_term_expression(adjective, _term_expression)
         
         _attribute_symbol = _adjective.find('./attributeSymbol')
-        ET.SubElement(parent, 'attributeSymbol', attrib=self.std_attrib(_attribute_symbol))
+        ET.SubElement(adjective, 'attributeSymbol', attrib=self.std_attrib(_attribute_symbol))
 
     def convert_radix_type(self, parent, _radix_type):
         """Convert radixType CST to AST
 
-        Structure: (modeSymbol <termExpression> *) | (structureSymbol <termExpression> *)
+        Structure: (modeSymbol / <termExpression> *)
+                 | (structureSymbol / <termExpression> *)
             modeSymbol <- modeSymbol
             structureSymbol <- structureSymbol
             <termExpression> <- termExpressionList/termExpression
@@ -275,12 +285,13 @@ class CST2AST:
             parent (ET.Element): AST parent node
             _radix_type (ET.Element): CST node
         """
-        _child0 = _radix_type[0]
-        ET.SubElement(parent, 'modeSymbol', attrib=self.std_attrib(_child0))
+        _mode_or_struct = _radix_type[0]
+        mode_or_struct = ET.SubElement(parent, _mode_or_struct.tag,
+                            attrib=self.std_attrib(_mode_or_struct))
 
         _term_expressions = _radix_type.findall('./termExpressionList/termExpression')
         for _term_expression in _term_expressions:
-            self.convert_term_expression(parent, _term_expression)
+            self.convert_term_expression(mode_or_struct, _term_expression)
 
     def convert_term_expression(self, parent, _term_expression):
         """Convert termExpression CST to AST
@@ -292,30 +303,57 @@ class CST2AST:
             _term_expression (ET.Element): CST node
         """
         term_expression = ET.SubElement(parent, 'termExpression')
+        self._convert_term_expression(term_expression, _term_expression)
 
+    def _convert_term_expression(self, parent, _term_expression):
+        """Convert termExpression CST to AST
+
+        Structure: termExpression / 
+
+        Args:
+            parent (ET.Element): AST parent node
+            _term_expression (ET.Element): CST node
+        """
+        # TODO
+        # Adjust functor priority
         for _child in _term_expression:
             if _child.tag == 'arguments':
                 if _child[0].tag == 'unitaryTerm':
-                    self.convert_unitary_term(term_expression, _child[0])
+                    self.convert_unitary_term(parent, _child[0])
                 else:
-                    self.convert_term_expression_list(term_expression, _child[1])
+                    self.convert_term_expression_list(parent, _child[1])
             elif _child.tag == 'functorSymbol':
-                ET.SubElement(term_expression, 'functorSymbol', attrib=self.std_attrib(_child))
+                ET.SubElement(parent, 'functorSymbol', attrib=self.std_attrib(_child))
             elif _child.tag == 'termExpression':
                 # TODO
-                pass
+                self.convert_term_expression(parent, _child[1])
             elif _child.tag == 'unitaryTerm':
-                self.convert_unitary_term(term_expression, _child)
-
-        # TODO
-        # Adjust functor priority
-
+                self.convert_unitary_term(parent, _child)
 
     def convert_term_expression_list(self, parent, _term_expression_list):
-        term_expression_list = ET.SubElement(parent, 'termExpressionList')
-        for _term_expression in _term_expression_list:
-            self.convert_term_expression(term_expression_list, _term_expression)
+        """Convert termExpressionList CST to AST
 
+        Structure: termExpressionList / <termExpression> *
+
+        Args:
+            parent (ET.Element): AST parent node
+            _term_expression_list (ET.Element): CST node
+        """
+        term_expression_list = ET.SubElement(parent, 'termExpressionList')
+        self._convert_term_expression_list(term_expression_list, _term_expression_list)
+
+    def _convert_term_expression_list(self, parent, _term_expression_list):
+        """Convert termExpressionList CST to AST
+
+        Structure: <termExpression> *
+
+        Args:
+            parent (ET.Element): AST parent node
+            _term_expression_list (ET.Element): CST node
+        """
+        for _term_expression in _term_expression_list:
+            self.convert_term_expression(parent, _term_expression)
+    
     def convert_unitary_term(self, _unitary_term, parent):
         pass
 
