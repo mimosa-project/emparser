@@ -172,6 +172,11 @@ explicitlyQualifiedVariables : qualifiedSegment ( ',' qualifiedSegment ) * ;
 qualifiedSegment : variables qualification ;
 variables : variableIdentifier ( ',' variableIdentifier ) * ;
 qualification : ( 'being' | 'be' ) typeExpression ;
+/* It is modified to below
+typeExpression : '(' radixType ')'
+    | adjectiveCluster typeExpression
+    | radixType ;
+*/
 typeExpression : '(' radixType ')'
     | adjective + typeExpression   // left recursion repaired
     | radixType ;
