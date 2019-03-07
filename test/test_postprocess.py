@@ -8,7 +8,8 @@ import shutil
 import filecmp
 import lxml.etree as ET
 
-from emparser.postprocess import CSTHandler,CST2AST
+from emparser.postprocess import CSTHandler
+# from emparser.postprocess import CST2AST
 from emparser import util
 from test import common
 
@@ -44,7 +45,7 @@ class CSTHandlerTest(unittest.TestCase):
             'ORDERS_1', 'WELLORD1', 'RING_1']
         self.assertEqual(vocabularies, expect)
 
-
+'''
 class CST2ASTTest(unittest.TestCase):
     def setUp(self):
         self.converter = CST2ASTTest.converter
@@ -85,3 +86,4 @@ class CST2ASTTest(unittest.TestCase):
         
         expect_path = common.EXPECT_DIR + '/ring_1_tp_ast.xml'
         self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
+'''

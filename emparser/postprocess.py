@@ -47,19 +47,27 @@ class CSTHandler:
         _vocablaries = _node.findall('.//vocabularyName')
         return [_vocablary.get('spelling') for _vocablary in _vocablaries]
 
-
+'''
 class CST2AST:
     """XML Converter from CST to AST.
     
     The purpose of this class is to provide converter from
     CST (concrete syntax tree) to AST (abstract syntax tree).
 
-    Naming rule :
-        convert_abc()   ->  create an unique top node in the function
-        _convert_abc()  ->  Do not create an unique top node in the function
+    Naming rule in source code:
+        convert_abc()   ->  create a top node for the tag in the function
+        _convert_abc()  ->  Do not create a top node for the tag in the function
 
         node   -> AST node
         _node  -> CST node
+
+    Naming rule of AST grammar comments
+        abc -> create tag in this function
+        _abc -> do not create tag in this function
+        <abc> -> convet_abc() is called
+        <_abc> -> _convet_abc() is called
+
+        _tag : -> AST node is not created for the tag
     """
     def convert(self, _root):
         """Convert CST to AST
@@ -86,12 +94,35 @@ class CST2AST:
     def convert_environ(self, parent, _environ):
         """Convert environment part of CST to AST
 
-        Structure: environ / (directive  / (ident *) ) *
+        CST grammar:
+            environmentDeclaration : 'environ' directive * ;
+            directive : vocabularyDirective | libraryDirective | requirementDirective ;
+            vocabularyDirective : 'vocabularies' vocabularyName ( ',' vocabularyName ) * ';' ;
+            vocabularyName : FILE_NAME ;
+            libraryDirective : ( 'notations' | 'constructors' | 'registrations' | 'definitions' | 'expansions' | 'equalities' | 'theorems' | 'schemes' )
+                articleName ( ',' articleName ) * ';' ;
+            articleName : FILE_NAME ;
+            requirementDirective : 'requirements' requirement ( ',' requirement ) * ';' ;
+            requirement : FILE_NAME ;
+
+        AST grammar:
+            environ : directive * ;
+            directive : article * ;
+
+        AST node attributes:
+            environ
+            directive[name]
+                name : "notations" | "constructors" | "registrations" | "definitions"
+                    | "expansions" | "equalities" | "theorems" | "schemes"
+            article[spelling, line, col]
+                spelling: FILENAME
+
+        Mapping AST <- CST:
             environ <- environmentDeclaration
             directive <- directive
-            ident <- vocabularyDirective/vocabularyName,
-                     requirementDirective/requirement,
-                     libraryDirective/articleName
+            article <- vocabularyDirective/vocabularyName,
+                   | requirementDirective/requirement,
+                   | libraryDirective/articleName
 
         Args:
             parent (ET.Element): AST parent node
@@ -115,14 +146,27 @@ class CST2AST:
                 _names = _directive.findall('./libraryDirective/articleName')
             
             for _name in _names:
-                ET.SubElement(directive, 'ident', attrib=self.std_attrib(_name))
+                ET.SubElement(directive, 'articleName', attrib=self.std_attrib(_name))
 
     def convert_text_proper(self, parent, _text_proper):
         """Convert text proper part of CST to AST
 
-        Structure: textProper / ( sectionPragma <textItem> * ) * 
+        CST grammar:
+            textProper : section + ;
+            section : 'begin' textItem * ;
+
+        AST grammar:
+            textProper : ( sectionPragma <_textItem> * ) *  ;
+        
+        AST node attributes:
+            textProper
+            sectionPragma[spelling, line, col]
+                spelling : "begin"
+        
+        Mapping AST <- CST:
+            textProper <- textProper
             sectionPragma <- section/'begin'
-            <textItem> <- section/textItem
+            <_textItem> <- section/textItem
 
         Args:
             parent (ET.Element): AST parent node
@@ -139,8 +183,23 @@ class CST2AST:
     def _convert_text_item(self, parent, _text_item):
         """Convert textItem CST to AST
 
-        Structure: (<reservation> | <definitionalItem> | <registrationItem> |
-                    <notationItem> | <theorem> | <schemeItem> | <auxiliaryItem>)
+        CST grammar:
+            textItem : reservation | definitionalItem | registrationItem
+                | notationItem | theorem | schemeItem | auxiliaryItem ;
+
+        AST grammar:
+            _textItem : <_reservation> | <definitionalItem> | <registrationItem>
+                | <notationItem> | <theorem> | <schemeItem> | <auxiliaryItem> ;
+        
+        Mapping AST <- CST:
+            _textItem <- textItem
+            <_reservation> <- reservation
+            <definitionalItem> <- definitionalItem
+            <registrationItem> <- registrationItem
+            <notationItem> <- notationItem
+            <theorem> <- theorem
+            <schemeItem> <- schemeItem
+            <auxiliaryItem> <- auxiliaryItem
 
         Args:
             parent (ET.Element): AST parent node
@@ -167,7 +226,22 @@ class CST2AST:
     def _convert_reservation(self, parent, _reservation):
         """Convert reservation CST to AST
 
-        Structure: (reservation / (variable + <<typeExpression>>)) +
+        CST grammar:
+            reservation : 'reserve' reservationSegment (',' reservationSegment) * ';' ;
+            reservationSegment : reservedIdentifiers 'for' typeExpression ;
+            reservedIdentifiers : reservedIdentifier (',' reservedIdentifier ) *;
+            reservedIdentifier: IDENTIFIER ;
+
+        AST grammar:
+            _ : reservation + ;
+            reservation : (variable + <typeExpression>)) + ;
+
+        AST node attributes:
+            reservation
+            variable[spelling, line, col]
+
+        Mapping AST <- CST:
+            _ <- reservation
             reservation <- reservationSegment
             variable <- reservationSegment/reservedIdentifier
             <typeExpression> <- typeExpression
@@ -207,6 +281,7 @@ class CST2AST:
         ET.SubElement(parent, 'notation', attrib=self.std_attrib(_notation_keyword))
 
     def convert_theorem(self, parent, _theorem):
+        # TODO
         """Convert theorem CST to AST
 
         Args:
@@ -218,19 +293,30 @@ class CST2AST:
         # TODO
 
     def convert_scheme(self, parent, _scheme):
+        # TODO
         _scheme_block = _scheme.find('./schemeBlock')
         _scheme_keyword = _scheme_block.find('./keyword[@spelling="scheme"]')
         ET.SubElement(parent, 'scheme', attrib=self.std_attrib(_scheme_keyword))
-        # TODO
     
     def convert_auxiliary(self, parent, _auxiliary):
-        ET.SubElement(parent, 'auxiliary')
         # TODO
+        ET.SubElement(parent, 'auxiliary')
 
     def convert_type_expression(self, parent, _type_expression):
         """Convert type expression CST to AST
 
-        Structure: typeExpression / (<adjective> * <radixType>)
+        CST grammar:
+            typeExpression : '(' radixType ')'
+                | adjective + typeExpression
+                | radixType ;
+
+        AST grammar:
+            typeExpression : <adjective> * <radixType> ;
+
+        AST node attributes:
+            typeExpression
+
+        Mapping AST <- CST:
             typeExpression <- typeExpression
             <adjective> <- adjective
             <radixType> <- radixType
@@ -245,16 +331,29 @@ class CST2AST:
             self.convert_adjective(type_expression, _adjective)
         
         _radix_type = _type_expression.find('.//radixType')
-        self.convert_radix_type(type_expression, _radix_type)
+        self._convert_radix_type(type_expression, _radix_type)
     
     def convert_adjective(self, parent, _adjective):
         """Convert adjective CST to AST
+        
+        CST grammar:
+            adjective : 'non' ? adjectiveArguments ? attributeSymbol ;
+            adjectiveArguments : termExpressionList | '(' termExpressionList ')' ;
+            attributeSymbol : ATTRIBUTE_SYMBOL ;
 
-        Structure: adjective / (attributeNagation ? <termExpression> * attributeSymbol)
+        AST grammar:
+            adjective : attributeNagation ? <termExpression> * attributeSymbol ;
+
+        AST node attributes:
+            adjective
+            attributeNagation[spelling, line, col]
+            attributeSymbol[spelling, line, col]
+
+        Mapping AST <- CST:
             attributeNagation <- 'non'
             <termExpression> <- adjectiveArguments/termExpressionList/termExpression
             attributeSymbol <- attributeSymbol
-
+        
         Args:
             parent (ET.Element): AST parent node
             _adjective (ET.Element): CST node
@@ -272,31 +371,47 @@ class CST2AST:
         _attribute_symbol = _adjective.find('./attributeSymbol')
         ET.SubElement(adjective, 'attributeSymbol', attrib=self.std_attrib(_attribute_symbol))
 
-    def convert_radix_type(self, parent, _radix_type):
+    def _convert_radix_type(self, parent, _radix_type):
         """Convert radixType CST to AST
 
-        Structure: (modeSymbol / <termExpression> *)
-                 | (structureSymbol / <termExpression> *)
-            modeSymbol <- modeSymbol
-            structureSymbol <- structureSymbol
+        CST grammar:
+            radixType : modeSymbol ( 'of' termExpressionList ) ?
+                | structureSymbol ( 'over' termExpressionList ) ? ;
+        
+        AST grammar:
+            _radixType : mode | structure ;
+            mode : <termExpression> * ;
+            structure : <termExpression> * ;
+        
+        AST node attributes:
+            modeType[spelling, line, col]
+            structureType[spelling, line, col]
+
+        Mapping AST <- CST:
+            _radixType <- radixType
+            modeType <- modeSymbol
+            structureType <- structureSymbol
             <termExpression> <- termExpressionList/termExpression
 
         Args:
             parent (ET.Element): AST parent node
             _radix_type (ET.Element): CST node
         """
-        _mode_or_struct = _radix_type[0]
-        mode_or_struct = ET.SubElement(parent, _mode_or_struct.tag,
-                            attrib=self.std_attrib(_mode_or_struct))
+        _first_node = _radix_type[0]
+        if _first_node.tag == 'modeSymbol':
+            top_tag = 'modeType'
+        elif _first_node.tag == 'structSymbol':
+            top_tag = 'structType'
+        
+        top_node = ET.SubElement(parent, top_tag,
+                                 attrib=self.std_attrib(_first_node))
 
         _term_expressions = _radix_type.findall('./termExpressionList/termExpression')
         for _term_expression in _term_expressions:
-            self.convert_term_expression(mode_or_struct, _term_expression)
+            self.convert_term_expression(top_node, _term_expression)
 
     def convert_term_expression(self, parent, _term_expression):
         """Convert termExpression CST to AST
-
-        Structure: termExpression / 
 
         Args:
             parent (ET.Element): AST parent node
@@ -308,32 +423,63 @@ class CST2AST:
     def _convert_term_expression(self, parent, _term_expression):
         """Convert termExpression CST to AST
 
-        Structure: termExpression / 
+        CST grammar:
+            termExpression : arguments ? (functorSymbol + arguments) * functorSymbol + arguments ?
+                | termExpression 'qua' typeExpression
+                | unitaryTerm ;
+            arguments : unitaryTerm | '(' termExpressionList ')' ;
+
+        AST grammar:
+            _termExpression : (<unitaryTerm> | <termExpressionList>) ?
+                    (functorTerm + (<unitaryTerm> | <termExpressionList>)) *
+                    functorTerm + (<unitaryTerm> | <termExpressionList>) ?
+                | typeCast
+                | <unitaryTerm> ;
+            typeCast : <termExpression> <typeExpression> ;
+
+        AST node attributes:
+            functorTerm[spelling, line, col]
+            typeCast[spelling, line, col]
+
+        Mapping AST <- CST:
+            _termExpression <- termExpression
+            functorTerm <- functorSymbol
+            <unitaryTerm> <- unitaryTerm
+            <termExpressionList> <- termExpressionList
+            <termExpression> <- termExpression/termExpression
+            <typeExpression> <- termExpression/typeExpression
+            typeCast <- 'qua'
 
         Args:
             parent (ET.Element): AST parent node
             _term_expression (ET.Element): CST node
         """
-        # TODO
-        # Adjust functor priority
-        for _child in _term_expression:
-            if _child.tag == 'arguments':
-                if _child[0].tag == 'unitaryTerm':
-                    self.convert_unitary_term(parent, _child[0])
-                else:
-                    self.convert_term_expression_list(parent, _child[1])
-            elif _child.tag == 'functorSymbol':
-                ET.SubElement(parent, 'functorSymbol', attrib=self.std_attrib(_child))
-            elif _child.tag == 'termExpression':
-                # TODO
-                self.convert_term_expression(parent, _child[1])
-            elif _child.tag == 'unitaryTerm':
-                self.convert_unitary_term(parent, _child)
+        _first_tag = _term_expression[0].tag
+        if _first_tag == 'arguments':
+            # TODO : Adjust functor priority
+            # arguments ? (functorSymbol + arguments) * functorSymbol + arguments ?
+            for _child in _term_expression:
+                if _child.tag == 'arguments':
+                    # arguments : unitaryTerm | '(' termExpressionList ')'
+                    if _child[0].tag == 'unitaryTerm':
+                        self._convert_unitary_term(parent, _child[0])
+                    else:
+                        self.convert_term_expression_list(parent, _child[1])
+                elif _child.tag == 'functorSymbol':
+                    ET.SubElement(parent, 'functorTerm', attrib=self.std_attrib(_child))
+        elif _first_tag == 'termExpression':
+            # termExpression 'qua' typeExpression
+            type_cast = ET.SubElement(parent, 'typeCast', attrib=self.std_attrib(_term_expression[1]))
+            self.convert_term_expression(type_cast, _term_expression[0])
+            self.convert_type_expression(type_cast, _term_expression[2])
+        elif _first_tag == 'unitaryTerm':
+            # unitaryTerm
+            self._convert_unitary_term(parent, _term_expression[0])
 
     def convert_term_expression_list(self, parent, _term_expression_list):
         """Convert termExpressionList CST to AST
 
-        Structure: termExpressionList / <termExpression> *
+        The details are implemented in _convert_term_expression_list()
 
         Args:
             parent (ET.Element): AST parent node
@@ -345,7 +491,15 @@ class CST2AST:
     def _convert_term_expression_list(self, parent, _term_expression_list):
         """Convert termExpressionList CST to AST
 
-        Structure: <termExpression> *
+        CST grammar:
+            termExpressionList : termExpression ( ',' termExpression ) * ;
+
+        AST grammar:
+            _ : <termExpression> + ;
+
+        Mapping AST <- CST:
+            _ <- termExpressionList
+            <termExpression> <- termExpression
 
         Args:
             parent (ET.Element): AST parent node
@@ -354,10 +508,102 @@ class CST2AST:
         for _term_expression in _term_expression_list:
             self.convert_term_expression(parent, _term_expression)
     
-    def convert_unitary_term(self, _unitary_term, parent):
-        pass
+    def _convert_unitary_term(self, parent, _unitary_term):
+        """Convert unitaryTerm CST to AST
+
+        CST grammar:
+            unitaryTerm : '(' termExpression ')'
+                | leftFunctorBracket termExpressionList rightFunctorBracket
+                | functorIdentifier '(' termExpressionList ? ')'
+                | structureSymbol '(#' termExpressionList '#)'
+                | 'the' structureSymbol 'of' termExpression
+                | variableIdentifier
+                | '{' termExpression  postqualification * ':' sentence '}'
+                | 'the' 'set' 'of' 'all' termExpression postqualification *
+                | NUMERAL
+                | 'the' selectorSymbol 'of' termExpression
+                | 'the' selectorSymbol
+                | 'the' typeExpression
+                | privateDefinitionParameter
+                | 'it' ;
+            typeExpression : '(' radixType ')'
+                | adjective + typeExpression   // left recursion repaired
+                | radixType ;
+            privateDefinitionParameter : '$1' | '$2' | '$3' | '$4' | '$5' | '$6' | '$7' | '$8' | '$9' | '$10' ;
+
+        AST grammar:
+            _ : <termExpression>
+                | bracketFunctorTerm
+                | privateFunctorTerm
+                | structureComposedTerm
+                | structureInstance
+                | variable
+                | intensionalStatement
+                | collection
+                | numeral
+                | selectorInstance
+                | typeInstance
+                | privateDefinitionParameter
+                | it ;
+            bracketFunctorTerm : leftfunctorBracket <termExpressionList> rightFunctorBracket
+            privateFunctorTerm : <_termExpressionList>
+            structureComposedTerm : <_termExpressionList>
+            structureInstance : <_termExpression>
+            intensionalStatement : <termExpression> <postqualification> * <sentence>
+            collection : <termExpression> <postqualification> *
+            selectorInstance : <_termExpression> ?
+            typeInstance : <typeExpression>
+
+        AST node attributes:
+            bracketFunctorTerm
+            privateFunctorTerm[spelling, line, col]
+            structureComposedTerm[spelling, line, col]
+            structureInstance[spelling, line, col]
+            variable[spelling, line, col]
+            intensionalStatement[spelling, line, col]
+            collection[spelling, line, col]
+            numeral[spelling, line, col]
+            selectorInstance[spelling, line, col]
+            typeInstance[line, col]
+            privateDefinitionParameter[spelling, line, col]
+            it[spelling, line, col]
+            leftfunctorBracket[spelling, line, col]
+            termExpressionList
+            rightFunctorBracket[spelling, line, col]
+
+
+
+
+
+        Mapping AST <- CST:
+            _ <- unitaryTerm
+            termExpression <- termExpression
+            leftfunctorBracket <- leftfunctorBracket
+            privateFunctorTerm <- functorIdentifier
+            structureComposition <- structureSymbol '(#'
+            structureInstance <- 'the' structureSymbol 'of'
+            variable <- variableIdentifier
+            numeral <- NUMERAL
+
+        Args:
+            parent (ET.Element): AST parent node
+            _term_expression_list (ET.Element): CST node
+        """
+        _child_0 = _unitary_term[0]
+        
 
     def std_attrib(self, node):
+        """Extract standard attribute from node
+
+        Standard attributes are 'spelling', 'line' and 'col'.
+        Functor prefixes are removed here.
+
+        Args:
+            node (ET.Element): CST node
+        
+        Returns:
+            dict[str,str]: attributes extracted from input node
+        """
         spelling = node.get('spelling')
         if node.tag in SYMBOL_TAGS:
             m = re.match(SYMBOL_PREFIX_REG, spelling)
@@ -368,3 +614,4 @@ class CST2AST:
         return {'spelling': spelling,
                 'line': node.get('line'),
                 'col': node.get('col')}
+'''
