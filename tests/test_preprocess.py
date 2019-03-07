@@ -2,54 +2,44 @@
 """Test of preprocess module.
 """
 
-import unittest
+import pytest
 import pprint
 from emparser.preprocess import Lexer
-from test import common
+from tests import common
 
-class LexerTest(unittest.TestCase):
-    def setUp(self):
-        self.lexer = LexerTest.lexer
-    
-    def tearDown(self):
-        pass
-    
-    @classmethod
-    def setUpClass(cls):
-        super(LexerTest, cls).setUpClass()
-        cls.lexer = Lexer()
-        cls.lexer.load_symbol_dict(common.MML_VCT)
-        cls.lexer.build_len2symbol()
-    
+class TestLexer:
+    @pytest.fixture(scope='function', autouse=True)
+    def prepare_instance(self):
+        self.lexer = Lexer()
+        self.lexer.load_symbol_dict(common.MML_VCT)
+        self.lexer.build_len2symbol()
+
     def test_separate_env_and_text_proper(self):
         filepath = common.DATA_DIR + '/ring_1.miz'
         with open(filepath, 'r') as f:
             lines = f.readlines()
             env_lines, tp_lines = self.lexer.separate_env_and_text_proper(lines)
         
-        self.assertEqual(len(env_lines), 40)
-        self.assertEqual(len(tp_lines), 1234-40)
+        assert len(env_lines) == 40
+        assert len(tp_lines) == 1234-40
 
     def test_load_symbol_dict(self):
         # 1. load symbol in specified Mizar files
         self.lexer.load_symbol_dict(common.MML_VCT, ["AFF_1", "AFF_2", "AFVECT0"])
         # AFF_1 -> 1, AFF_2 -> 14, AFVECT0 -> 10
         # Special Symbol -> 26
-        self.assertEqual(len(self.lexer.symbol_dict), 1 + 14 + 10 + 26)
+        assert len(self.lexer.symbol_dict) == 1 + 14 + 10 + 26
 
         # 2. load all symbols in MML
         # pprint.pprint(self.lexer.symbol_dict)
         self.lexer.load_symbol_dict(common.MML_VCT)
-        self.assertEqual(len(self.lexer.symbol_dict), 9240)
-        self.assertEqual(self.lexer.symbol_dict['zeros'],
-            {'filename': 'PRVECT_1', 'type': 'O'})
-        self.assertEqual(self.lexer.symbol_dict[','],
-            {'type': 'special'})
-
+        assert len(self.lexer.symbol_dict) == 9240
+        assert self.lexer.symbol_dict['zeros'] == {'filename': 'PRVECT_1', 'type': 'O'}
+        assert self.lexer.symbol_dict[','] == {'type': 'special'}
 
     def test_bulid_len2symbol(self):
         # pprint.pprint(self.lexer.len2symbol)
-        self.assertEqual(len(self.lexer.len2symbol), 45)
+        assert len(self.lexer.len2symbol) == 45
 
     def test_read_until_space(self):
         cases = [
@@ -60,7 +50,7 @@ class LexerTest(unittest.TestCase):
 
         for case in cases:
             res = self.lexer.read_until_space(case[0])
-            self.assertEqual(res, case[1])
+            assert res == case[1]
 
     def test_read_identifier(self):
         cases = [
@@ -73,7 +63,7 @@ class LexerTest(unittest.TestCase):
 
         for case in cases:
             res = self.lexer.read_identifier(case[0])
-            self.assertEqual(res, case[1])
+            assert res == case[1]
 
     def test_is_word_boundary(self):
         cases = [
@@ -89,7 +79,7 @@ class LexerTest(unittest.TestCase):
 
         for case in cases:
             res = self.lexer.is_word_boundary(*case[0])
-            self.assertEqual(res, case[1])
+            assert res == case[1]
 
     def test_cut_symbol(self):
         cases = [
@@ -108,8 +98,7 @@ class LexerTest(unittest.TestCase):
 
         for case in cases:
             res = self.lexer.cut_symbol(case[0])
-            self.assertEqual(res, case[1])
-
+            assert res == case[1]
 
     def test_cut_reserved_word(self):
         cases = [
@@ -120,7 +109,7 @@ class LexerTest(unittest.TestCase):
 
         for case in cases:
             res = self.lexer.cut_reserved_word(case[0])
-            self.assertEqual(res, case[1])
+            assert res == case[1]
 
     def test_cut_identifier(self):
         cases = [
@@ -131,7 +120,7 @@ class LexerTest(unittest.TestCase):
 
         for case in cases:
             res = self.lexer.cut_identifier(case[0])
-            self.assertEqual(res, case[1])
+            assert res == case[1]
 
     def test_cut_numeral(self):
         cases = [
@@ -145,7 +134,7 @@ class LexerTest(unittest.TestCase):
 
         for case in cases:
             res = self.lexer.cut_numeral(case[0])
-            self.assertEqual(res, case[1])
+            assert res == case[1]
 
     def test_remove_comment_in_a_line(self):
         cases = ["theorem :: ABCMIZ_0:1",
@@ -158,7 +147,7 @@ class LexerTest(unittest.TestCase):
         
         for case, expect in zip(cases, expects):
             res = self.lexer.remove_comment_in_a_line(case)
-            self.assertEqual(res, expect)
+            assert res == expect
 
         
     def test_remove_comment(self):
@@ -175,7 +164,7 @@ class LexerTest(unittest.TestCase):
         ]
 
         res1 = self.lexer.remove_comment(case1)
-        self.assertEqual(expect1, res1)
+        assert expect1 == res1
     
         case2 = [
             "theorem :: ABCMIZ_0:1",
@@ -190,7 +179,7 @@ class LexerTest(unittest.TestCase):
         ]
 
         res2 = self.lexer.remove_comment(case2)
-        self.assertEqual(expect2, res2)
+        assert expect2 == res2
 
     def test_lex(self):
         case1 = [
@@ -205,7 +194,7 @@ class LexerTest(unittest.TestCase):
             "holds __R_ex_sup_of I , T & __O200_sup I __R_in I ;"
         ]
         text1, pos_map1 = self.lexer.lex(case1)
-        self.assertEqual(expect1, text1)
+        assert expect1 == text1
 
 
         case2 = [
@@ -222,4 +211,4 @@ class LexerTest(unittest.TestCase):
 
 
         text2, pos_map2 = self.lexer.lex(case2)
-        self.assertEqual(expect2, text2)
+        assert expect2 == text2

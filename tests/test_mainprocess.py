@@ -2,48 +2,35 @@
 """Test of preprocess module.
 """
 
-import unittest
+import pytest
 import filecmp
 from pprint import pprint
 import lxml.etree as ET
 from emparser.preprocess import Lexer
 from emparser.mainprocess import Parser
 from emparser import util
-from test import common
+from tests import common
 
 
-def setUpModule():
-    common.create_output_dir()
-
-def tearDownModule():
-    common.delete_output_dir()
-
-class ParserTest(unittest.TestCase):
-    def setUp(self):
-        self.lexer = ParserTest.lexer
-        self.parser = ParserTest.parser
+class TestParser:
+    @pytest.fixture(scope='function', autouse=True)
+    def preparare_instance(self):
+        print('prepare_instances called')
+        self.parser = Parser()
+        self.lexer = Lexer()
+        self.lexer.load_symbol_dict(common.MML_VCT)
+        self.lexer.build_len2symbol()
+        yield
     
-    def tearDown(self):
-        pass
-    
-    @classmethod
-    def setUpClass(cls):
-        super(ParserTest, cls).setUpClass()
-        cls.parser = Parser()
-        cls.lexer = Lexer()
-        cls.lexer.load_symbol_dict(common.MML_VCT)
-        cls.lexer.build_len2symbol()
-
     def test_parse_theorem(self):
         case1 = "theorem ( ( for r , s , t holds ( r __O_* s ) __O_* t = r __O_* ( s __O_* t ) ) \n" + \
             "& ex t st for s1 holds s1 __O_* t = s1 & t __O_* s1 = s1 & ex s2 st s1 __O_* s2 \n" + \
             "= t & s2 __O_* s1 = t ) implies S is __M_Group ;"
         xml_root = self.parser.parse_theorem(case1)
         xmlstr = util.pretty_xml(xml_root)
-        # print(xmlstr)
+        print(xmlstr)
 
-'''
-
+    @pytest.mark.slow
     def test_parse_ring_1_miz(self):
         """This function is too heavy to call every time
         Please comment out only if you want to test. 
@@ -70,7 +57,7 @@ class ParserTest(unittest.TestCase):
             file.write(env_xmlstr)
 
         expect_path = common.EXPECT_DIR + '/ring_1_env.xml'
-        self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
 
         # text_proper_lines
         text_proper_lines = self.lexer.remove_comment(text_proper_lines)
@@ -85,6 +72,5 @@ class ParserTest(unittest.TestCase):
             file.write(tp_xmlstr)
 
         expect_path = common.EXPECT_DIR + '/ring_1_tp.xml'
-        self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
 
-'''

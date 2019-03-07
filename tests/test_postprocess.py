@@ -3,7 +3,7 @@
 """
 
 import os
-import unittest
+import pytest
 import shutil
 import filecmp
 import lxml.etree as ET
@@ -11,29 +11,14 @@ import lxml.etree as ET
 from emparser.postprocess import CSTHandler
 # from emparser.postprocess import CST2AST
 from emparser import util
-from test import common
+from tests import common
 
-
-def setUpModule():
-    common.create_output_dir()
-    common.create_output2_dir()
-
-def tearDownModule():
-    common.delete_output_dir()
-    common.delete_output2_dir()
-
-class CSTHandlerTest(unittest.TestCase):
-    def setUp(self):
-        self.handler = CSTHandlerTest.handler
+class TestCSTHandler:
+    @pytest.fixture(scope='function')
+    def prepare_instance(self):
+        self.handler = CSTHandler()
+        yield
     
-    def tearDown(self):
-        pass
-    
-    @classmethod
-    def setUpClass(cls):
-        super(CSTHandlerTest, cls).setUpClass()
-        cls.handler = CSTHandler()
-
     def test_extract_vocablaries(self):
         env_xmlpath = common.EXPECT_DIR+ '/ring_1_env.xml'
         env_tree = ET.parse(env_xmlpath)
@@ -43,7 +28,7 @@ class CSTHandlerTest(unittest.TestCase):
             'GROUP_1', 'FUNCSDOM', 'EQREL_1', 'STRUCT_0', 'WAYBEL20', 'PARTFUN1', 'RELAT_2',
             'SETWISEO', 'FUNCT_1', 'MESFUNC1', 'BINOP_1', 'VECTSP_1', 'LATTICES', 'WELLORD2',
             'ORDERS_1', 'WELLORD1', 'RING_1']
-        self.assertEqual(vocabularies, expect)
+        assert vocabularies == expect
 
 '''
 class CST2ASTTest(unittest.TestCase):
