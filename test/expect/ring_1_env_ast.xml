@@ -1,0 +1,141 @@
+<?xml version="1.0" ?>
+<environ>
+ <directive name="vocabularies">
+  <ident col="15" line="17" spelling="RLVECT_1"/>
+  <ident col="25" line="17" spelling="ALGSTR_0"/>
+  <ident col="35" line="17" spelling="XBOOLE_0"/>
+  <ident col="45" line="17" spelling="SUBSET_1"/>
+  <ident col="55" line="17" spelling="ARYTM_1"/>
+  <ident col="64" line="17" spelling="ARYTM_3"/>
+  <ident col="7" line="18" spelling="SUPINF_2"/>
+  <ident col="17" line="18" spelling="RELAT_1"/>
+  <ident col="26" line="18" spelling="INT_2"/>
+  <ident col="33" line="18" spelling="CARD_FIL"/>
+  <ident col="43" line="18" spelling="TARSKI"/>
+  <ident col="51" line="18" spelling="GROUP_4"/>
+  <ident col="60" line="18" spelling="IDEAL_1"/>
+  <ident col="69" line="18" spelling="VECTSP_2"/>
+  <ident col="7" line="19" spelling="GROUP_1"/>
+  <ident col="16" line="19" spelling="FUNCSDOM"/>
+  <ident col="26" line="19" spelling="EQREL_1"/>
+  <ident col="35" line="19" spelling="STRUCT_0"/>
+  <ident col="45" line="19" spelling="WAYBEL20"/>
+  <ident col="55" line="19" spelling="PARTFUN1"/>
+  <ident col="65" line="19" spelling="RELAT_2"/>
+  <ident col="7" line="20" spelling="SETWISEO"/>
+  <ident col="17" line="20" spelling="FUNCT_1"/>
+  <ident col="26" line="20" spelling="MESFUNC1"/>
+  <ident col="36" line="20" spelling="BINOP_1"/>
+  <ident col="45" line="20" spelling="VECTSP_1"/>
+  <ident col="55" line="20" spelling="LATTICES"/>
+  <ident col="65" line="20" spelling="WELLORD2"/>
+  <ident col="7" line="21" spelling="ORDERS_1"/>
+  <ident col="17" line="21" spelling="WELLORD1"/>
+  <ident col="27" line="21" spelling="RING_1"/>
+ </directive>
+ <directive name="notations">
+  <ident col="12" line="22" spelling="TARSKI"/>
+  <ident col="20" line="22" spelling="XBOOLE_0"/>
+  <ident col="30" line="22" spelling="SUBSET_1"/>
+  <ident col="40" line="22" spelling="SETWISEO"/>
+  <ident col="50" line="22" spelling="RELAT_1"/>
+  <ident col="59" line="22" spelling="RELSET_1"/>
+  <ident col="69" line="22" spelling="FUNCT_1"/>
+  <ident col="7" line="23" spelling="PARTFUN1"/>
+  <ident col="17" line="23" spelling="ALG_1"/>
+  <ident col="24" line="23" spelling="RELAT_2"/>
+  <ident col="33" line="23" spelling="EQREL_1"/>
+  <ident col="42" line="23" spelling="WELLORD1"/>
+  <ident col="52" line="23" spelling="WELLORD2"/>
+  <ident col="62" line="23" spelling="ORDERS_1"/>
+  <ident col="72" line="23" spelling="BINOP_1"/>
+  <ident col="7" line="24" spelling="DOMAIN_1"/>
+  <ident col="17" line="24" spelling="STRUCT_0"/>
+  <ident col="27" line="24" spelling="ALGSTR_0"/>
+  <ident col="37" line="24" spelling="GROUP_1"/>
+  <ident col="46" line="24" spelling="RLVECT_1"/>
+  <ident col="56" line="24" spelling="VECTSP_1"/>
+  <ident col="66" line="24" spelling="VECTSP_2"/>
+  <ident col="7" line="25" spelling="IDEAL_1"/>
+ </directive>
+ <directive name="constructors">
+  <ident col="15" line="26" spelling="WELLORD1"/>
+  <ident col="25" line="26" spelling="WELLORD2"/>
+  <ident col="35" line="26" spelling="BINOP_1"/>
+  <ident col="44" line="26" spelling="SETWISEO"/>
+  <ident col="54" line="26" spelling="ORDERS_1"/>
+  <ident col="64" line="26" spelling="EQREL_1"/>
+  <ident col="73" line="26" spelling="GCD_1"/>
+  <ident col="7" line="27" spelling="IDEAL_1"/>
+  <ident col="16" line="27" spelling="DOMAIN_1"/>
+  <ident col="26" line="27" spelling="RELSET_1"/>
+ </directive>
+ <directive name="registrations">
+  <ident col="16" line="28" spelling="XBOOLE_0"/>
+  <ident col="26" line="28" spelling="SUBSET_1"/>
+  <ident col="36" line="28" spelling="RELSET_1"/>
+  <ident col="46" line="28" spelling="FINSUB_1"/>
+  <ident col="56" line="28" spelling="EQREL_1"/>
+  <ident col="65" line="28" spelling="STRUCT_0"/>
+  <ident col="7" line="29" spelling="VECTSP_1"/>
+  <ident col="17" line="29" spelling="ALGSTR_1"/>
+  <ident col="27" line="29" spelling="QUOFIELD"/>
+  <ident col="37" line="29" spelling="IDEAL_1"/>
+ </directive>
+ <directive name="requirements">
+  <ident col="15" line="30" spelling="BOOLE"/>
+  <ident col="22" line="30" spelling="SUBSET"/>
+ </directive>
+ <directive name="definitions">
+  <ident col="14" line="31" spelling="TARSKI"/>
+  <ident col="22" line="31" spelling="XBOOLE_0"/>
+  <ident col="32" line="31" spelling="RELAT_1"/>
+  <ident col="41" line="31" spelling="RLVECT_1"/>
+  <ident col="51" line="31" spelling="GROUP_1"/>
+  <ident col="60" line="31" spelling="VECTSP_1"/>
+  <ident col="70" line="31" spelling="VECTSP_2"/>
+  <ident col="7" line="32" spelling="IDEAL_1"/>
+  <ident col="16" line="32" spelling="ORDERS_1"/>
+  <ident col="26" line="32" spelling="STRUCT_0"/>
+  <ident col="36" line="32" spelling="ALGSTR_0"/>
+ </directive>
+ <directive name="equalities">
+  <ident col="13" line="33" spelling="WELLORD1"/>
+  <ident col="23" line="33" spelling="STRUCT_0"/>
+  <ident col="33" line="33" spelling="ALGSTR_0"/>
+ </directive>
+ <directive name="expansions">
+  <ident col="13" line="34" spelling="TARSKI"/>
+  <ident col="21" line="34" spelling="XBOOLE_0"/>
+  <ident col="31" line="34" spelling="GROUP_1"/>
+  <ident col="40" line="34" spelling="VECTSP_1"/>
+  <ident col="50" line="34" spelling="VECTSP_2"/>
+  <ident col="60" line="34" spelling="IDEAL_1"/>
+  <ident col="69" line="34" spelling="ORDERS_1"/>
+  <ident col="7" line="35" spelling="STRUCT_0"/>
+ </directive>
+ <directive name="theorems">
+  <ident col="11" line="36" spelling="VECTSP_1"/>
+  <ident col="21" line="36" spelling="TARSKI"/>
+  <ident col="29" line="36" spelling="FUNCT_1"/>
+  <ident col="38" line="36" spelling="RLVECT_1"/>
+  <ident col="48" line="36" spelling="VECTSP_2"/>
+  <ident col="58" line="36" spelling="XBOOLE_0"/>
+  <ident col="68" line="36" spelling="FUNCT_2"/>
+  <ident col="7" line="37" spelling="BINOP_1"/>
+  <ident col="16" line="37" spelling="ZFMISC_1"/>
+  <ident col="26" line="37" spelling="GROUP_1"/>
+  <ident col="35" line="37" spelling="IDEAL_1"/>
+  <ident col="44" line="37" spelling="RELAT_1"/>
+  <ident col="53" line="37" spelling="EQREL_1"/>
+  <ident col="62" line="37" spelling="SETWISEO"/>
+  <ident col="7" line="38" spelling="ORDERS_1"/>
+  <ident col="17" line="38" spelling="WELLORD2"/>
+  <ident col="27" line="38" spelling="RELAT_2"/>
+  <ident col="36" line="38" spelling="SUBSET_1"/>
+ </directive>
+ <directive name="schemes">
+  <ident col="10" line="39" spelling="EQREL_1"/>
+  <ident col="19" line="39" spelling="BINOP_1"/>
+ </directive>
+</environ>

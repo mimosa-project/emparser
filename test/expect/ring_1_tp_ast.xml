@@ -1,0 +1,78 @@
+<?xml version="1.0" ?>
+<textProper>
+ <sectionPragma col="1" line="41" spelling="begin"/>
+ <theorem col="1" line="43" spelling="theorem"/>
+ <theorem col="1" line="54" spelling="theorem"/>
+ <theorem col="1" line="66" spelling="theorem"/>
+ <sectionPragma col="1" line="80" spelling="begin"/>
+ <registration col="1" line="112" spelling="registration"/>
+ <registration col="1" line="120" spelling="registration"/>
+ <registration col="1" line="128" spelling="registration"/>
+ <registration col="1" line="134" spelling="registration"/>
+ <theorem col="1" line="140" spelling="theorem"/>
+ <sectionPragma col="1" line="153" spelling="begin"/>
+ <reservation>
+  <variable col="9" line="155" spelling="R"/>
+  <typeExpression>
+   <modeSymbol col="15" line="155" spelling="Ring"/>
+  </typeExpression>
+ </reservation>
+ <reservation>
+  <variable col="3" line="156" spelling="I"/>
+  <typeExpression>
+   <modeSymbol col="9" line="156" spelling="Ideal">
+    <termExpression/>
+    <termExpression/>
+   </modeSymbol>
+  </typeExpression>
+ </reservation>
+ <reservation>
+  <variable col="6" line="157" spelling="b"/>
+  <typeExpression>
+   <modeSymbol col="12" line="157" spelling="Element">
+    <termExpression/>
+   </modeSymbol>
+  </typeExpression>
+ </reservation>
+ <auxiliary/>
+ <registration col="1" line="249" spelling="registration"/>
+ <theorem col="1" line="278" spelling="theorem"/>
+ <theorem col="1" line="292" spelling="theorem"/>
+ <theorem col="1" line="307" spelling="theorem"/>
+ <theorem col="1" line="320" spelling="theorem"/>
+ <theorem col="1" line="351" spelling="theorem"/>
+ <theorem col="1" line="376" spelling="theorem"/>
+ <sectionPragma col="1" line="426" spelling="begin"/>
+ <notation col="1" line="548" spelling="notation"/>
+ <registration col="1" line="553" spelling="registration"/>
+ <reservation>
+  <variable col="9" line="563" spelling="x"/>
+  <variable col="12" line="563" spelling="y"/>
+  <typeExpression>
+   <modeSymbol col="18" line="563" spelling="Element">
+    <termExpression>
+     <functorSymbol col="30" line="563" spelling="/"/>
+    </termExpression>
+   </modeSymbol>
+  </typeExpression>
+ </reservation>
+ <theorem col="1" line="565" spelling="theorem"/>
+ <theorem col="1" line="576" spelling="theorem"/>
+ <theorem col="1" line="583" spelling="theorem"/>
+ <theorem col="1" line="599" spelling="theorem"/>
+ <auxiliary/>
+ <theorem col="1" line="647" spelling="theorem"/>
+ <registration col="1" line="650" spelling="registration"/>
+ <registration col="1" line="830" spelling="registration"/>
+ <theorem col="1" line="846" spelling="theorem"/>
+ <theorem col="1" line="861" spelling="theorem"/>
+ <theorem col="1" line="896" spelling="theorem"/>
+ <theorem col="1" line="901" spelling="theorem"/>
+ <theorem col="1" line="1001" spelling="theorem"/>
+ <theorem col="1" line="1037" spelling="theorem"/>
+ <registration col="1" line="1042" spelling="registration"/>
+ <registration col="1" line="1056" spelling="registration"/>
+ <registration col="1" line="1213" spelling="registration"/>
+ <registration col="1" line="1224" spelling="registration"/>
+ <registration col="1" line="1230" spelling="registration"/>
+</textProper>

@@ -1421,6 +1421,15 @@ class MizarListener(ParseTreeListener):
         pass
 
 
+    # Enter a parse tree produced by MizarParser#unitaryTerm.
+    def enterUnitaryTerm(self, ctx:MizarParser.UnitaryTermContext):
+        pass
+
+    # Exit a parse tree produced by MizarParser#unitaryTerm.
+    def exitUnitaryTerm(self, ctx:MizarParser.UnitaryTermContext):
+        pass
+
+
     # Enter a parse tree produced by MizarParser#arguments.
     def enterArguments(self, ctx:MizarParser.ArgumentsContext):
         pass

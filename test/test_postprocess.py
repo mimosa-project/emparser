@@ -4,32 +4,86 @@
 
 import os
 import unittest
-import pprint
-from emparser.postprocess import CSTAnalyzer
-import xml.etree.ElementTree as ET
+import shutil
+import filecmp
+import lxml.etree as ET
+
+from emparser.postprocess import CSTHandler
+# from emparser.postprocess import CST2AST
+from emparser import util
+from test import common
 
 
-EXPECT_DIR = os.path.dirname(__file__) + '/expect'
+def setUpModule():
+    common.create_output_dir()
+    common.create_output2_dir()
 
-class CSTAnalyzerTest(unittest.TestCase):
+def tearDownModule():
+    common.delete_output_dir()
+    common.delete_output2_dir()
+
+class CSTHandlerTest(unittest.TestCase):
     def setUp(self):
-        self.cst_analyzer = CSTAnalyzerTest.cst_analyzer
+        self.handler = CSTHandlerTest.handler
     
     def tearDown(self):
         pass
     
     @classmethod
     def setUpClass(cls):
-        super(CSTAnalyzerTest, cls).setUpClass()
-        cls.cst_analyzer = CSTAnalyzer()
+        super(CSTHandlerTest, cls).setUpClass()
+        cls.handler = CSTHandler()
 
     def test_extract_vocablaries(self):
-        env_xmlpath = EXPECT_DIR+ '/ring_1_env.xml'
-        env_root = ET.parse(env_xmlpath)
-        vocabularies = CSTAnalyzer.extract_vocablaries(env_root)
+        env_xmlpath = common.EXPECT_DIR+ '/ring_1_env.xml'
+        env_tree = ET.parse(env_xmlpath)
+        vocabularies = CSTHandler.extract_vocablaries(env_tree)
         expect = ['RLVECT_1', 'ALGSTR_0', 'XBOOLE_0', 'SUBSET_1', 'ARYTM_1', 'ARYTM_3',
             'SUPINF_2', 'RELAT_1', 'INT_2', 'CARD_FIL', 'TARSKI', 'GROUP_4', 'IDEAL_1', 'VECTSP_2',
             'GROUP_1', 'FUNCSDOM', 'EQREL_1', 'STRUCT_0', 'WAYBEL20', 'PARTFUN1', 'RELAT_2',
             'SETWISEO', 'FUNCT_1', 'MESFUNC1', 'BINOP_1', 'VECTSP_1', 'LATTICES', 'WELLORD2',
             'ORDERS_1', 'WELLORD1', 'RING_1']
         self.assertEqual(vocabularies, expect)
+
+'''
+class CST2ASTTest(unittest.TestCase):
+    def setUp(self):
+        self.converter = CST2ASTTest.converter
+    
+    def tearDown(self):
+        pass
+    
+    @classmethod
+    def setUpClass(cls):
+        super(CST2ASTTest, cls).setUpClass()
+        cls.converter = CST2AST()
+
+    def test_convert_ring_1_env(self):
+        input_path = common.EXPECT_DIR + '/ring_1_env.xml'
+        cst_tree = ET.parse(input_path)
+        ast_roots = self.converter.convert(cst_tree.getroot())
+        self.assertEqual(len(ast_roots), 1)
+        xmlstr = util.pretty_xml(ast_roots[0])
+        output_path = common.OUTPUT_DIR + '/ring_1_env_ast.xml'
+        # output_path = common.EXPECT_DIR + '/ring_1_env_ast.xml'
+        with open(output_path, 'w') as f:
+            f.write(xmlstr)
+        
+        expect_path = common.EXPECT_DIR + '/ring_1_env_ast.xml'
+        self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
+
+    def test_convert_ring_1_tp(self):
+        input_path = common.EXPECT_DIR + '/ring_1_tp.xml'
+        cst_tree = ET.parse(input_path)
+        ast_roots = self.converter.convert(cst_tree.getroot())
+        self.assertEqual(len(ast_roots), 1)
+        xmlstr = util.pretty_xml(ast_roots[0])
+        output_path = common.OUTPUT_DIR + '/ring_1_tp_ast.xml'
+        # output_path = common.OUTPUT2_DIR + '/ring_1_tp_ast.xml'
+        # output_path = common.EXPECT_DIR + '/ring_1_tp_ast.xml'
+        with open(output_path, 'w') as f:
+            f.write(xmlstr)
+        
+        expect_path = common.EXPECT_DIR + '/ring_1_tp_ast.xml'
+        self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
+'''

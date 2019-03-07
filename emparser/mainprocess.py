@@ -33,7 +33,7 @@ class Parser:
         xmlBuilder = MizarXMLBuilder(position_map)
         walker = ParseTreeWalker()
         walker.walk(xmlBuilder, tree)
-        return xmlBuilder.topNode
+        return xmlBuilder.xmlRoot
 
     def parse_environment(self, text:str, position_map=None):
         return self.parse(text, position_map, 'environmentDeclaration')

@@ -1,6 +1,7 @@
 # -*- coding: utf-8 -*-
 
-import xml.etree.ElementTree as ET
+# import xml.etree.ElementTree as ET
+import lxml.etree as ET
 from antlr.MizarLexer import MizarLexer
 from antlr.MizarParser import MizarParser
 from antlr.MizarListener import MizarListener
@@ -10,7 +11,7 @@ from antlr4.ParserRuleContext import ParserRuleContext
 
 class MizarXMLBuilder(MizarListener):
     def __init__(self, position_map):
-        self.topNode = None
+        self.xmlRoot = None
         self.xmlNodeStack = []
         self.position_map = position_map
 
@@ -46,7 +47,7 @@ class MizarXMLBuilder(MizarListener):
             aboveNode = self.xmlNodeStack[len(self.xmlNodeStack)-1]
             aboveNode.append(node)
         else:
-            self.topNode = node
+            self.xmlRoot = node
         self.xmlNodeStack.append(node)
 
     def exitEveryRule(self, ctx:ParserRuleContext):

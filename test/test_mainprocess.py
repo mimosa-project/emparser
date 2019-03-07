@@ -2,48 +2,44 @@
 """Test of preprocess module.
 """
 
-import os
 import unittest
-import shutil
 import filecmp
 from pprint import pprint
-import xml.etree.ElementTree as ET
+import lxml.etree as ET
 from emparser.preprocess import Lexer
 from emparser.mainprocess import Parser
-
-EXPECT_DIR = os.path.dirname(__file__) + '/expect'
-OUTPUT_DIR = os.path.dirname(__file__) + '/output'
-DATA_DIR = os.path.dirname(__file__) + '/data'
-VOC_FILE = DATA_DIR + '/mml.vct'
+from emparser import util
+from test import common
 
 
+def setUpModule():
+    common.create_output_dir()
+
+def tearDownModule():
+    common.delete_output_dir()
 
 class ParserTest(unittest.TestCase):
     def setUp(self):
         self.lexer = ParserTest.lexer
         self.parser = ParserTest.parser
-        if not os.path.exists(OUTPUT_DIR):
-            os.makedirs(OUTPUT_DIR)
-
+    
     def tearDown(self):
-        shutil.rmtree(OUTPUT_DIR)
+        pass
     
     @classmethod
     def setUpClass(cls):
         super(ParserTest, cls).setUpClass()
         cls.parser = Parser()
         cls.lexer = Lexer()
-        cls.lexer.load_symbol_dict(VOC_FILE)
+        cls.lexer.load_symbol_dict(common.MML_VCT)
         cls.lexer.build_len2symbol()
 
     def test_parse_theorem(self):
         case1 = "theorem ( ( for r , s , t holds ( r __O_* s ) __O_* t = r __O_* ( s __O_* t ) ) \n" + \
             "& ex t st for s1 holds s1 __O_* t = s1 & t __O_* s1 = s1 & ex s2 st s1 __O_* s2 \n" + \
             "= t & s2 __O_* s1 = t ) implies S is __M_Group ;"
-        xml_tree = self.parser.parse_theorem(case1)
-        # print(ET.dump(xml_tree))
-        from xml.dom import minidom
-        xmlstr = minidom.parseString(ET.tostring(xml_tree)).toprettyxml(indent=" ")
+        xml_root = self.parser.parse_theorem(case1)
+        xmlstr = util.pretty_xml(xml_root)
         # print(xmlstr)
 
 '''
@@ -52,7 +48,7 @@ class ParserTest(unittest.TestCase):
         """This function is too heavy to call every time
         Please comment out only if you want to test. 
         """
-        filepath = os.path.dirname(__file__) + '/data/ring_1.miz'
+        filepath = common.DATA_DIR + '/ring_1.miz'
 
         lines = None
         with open(filepath) as f:
@@ -65,30 +61,30 @@ class ParserTest(unittest.TestCase):
         env_lines = self.lexer.remove_comment(env_lines)
         tokenized_lines, posotion_map = self.lexer.lex(env_lines, is_environment_part=True)
         txt = '\n'.join(tokenized_lines)
-        env_xml_tree = self.parser.parse_environment(txt, posotion_map)
-        from xml.dom import minidom
-        env_xmlstr = minidom.parseString(ET.tostring(env_xml_tree)).toprettyxml(indent=" ")
+        env_xml_root = self.parser.parse_environment(txt, posotion_map)
+        env_xmlstr = util.pretty_xml(env_xml_root)
         
-        output_path = OUTPUT_DIR + '/ring_1_env.xml'
+        output_path = common.OUTPUT_DIR + '/ring_1_env.xml'
+        # output_path = common.EXPECT_DIR + '/ring_1_env.xml'
         with open(output_path, 'w') as file:
             file.write(env_xmlstr)
 
-        expect_path = EXPECT_DIR + '/ring_1_env.xml'
+        expect_path = common.EXPECT_DIR + '/ring_1_env.xml'
         self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
 
         # text_proper_lines
         text_proper_lines = self.lexer.remove_comment(text_proper_lines)
         tokenized_lines, posotion_map = self.lexer.lex(text_proper_lines, first_line_number=len(env_lines)+1)
         txt = '\n'.join(tokenized_lines)
-        tp_xml_tree = self.parser.parse_text_proper(txt, posotion_map)
-        from xml.dom import minidom
-        tp_xmlstr = minidom.parseString(ET.tostring(tp_xml_tree)).toprettyxml(indent=" ")
+        tp_xml_root = self.parser.parse_text_proper(txt, posotion_map)
+        tp_xmlstr = util.pretty_xml(tp_xml_root)
 
-        output_path = OUTPUT_DIR + '/ring_1_tp.xml'
+        output_path = common.OUTPUT_DIR + '/ring_1_tp.xml'
+        # output_path = common.EXPECT_DIR + '/ring_1_tp.xml'
         with open(output_path, 'w') as file:
             file.write(tp_xmlstr)
 
-        expect_path = EXPECT_DIR + '/ring_1_tp.xml'
+        expect_path = common.EXPECT_DIR + '/ring_1_tp.xml'
         self.assertTrue(filecmp.cmp(expect_path, output_path, shallow=False))
-    
+
 '''
