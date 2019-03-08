@@ -2,9 +2,9 @@
 
 # import xml.etree.ElementTree as ET
 import lxml.etree as ET
-from antlr.MizarLexer import MizarLexer
-from antlr.MizarParser import MizarParser
-from antlr.MizarListener import MizarListener
+from emparser.antlr.MizarLexer import MizarLexer
+from emparser.antlr.MizarParser import MizarParser
+from emparser.antlr.MizarListener import MizarListener
 from antlr4.tree.Tree import *
 from antlr4.ParserRuleContext import ParserRuleContext
 
