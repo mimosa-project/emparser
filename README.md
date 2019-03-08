@@ -12,3 +12,8 @@ Extended Mizar parser
 > pytest -q tests                       # test all quietly  
 > pytest tests/test_mainprocess.py      # test only one file  
 > pytest -m tests 'not slow'            # test except 'slow' marked cases  
+
+## Packaging
+> python setup.py sdist                 # ordinal distribution  
+> python setup.py bdist_wheel           # wheel distribution
+

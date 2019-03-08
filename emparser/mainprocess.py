@@ -13,9 +13,9 @@ Todo:
 
 """
 
-from emparser.antlr.MizarLexer import MizarLexer
-from emparser.antlr.MizarParser import MizarParser
-from emparser.MizarXMLBuilder import MizarXMLBuilder
+from .antlr.MizarLexer import MizarLexer
+from .antlr.MizarParser import MizarParser
+from .MizarXMLBuilder import MizarXMLBuilder
 import antlr4
 from antlr4.tree.Tree import *
 

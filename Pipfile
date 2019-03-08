@@ -9,6 +9,7 @@ verify_ssl = true
 lxml = "*"
 pytest = "*"
 antlr4-python3-runtime = "*"
+wheel = "*"
 
 [requires]
 python_version = "3.7"
