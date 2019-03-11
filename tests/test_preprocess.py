@@ -2,6 +2,7 @@
 """Test of preprocess module.
 """
 
+import sys
 import pytest
 import pprint
 from emparser.preprocess import Lexer
@@ -209,6 +210,40 @@ class TestLexer:
             "__O_* t = s1 & t __O_* s1 = s1 & ex s2 st s1 __O_* s2 = t & s2 __O_* s1 = t ) implies S is __M_Group ;"
         ]
 
-
         text2, pos_map2 = self.lexer.lex(case2)
         assert expect2 == text2
+
+        case3 = [
+            "theorem",
+            "for F be add-associative right_zeroed right_complementable",
+            "right-distributive non empty doubleLoopStr, x,y,z being Element of F holds",
+            "x*(y-z) = x*y - x*z;",
+        ]
+
+        expect3 = [
+            'theorem',
+            'for F be __V_add-associative __V_right_zeroed __V_right_complementable',
+            '__V_right-distributive non __V_empty __G_doubleLoopStr , x , y , z being __M_Element of F holds',
+            'x __O_* ( y __O32_- z ) = x __O_* y __O32_- x __O_* z ;',
+        ]
+
+        text3, pos_map3 = self.lexer.lex(case3)
+        assert expect3 == text3
+
+
+        case4 = [
+            "theorem",
+            "for V being add-associative right_zeroed right_complementable non",
+            "empty addLoopStr, u,v,w being Element of V holds -(v+w)=-w-v & -(w+-v)=v-w & -",
+            "(v-w)=w+-v & -(-v-w)=w+v & u-(w+v)=u-v-w;",
+        ]
+
+        expect4 = [
+            'theorem',
+            'for V being __V_add-associative __V_right_zeroed __V_right_complementable non',
+            '__V_empty __G_addLoopStr , u , v , w being __M_Element of V holds __O32_- ( v __O32_+ w ) = __O32_- w __O32_- v & __O32_- ( w __O32_+ __O32_- v ) = v __O32_- w & __O32_-',
+            '( v __O32_- w ) = w __O32_+ __O32_- v & __O32_- ( __O32_- v __O32_- w ) = w __O32_+ v & u __O32_- ( w __O32_+ v ) = u __O32_- v __O32_- w ;',
+        ]
+
+        text4, pos_map4 = self.lexer.lex(case4)
+        assert expect4 == text4

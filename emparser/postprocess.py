@@ -21,6 +21,10 @@ SYMBOL_PREFIX_REG = re.compile(r"^(__[GKLMORUV]\d*_)", re.ASCII)
 """re: Regex object to specify symbol prefix.
 """
 
+FUNCTOR_PRIORITY_REG = re.compile(r"^__O(\d*)_", re.ASCII)
+"""re: Regex object to specify priority of functor symbol.
+"""
+
 SYMBOL_TAGS = {'predicateSymbol', 'functorSymbol', 'leftFunctorBracket'
     'rightFunctorBracket', 'attributeSymbol', 'modeSymbol', 'structureSymbol',
     'selectorSymbol'}
@@ -35,17 +39,180 @@ class CSTHandler:
     extract information, manipulate CST, and so on.
     """
     @classmethod
-    def extract_vocablaries(cls, _node):
+    def extract_vocablaries(cls, _root):
         """Extract vocabulary files in environment part
+
         Args:
-            _node (ET.Element): xml node includes environment part,
+            _root (ET.Element): xml node includes environment part,
                 which is produced by ANTLR-generated parser.
         
         Returns:
             list[str]: list of vocabulary Mizar files
         """
-        _vocablaries = _node.findall('.//vocabularyName')
+        _vocablaries = _root.findall('.//vocabularyName')
         return [_vocablary.get('spelling') for _vocablary in _vocablaries]
+    
+    def adjust_type_expression(self, _root):
+        """Modify and adjust type expression node into original syntax 
+        
+        Procedure:
+            1. Shrink radixTypeExpression node
+
+        Target structure:
+            typeExpression : adjectiveCluster radixTypeExpression ;
+            radixTypeExpression : '(' radixType ')'
+                | radixType ;
+
+        After conversion, the structure will be:
+            typeExpression : '(' radixType ')'
+                | adjectiveCluster typeExpression
+                | radixType ;
+
+        Args:
+            _root (ET.Element): xml node includes typeExpressions under it.
+        """
+        _radix_type_expressions = _root.findall('.//radixTypeExpression')
+        for _radix_type_expression in _radix_type_expressions:
+            _type_expression = _radix_type_expression.getparent()
+            assert _type_expression.tag == 'typeExpression'
+
+            _children = _radix_type_expression.getchildren()
+            _type_expression.remove(_radix_type_expression)
+            _type_expression.extend(_children)
+
+
+    def adjust_term_expression(self, _root):
+        """Modify and adjust term expression node into original syntax 
+        
+        Procedure:
+            1. Adjust precedence of functor symbols in termExpression
+            2. Shrink unitaryTerm node
+        
+        Target structure:
+            termExpression : arguments ? (functorSymbol + arguments) * functorSymbol + arguments ?
+                | termExpression 'qua' typeExpression
+                | unitaryTerm ;
+            unitaryTerm : '(' termExpression ')'
+                | leftFunctorBracket termExpressionList rightFunctorBracket
+                | functorIdentifier '(' termExpressionList ? ')'
+                | structureSymbol '(#' termExpressionList '#)'
+                | 'the' structureSymbol 'of' termExpression
+                | variableIdentifier
+                | '{' termExpression  postqualification * ':' sentence '}'
+                | 'the' 'set' 'of' 'all' termExpression postqualification *
+                | NUMERAL
+                | 'the' selectorSymbol 'of' termExpression
+                | 'the' selectorSymbol
+                | 'the' typeExpression
+                | privateDefinitionParameter
+                | 'it' ;
+            arguments : unitaryTerm | '(' termExpressionList ')' ;
+
+        After conversion, the structure will be:
+            termExpression : '(' termExpression ')'
+                | arguments ? functorSymbol arguments ?  // left recursion
+                | leftFunctorBracket termExpressionList rightFunctorBracket
+                | functorIdentifier '(' termExpressionList ? ')'
+                | structureSymbol '(#' termExpressionList '#)'
+                | 'the' structureSymbol 'of' termExpression
+                | variableIdentifier
+                | '{' termExpression  postqualification * ':' sentence '}'
+                | 'the' 'set' 'of' 'all' termExpression postqualification *
+                | NUMERAL
+                | termExpression 'qua' typeExpression
+                | 'the' selectorSymbol 'of' termExpression
+                | 'the' selectorSymbol
+                | 'the' typeExpression
+                | privateDefinitionParameter
+                | 'it' ;
+            arguments : termExpression | '(' termExpressionList ')' ;
+        
+        Args:
+            _root (ET.Element): xml node includes termExpressions under it.
+        """
+        # 1. Adjust precedence of functor symbols in termExpression
+        _term_expressions = _root.findall('.//termExpression[functorSymbol]')
+
+        for _term_expression in _term_expressions:
+            _functors = _term_expression.findall('./functorSymbol')
+            func2priorities = []
+            for _functor in _functors:
+                spelling = _functor.get('spelling')
+                m = re.match(FUNCTOR_PRIORITY_REG, spelling)
+                if m.group(1):
+                    priority = int(m.group(1))
+                else:
+                    priority = 64
+                func2priorities.append((_functor, priority))
+
+            func2priorities.sort(key=lambda a: a[1], reverse=True)
+
+            for i, f2p in enumerate(func2priorities):
+                _functor = f2p[0]
+                _prev = _functor.getprevious()
+                _next = _functor.getnext()
+                if i < len(func2priorities) - 1:
+                    _sub_term = ET.Element('termExpression')
+                    
+                    if _prev is not None and _prev.tag != 'functorSymbol':
+                        _term_expression.remove(_prev)
+                        if _prev.tag != 'arguments':
+                            _arguments = ET.Element('arguments')
+                            _arguments.append(_prev)
+                            _sub_term.append(_arguments)
+                        else:
+                            _sub_term.append(_prev)
+
+                    _functor.addprevious(_sub_term)
+                    _term_expression.remove(_functor)
+                    _sub_term.append(_functor)
+                    
+                    if _next is not None and _next.tag != 'functorSymbol':
+                        _term_expression.remove(_next)
+                        if _next.tag != 'arguments':
+                            _arguments = ET.Element('arguments')
+                            _arguments.append(_next)
+                            _sub_term.append(_arguments)
+                        else:
+                            _sub_term.append(_next)
+                else:
+                    # it is the last node
+                    if _prev is not None and _prev.tag != 'arguments':
+                        _arguments = ET.Element('arguments')
+                        _prev.addprevious(_arguments)
+                        _term_expression.remove(_prev)
+                        _arguments.append(_prev)
+
+                    if _next is not None and _next.tag != 'arguments':
+                        _arguments = ET.Element('arguments')
+                        _next.addprevious(_arguments)
+                        _term_expression.remove(_next)
+                        _arguments.append(_next)
+
+        # 2. Shrink unitaryTerm node
+        _unitary_terms = _root.findall('.//unitaryTerm')
+        for _unitary_term in _unitary_terms:
+            _parent = _unitary_term.getparent()
+            _children = _unitary_term.getchildren()
+            for _child in _children:
+                _unitary_term.addprevious(_child)
+            _parent.remove(_unitary_term)
+
+    def remove_prefix(self, _root):
+        """Remove prefix in spelling of symbol nodes 
+
+        Args:
+            _root (ET.Element): CST root node.
+        """
+        for element in _root.iter():
+            spelling = element.get('spelling')
+            if spelling is not None:
+                m = re.match(SYMBOL_PREFIX_REG, spelling)
+                if m is not None:
+                    spelling = spelling[len(m.group(1)):]
+                    element.set('spelling', spelling)
+
+
 
 '''
 class CST2AST:

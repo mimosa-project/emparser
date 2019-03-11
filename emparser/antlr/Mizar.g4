@@ -172,13 +172,13 @@ explicitlyQualifiedVariables : qualifiedSegment ( ',' qualifiedSegment ) * ;
 qualifiedSegment : variables qualification ;
 variables : variableIdentifier ( ',' variableIdentifier ) * ;
 qualification : ( 'being' | 'be' ) typeExpression ;
-/* It is modified to below
+/* It is modified into typeExpression and radixTypeExpression
 typeExpression : '(' radixType ')'
     | adjectiveCluster typeExpression
     | radixType ;
 */
-typeExpression : '(' radixType ')'
-    | adjective + typeExpression   // left recursion repaired
+typeExpression : adjectiveCluster radixTypeExpression ;   // left recursion repaired
+radixTypeExpression : '(' radixType ')'
     | radixType ;
 
 structureTypeExpression : '(' structureSymbol ( 'over' termExpressionList ) ? ')'

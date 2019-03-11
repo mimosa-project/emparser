@@ -14,21 +14,70 @@ from emparser import util
 from tests import common
 
 class TestCSTHandler:
-    @pytest.fixture(scope='function')
+    @pytest.fixture(scope='function', autouse=True)
     def prepare_instance(self):
         self.handler = CSTHandler()
         yield
     
     def test_extract_vocablaries(self):
-        env_xmlpath = common.EXPECT_DIR+ '/ring_1_env.xml'
+        env_xmlpath = common.EXPECT_DIR+ '/main/ring_1_env.xml'
         env_tree = ET.parse(env_xmlpath)
-        vocabularies = CSTHandler.extract_vocablaries(env_tree)
+        vocabularies = CSTHandler.extract_vocablaries(env_tree.getroot())
         expect = ['RLVECT_1', 'ALGSTR_0', 'XBOOLE_0', 'SUBSET_1', 'ARYTM_1', 'ARYTM_3',
             'SUPINF_2', 'RELAT_1', 'INT_2', 'CARD_FIL', 'TARSKI', 'GROUP_4', 'IDEAL_1', 'VECTSP_2',
             'GROUP_1', 'FUNCSDOM', 'EQREL_1', 'STRUCT_0', 'WAYBEL20', 'PARTFUN1', 'RELAT_2',
             'SETWISEO', 'FUNCT_1', 'MESFUNC1', 'BINOP_1', 'VECTSP_1', 'LATTICES', 'WELLORD2',
             'ORDERS_1', 'WELLORD1', 'RING_1']
         assert vocabularies == expect
+
+    def test_adjust_type_expression(self):
+        filepath = common.EXPECT_DIR + '/main/theorem1.xml'
+        xml_tree = ET.parse(filepath)
+
+        root = xml_tree.getroot()
+        self.handler.adjust_type_expression(root)
+        output_xmlstr = util.pretty_xml(root)
+
+        # output_path = common.EXPECT_DIR + '/post/adjust_type_expression.xml'
+        output_path = common.OUTPUT_DIR + '/adjust_type_expression.xml'
+        with open(output_path, 'w') as file:
+            file.write(output_xmlstr)
+
+        expect_path = common.EXPECT_DIR + '/post/adjust_type_expression.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
+
+    def test_adjust_term_expression(self):
+        filepath = common.EXPECT_DIR + '/main/theorem2.xml'
+        xml_tree = ET.parse(filepath)
+
+        root = xml_tree.getroot()
+        self.handler.adjust_term_expression(root)
+        output_xmlstr = util.pretty_xml(root)
+
+        # output_path = common.EXPECT_DIR + '/post/adjust_term_expression.xml'
+        output_path = common.OUTPUT_DIR + '/adjust_term_expression.xml'
+        with open(output_path, 'w') as file:
+            file.write(output_xmlstr)
+
+        expect_path = common.EXPECT_DIR + '/post/adjust_term_expression.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
+
+    def test_remove_prefix(self):
+        filepath = common.EXPECT_DIR + '/post/adjust_term_expression.xml'
+        xml_tree = ET.parse(filepath)
+
+        root = xml_tree.getroot()
+        self.handler.remove_prefix(root)
+        output_xmlstr = util.pretty_xml(root)
+
+        # output_path = common.EXPECT_DIR + '/post/remove_prefix.xml'
+        output_path = common.OUTPUT_DIR + '/remove_prefix.xml'
+        with open(output_path, 'w') as file:
+            file.write(output_xmlstr)
+
+        expect_path = common.EXPECT_DIR + '/post/remove_prefix.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
+
 
 '''
 class CST2ASTTest(unittest.TestCase):

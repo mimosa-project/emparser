@@ -1,4 +1,4 @@
-# Generated from c:\dev\mimosa-project\emparser\antlr\Mizar.g4 by ANTLR 4.7.1
+# Generated from c:\dev\mimosa-project\emparser\emparser\antlr\Mizar.g4 by ANTLR 4.7.1
 from antlr4 import *
 if __name__ is not None and "." in __name__:
     from .MizarParser import MizarParser
@@ -1382,6 +1382,15 @@ class MizarListener(ParseTreeListener):
 
     # Exit a parse tree produced by MizarParser#typeExpression.
     def exitTypeExpression(self, ctx:MizarParser.TypeExpressionContext):
+        pass
+
+
+    # Enter a parse tree produced by MizarParser#radixTypeExpression.
+    def enterRadixTypeExpression(self, ctx:MizarParser.RadixTypeExpressionContext):
+        pass
+
+    # Exit a parse tree produced by MizarParser#radixTypeExpression.
+    def exitRadixTypeExpression(self, ctx:MizarParser.RadixTypeExpressionContext):
         pass
 
 

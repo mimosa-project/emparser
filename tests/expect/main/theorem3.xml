@@ -1,0 +1,342 @@
+<?xml version="1.0" ?>
+<theorem>
+ <keyword spelling="theorem"/>
+ <compactStatement>
+  <proposition>
+   <sentence>
+    <formulaExpression>
+     <quantifiedFormulaExpression>
+      <keyword spelling="for"/>
+      <qualifiedVariables>
+       <explicitlyQualifiedVariables>
+        <qualifiedSegment>
+         <variables>
+          <variableIdentifier spelling="V"/>
+         </variables>
+         <qualification>
+          <keyword spelling="being"/>
+          <typeExpression>
+           <adjectiveCluster>
+            <adjective>
+             <attributeSymbol spelling="__V_add-associative"/>
+            </adjective>
+            <adjective>
+             <attributeSymbol spelling="__V_right_zeroed"/>
+            </adjective>
+            <adjective>
+             <attributeSymbol spelling="__V_right_complementable"/>
+            </adjective>
+            <adjective>
+             <keyword spelling="non"/>
+             <attributeSymbol spelling="__V_empty"/>
+            </adjective>
+           </adjectiveCluster>
+           <radixTypeExpression>
+            <radixType>
+             <structureSymbol spelling="__G_addLoopStr"/>
+            </radixType>
+           </radixTypeExpression>
+          </typeExpression>
+         </qualification>
+        </qualifiedSegment>
+        <keyword spelling=","/>
+        <qualifiedSegment>
+         <variables>
+          <variableIdentifier spelling="u"/>
+          <keyword spelling=","/>
+          <variableIdentifier spelling="v"/>
+          <keyword spelling=","/>
+          <variableIdentifier spelling="w"/>
+         </variables>
+         <qualification>
+          <keyword spelling="being"/>
+          <typeExpression>
+           <adjectiveCluster/>
+           <radixTypeExpression>
+            <radixType>
+             <modeSymbol spelling="__M_Element"/>
+             <keyword spelling="of"/>
+             <termExpressionList>
+              <termExpression>
+               <unitaryTerm>
+                <variableIdentifier spelling="V"/>
+               </unitaryTerm>
+              </termExpression>
+             </termExpressionList>
+            </radixType>
+           </radixTypeExpression>
+          </typeExpression>
+         </qualification>
+        </qualifiedSegment>
+       </explicitlyQualifiedVariables>
+      </qualifiedVariables>
+      <keyword spelling="holds"/>
+      <formulaExpression>
+       <formulaExpression>
+        <formulaExpression>
+         <formulaExpression>
+          <formulaExpression>
+           <atomicFormulaExpression>
+            <termExpressionList>
+             <termExpression>
+              <functorSymbol spelling="__O32_-"/>
+              <arguments>
+               <unitaryTerm>
+                <keyword spelling="("/>
+                <termExpression>
+                 <arguments>
+                  <unitaryTerm>
+                   <variableIdentifier spelling="v"/>
+                  </unitaryTerm>
+                 </arguments>
+                 <functorSymbol spelling="__O32_+"/>
+                 <arguments>
+                  <unitaryTerm>
+                   <variableIdentifier spelling="w"/>
+                  </unitaryTerm>
+                 </arguments>
+                </termExpression>
+                <keyword spelling=")"/>
+               </unitaryTerm>
+              </arguments>
+             </termExpression>
+            </termExpressionList>
+            <predicateSymbol>
+             <keyword spelling="="/>
+            </predicateSymbol>
+            <termExpressionList>
+             <termExpression>
+              <functorSymbol spelling="__O32_-"/>
+              <arguments>
+               <unitaryTerm>
+                <variableIdentifier spelling="w"/>
+               </unitaryTerm>
+              </arguments>
+              <functorSymbol spelling="__O32_-"/>
+              <arguments>
+               <unitaryTerm>
+                <variableIdentifier spelling="v"/>
+               </unitaryTerm>
+              </arguments>
+             </termExpression>
+            </termExpressionList>
+           </atomicFormulaExpression>
+          </formulaExpression>
+          <keyword spelling="&amp;"/>
+          <formulaExpression>
+           <atomicFormulaExpression>
+            <termExpressionList>
+             <termExpression>
+              <functorSymbol spelling="__O32_-"/>
+              <arguments>
+               <unitaryTerm>
+                <keyword spelling="("/>
+                <termExpression>
+                 <arguments>
+                  <unitaryTerm>
+                   <variableIdentifier spelling="w"/>
+                  </unitaryTerm>
+                 </arguments>
+                 <functorSymbol spelling="__O32_+"/>
+                 <functorSymbol spelling="__O32_-"/>
+                 <arguments>
+                  <unitaryTerm>
+                   <variableIdentifier spelling="v"/>
+                  </unitaryTerm>
+                 </arguments>
+                </termExpression>
+                <keyword spelling=")"/>
+               </unitaryTerm>
+              </arguments>
+             </termExpression>
+            </termExpressionList>
+            <predicateSymbol>
+             <keyword spelling="="/>
+            </predicateSymbol>
+            <termExpressionList>
+             <termExpression>
+              <arguments>
+               <unitaryTerm>
+                <variableIdentifier spelling="v"/>
+               </unitaryTerm>
+              </arguments>
+              <functorSymbol spelling="__O32_-"/>
+              <arguments>
+               <unitaryTerm>
+                <variableIdentifier spelling="w"/>
+               </unitaryTerm>
+              </arguments>
+             </termExpression>
+            </termExpressionList>
+           </atomicFormulaExpression>
+          </formulaExpression>
+         </formulaExpression>
+         <keyword spelling="&amp;"/>
+         <formulaExpression>
+          <atomicFormulaExpression>
+           <termExpressionList>
+            <termExpression>
+             <functorSymbol spelling="__O32_-"/>
+             <arguments>
+              <unitaryTerm>
+               <keyword spelling="("/>
+               <termExpression>
+                <arguments>
+                 <unitaryTerm>
+                  <variableIdentifier spelling="v"/>
+                 </unitaryTerm>
+                </arguments>
+                <functorSymbol spelling="__O32_-"/>
+                <arguments>
+                 <unitaryTerm>
+                  <variableIdentifier spelling="w"/>
+                 </unitaryTerm>
+                </arguments>
+               </termExpression>
+               <keyword spelling=")"/>
+              </unitaryTerm>
+             </arguments>
+            </termExpression>
+           </termExpressionList>
+           <predicateSymbol>
+            <keyword spelling="="/>
+           </predicateSymbol>
+           <termExpressionList>
+            <termExpression>
+             <arguments>
+              <unitaryTerm>
+               <variableIdentifier spelling="w"/>
+              </unitaryTerm>
+             </arguments>
+             <functorSymbol spelling="__O32_+"/>
+             <functorSymbol spelling="__O32_-"/>
+             <arguments>
+              <unitaryTerm>
+               <variableIdentifier spelling="v"/>
+              </unitaryTerm>
+             </arguments>
+            </termExpression>
+           </termExpressionList>
+          </atomicFormulaExpression>
+         </formulaExpression>
+        </formulaExpression>
+        <keyword spelling="&amp;"/>
+        <formulaExpression>
+         <atomicFormulaExpression>
+          <termExpressionList>
+           <termExpression>
+            <functorSymbol spelling="__O32_-"/>
+            <arguments>
+             <unitaryTerm>
+              <keyword spelling="("/>
+              <termExpression>
+               <functorSymbol spelling="__O32_-"/>
+               <arguments>
+                <unitaryTerm>
+                 <variableIdentifier spelling="v"/>
+                </unitaryTerm>
+               </arguments>
+               <functorSymbol spelling="__O32_-"/>
+               <arguments>
+                <unitaryTerm>
+                 <variableIdentifier spelling="w"/>
+                </unitaryTerm>
+               </arguments>
+              </termExpression>
+              <keyword spelling=")"/>
+             </unitaryTerm>
+            </arguments>
+           </termExpression>
+          </termExpressionList>
+          <predicateSymbol>
+           <keyword spelling="="/>
+          </predicateSymbol>
+          <termExpressionList>
+           <termExpression>
+            <arguments>
+             <unitaryTerm>
+              <variableIdentifier spelling="w"/>
+             </unitaryTerm>
+            </arguments>
+            <functorSymbol spelling="__O32_+"/>
+            <arguments>
+             <unitaryTerm>
+              <variableIdentifier spelling="v"/>
+             </unitaryTerm>
+            </arguments>
+           </termExpression>
+          </termExpressionList>
+         </atomicFormulaExpression>
+        </formulaExpression>
+       </formulaExpression>
+       <keyword spelling="&amp;"/>
+       <formulaExpression>
+        <atomicFormulaExpression>
+         <termExpressionList>
+          <termExpression>
+           <arguments>
+            <unitaryTerm>
+             <variableIdentifier spelling="u"/>
+            </unitaryTerm>
+           </arguments>
+           <functorSymbol spelling="__O32_-"/>
+           <arguments>
+            <unitaryTerm>
+             <keyword spelling="("/>
+             <termExpression>
+              <arguments>
+               <unitaryTerm>
+                <variableIdentifier spelling="w"/>
+               </unitaryTerm>
+              </arguments>
+              <functorSymbol spelling="__O32_+"/>
+              <arguments>
+               <unitaryTerm>
+                <variableIdentifier spelling="v"/>
+               </unitaryTerm>
+              </arguments>
+             </termExpression>
+             <keyword spelling=")"/>
+            </unitaryTerm>
+           </arguments>
+          </termExpression>
+         </termExpressionList>
+         <predicateSymbol>
+          <keyword spelling="="/>
+         </predicateSymbol>
+         <termExpressionList>
+          <termExpression>
+           <arguments>
+            <unitaryTerm>
+             <variableIdentifier spelling="u"/>
+            </unitaryTerm>
+           </arguments>
+           <functorSymbol spelling="__O32_-"/>
+           <arguments>
+            <unitaryTerm>
+             <variableIdentifier spelling="v"/>
+            </unitaryTerm>
+           </arguments>
+           <functorSymbol spelling="__O32_-"/>
+           <arguments>
+            <unitaryTerm>
+             <variableIdentifier spelling="w"/>
+            </unitaryTerm>
+           </arguments>
+          </termExpression>
+         </termExpressionList>
+        </atomicFormulaExpression>
+       </formulaExpression>
+      </formulaExpression>
+     </quantifiedFormulaExpression>
+    </formulaExpression>
+   </sentence>
+  </proposition>
+  <justification>
+   <simpleJustification>
+    <straightforwardJustification/>
+   </simpleJustification>
+  </justification>
+  <keyword spelling=";"/>
+ </compactStatement>
+</theorem>
