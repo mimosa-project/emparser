@@ -12,6 +12,36 @@ from emparser import util
 from tests import common
 
 
+class TestMizarErrorListener:
+    @pytest.fixture(scope='function', autouse=True)
+    def preparare_instance(self):
+        self.lexer = Lexer()
+        self.lexer.load_symbol_dict(common.MML_VCT)
+        self.lexer.build_len2symbol()
+        self.parser = Parser()
+        yield
+
+    def test_error_1(self):
+        case = [
+            "theorem",
+            "(for r,s,t holds (r * s) * t = r * (s * t)) & ex t st for s1 holds s1",
+            "* t = s1 & t * s1 = s1 & ex s2 st s1 * s2 = t & s2 * s1 = t) implies S is Group;"
+        ]
+        formed_txt, position_map = self.lexer.lex(case)
+        # print(formed_txt)
+        # pprint(position_map)
+        xml_root = self.parser.parse_theorem('\n'.join(formed_txt), position_map)
+        xmlstr = util.pretty_xml(xml_root)
+        # print(xmlstr)
+
+        # output_path = common.EXPECT_DIR + '/main/error1.xml'
+        output_path = common.OUTPUT_DIR + '/error1.xml'
+        with open(output_path, 'w') as file:
+            file.write(xmlstr)
+
+        expect_path = common.EXPECT_DIR + '/main/error1.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
+
 class TestParser:
     @pytest.fixture(scope='function', autouse=True)
     def preparare_instance(self):

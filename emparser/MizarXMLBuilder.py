@@ -38,7 +38,22 @@ class MizarXMLBuilder(MizarListener):
                 print("position {} not found".format(after_pos))
 
     def visitErrorNode(self, node:ErrorNode):
-        pass
+        assert len(self.xmlNodeStack) > 0
+        aboveXmlNode = self.xmlNodeStack[len(self.xmlNodeStack)-1]
+        symbol = node.getSymbol()
+        xmlNode = ET.Element('error')
+        xmlNode.set('spelling', node.getText())
+        aboveXmlNode.append(xmlNode)
+        
+        if self.position_map:
+            # symbol.column is 0-origin
+            after_pos = (symbol.line, symbol.column+1)
+            if after_pos in self.position_map:
+                before_pos = self.position_map[after_pos]
+                xmlNode.set('line', str(before_pos[0]))
+                xmlNode.set('col', str(before_pos[1]))
+            else:
+                print("position {} not found".format(after_pos))
 
     def enterEveryRule(self, ctx:ParserRuleContext):
         rulename = MizarParser.ruleNames[ctx.getRuleIndex()]
