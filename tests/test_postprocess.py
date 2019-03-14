@@ -3,13 +3,13 @@
 """
 
 import os
+import time
 import pytest
 import shutil
 import filecmp
 import lxml.etree as ET
 
 from emparser.postprocess import CSTHandler
-# from emparser.postprocess import CST2AST
 from emparser import util
 from tests import common
 
@@ -19,10 +19,10 @@ class TestCSTHandler:
         self.handler = CSTHandler()
         yield
     
-    def test_extract_vocablaries(self):
+    def test_extract_vocabularies(self):
         env_xmlpath = common.EXPECT_DIR+ '/main/ring_1_env.xml'
         env_tree = ET.parse(env_xmlpath)
-        vocabularies = CSTHandler.extract_vocablaries(env_tree.getroot())
+        vocabularies = CSTHandler.extract_vocabularies(env_tree.getroot())
         expect = ['RLVECT_1', 'ALGSTR_0', 'XBOOLE_0', 'SUBSET_1', 'ARYTM_1', 'ARYTM_3',
             'SUPINF_2', 'RELAT_1', 'INT_2', 'CARD_FIL', 'TARSKI', 'GROUP_4', 'IDEAL_1', 'VECTSP_2',
             'GROUP_1', 'FUNCSDOM', 'EQREL_1', 'STRUCT_0', 'WAYBEL20', 'PARTFUN1', 'RELAT_2',
@@ -76,6 +76,22 @@ class TestCSTHandler:
             file.write(output_xmlstr)
 
         expect_path = common.EXPECT_DIR + '/post/remove_prefix.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
+    
+    def test_all_post_process(self):
+        filepath = common.EXPECT_DIR + '/main/ring_1_tp.xml'
+        
+        xml_tree = ET.parse(filepath)
+        root = xml_tree.getroot()
+        self.handler.adjust_type_expression(root)
+        self.handler.adjust_term_expression(root)
+        self.handler.remove_prefix(root)
+        output_xmlstr = util.pretty_xml(root)
+        output_path = common.OUTPUT_DIR + '/all_post_process.xml'
+        with open(output_path, 'w') as file:
+            file.write(output_xmlstr)
+
+        expect_path = common.EXPECT_DIR + '/post/all_post_process.xml'
         assert filecmp.cmp(expect_path, output_path, shallow=False)
 
 

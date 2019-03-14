@@ -39,7 +39,7 @@ class CSTHandler:
     extract information, manipulate CST, and so on.
     """
     @classmethod
-    def extract_vocablaries(cls, _root):
+    def extract_vocabularies(cls, _root):
         """Extract vocabulary files in environment part
 
         Args:
