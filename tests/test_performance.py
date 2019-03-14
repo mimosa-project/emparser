@@ -29,16 +29,16 @@ class TestPerformance:
         """
         current performance test result:
 
-        #1 : 0.017235517501831055
-        #2 : 0.0005946159362792969
-        #3 : 0.0005059242248535156
-        #4 : 0.057485103607177734
-        #5 : 0.005709648132324219
-        #6 : 0.10084152221679688
-        #7 : 6.513091802597046
-        #8 : 0.05884361267089844
-        #9 : 0.5766453742980957
-        #10 : 0.0030059814453125
+        #1 : 0.017391204833984375
+        #2 : 0.0008416175842285156
+        #3 : 0.0008263587951660156
+        #4 : 0.05384230613708496
+        #5 : 0.005171775817871094
+        #6 : 0.09348726272583008
+        #7 : 6.468583345413208
+        #8 : 0.0592193603515625
+        #9 : 0.02293229103088379
+        #10 : 0.006582736968994141
         """
         print('#test_performance_1#')
         t0 = time.time()
@@ -96,36 +96,39 @@ class TestPerformance:
         t8 = time.time()
         print(f'#8 : {t8 - t7}')
 
-        tp_xmlstr = util.pretty_xml(tp_xmlroot)
-        # tp_xmlstr = ET.tostring(tp_xmlroot).decode('utf-8') # much faster than above
+        # tp_xmlstr = util.pretty_xml(tp_xmlroot)
+        tp_xmlstr = ET.tostring(tp_xmlroot, pretty_print=True).decode('utf-8')
 
         t9 = time.time()
         print(f'#9 : {t9 - t8}')
 
-        output_path = common.OUTPUT2_DIR + '/performance_1.xml'
+        # output_path = common.OUTPUT_DIR + '/performance_1.xml'
+        output_path = common.EXPECT_DIR + '/performance/performance_1.xml'
         with open(output_path, 'w') as file:
             file.write(tp_xmlstr)
 
         t10 = time.time()
         print(f'#10 : {t10 - t9}')
 
+        expect_path = common.EXPECT_DIR + '/performance/performance_1.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
 
     @pytest.mark.slow
     def test_performance_2(self):
         """
         current performance test result:
 
-        #1 : 0.01493382453918457
-        #2 : 0.0034759044647216797
-        #3 : 0.004106998443603516
+        #1 : 0.10028433799743652
+        #2 : 0.0023505687713623047
+        #3 : 0.003578662872314453
         line 31:15 mismatched input 'REAL' expecting FILE_NAME
-        #4 : 0.03134036064147949
-        #5 : 0.004895687103271484
-        #6 : 2.158524513244629
-        #7 : 237.9995551109314
-        #8 : 1.2246570587158203
-        #9 : 9.682507753372192
-        #10 : 0.1006784439086914
+        #4 : 0.032854557037353516
+        #5 : 0.005401611328125
+        #6 : 1.70389723777771
+        #7 : 234.9770917892456
+        #8 : 1.2079763412475586
+        #9 : 0.4340200424194336
+        #10 : 0.11806201934814453
         """
 
         print('#test_performance_2#')
@@ -184,15 +187,19 @@ class TestPerformance:
         t8 = time.time()
         print(f'#8 : {t8 - t7}')
 
-        tp_xmlstr = util.pretty_xml(tp_xmlroot)
-        # tp_xmlstr = ET.tostring(tp_xmlroot).decode('utf-8') # much faster than above
+        # tp_xmlstr = util.pretty_xml(tp_xmlroot)
+        tp_xmlstr = ET.tostring(tp_xmlroot, pretty_print=True).decode('utf-8')
 
         t9 = time.time()
         print(f'#9 : {t9 - t8}')
 
-        output_path = common.OUTPUT2_DIR + '/performance_2.xml'
+        # output_path = common.OUTPUT_DIR + '/performance_2.xml'
+        output_path = common.EXPECT_DIR + '/performance/performance_2.xml'
         with open(output_path, 'w') as file:
             file.write(tp_xmlstr)
 
         t10 = time.time()
         print(f'#10 : {t10 - t9}')
+
+        expect_path = common.EXPECT_DIR + '/performance/performance_2.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
