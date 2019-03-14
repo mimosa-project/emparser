@@ -150,6 +150,7 @@ class Lexer:
         """
         if miz_files is not None:
             miz_files = set(miz_files)
+            miz_files.add('HIDDEN')
         
         self.symbol_dict = {}
         
@@ -308,7 +309,6 @@ class Lexer:
                         return res
                 
                 # error
-                print("Error in LexerStateMachine.cut: " + line)
                 return None
 
             def is_special_symbol(self, symbol):
@@ -436,6 +436,9 @@ class Lexer:
                 before_pos = (first_line_number+i, len(line) - len(buffer) + 1)
                 
                 res = stateMachine.cut(buffer)
+                if res is None:
+                    print('Error in lexer pos={}, buffer={}'.format(before_pos, buffer))
+                    assert False
                 tokens.append(res[0])
                 buffer = res[1]
 
