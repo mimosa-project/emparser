@@ -7,5 +7,5 @@ def maintain_directory():
     common.create_output_dir()
     common.create_output2_dir()
     yield
-    common.delete_output2_dir()
+    # common.delete_output2_dir()
     common.delete_output_dir()
