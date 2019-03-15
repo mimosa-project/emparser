@@ -4,12 +4,13 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
+pybind11 = "*"
+wheel = "*"
+pytest = "*"
 
 [packages]
 lxml = "*"
-pytest = "*"
 antlr4-python3-runtime = "*"
-wheel = "*"
 
 [requires]
 python_version = "3.7"
