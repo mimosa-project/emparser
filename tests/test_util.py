@@ -11,7 +11,7 @@ from tests import common
 
 class TestUtil:
     def test_pretty_xml(self):
-        input_path = common.EXPECT_DIR + '/ring_1_env.xml'
+        input_path = common.EXPECT_DIR + '/main/ring_1_env.xml'
         output_path = common.OUTPUT_DIR + '/ring_1_env.xml'
         xmltree = ET.parse(input_path)
         xmlstr = util.pretty_xml(xmltree.getroot())
