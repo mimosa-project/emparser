@@ -4,10 +4,10 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pybind11 = "*"
 wheel = "*"
 pytest = "*"
 emparser = {editable = true,path = "."}
+cmake = "*"
 
 [packages]
 lxml = "*"

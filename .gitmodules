@@ -1,0 +1,12 @@
+[submodule "vendor/pugixml"]
+	path = vendor/pugixml
+	url = https://github.com/zeux/pugixml.git
+[submodule "vendor/pybind11"]
+	path = vendor/pybind11
+	url = https://github.com/pybind/pybind11.git
+[submodule "vendor/catch"]
+	path = vendor/catch
+	url = https://github.com/catchorg/Catch2.git
+[submodule "vendor/antlr4"]
+	path = vendor/antlr4
+	url = https://github.com/antlr/antlr4.git
