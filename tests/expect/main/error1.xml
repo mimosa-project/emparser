@@ -1,0 +1,245 @@
+<?xml version="1.0" ?>
+<theorem>
+ <keyword col="1" line="1" spelling="theorem"/>
+ <compactStatement>
+  <proposition>
+   <sentence>
+    <formulaExpression>
+     <formulaExpression>
+      <formulaExpression>
+       <formulaExpression>
+        <keyword col="1" line="2" spelling="("/>
+        <formulaExpression>
+         <quantifiedFormulaExpression>
+          <keyword col="2" line="2" spelling="for"/>
+          <qualifiedVariables>
+           <implicitlyQualifiedVariables>
+            <variables>
+             <variableIdentifier col="6" line="2" spelling="r"/>
+             <keyword col="7" line="2" spelling=","/>
+             <variableIdentifier col="8" line="2" spelling="s"/>
+             <keyword col="9" line="2" spelling=","/>
+             <variableIdentifier col="10" line="2" spelling="t"/>
+            </variables>
+           </implicitlyQualifiedVariables>
+          </qualifiedVariables>
+          <keyword col="12" line="2" spelling="holds"/>
+          <formulaExpression>
+           <atomicFormulaExpression>
+            <termExpressionList>
+             <termExpression>
+              <arguments>
+               <unitaryTerm>
+                <keyword col="18" line="2" spelling="("/>
+                <termExpression>
+                 <arguments>
+                  <unitaryTerm>
+                   <variableIdentifier col="19" line="2" spelling="r"/>
+                  </unitaryTerm>
+                 </arguments>
+                 <functorSymbol col="21" line="2" spelling="__O_*"/>
+                 <arguments>
+                  <unitaryTerm>
+                   <variableIdentifier col="23" line="2" spelling="s"/>
+                  </unitaryTerm>
+                 </arguments>
+                </termExpression>
+                <keyword col="24" line="2" spelling=")"/>
+               </unitaryTerm>
+              </arguments>
+              <functorSymbol col="26" line="2" spelling="__O_*"/>
+              <arguments>
+               <unitaryTerm>
+                <variableIdentifier col="28" line="2" spelling="t"/>
+               </unitaryTerm>
+              </arguments>
+             </termExpression>
+            </termExpressionList>
+            <predicateSymbol>
+             <keyword col="30" line="2" spelling="="/>
+            </predicateSymbol>
+            <termExpressionList>
+             <termExpression>
+              <arguments>
+               <unitaryTerm>
+                <variableIdentifier col="32" line="2" spelling="r"/>
+               </unitaryTerm>
+              </arguments>
+              <functorSymbol col="34" line="2" spelling="__O_*"/>
+              <arguments>
+               <unitaryTerm>
+                <keyword col="36" line="2" spelling="("/>
+                <termExpression>
+                 <arguments>
+                  <unitaryTerm>
+                   <variableIdentifier col="37" line="2" spelling="s"/>
+                  </unitaryTerm>
+                 </arguments>
+                 <functorSymbol col="39" line="2" spelling="__O_*"/>
+                 <arguments>
+                  <unitaryTerm>
+                   <variableIdentifier col="41" line="2" spelling="t"/>
+                  </unitaryTerm>
+                 </arguments>
+                </termExpression>
+                <keyword col="42" line="2" spelling=")"/>
+               </unitaryTerm>
+              </arguments>
+             </termExpression>
+            </termExpressionList>
+           </atomicFormulaExpression>
+          </formulaExpression>
+         </quantifiedFormulaExpression>
+        </formulaExpression>
+        <keyword col="43" line="2" spelling=")"/>
+       </formulaExpression>
+       <keyword col="45" line="2" spelling="&amp;"/>
+       <formulaExpression>
+        <quantifiedFormulaExpression>
+         <keyword col="47" line="2" spelling="ex"/>
+         <qualifiedVariables>
+          <implicitlyQualifiedVariables>
+           <variables>
+            <variableIdentifier col="50" line="2" spelling="t"/>
+           </variables>
+          </implicitlyQualifiedVariables>
+         </qualifiedVariables>
+         <keyword col="52" line="2" spelling="st"/>
+         <formulaExpression>
+          <quantifiedFormulaExpression>
+           <keyword col="55" line="2" spelling="for"/>
+           <qualifiedVariables>
+            <implicitlyQualifiedVariables>
+             <variables>
+              <variableIdentifier col="59" line="2" spelling="s1"/>
+             </variables>
+            </implicitlyQualifiedVariables>
+           </qualifiedVariables>
+           <keyword col="62" line="2" spelling="holds"/>
+           <formulaExpression>
+            <atomicFormulaExpression>
+             <termExpressionList>
+              <termExpression>
+               <arguments>
+                <unitaryTerm>
+                 <variableIdentifier col="68" line="2" spelling="s1"/>
+                </unitaryTerm>
+               </arguments>
+               <functorSymbol col="1" line="3" spelling="__O_*"/>
+               <arguments>
+                <unitaryTerm>
+                 <variableIdentifier col="3" line="3" spelling="t"/>
+                </unitaryTerm>
+               </arguments>
+              </termExpression>
+             </termExpressionList>
+             <predicateSymbol>
+              <keyword col="5" line="3" spelling="="/>
+             </predicateSymbol>
+             <termExpressionList>
+              <termExpression>
+               <unitaryTerm>
+                <variableIdentifier col="7" line="3" spelling="s1"/>
+               </unitaryTerm>
+              </termExpression>
+             </termExpressionList>
+            </atomicFormulaExpression>
+           </formulaExpression>
+          </quantifiedFormulaExpression>
+          <error col="10" line="3" spelling="&amp;"/>
+          <error col="12" line="3" spelling="t"/>
+          <error col="14" line="3" spelling="__O_*"/>
+          <error col="16" line="3" spelling="s1"/>
+          <error col="19" line="3" spelling="="/>
+          <error col="21" line="3" spelling="s1"/>
+         </formulaExpression>
+        </quantifiedFormulaExpression>
+       </formulaExpression>
+      </formulaExpression>
+      <keyword col="24" line="3" spelling="&amp;"/>
+      <formulaExpression>
+       <quantifiedFormulaExpression>
+        <keyword col="26" line="3" spelling="ex"/>
+        <qualifiedVariables>
+         <implicitlyQualifiedVariables>
+          <variables>
+           <variableIdentifier col="29" line="3" spelling="s2"/>
+          </variables>
+         </implicitlyQualifiedVariables>
+        </qualifiedVariables>
+        <keyword col="32" line="3" spelling="st"/>
+        <formulaExpression>
+         <atomicFormulaExpression>
+          <termExpressionList>
+           <termExpression>
+            <arguments>
+             <unitaryTerm>
+              <variableIdentifier col="35" line="3" spelling="s1"/>
+             </unitaryTerm>
+            </arguments>
+            <functorSymbol col="38" line="3" spelling="__O_*"/>
+            <arguments>
+             <unitaryTerm>
+              <variableIdentifier col="40" line="3" spelling="s2"/>
+             </unitaryTerm>
+            </arguments>
+           </termExpression>
+          </termExpressionList>
+          <predicateSymbol>
+           <keyword col="43" line="3" spelling="="/>
+          </predicateSymbol>
+          <termExpressionList>
+           <termExpression>
+            <unitaryTerm>
+             <variableIdentifier col="45" line="3" spelling="t"/>
+            </unitaryTerm>
+           </termExpression>
+          </termExpressionList>
+         </atomicFormulaExpression>
+        </formulaExpression>
+       </quantifiedFormulaExpression>
+      </formulaExpression>
+     </formulaExpression>
+     <keyword col="47" line="3" spelling="&amp;"/>
+     <formulaExpression>
+      <atomicFormulaExpression>
+       <termExpressionList>
+        <termExpression>
+         <arguments>
+          <unitaryTerm>
+           <variableIdentifier col="49" line="3" spelling="s2"/>
+          </unitaryTerm>
+         </arguments>
+         <functorSymbol col="52" line="3" spelling="__O_*"/>
+         <arguments>
+          <unitaryTerm>
+           <variableIdentifier col="54" line="3" spelling="s1"/>
+          </unitaryTerm>
+         </arguments>
+        </termExpression>
+       </termExpressionList>
+       <predicateSymbol>
+        <keyword col="57" line="3" spelling="="/>
+       </predicateSymbol>
+       <termExpressionList>
+        <termExpression>
+         <unitaryTerm>
+          <variableIdentifier col="59" line="3" spelling="t"/>
+         </unitaryTerm>
+        </termExpression>
+       </termExpressionList>
+      </atomicFormulaExpression>
+     </formulaExpression>
+    </formulaExpression>
+   </sentence>
+  </proposition>
+  <justification>
+   <error col="60" line="3" spelling=")"/>
+   <error col="62" line="3" spelling="implies"/>
+   <error col="70" line="3" spelling="S"/>
+   <error col="72" line="3" spelling="is"/>
+   <error col="75" line="3" spelling="__M_Group"/>
+  </justification>
+  <keyword col="80" line="3" spelling=";"/>
+ </compactStatement>
+</theorem>

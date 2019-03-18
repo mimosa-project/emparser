@@ -1,0 +1,145 @@
+<?xml version="1.0"?>
+<Environ aid="RING_1">
+ <Directive name="vocabularies" argnr="32">
+  <Ident name="HIDDEN" line="1" col="1"/>
+  <Ident name="RLVECT_1" line="17" col="22"/>
+  <Ident name="ALGSTR_0" line="17" col="32"/>
+  <Ident name="XBOOLE_0" line="17" col="42"/>
+  <Ident name="SUBSET_1" line="17" col="52"/>
+  <Ident name="ARYTM_1" line="17" col="61"/>
+  <Ident name="ARYTM_3" line="17" col="70"/>
+  <Ident name="SUPINF_2" line="18" col="14"/>
+  <Ident name="RELAT_1" line="18" col="23"/>
+  <Ident name="INT_2" line="18" col="30"/>
+  <Ident name="CARD_FIL" line="18" col="40"/>
+  <Ident name="TARSKI" line="18" col="48"/>
+  <Ident name="GROUP_4" line="18" col="57"/>
+  <Ident name="IDEAL_1" line="18" col="66"/>
+  <Ident name="VECTSP_2" line="18" col="76"/>
+  <Ident name="GROUP_1" line="19" col="13"/>
+  <Ident name="FUNCSDOM" line="19" col="23"/>
+  <Ident name="EQREL_1" line="19" col="32"/>
+  <Ident name="STRUCT_0" line="19" col="42"/>
+  <Ident name="WAYBEL20" line="19" col="52"/>
+  <Ident name="PARTFUN1" line="19" col="62"/>
+  <Ident name="RELAT_2" line="19" col="71"/>
+  <Ident name="SETWISEO" line="20" col="14"/>
+  <Ident name="FUNCT_1" line="20" col="23"/>
+  <Ident name="MESFUNC1" line="20" col="33"/>
+  <Ident name="BINOP_1" line="20" col="42"/>
+  <Ident name="VECTSP_1" line="20" col="52"/>
+  <Ident name="LATTICES" line="20" col="62"/>
+  <Ident name="WELLORD2" line="20" col="72"/>
+  <Ident name="ORDERS_1" line="21" col="14"/>
+  <Ident name="WELLORD1" line="21" col="24"/>
+  <Ident name="RING_1" line="21" col="32"/>
+ </Directive>
+ <Directive name="notations" argnr="24">
+  <Ident name="HIDDEN" line="1" col="1"/>
+  <Ident name="TARSKI" line="22" col="17"/>
+  <Ident name="XBOOLE_0" line="22" col="27"/>
+  <Ident name="SUBSET_1" line="22" col="37"/>
+  <Ident name="SETWISEO" line="22" col="47"/>
+  <Ident name="RELAT_1" line="22" col="56"/>
+  <Ident name="RELSET_1" line="22" col="66"/>
+  <Ident name="FUNCT_1" line="22" col="75"/>
+  <Ident name="PARTFUN1" line="23" col="14"/>
+  <Ident name="ALG_1" line="23" col="21"/>
+  <Ident name="RELAT_2" line="23" col="30"/>
+  <Ident name="EQREL_1" line="23" col="39"/>
+  <Ident name="WELLORD1" line="23" col="49"/>
+  <Ident name="WELLORD2" line="23" col="59"/>
+  <Ident name="ORDERS_1" line="23" col="69"/>
+  <Ident name="BINOP_1" line="23" col="78"/>
+  <Ident name="DOMAIN_1" line="24" col="14"/>
+  <Ident name="STRUCT_0" line="24" col="24"/>
+  <Ident name="ALGSTR_0" line="24" col="34"/>
+  <Ident name="GROUP_1" line="24" col="43"/>
+  <Ident name="RLVECT_1" line="24" col="53"/>
+  <Ident name="VECTSP_1" line="24" col="63"/>
+  <Ident name="VECTSP_2" line="24" col="73"/>
+  <Ident name="IDEAL_1" line="25" col="13"/>
+ </Directive>
+ <Directive name="definitions" argnr="11">
+  <Ident name="TARSKI" line="31" col="19"/>
+  <Ident name="XBOOLE_0" line="31" col="29"/>
+  <Ident name="RELAT_1" line="31" col="38"/>
+  <Ident name="RLVECT_1" line="31" col="48"/>
+  <Ident name="GROUP_1" line="31" col="57"/>
+  <Ident name="VECTSP_1" line="31" col="67"/>
+  <Ident name="VECTSP_2" line="31" col="77"/>
+  <Ident name="IDEAL_1" line="32" col="13"/>
+  <Ident name="ORDERS_1" line="32" col="23"/>
+  <Ident name="STRUCT_0" line="32" col="33"/>
+  <Ident name="ALGSTR_0" line="32" col="43"/>
+ </Directive>
+ <Directive name="theorems" argnr="18">
+  <Ident name="VECTSP_1" line="36" col="18"/>
+  <Ident name="TARSKI" line="36" col="26"/>
+  <Ident name="FUNCT_1" line="36" col="35"/>
+  <Ident name="RLVECT_1" line="36" col="45"/>
+  <Ident name="VECTSP_2" line="36" col="55"/>
+  <Ident name="XBOOLE_0" line="36" col="65"/>
+  <Ident name="FUNCT_2" line="36" col="74"/>
+  <Ident name="BINOP_1" line="37" col="13"/>
+  <Ident name="ZFMISC_1" line="37" col="23"/>
+  <Ident name="GROUP_1" line="37" col="32"/>
+  <Ident name="IDEAL_1" line="37" col="41"/>
+  <Ident name="RELAT_1" line="37" col="50"/>
+  <Ident name="EQREL_1" line="37" col="59"/>
+  <Ident name="SETWISEO" line="37" col="69"/>
+  <Ident name="ORDERS_1" line="38" col="14"/>
+  <Ident name="WELLORD2" line="38" col="24"/>
+  <Ident name="RELAT_2" line="38" col="33"/>
+  <Ident name="SUBSET_1" line="38" col="43"/>
+ </Directive>
+ <Directive name="schemes" argnr="2">
+  <Ident name="EQREL_1" line="39" col="16"/>
+  <Ident name="BINOP_1" line="39" col="25"/>
+ </Directive>
+ <Directive name="registrations" argnr="10">
+  <Ident name="XBOOLE_0" line="28" col="23"/>
+  <Ident name="SUBSET_1" line="28" col="33"/>
+  <Ident name="RELSET_1" line="28" col="43"/>
+  <Ident name="FINSUB_1" line="28" col="53"/>
+  <Ident name="EQREL_1" line="28" col="62"/>
+  <Ident name="STRUCT_0" line="28" col="72"/>
+  <Ident name="VECTSP_1" line="29" col="14"/>
+  <Ident name="ALGSTR_1" line="29" col="24"/>
+  <Ident name="QUOFIELD" line="29" col="34"/>
+  <Ident name="IDEAL_1" line="29" col="43"/>
+ </Directive>
+ <Directive name="constructors" argnr="11">
+  <Ident name="HIDDEN" line="1" col="1"/>
+  <Ident name="WELLORD1" line="26" col="22"/>
+  <Ident name="WELLORD2" line="26" col="32"/>
+  <Ident name="BINOP_1" line="26" col="41"/>
+  <Ident name="SETWISEO" line="26" col="51"/>
+  <Ident name="ORDERS_1" line="26" col="61"/>
+  <Ident name="EQREL_1" line="26" col="70"/>
+  <Ident name="GCD_1" line="26" col="77"/>
+  <Ident name="IDEAL_1" line="27" col="13"/>
+  <Ident name="DOMAIN_1" line="27" col="23"/>
+  <Ident name="RELSET_1" line="27" col="33"/>
+ </Directive>
+ <Directive name="requirements" argnr="3">
+  <Ident name="HIDDEN" line="1" col="1"/>
+  <Ident name="BOOLE" line="30" col="19"/>
+  <Ident name="SUBSET" line="30" col="27"/>
+ </Directive>
+ <Directive name="equalities" argnr="3">
+  <Ident name="WELLORD1" line="33" col="20"/>
+  <Ident name="STRUCT_0" line="33" col="30"/>
+  <Ident name="ALGSTR_0" line="33" col="40"/>
+ </Directive>
+ <Directive name="expansions" argnr="8">
+  <Ident name="TARSKI" line="34" col="18"/>
+  <Ident name="XBOOLE_0" line="34" col="28"/>
+  <Ident name="GROUP_1" line="34" col="37"/>
+  <Ident name="VECTSP_1" line="34" col="47"/>
+  <Ident name="VECTSP_2" line="34" col="57"/>
+  <Ident name="IDEAL_1" line="34" col="66"/>
+  <Ident name="ORDERS_1" line="34" col="76"/>
+  <Ident name="STRUCT_0" line="35" col="14"/>
+ </Directive>
+</Environ>

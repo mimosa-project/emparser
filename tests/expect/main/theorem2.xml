@@ -1,0 +1,151 @@
+<?xml version="1.0" ?>
+<theorem>
+ <keyword spelling="theorem"/>
+ <compactStatement>
+  <proposition>
+   <sentence>
+    <formulaExpression>
+     <quantifiedFormulaExpression>
+      <keyword spelling="for"/>
+      <qualifiedVariables>
+       <explicitlyQualifiedVariables>
+        <qualifiedSegment>
+         <variables>
+          <variableIdentifier spelling="F"/>
+         </variables>
+         <qualification>
+          <keyword spelling="be"/>
+          <typeExpression>
+           <adjectiveCluster>
+            <adjective>
+             <attributeSymbol spelling="__V_add-associative"/>
+            </adjective>
+            <adjective>
+             <attributeSymbol spelling="__V_right_zeroed"/>
+            </adjective>
+            <adjective>
+             <attributeSymbol spelling="__V_right_complementable"/>
+            </adjective>
+            <adjective>
+             <attributeSymbol spelling="__V_right-distributive"/>
+            </adjective>
+            <adjective>
+             <keyword spelling="non"/>
+             <attributeSymbol spelling="__V_empty"/>
+            </adjective>
+           </adjectiveCluster>
+           <radixTypeExpression>
+            <radixType>
+             <structureSymbol spelling="__G_doubleLoopStr"/>
+            </radixType>
+           </radixTypeExpression>
+          </typeExpression>
+         </qualification>
+        </qualifiedSegment>
+        <keyword spelling=","/>
+        <qualifiedSegment>
+         <variables>
+          <variableIdentifier spelling="x"/>
+          <keyword spelling=","/>
+          <variableIdentifier spelling="y"/>
+          <keyword spelling=","/>
+          <variableIdentifier spelling="z"/>
+         </variables>
+         <qualification>
+          <keyword spelling="being"/>
+          <typeExpression>
+           <adjectiveCluster/>
+           <radixTypeExpression>
+            <radixType>
+             <modeSymbol spelling="__M_Element"/>
+             <keyword spelling="of"/>
+             <termExpressionList>
+              <termExpression>
+               <unitaryTerm>
+                <variableIdentifier spelling="F"/>
+               </unitaryTerm>
+              </termExpression>
+             </termExpressionList>
+            </radixType>
+           </radixTypeExpression>
+          </typeExpression>
+         </qualification>
+        </qualifiedSegment>
+       </explicitlyQualifiedVariables>
+      </qualifiedVariables>
+      <keyword spelling="holds"/>
+      <formulaExpression>
+       <atomicFormulaExpression>
+        <termExpressionList>
+         <termExpression>
+          <arguments>
+           <unitaryTerm>
+            <variableIdentifier spelling="x"/>
+           </unitaryTerm>
+          </arguments>
+          <functorSymbol spelling="__O_*"/>
+          <arguments>
+           <unitaryTerm>
+            <keyword spelling="("/>
+            <termExpression>
+             <arguments>
+              <unitaryTerm>
+               <variableIdentifier spelling="y"/>
+              </unitaryTerm>
+             </arguments>
+             <functorSymbol spelling="__O32_-"/>
+             <arguments>
+              <unitaryTerm>
+               <variableIdentifier spelling="z"/>
+              </unitaryTerm>
+             </arguments>
+            </termExpression>
+            <keyword spelling=")"/>
+           </unitaryTerm>
+          </arguments>
+         </termExpression>
+        </termExpressionList>
+        <predicateSymbol>
+         <keyword spelling="="/>
+        </predicateSymbol>
+        <termExpressionList>
+         <termExpression>
+          <arguments>
+           <unitaryTerm>
+            <variableIdentifier spelling="x"/>
+           </unitaryTerm>
+          </arguments>
+          <functorSymbol spelling="__O_*"/>
+          <arguments>
+           <unitaryTerm>
+            <variableIdentifier spelling="y"/>
+           </unitaryTerm>
+          </arguments>
+          <functorSymbol spelling="__O32_-"/>
+          <arguments>
+           <unitaryTerm>
+            <variableIdentifier spelling="x"/>
+           </unitaryTerm>
+          </arguments>
+          <functorSymbol spelling="__O_*"/>
+          <arguments>
+           <unitaryTerm>
+            <variableIdentifier spelling="z"/>
+           </unitaryTerm>
+          </arguments>
+         </termExpression>
+        </termExpressionList>
+       </atomicFormulaExpression>
+      </formulaExpression>
+     </quantifiedFormulaExpression>
+    </formulaExpression>
+   </sentence>
+  </proposition>
+  <justification>
+   <simpleJustification>
+    <straightforwardJustification/>
+   </simpleJustification>
+  </justification>
+  <keyword spelling=";"/>
+ </compactStatement>
+</theorem>
