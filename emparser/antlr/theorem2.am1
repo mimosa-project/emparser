@@ -1,5 +1,0 @@
-theorem
-for T being __V_Noetherian __M_sup-Semilattice
-for I being __M_Ideal of T
-holds __R_ex_sup_of I , T & __O200_sup
-I __R_in I ;
