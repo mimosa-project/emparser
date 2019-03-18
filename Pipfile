@@ -7,6 +7,7 @@ verify_ssl = true
 pybind11 = "*"
 wheel = "*"
 pytest = "*"
+emparser = {editable = true,path = "."}
 
 [packages]
 lxml = "*"
