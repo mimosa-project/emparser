@@ -4,9 +4,9 @@ url = "https://pypi.org/simple"
 verify_ssl = true
 
 [dev-packages]
-pybind11 = "*"
 wheel = "*"
 pytest = "*"
+cmake = "*"
 emparser = {editable = true,path = "."}
 
 [packages]

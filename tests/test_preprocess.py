@@ -28,15 +28,13 @@ class TestLexer:
         # 1. load symbol in specified Mizar files
         self.lexer.load_symbol_dict(common.MML_VCT, ["AFF_1", "AFF_2", "AFVECT0"])
         # HIDDEN -> 4, AFF_1 -> 1, AFF_2 -> 14, AFVECT0 -> 10
-        # Special Symbol -> 26
-        assert len(self.lexer.symbol_dict) == 4 + 1 + 14 + 10 + 26
+        assert len(self.lexer.symbol_dict) == 4 + 1 + 14 + 10
 
         # 2. load all symbols in MML
         # pprint.pprint(self.lexer.symbol_dict)
         self.lexer.load_symbol_dict(common.MML_VCT)
-        assert len(self.lexer.symbol_dict) == 9240
+        assert len(self.lexer.symbol_dict) == 9214
         assert self.lexer.symbol_dict['zeros'] == {'filename': 'PRVECT_1', 'type': 'O'}
-        assert self.lexer.symbol_dict[','] == {'type': 'special'}
 
     def test_bulid_len2symbol(self):
         # pprint.pprint(self.lexer.len2symbol)

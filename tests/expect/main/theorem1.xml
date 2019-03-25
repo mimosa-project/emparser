@@ -1,89 +1,89 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <theorem>
- <keyword spelling="theorem"/>
+ <keyword spelling="theorem" />
  <compactStatement>
   <proposition>
    <sentence>
     <formulaExpression>
      <formulaExpression>
-      <keyword spelling="("/>
+      <keyword spelling="(" />
       <formulaExpression>
        <formulaExpression>
-        <keyword spelling="("/>
+        <keyword spelling="(" />
         <formulaExpression>
          <quantifiedFormulaExpression>
-          <keyword spelling="for"/>
+          <keyword spelling="for" />
           <qualifiedVariables>
            <implicitlyQualifiedVariables>
             <variables>
-             <variableIdentifier spelling="r"/>
-             <keyword spelling=","/>
-             <variableIdentifier spelling="s"/>
-             <keyword spelling=","/>
-             <variableIdentifier spelling="t"/>
+             <variableIdentifier spelling="r" />
+             <keyword spelling="," />
+             <variableIdentifier spelling="s" />
+             <keyword spelling="," />
+             <variableIdentifier spelling="t" />
             </variables>
            </implicitlyQualifiedVariables>
           </qualifiedVariables>
-          <keyword spelling="holds"/>
+          <keyword spelling="holds" />
           <formulaExpression>
            <atomicFormulaExpression>
             <termExpressionList>
              <termExpression>
               <arguments>
                <unitaryTerm>
-                <keyword spelling="("/>
+                <keyword spelling="(" />
                 <termExpression>
                  <arguments>
                   <unitaryTerm>
-                   <variableIdentifier spelling="r"/>
+                   <variableIdentifier spelling="r" />
                   </unitaryTerm>
                  </arguments>
-                 <functorSymbol spelling="__O_*"/>
+                 <functorSymbol spelling="__O_*" />
                  <arguments>
                   <unitaryTerm>
-                   <variableIdentifier spelling="s"/>
+                   <variableIdentifier spelling="s" />
                   </unitaryTerm>
                  </arguments>
                 </termExpression>
-                <keyword spelling=")"/>
+                <keyword spelling=")" />
                </unitaryTerm>
               </arguments>
-              <functorSymbol spelling="__O_*"/>
+              <functorSymbol spelling="__O_*" />
               <arguments>
                <unitaryTerm>
-                <variableIdentifier spelling="t"/>
+                <variableIdentifier spelling="t" />
                </unitaryTerm>
               </arguments>
              </termExpression>
             </termExpressionList>
             <predicateSymbol>
-             <keyword spelling="="/>
+             <keyword spelling="=" />
             </predicateSymbol>
             <termExpressionList>
              <termExpression>
               <arguments>
                <unitaryTerm>
-                <variableIdentifier spelling="r"/>
+                <variableIdentifier spelling="r" />
                </unitaryTerm>
               </arguments>
-              <functorSymbol spelling="__O_*"/>
+              <functorSymbol spelling="__O_*" />
               <arguments>
                <unitaryTerm>
-                <keyword spelling="("/>
+                <keyword spelling="(" />
                 <termExpression>
                  <arguments>
                   <unitaryTerm>
-                   <variableIdentifier spelling="s"/>
+                   <variableIdentifier spelling="s" />
                   </unitaryTerm>
                  </arguments>
-                 <functorSymbol spelling="__O_*"/>
+                 <functorSymbol spelling="__O_*" />
                  <arguments>
                   <unitaryTerm>
-                   <variableIdentifier spelling="t"/>
+                   <variableIdentifier spelling="t" />
                   </unitaryTerm>
                  </arguments>
                 </termExpression>
-                <keyword spelling=")"/>
+                <keyword spelling=")" />
                </unitaryTerm>
               </arguments>
              </termExpression>
@@ -92,31 +92,31 @@
           </formulaExpression>
          </quantifiedFormulaExpression>
         </formulaExpression>
-        <keyword spelling=")"/>
+        <keyword spelling=")" />
        </formulaExpression>
-       <keyword spelling="&amp;"/>
+       <keyword spelling="&amp;" />
        <formulaExpression>
         <quantifiedFormulaExpression>
-         <keyword spelling="ex"/>
+         <keyword spelling="ex" />
          <qualifiedVariables>
           <implicitlyQualifiedVariables>
            <variables>
-            <variableIdentifier spelling="t"/>
+            <variableIdentifier spelling="t" />
            </variables>
           </implicitlyQualifiedVariables>
          </qualifiedVariables>
-         <keyword spelling="st"/>
+         <keyword spelling="st" />
          <formulaExpression>
           <quantifiedFormulaExpression>
-           <keyword spelling="for"/>
+           <keyword spelling="for" />
            <qualifiedVariables>
             <implicitlyQualifiedVariables>
              <variables>
-              <variableIdentifier spelling="s1"/>
+              <variableIdentifier spelling="s1" />
              </variables>
             </implicitlyQualifiedVariables>
            </qualifiedVariables>
-           <keyword spelling="holds"/>
+           <keyword spelling="holds" />
            <formulaExpression>
             <formulaExpression>
              <formulaExpression>
@@ -125,72 +125,72 @@
                 <termExpression>
                  <arguments>
                   <unitaryTerm>
-                   <variableIdentifier spelling="s1"/>
+                   <variableIdentifier spelling="s1" />
                   </unitaryTerm>
                  </arguments>
-                 <functorSymbol spelling="__O_*"/>
+                 <functorSymbol spelling="__O_*" />
                  <arguments>
                   <unitaryTerm>
-                   <variableIdentifier spelling="t"/>
+                   <variableIdentifier spelling="t" />
                   </unitaryTerm>
                  </arguments>
                 </termExpression>
                </termExpressionList>
                <predicateSymbol>
-                <keyword spelling="="/>
+                <keyword spelling="=" />
                </predicateSymbol>
                <termExpressionList>
                 <termExpression>
                  <unitaryTerm>
-                  <variableIdentifier spelling="s1"/>
+                  <variableIdentifier spelling="s1" />
                  </unitaryTerm>
                 </termExpression>
                </termExpressionList>
               </atomicFormulaExpression>
              </formulaExpression>
-             <keyword spelling="&amp;"/>
+             <keyword spelling="&amp;" />
              <formulaExpression>
               <atomicFormulaExpression>
                <termExpressionList>
                 <termExpression>
                  <arguments>
                   <unitaryTerm>
-                   <variableIdentifier spelling="t"/>
+                   <variableIdentifier spelling="t" />
                   </unitaryTerm>
                  </arguments>
-                 <functorSymbol spelling="__O_*"/>
+                 <functorSymbol spelling="__O_*" />
                  <arguments>
                   <unitaryTerm>
-                   <variableIdentifier spelling="s1"/>
+                   <variableIdentifier spelling="s1" />
                   </unitaryTerm>
                  </arguments>
                 </termExpression>
                </termExpressionList>
                <predicateSymbol>
-                <keyword spelling="="/>
+                <keyword spelling="=" />
                </predicateSymbol>
                <termExpressionList>
                 <termExpression>
                  <unitaryTerm>
-                  <variableIdentifier spelling="s1"/>
+                  <variableIdentifier spelling="s1" />
                  </unitaryTerm>
                 </termExpression>
                </termExpressionList>
               </atomicFormulaExpression>
              </formulaExpression>
             </formulaExpression>
-            <keyword spelling="&amp;"/>
+            <keyword spelling="&amp;" />
             <formulaExpression>
              <quantifiedFormulaExpression>
-              <keyword spelling="ex"/>
+              <keyword spelling="ex" />
               <qualifiedVariables>
                <implicitlyQualifiedVariables>
                 <variables>
-                 <variableIdentifier spelling="s2"/>
+                 <variableIdentifier spelling="s2" />
                 </variables>
                </implicitlyQualifiedVariables>
               </qualifiedVariables>
-              <keyword spelling="st"/>
+              <keyword spelling="st" />
               <formulaExpression>
                <formulaExpression>
                 <atomicFormulaExpression>
@@ -198,54 +198,54 @@
                   <termExpression>
                    <arguments>
                     <unitaryTerm>
-                     <variableIdentifier spelling="s1"/>
+                     <variableIdentifier spelling="s1" />
                     </unitaryTerm>
                    </arguments>
-                   <functorSymbol spelling="__O_*"/>
+                   <functorSymbol spelling="__O_*" />
                    <arguments>
                     <unitaryTerm>
-                     <variableIdentifier spelling="s2"/>
+                     <variableIdentifier spelling="s2" />
                     </unitaryTerm>
                    </arguments>
                   </termExpression>
                  </termExpressionList>
                  <predicateSymbol>
-                  <keyword spelling="="/>
+                  <keyword spelling="=" />
                  </predicateSymbol>
                  <termExpressionList>
                   <termExpression>
                    <unitaryTerm>
-                    <variableIdentifier spelling="t"/>
+                    <variableIdentifier spelling="t" />
                    </unitaryTerm>
                   </termExpression>
                  </termExpressionList>
                 </atomicFormulaExpression>
                </formulaExpression>
-               <keyword spelling="&amp;"/>
+               <keyword spelling="&amp;" />
                <formulaExpression>
                 <atomicFormulaExpression>
                  <termExpressionList>
                   <termExpression>
                    <arguments>
                     <unitaryTerm>
-                     <variableIdentifier spelling="s2"/>
+                     <variableIdentifier spelling="s2" />
                     </unitaryTerm>
                    </arguments>
-                   <functorSymbol spelling="__O_*"/>
+                   <functorSymbol spelling="__O_*" />
                    <arguments>
                     <unitaryTerm>
-                     <variableIdentifier spelling="s1"/>
+                     <variableIdentifier spelling="s1" />
                     </unitaryTerm>
                    </arguments>
                   </termExpression>
                  </termExpressionList>
                  <predicateSymbol>
-                  <keyword spelling="="/>
+                  <keyword spelling="=" />
                  </predicateSymbol>
                  <termExpressionList>
                   <termExpression>
                    <unitaryTerm>
-                    <variableIdentifier spelling="t"/>
+                    <variableIdentifier spelling="t" />
                    </unitaryTerm>
                   </termExpression>
                  </termExpressionList>
@@ -260,22 +260,22 @@
         </quantifiedFormulaExpression>
        </formulaExpression>
       </formulaExpression>
-      <keyword spelling=")"/>
+      <keyword spelling=")" />
      </formulaExpression>
-     <keyword spelling="implies"/>
+     <keyword spelling="implies" />
      <formulaExpression>
       <atomicFormulaExpression>
        <termExpression>
         <unitaryTerm>
-         <variableIdentifier spelling="S"/>
+         <variableIdentifier spelling="S" />
         </unitaryTerm>
        </termExpression>
-       <keyword spelling="is"/>
+       <keyword spelling="is" />
        <typeExpression>
-        <adjectiveCluster/>
+        <adjectiveCluster />
         <radixTypeExpression>
          <radixType>
-          <modeSymbol spelling="__M_Group"/>
+          <modeSymbol spelling="__M_Group" />
          </radixType>
         </radixTypeExpression>
        </typeExpression>
@@ -286,9 +286,9 @@
   </proposition>
   <justification>
    <simpleJustification>
-    <straightforwardJustification/>
+    <straightforwardJustification />
    </simpleJustification>
   </justification>
-  <keyword spelling=";"/>
+  <keyword spelling=";" />
  </compactStatement>
 </theorem>

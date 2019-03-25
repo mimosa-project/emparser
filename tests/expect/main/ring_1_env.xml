@@ -1,290 +1,290 @@
-<?xml version="1.0" ?>
+<?xml version="1.0"?>
 <environmentDeclaration>
- <keyword col="1" line="15" spelling="environ"/>
+ <keyword spelling="environ" line="15" col="1" />
  <directive>
   <vocabularyDirective>
-   <keyword col="2" line="17" spelling="vocabularies"/>
-   <vocabularyName col="15" line="17" spelling="RLVECT_1"/>
-   <keyword col="23" line="17" spelling=","/>
-   <vocabularyName col="25" line="17" spelling="ALGSTR_0"/>
-   <keyword col="33" line="17" spelling=","/>
-   <vocabularyName col="35" line="17" spelling="XBOOLE_0"/>
-   <keyword col="43" line="17" spelling=","/>
-   <vocabularyName col="45" line="17" spelling="SUBSET_1"/>
-   <keyword col="53" line="17" spelling=","/>
-   <vocabularyName col="55" line="17" spelling="ARYTM_1"/>
-   <keyword col="62" line="17" spelling=","/>
-   <vocabularyName col="64" line="17" spelling="ARYTM_3"/>
-   <keyword col="71" line="17" spelling=","/>
-   <vocabularyName col="7" line="18" spelling="SUPINF_2"/>
-   <keyword col="15" line="18" spelling=","/>
-   <vocabularyName col="17" line="18" spelling="RELAT_1"/>
-   <keyword col="24" line="18" spelling=","/>
-   <vocabularyName col="26" line="18" spelling="INT_2"/>
-   <keyword col="31" line="18" spelling=","/>
-   <vocabularyName col="33" line="18" spelling="CARD_FIL"/>
-   <keyword col="41" line="18" spelling=","/>
-   <vocabularyName col="43" line="18" spelling="TARSKI"/>
-   <keyword col="49" line="18" spelling=","/>
-   <vocabularyName col="51" line="18" spelling="GROUP_4"/>
-   <keyword col="58" line="18" spelling=","/>
-   <vocabularyName col="60" line="18" spelling="IDEAL_1"/>
-   <keyword col="67" line="18" spelling=","/>
-   <vocabularyName col="69" line="18" spelling="VECTSP_2"/>
-   <keyword col="77" line="18" spelling=","/>
-   <vocabularyName col="7" line="19" spelling="GROUP_1"/>
-   <keyword col="14" line="19" spelling=","/>
-   <vocabularyName col="16" line="19" spelling="FUNCSDOM"/>
-   <keyword col="24" line="19" spelling=","/>
-   <vocabularyName col="26" line="19" spelling="EQREL_1"/>
-   <keyword col="33" line="19" spelling=","/>
-   <vocabularyName col="35" line="19" spelling="STRUCT_0"/>
-   <keyword col="43" line="19" spelling=","/>
-   <vocabularyName col="45" line="19" spelling="WAYBEL20"/>
-   <keyword col="53" line="19" spelling=","/>
-   <vocabularyName col="55" line="19" spelling="PARTFUN1"/>
-   <keyword col="63" line="19" spelling=","/>
-   <vocabularyName col="65" line="19" spelling="RELAT_2"/>
-   <keyword col="72" line="19" spelling=","/>
-   <vocabularyName col="7" line="20" spelling="SETWISEO"/>
-   <keyword col="15" line="20" spelling=","/>
-   <vocabularyName col="17" line="20" spelling="FUNCT_1"/>
-   <keyword col="24" line="20" spelling=","/>
-   <vocabularyName col="26" line="20" spelling="MESFUNC1"/>
-   <keyword col="34" line="20" spelling=","/>
-   <vocabularyName col="36" line="20" spelling="BINOP_1"/>
-   <keyword col="43" line="20" spelling=","/>
-   <vocabularyName col="45" line="20" spelling="VECTSP_1"/>
-   <keyword col="53" line="20" spelling=","/>
-   <vocabularyName col="55" line="20" spelling="LATTICES"/>
-   <keyword col="63" line="20" spelling=","/>
-   <vocabularyName col="65" line="20" spelling="WELLORD2"/>
-   <keyword col="73" line="20" spelling=","/>
-   <vocabularyName col="7" line="21" spelling="ORDERS_1"/>
-   <keyword col="15" line="21" spelling=","/>
-   <vocabularyName col="17" line="21" spelling="WELLORD1"/>
-   <keyword col="25" line="21" spelling=","/>
-   <vocabularyName col="27" line="21" spelling="RING_1"/>
-   <keyword col="33" line="21" spelling=";"/>
+   <keyword spelling="vocabularies" line="17" col="2" />
+   <vocabularyName spelling="RLVECT_1" line="17" col="15" />
+   <keyword spelling="," line="17" col="23" />
+   <vocabularyName spelling="ALGSTR_0" line="17" col="25" />
+   <keyword spelling="," line="17" col="33" />
+   <vocabularyName spelling="XBOOLE_0" line="17" col="35" />
+   <keyword spelling="," line="17" col="43" />
+   <vocabularyName spelling="SUBSET_1" line="17" col="45" />
+   <keyword spelling="," line="17" col="53" />
+   <vocabularyName spelling="ARYTM_1" line="17" col="55" />
+   <keyword spelling="," line="17" col="62" />
+   <vocabularyName spelling="ARYTM_3" line="17" col="64" />
+   <keyword spelling="," line="17" col="71" />
+   <vocabularyName spelling="SUPINF_2" line="18" col="7" />
+   <keyword spelling="," line="18" col="15" />
+   <vocabularyName spelling="RELAT_1" line="18" col="17" />
+   <keyword spelling="," line="18" col="24" />
+   <vocabularyName spelling="INT_2" line="18" col="26" />
+   <keyword spelling="," line="18" col="31" />
+   <vocabularyName spelling="CARD_FIL" line="18" col="33" />
+   <keyword spelling="," line="18" col="41" />
+   <vocabularyName spelling="TARSKI" line="18" col="43" />
+   <keyword spelling="," line="18" col="49" />
+   <vocabularyName spelling="GROUP_4" line="18" col="51" />
+   <keyword spelling="," line="18" col="58" />
+   <vocabularyName spelling="IDEAL_1" line="18" col="60" />
+   <keyword spelling="," line="18" col="67" />
+   <vocabularyName spelling="VECTSP_2" line="18" col="69" />
+   <keyword spelling="," line="18" col="77" />
+   <vocabularyName spelling="GROUP_1" line="19" col="7" />
+   <keyword spelling="," line="19" col="14" />
+   <vocabularyName spelling="FUNCSDOM" line="19" col="16" />
+   <keyword spelling="," line="19" col="24" />
+   <vocabularyName spelling="EQREL_1" line="19" col="26" />
+   <keyword spelling="," line="19" col="33" />
+   <vocabularyName spelling="STRUCT_0" line="19" col="35" />
+   <keyword spelling="," line="19" col="43" />
+   <vocabularyName spelling="WAYBEL20" line="19" col="45" />
+   <keyword spelling="," line="19" col="53" />
+   <vocabularyName spelling="PARTFUN1" line="19" col="55" />
+   <keyword spelling="," line="19" col="63" />
+   <vocabularyName spelling="RELAT_2" line="19" col="65" />
+   <keyword spelling="," line="19" col="72" />
+   <vocabularyName spelling="SETWISEO" line="20" col="7" />
+   <keyword spelling="," line="20" col="15" />
+   <vocabularyName spelling="FUNCT_1" line="20" col="17" />
+   <keyword spelling="," line="20" col="24" />
+   <vocabularyName spelling="MESFUNC1" line="20" col="26" />
+   <keyword spelling="," line="20" col="34" />
+   <vocabularyName spelling="BINOP_1" line="20" col="36" />
+   <keyword spelling="," line="20" col="43" />
+   <vocabularyName spelling="VECTSP_1" line="20" col="45" />
+   <keyword spelling="," line="20" col="53" />
+   <vocabularyName spelling="LATTICES" line="20" col="55" />
+   <keyword spelling="," line="20" col="63" />
+   <vocabularyName spelling="WELLORD2" line="20" col="65" />
+   <keyword spelling="," line="20" col="73" />
+   <vocabularyName spelling="ORDERS_1" line="21" col="7" />
+   <keyword spelling="," line="21" col="15" />
+   <vocabularyName spelling="WELLORD1" line="21" col="17" />
+   <keyword spelling="," line="21" col="25" />
+   <vocabularyName spelling="RING_1" line="21" col="27" />
+   <keyword spelling=";" line="21" col="33" />
   </vocabularyDirective>
  </directive>
  <directive>
   <libraryDirective>
-   <keyword col="2" line="22" spelling="notations"/>
-   <articleName col="12" line="22" spelling="TARSKI"/>
-   <keyword col="18" line="22" spelling=","/>
-   <articleName col="20" line="22" spelling="XBOOLE_0"/>
-   <keyword col="28" line="22" spelling=","/>
-   <articleName col="30" line="22" spelling="SUBSET_1"/>
-   <keyword col="38" line="22" spelling=","/>
-   <articleName col="40" line="22" spelling="SETWISEO"/>
-   <keyword col="48" line="22" spelling=","/>
-   <articleName col="50" line="22" spelling="RELAT_1"/>
-   <keyword col="57" line="22" spelling=","/>
-   <articleName col="59" line="22" spelling="RELSET_1"/>
-   <keyword col="67" line="22" spelling=","/>
-   <articleName col="69" line="22" spelling="FUNCT_1"/>
-   <keyword col="76" line="22" spelling=","/>
-   <articleName col="7" line="23" spelling="PARTFUN1"/>
-   <keyword col="15" line="23" spelling=","/>
-   <articleName col="17" line="23" spelling="ALG_1"/>
-   <keyword col="22" line="23" spelling=","/>
-   <articleName col="24" line="23" spelling="RELAT_2"/>
-   <keyword col="31" line="23" spelling=","/>
-   <articleName col="33" line="23" spelling="EQREL_1"/>
-   <keyword col="40" line="23" spelling=","/>
-   <articleName col="42" line="23" spelling="WELLORD1"/>
-   <keyword col="50" line="23" spelling=","/>
-   <articleName col="52" line="23" spelling="WELLORD2"/>
-   <keyword col="60" line="23" spelling=","/>
-   <articleName col="62" line="23" spelling="ORDERS_1"/>
-   <keyword col="70" line="23" spelling=","/>
-   <articleName col="72" line="23" spelling="BINOP_1"/>
-   <keyword col="79" line="23" spelling=","/>
-   <articleName col="7" line="24" spelling="DOMAIN_1"/>
-   <keyword col="15" line="24" spelling=","/>
-   <articleName col="17" line="24" spelling="STRUCT_0"/>
-   <keyword col="25" line="24" spelling=","/>
-   <articleName col="27" line="24" spelling="ALGSTR_0"/>
-   <keyword col="35" line="24" spelling=","/>
-   <articleName col="37" line="24" spelling="GROUP_1"/>
-   <keyword col="44" line="24" spelling=","/>
-   <articleName col="46" line="24" spelling="RLVECT_1"/>
-   <keyword col="54" line="24" spelling=","/>
-   <articleName col="56" line="24" spelling="VECTSP_1"/>
-   <keyword col="64" line="24" spelling=","/>
-   <articleName col="66" line="24" spelling="VECTSP_2"/>
-   <keyword col="74" line="24" spelling=","/>
-   <articleName col="7" line="25" spelling="IDEAL_1"/>
-   <keyword col="14" line="25" spelling=";"/>
+   <keyword spelling="notations" line="22" col="2" />
+   <articleName spelling="TARSKI" line="22" col="12" />
+   <keyword spelling="," line="22" col="18" />
+   <articleName spelling="XBOOLE_0" line="22" col="20" />
+   <keyword spelling="," line="22" col="28" />
+   <articleName spelling="SUBSET_1" line="22" col="30" />
+   <keyword spelling="," line="22" col="38" />
+   <articleName spelling="SETWISEO" line="22" col="40" />
+   <keyword spelling="," line="22" col="48" />
+   <articleName spelling="RELAT_1" line="22" col="50" />
+   <keyword spelling="," line="22" col="57" />
+   <articleName spelling="RELSET_1" line="22" col="59" />
+   <keyword spelling="," line="22" col="67" />
+   <articleName spelling="FUNCT_1" line="22" col="69" />
+   <keyword spelling="," line="22" col="76" />
+   <articleName spelling="PARTFUN1" line="23" col="7" />
+   <keyword spelling="," line="23" col="15" />
+   <articleName spelling="ALG_1" line="23" col="17" />
+   <keyword spelling="," line="23" col="22" />
+   <articleName spelling="RELAT_2" line="23" col="24" />
+   <keyword spelling="," line="23" col="31" />
+   <articleName spelling="EQREL_1" line="23" col="33" />
+   <keyword spelling="," line="23" col="40" />
+   <articleName spelling="WELLORD1" line="23" col="42" />
+   <keyword spelling="," line="23" col="50" />
+   <articleName spelling="WELLORD2" line="23" col="52" />
+   <keyword spelling="," line="23" col="60" />
+   <articleName spelling="ORDERS_1" line="23" col="62" />
+   <keyword spelling="," line="23" col="70" />
+   <articleName spelling="BINOP_1" line="23" col="72" />
+   <keyword spelling="," line="23" col="79" />
+   <articleName spelling="DOMAIN_1" line="24" col="7" />
+   <keyword spelling="," line="24" col="15" />
+   <articleName spelling="STRUCT_0" line="24" col="17" />
+   <keyword spelling="," line="24" col="25" />
+   <articleName spelling="ALGSTR_0" line="24" col="27" />
+   <keyword spelling="," line="24" col="35" />
+   <articleName spelling="GROUP_1" line="24" col="37" />
+   <keyword spelling="," line="24" col="44" />
+   <articleName spelling="RLVECT_1" line="24" col="46" />
+   <keyword spelling="," line="24" col="54" />
+   <articleName spelling="VECTSP_1" line="24" col="56" />
+   <keyword spelling="," line="24" col="64" />
+   <articleName spelling="VECTSP_2" line="24" col="66" />
+   <keyword spelling="," line="24" col="74" />
+   <articleName spelling="IDEAL_1" line="25" col="7" />
+   <keyword spelling=";" line="25" col="14" />
   </libraryDirective>
  </directive>
  <directive>
   <libraryDirective>
-   <keyword col="2" line="26" spelling="constructors"/>
-   <articleName col="15" line="26" spelling="WELLORD1"/>
-   <keyword col="23" line="26" spelling=","/>
-   <articleName col="25" line="26" spelling="WELLORD2"/>
-   <keyword col="33" line="26" spelling=","/>
-   <articleName col="35" line="26" spelling="BINOP_1"/>
-   <keyword col="42" line="26" spelling=","/>
-   <articleName col="44" line="26" spelling="SETWISEO"/>
-   <keyword col="52" line="26" spelling=","/>
-   <articleName col="54" line="26" spelling="ORDERS_1"/>
-   <keyword col="62" line="26" spelling=","/>
-   <articleName col="64" line="26" spelling="EQREL_1"/>
-   <keyword col="71" line="26" spelling=","/>
-   <articleName col="73" line="26" spelling="GCD_1"/>
-   <keyword col="78" line="26" spelling=","/>
-   <articleName col="7" line="27" spelling="IDEAL_1"/>
-   <keyword col="14" line="27" spelling=","/>
-   <articleName col="16" line="27" spelling="DOMAIN_1"/>
-   <keyword col="24" line="27" spelling=","/>
-   <articleName col="26" line="27" spelling="RELSET_1"/>
-   <keyword col="34" line="27" spelling=";"/>
+   <keyword spelling="constructors" line="26" col="2" />
+   <articleName spelling="WELLORD1" line="26" col="15" />
+   <keyword spelling="," line="26" col="23" />
+   <articleName spelling="WELLORD2" line="26" col="25" />
+   <keyword spelling="," line="26" col="33" />
+   <articleName spelling="BINOP_1" line="26" col="35" />
+   <keyword spelling="," line="26" col="42" />
+   <articleName spelling="SETWISEO" line="26" col="44" />
+   <keyword spelling="," line="26" col="52" />
+   <articleName spelling="ORDERS_1" line="26" col="54" />
+   <keyword spelling="," line="26" col="62" />
+   <articleName spelling="EQREL_1" line="26" col="64" />
+   <keyword spelling="," line="26" col="71" />
+   <articleName spelling="GCD_1" line="26" col="73" />
+   <keyword spelling="," line="26" col="78" />
+   <articleName spelling="IDEAL_1" line="27" col="7" />
+   <keyword spelling="," line="27" col="14" />
+   <articleName spelling="DOMAIN_1" line="27" col="16" />
+   <keyword spelling="," line="27" col="24" />
+   <articleName spelling="RELSET_1" line="27" col="26" />
+   <keyword spelling=";" line="27" col="34" />
   </libraryDirective>
  </directive>
  <directive>
   <libraryDirective>
-   <keyword col="2" line="28" spelling="registrations"/>
-   <articleName col="16" line="28" spelling="XBOOLE_0"/>
-   <keyword col="24" line="28" spelling=","/>
-   <articleName col="26" line="28" spelling="SUBSET_1"/>
-   <keyword col="34" line="28" spelling=","/>
-   <articleName col="36" line="28" spelling="RELSET_1"/>
-   <keyword col="44" line="28" spelling=","/>
-   <articleName col="46" line="28" spelling="FINSUB_1"/>
-   <keyword col="54" line="28" spelling=","/>
-   <articleName col="56" line="28" spelling="EQREL_1"/>
-   <keyword col="63" line="28" spelling=","/>
-   <articleName col="65" line="28" spelling="STRUCT_0"/>
-   <keyword col="73" line="28" spelling=","/>
-   <articleName col="7" line="29" spelling="VECTSP_1"/>
-   <keyword col="15" line="29" spelling=","/>
-   <articleName col="17" line="29" spelling="ALGSTR_1"/>
-   <keyword col="25" line="29" spelling=","/>
-   <articleName col="27" line="29" spelling="QUOFIELD"/>
-   <keyword col="35" line="29" spelling=","/>
-   <articleName col="37" line="29" spelling="IDEAL_1"/>
-   <keyword col="44" line="29" spelling=";"/>
+   <keyword spelling="registrations" line="28" col="2" />
+   <articleName spelling="XBOOLE_0" line="28" col="16" />
+   <keyword spelling="," line="28" col="24" />
+   <articleName spelling="SUBSET_1" line="28" col="26" />
+   <keyword spelling="," line="28" col="34" />
+   <articleName spelling="RELSET_1" line="28" col="36" />
+   <keyword spelling="," line="28" col="44" />
+   <articleName spelling="FINSUB_1" line="28" col="46" />
+   <keyword spelling="," line="28" col="54" />
+   <articleName spelling="EQREL_1" line="28" col="56" />
+   <keyword spelling="," line="28" col="63" />
+   <articleName spelling="STRUCT_0" line="28" col="65" />
+   <keyword spelling="," line="28" col="73" />
+   <articleName spelling="VECTSP_1" line="29" col="7" />
+   <keyword spelling="," line="29" col="15" />
+   <articleName spelling="ALGSTR_1" line="29" col="17" />
+   <keyword spelling="," line="29" col="25" />
+   <articleName spelling="QUOFIELD" line="29" col="27" />
+   <keyword spelling="," line="29" col="35" />
+   <articleName spelling="IDEAL_1" line="29" col="37" />
+   <keyword spelling=";" line="29" col="44" />
   </libraryDirective>
  </directive>
  <directive>
   <requirementDirective>
-   <keyword col="2" line="30" spelling="requirements"/>
-   <requirement col="15" line="30" spelling="BOOLE"/>
-   <keyword col="20" line="30" spelling=","/>
-   <requirement col="22" line="30" spelling="SUBSET"/>
-   <keyword col="28" line="30" spelling=";"/>
+   <keyword spelling="requirements" line="30" col="2" />
+   <requirement spelling="BOOLE" line="30" col="15" />
+   <keyword spelling="," line="30" col="20" />
+   <requirement spelling="SUBSET" line="30" col="22" />
+   <keyword spelling=";" line="30" col="28" />
   </requirementDirective>
  </directive>
  <directive>
   <libraryDirective>
-   <keyword col="2" line="31" spelling="definitions"/>
-   <articleName col="14" line="31" spelling="TARSKI"/>
-   <keyword col="20" line="31" spelling=","/>
-   <articleName col="22" line="31" spelling="XBOOLE_0"/>
-   <keyword col="30" line="31" spelling=","/>
-   <articleName col="32" line="31" spelling="RELAT_1"/>
-   <keyword col="39" line="31" spelling=","/>
-   <articleName col="41" line="31" spelling="RLVECT_1"/>
-   <keyword col="49" line="31" spelling=","/>
-   <articleName col="51" line="31" spelling="GROUP_1"/>
-   <keyword col="58" line="31" spelling=","/>
-   <articleName col="60" line="31" spelling="VECTSP_1"/>
-   <keyword col="68" line="31" spelling=","/>
-   <articleName col="70" line="31" spelling="VECTSP_2"/>
-   <keyword col="78" line="31" spelling=","/>
-   <articleName col="7" line="32" spelling="IDEAL_1"/>
-   <keyword col="14" line="32" spelling=","/>
-   <articleName col="16" line="32" spelling="ORDERS_1"/>
-   <keyword col="24" line="32" spelling=","/>
-   <articleName col="26" line="32" spelling="STRUCT_0"/>
-   <keyword col="34" line="32" spelling=","/>
-   <articleName col="36" line="32" spelling="ALGSTR_0"/>
-   <keyword col="44" line="32" spelling=";"/>
+   <keyword spelling="definitions" line="31" col="2" />
+   <articleName spelling="TARSKI" line="31" col="14" />
+   <keyword spelling="," line="31" col="20" />
+   <articleName spelling="XBOOLE_0" line="31" col="22" />
+   <keyword spelling="," line="31" col="30" />
+   <articleName spelling="RELAT_1" line="31" col="32" />
+   <keyword spelling="," line="31" col="39" />
+   <articleName spelling="RLVECT_1" line="31" col="41" />
+   <keyword spelling="," line="31" col="49" />
+   <articleName spelling="GROUP_1" line="31" col="51" />
+   <keyword spelling="," line="31" col="58" />
+   <articleName spelling="VECTSP_1" line="31" col="60" />
+   <keyword spelling="," line="31" col="68" />
+   <articleName spelling="VECTSP_2" line="31" col="70" />
+   <keyword spelling="," line="31" col="78" />
+   <articleName spelling="IDEAL_1" line="32" col="7" />
+   <keyword spelling="," line="32" col="14" />
+   <articleName spelling="ORDERS_1" line="32" col="16" />
+   <keyword spelling="," line="32" col="24" />
+   <articleName spelling="STRUCT_0" line="32" col="26" />
+   <keyword spelling="," line="32" col="34" />
+   <articleName spelling="ALGSTR_0" line="32" col="36" />
+   <keyword spelling=";" line="32" col="44" />
   </libraryDirective>
  </directive>
  <directive>
   <libraryDirective>
-   <keyword col="2" line="33" spelling="equalities"/>
-   <articleName col="13" line="33" spelling="WELLORD1"/>
-   <keyword col="21" line="33" spelling=","/>
-   <articleName col="23" line="33" spelling="STRUCT_0"/>
-   <keyword col="31" line="33" spelling=","/>
-   <articleName col="33" line="33" spelling="ALGSTR_0"/>
-   <keyword col="41" line="33" spelling=";"/>
+   <keyword spelling="equalities" line="33" col="2" />
+   <articleName spelling="WELLORD1" line="33" col="13" />
+   <keyword spelling="," line="33" col="21" />
+   <articleName spelling="STRUCT_0" line="33" col="23" />
+   <keyword spelling="," line="33" col="31" />
+   <articleName spelling="ALGSTR_0" line="33" col="33" />
+   <keyword spelling=";" line="33" col="41" />
   </libraryDirective>
  </directive>
  <directive>
   <libraryDirective>
-   <keyword col="2" line="34" spelling="expansions"/>
-   <articleName col="13" line="34" spelling="TARSKI"/>
-   <keyword col="19" line="34" spelling=","/>
-   <articleName col="21" line="34" spelling="XBOOLE_0"/>
-   <keyword col="29" line="34" spelling=","/>
-   <articleName col="31" line="34" spelling="GROUP_1"/>
-   <keyword col="38" line="34" spelling=","/>
-   <articleName col="40" line="34" spelling="VECTSP_1"/>
-   <keyword col="48" line="34" spelling=","/>
-   <articleName col="50" line="34" spelling="VECTSP_2"/>
-   <keyword col="58" line="34" spelling=","/>
-   <articleName col="60" line="34" spelling="IDEAL_1"/>
-   <keyword col="67" line="34" spelling=","/>
-   <articleName col="69" line="34" spelling="ORDERS_1"/>
-   <keyword col="77" line="34" spelling=","/>
-   <articleName col="7" line="35" spelling="STRUCT_0"/>
-   <keyword col="15" line="35" spelling=";"/>
+   <keyword spelling="expansions" line="34" col="2" />
+   <articleName spelling="TARSKI" line="34" col="13" />
+   <keyword spelling="," line="34" col="19" />
+   <articleName spelling="XBOOLE_0" line="34" col="21" />
+   <keyword spelling="," line="34" col="29" />
+   <articleName spelling="GROUP_1" line="34" col="31" />
+   <keyword spelling="," line="34" col="38" />
+   <articleName spelling="VECTSP_1" line="34" col="40" />
+   <keyword spelling="," line="34" col="48" />
+   <articleName spelling="VECTSP_2" line="34" col="50" />
+   <keyword spelling="," line="34" col="58" />
+   <articleName spelling="IDEAL_1" line="34" col="60" />
+   <keyword spelling="," line="34" col="67" />
+   <articleName spelling="ORDERS_1" line="34" col="69" />
+   <keyword spelling="," line="34" col="77" />
+   <articleName spelling="STRUCT_0" line="35" col="7" />
+   <keyword spelling=";" line="35" col="15" />
   </libraryDirective>
  </directive>
  <directive>
   <libraryDirective>
-   <keyword col="2" line="36" spelling="theorems"/>
-   <articleName col="11" line="36" spelling="VECTSP_1"/>
-   <keyword col="19" line="36" spelling=","/>
-   <articleName col="21" line="36" spelling="TARSKI"/>
-   <keyword col="27" line="36" spelling=","/>
-   <articleName col="29" line="36" spelling="FUNCT_1"/>
-   <keyword col="36" line="36" spelling=","/>
-   <articleName col="38" line="36" spelling="RLVECT_1"/>
-   <keyword col="46" line="36" spelling=","/>
-   <articleName col="48" line="36" spelling="VECTSP_2"/>
-   <keyword col="56" line="36" spelling=","/>
-   <articleName col="58" line="36" spelling="XBOOLE_0"/>
-   <keyword col="66" line="36" spelling=","/>
-   <articleName col="68" line="36" spelling="FUNCT_2"/>
-   <keyword col="75" line="36" spelling=","/>
-   <articleName col="7" line="37" spelling="BINOP_1"/>
-   <keyword col="14" line="37" spelling=","/>
-   <articleName col="16" line="37" spelling="ZFMISC_1"/>
-   <keyword col="24" line="37" spelling=","/>
-   <articleName col="26" line="37" spelling="GROUP_1"/>
-   <keyword col="33" line="37" spelling=","/>
-   <articleName col="35" line="37" spelling="IDEAL_1"/>
-   <keyword col="42" line="37" spelling=","/>
-   <articleName col="44" line="37" spelling="RELAT_1"/>
-   <keyword col="51" line="37" spelling=","/>
-   <articleName col="53" line="37" spelling="EQREL_1"/>
-   <keyword col="60" line="37" spelling=","/>
-   <articleName col="62" line="37" spelling="SETWISEO"/>
-   <keyword col="70" line="37" spelling=","/>
-   <articleName col="7" line="38" spelling="ORDERS_1"/>
-   <keyword col="15" line="38" spelling=","/>
-   <articleName col="17" line="38" spelling="WELLORD2"/>
-   <keyword col="25" line="38" spelling=","/>
-   <articleName col="27" line="38" spelling="RELAT_2"/>
-   <keyword col="34" line="38" spelling=","/>
-   <articleName col="36" line="38" spelling="SUBSET_1"/>
-   <keyword col="44" line="38" spelling=";"/>
+   <keyword spelling="theorems" line="36" col="2" />
+   <articleName spelling="VECTSP_1" line="36" col="11" />
+   <keyword spelling="," line="36" col="19" />
+   <articleName spelling="TARSKI" line="36" col="21" />
+   <keyword spelling="," line="36" col="27" />
+   <articleName spelling="FUNCT_1" line="36" col="29" />
+   <keyword spelling="," line="36" col="36" />
+   <articleName spelling="RLVECT_1" line="36" col="38" />
+   <keyword spelling="," line="36" col="46" />
+   <articleName spelling="VECTSP_2" line="36" col="48" />
+   <keyword spelling="," line="36" col="56" />
+   <articleName spelling="XBOOLE_0" line="36" col="58" />
+   <keyword spelling="," line="36" col="66" />
+   <articleName spelling="FUNCT_2" line="36" col="68" />
+   <keyword spelling="," line="36" col="75" />
+   <articleName spelling="BINOP_1" line="37" col="7" />
+   <keyword spelling="," line="37" col="14" />
+   <articleName spelling="ZFMISC_1" line="37" col="16" />
+   <keyword spelling="," line="37" col="24" />
+   <articleName spelling="GROUP_1" line="37" col="26" />
+   <keyword spelling="," line="37" col="33" />
+   <articleName spelling="IDEAL_1" line="37" col="35" />
+   <keyword spelling="," line="37" col="42" />
+   <articleName spelling="RELAT_1" line="37" col="44" />
+   <keyword spelling="," line="37" col="51" />
+   <articleName spelling="EQREL_1" line="37" col="53" />
+   <keyword spelling="," line="37" col="60" />
+   <articleName spelling="SETWISEO" line="37" col="62" />
+   <keyword spelling="," line="37" col="70" />
+   <articleName spelling="ORDERS_1" line="38" col="7" />
+   <keyword spelling="," line="38" col="15" />
+   <articleName spelling="WELLORD2" line="38" col="17" />
+   <keyword spelling="," line="38" col="25" />
+   <articleName spelling="RELAT_2" line="38" col="27" />
+   <keyword spelling="," line="38" col="34" />
+   <articleName spelling="SUBSET_1" line="38" col="36" />
+   <keyword spelling=";" line="38" col="44" />
   </libraryDirective>
  </directive>
  <directive>
   <libraryDirective>
-   <keyword col="2" line="39" spelling="schemes"/>
-   <articleName col="10" line="39" spelling="EQREL_1"/>
-   <keyword col="17" line="39" spelling=","/>
-   <articleName col="19" line="39" spelling="BINOP_1"/>
-   <keyword col="26" line="39" spelling=";"/>
+   <keyword spelling="schemes" line="39" col="2" />
+   <articleName spelling="EQREL_1" line="39" col="10" />
+   <keyword spelling="," line="39" col="17" />
+   <articleName spelling="BINOP_1" line="39" col="19" />
+   <keyword spelling=";" line="39" col="26" />
   </libraryDirective>
  </directive>
 </environmentDeclaration>
