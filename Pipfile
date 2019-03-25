@@ -6,8 +6,8 @@ verify_ssl = true
 [dev-packages]
 wheel = "*"
 pytest = "*"
-emparser = {editable = true,path = "."}
 cmake = "*"
+emparser = {editable = true,path = "."}
 
 [packages]
 lxml = "*"

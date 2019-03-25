@@ -109,3 +109,4 @@ venv.bak/
 # other
 sandbox/
 antlr/old/
+.vscode/ipch/

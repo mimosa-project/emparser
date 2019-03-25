@@ -15,6 +15,7 @@ Todo:
 
 import os
 import re
+from emparser import PositionMap
 
 RESERVED_WORDS = set(['according','aggregate','all','and','antonym','are','as',
   'associativity','assume','asymmetry','attr','be','begin','being','by',
@@ -90,6 +91,9 @@ class Lexer:
     """
 
     def __init__(self):
+        self.clear()
+    
+    def clear(self):
         self.symbol_dict = {}
         self.len2symbol = {}
 
@@ -154,11 +158,6 @@ class Lexer:
         
         self.symbol_dict = {}
         
-        # load special symbols in advance
-        for symbols in SPECIAL_SYMBOLS.values():
-            for name in symbols:
-                self.symbol_dict[name] = {'type': 'special'}
-
         # load symbols from voc_file
         lines = None
         with open(mml_vct) as f:
@@ -225,6 +224,11 @@ class Lexer:
             Change the data structure to Radix tree
             See https://en.wikipedia.org/wiki/Radix_tree
         """
+        # load special symbols in advance
+        for symbols in SPECIAL_SYMBOLS.values():
+            for name in symbols:
+                self.symbol_dict[name] = {'type': 'special'}
+
         self.len2symbol = {}
         for name in self.symbol_dict:
             length = len(name)
@@ -420,7 +424,7 @@ class Lexer:
             
         stateMachine = LexerStateMachine(self, is_environment_part)
         tokenized_lines = []
-        position_map = {}
+        position_map = PositionMap()
 
         for i, line in enumerate(lines):
             tokens = []
@@ -445,7 +449,7 @@ class Lexer:
                 after_pos = (i+1, after_column)
                 after_column += len(res[0]) + 1
 
-                position_map[after_pos] = before_pos
+                position_map.set_position(before_pos, after_pos)
 
             tokenized_lines.append(' '.join(tokens))
 

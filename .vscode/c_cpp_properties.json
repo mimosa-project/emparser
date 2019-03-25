@@ -1,0 +1,30 @@
+{
+    "configurations": [
+        {
+            "name": "WSL",
+            "intelliSenseMode": "clang-x64",
+            "compilerPath": "/usr/bin/gcc",
+            "includePath": [
+                "${env:PYENV_ROOT}/versions/3.7.1/include/python3.7m",
+                "${workspaceFolder}/src/emparser",
+                "${workspaceFolder}/vendor/pugixml/src",
+                "${workspaceFolder}/vendor/antlr4/runtime/Cpp/runtime/src",
+                "${workspaceFolder}/vendor/antlr4/runtime/Cpp/runtime/src/tree",
+                "${workspaceFolder}/vendor/catch/include",
+                "${workspaceFolder}/vendor/pybind11/include",
+                "${workspaceFolder}/vendor/spdlog/include"
+            ],
+            "defines": [],
+            "browse": {
+                "path": [
+                    "${workspaceFolder}"
+                ],
+                "limitSymbolsToIncludedHeaders": true,
+                "databaseFilename": ""
+            },
+            "cStandard": "c11",
+            "cppStandard": "c++17"
+        }
+    ],
+    "version": 4
+}
