@@ -77,21 +77,29 @@
         <termExpressionList>
          <termExpression>
           <arguments>
-           <variableIdentifier spelling="x"/>
+           <termExpression>
+            <variableIdentifier spelling="x"/>
+           </termExpression>
           </arguments>
           <functorSymbol spelling="__O_*"/>
           <arguments>
-           <keyword spelling="("/>
            <termExpression>
-            <arguments>
-             <variableIdentifier spelling="y"/>
-            </arguments>
-            <functorSymbol spelling="__O32_-"/>
-            <arguments>
-             <variableIdentifier spelling="z"/>
-            </arguments>
+            <keyword spelling="("/>
+            <termExpression>
+             <arguments>
+              <termExpression>
+               <variableIdentifier spelling="y"/>
+              </termExpression>
+             </arguments>
+             <functorSymbol spelling="__O32_-"/>
+             <arguments>
+              <termExpression>
+               <variableIdentifier spelling="z"/>
+              </termExpression>
+             </arguments>
+            </termExpression>
+            <keyword spelling=")"/>
            </termExpression>
-           <keyword spelling=")"/>
           </arguments>
          </termExpression>
         </termExpressionList>
@@ -103,11 +111,15 @@
           <arguments>
            <termExpression>
             <arguments>
-             <variableIdentifier spelling="x"/>
+             <termExpression>
+              <variableIdentifier spelling="x"/>
+             </termExpression>
             </arguments>
             <functorSymbol spelling="__O_*"/>
             <arguments>
-             <variableIdentifier spelling="y"/>
+             <termExpression>
+              <variableIdentifier spelling="y"/>
+             </termExpression>
             </arguments>
            </termExpression>
           </arguments>
@@ -115,11 +127,15 @@
           <arguments>
            <termExpression>
             <arguments>
-             <variableIdentifier spelling="x"/>
+             <termExpression>
+              <variableIdentifier spelling="x"/>
+             </termExpression>
             </arguments>
             <functorSymbol spelling="__O_*"/>
             <arguments>
-             <variableIdentifier spelling="z"/>
+             <termExpression>
+              <variableIdentifier spelling="z"/>
+             </termExpression>
             </arguments>
            </termExpression>
           </arguments>
