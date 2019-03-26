@@ -10,7 +10,8 @@ import filecmp
 import lxml.etree as ET
 
 from emparser.preprocess import Lexer
-from emparser.mainprocess import Parser
+# from emparser.mainprocess import Parser
+from emparser import Parser
 from emparser.postprocess import CSTHandler
 from emparser import util
 from tests import common
@@ -28,21 +29,20 @@ class TestPerformance:
     def test_performance_1(self):
         """
         current performance test result:
-
-        #1 : 0.017391204833984375
-        #2 : 0.0008416175842285156
-        #3 : 0.0008263587951660156
-        #4 : 0.05384230613708496
-        #5 : 0.005171775817871094
-        #6 : 0.09348726272583008
-        #7 : 6.468583345413208
-        #8 : 0.0592193603515625
-        #9 : 0.02293229103088379
-        #10 : 0.006582736968994141
+        #1 : 3.743171691894531e-05
+        #2 : 0.0007483959197998047
+        #3 : 0.0007982254028320312
+        #4 : 0.006863117218017578
+        #5 : 0.010075092315673828
+        #6 : 0.16891860961914062
+        #7 : 0.41028857231140137
+        #8 : 0.0686800479888916
+        #9 : 0.015757322311401367
+        #10 : 0.001768350601196289
         """
         print('#test_performance_1#')
         t0 = time.time()
-        self.lexer.load_symbol_dict(common.MML_VCT)
+        self.lexer.clear()
         self.lexer.build_len2symbol()
 
         t1 = time.time()
@@ -63,7 +63,9 @@ class TestPerformance:
         print(f'#3 : {t3 - t2}')
 
         env_tokens, env_posmap = self.lexer.lex(env_lines, is_environment_part=True)
-        env_xmlroot = self.parser.parse_environment('\n'.join(env_tokens), env_posmap)
+        # env_xmlroot = self.parser.parse_environment('\n'.join(env_tokens), env_posmap)
+        env_xmlstr = self.parser.parse_environment('\n'.join(env_tokens), env_posmap)
+        env_xmlroot = ET.fromstring(env_xmlstr)
         vocfiles = self.handler.extract_vocabularies(env_xmlroot)
         # print(vocfiles)
 
@@ -84,7 +86,9 @@ class TestPerformance:
         t6 = time.time()
         print(f'#6 : {t6 - t5}')
 
-        tp_xmlroot = self.parser.parse_text_proper('\n'.join(tp_tokens), tp_posmap)
+        # tp_xmlroot = self.parser.parse_text_proper('\n'.join(tp_tokens), tp_posmap)
+        tp_xmlstr = self.parser.parse_text_proper('\n'.join(tp_tokens), tp_posmap)
+        tp_xmlroot = ET.fromstring(tp_xmlstr)
 
         t7 = time.time()
         print(f'#7 : {t7 - t6}')
@@ -102,8 +106,8 @@ class TestPerformance:
         t9 = time.time()
         print(f'#9 : {t9 - t8}')
 
-        # output_path = common.OUTPUT_DIR + '/performance_1.xml'
-        output_path = common.EXPECT_DIR + '/performance/performance_1.xml'
+        output_path = common.OUTPUT_DIR + '/performance_1.xml'
+        # output_path = common.EXPECT_DIR + '/performance/performance_1.xml'
         with open(output_path, 'w') as file:
             file.write(tp_xmlstr)
 
@@ -118,22 +122,21 @@ class TestPerformance:
         """
         current performance test result:
 
-        #1 : 0.10028433799743652
-        #2 : 0.0023505687713623047
-        #3 : 0.003578662872314453
-        line 31:15 mismatched input 'REAL' expecting FILE_NAME
-        #4 : 0.032854557037353516
-        #5 : 0.005401611328125
-        #6 : 1.70389723777771
-        #7 : 234.9770917892456
-        #8 : 1.2079763412475586
-        #9 : 0.4340200424194336
-        #10 : 0.11806201934814453
+        #1 : 0.00012969970703125
+        #2 : 0.011978864669799805
+        #3 : 0.008319616317749023
+        #4 : 0.006693124771118164
+        #5 : 0.005953550338745117
+        #6 : 2.4441311359405518
+        #7 : 14.36815881729126
+        #8 : 1.1940639019012451
+        #9 : 0.3822813034057617
+        #10 : 0.08751440048217773
         """
 
         print('#test_performance_2#')
         t0 = time.time()
-        self.lexer.load_symbol_dict(common.MML_VCT)
+        self.lexer.clear()
         self.lexer.build_len2symbol()
 
         t1 = time.time()
@@ -154,7 +157,9 @@ class TestPerformance:
         print(f'#3 : {t3 - t2}')
 
         env_tokens, env_posmap = self.lexer.lex(env_lines, is_environment_part=True)
-        env_xmlroot = self.parser.parse_environment('\n'.join(env_tokens), env_posmap)
+        # env_xmlroot = self.parser.parse_environment('\n'.join(env_tokens), env_posmap)
+        env_xmlstr = self.parser.parse_environment('\n'.join(env_tokens), env_posmap)
+        env_xmlroot = ET.fromstring(env_xmlstr)
         vocfiles = self.handler.extract_vocabularies(env_xmlroot)
         # print(vocfiles)
 
@@ -175,7 +180,9 @@ class TestPerformance:
         t6 = time.time()
         print(f'#6 : {t6 - t5}')
 
-        tp_xmlroot = self.parser.parse_text_proper('\n'.join(tp_tokens), tp_posmap)
+        # tp_xmlroot = self.parser.parse_text_proper('\n'.join(tp_tokens), tp_posmap)
+        tp_xmlstr = self.parser.parse_text_proper('\n'.join(tp_tokens), tp_posmap)
+        tp_xmlroot = ET.fromstring(tp_xmlstr)
 
         t7 = time.time()
         print(f'#7 : {t7 - t6}')
@@ -193,8 +200,8 @@ class TestPerformance:
         t9 = time.time()
         print(f'#9 : {t9 - t8}')
 
-        # output_path = common.OUTPUT_DIR + '/performance_2.xml'
-        output_path = common.EXPECT_DIR + '/performance/performance_2.xml'
+        output_path = common.OUTPUT_DIR + '/performance_2.xml'
+        # output_path = common.EXPECT_DIR + '/performance/performance_2.xml'
         with open(output_path, 'w') as file:
             file.write(tp_xmlstr)
 

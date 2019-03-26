@@ -1,7 +1,7 @@
 {
     "antlr4.generation": {
         "mode": "external",
-        "language": "Python3",
+        "language": "Cpp",
         "listeners": true,
         "visitors": false
     }

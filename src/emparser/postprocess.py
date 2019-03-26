@@ -188,15 +188,20 @@ class CSTHandler:
                         _next.addprevious(_arguments)
                         _term_expression.remove(_next)
                         _arguments.append(_next)
-
         # 2. Shrink unitaryTerm node
         _unitary_terms = _root.findall('.//unitaryTerm')
         for _unitary_term in _unitary_terms:
             _parent = _unitary_term.getparent()
-            _children = _unitary_term.getchildren()
-            for _child in _children:
-                _unitary_term.addprevious(_child)
-            _parent.remove(_unitary_term)
+
+            if _parent.tag == 'termExpression':
+                _children = _unitary_term.getchildren()
+                for _child in _children:
+                    _unitary_term.addprevious(_child)
+                _parent.remove(_unitary_term)
+            else:
+                assert _parent.tag == 'arguments'
+                _unitary_term.tag = 'termExpression'
+            
 
     def remove_prefix(self, _root):
         """Remove prefix in spelling of symbol nodes 

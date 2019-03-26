@@ -109,8 +109,8 @@ privatePredicateDefinition : 'defpred' privatePredicatePattern 'means' sentence 
 privateFunctorPattern : functorIdentifier '(' typeExpressionList ? ')' ;
 privatePredicatePattern : predicateIdentifier '[' typeExpressionList ? ']' ;
 reasoning : reasoningItem * ( 'then' ? 'per' 'cases' simpleJustification ';' ( caseList | supposeList ) ) ? ;
-caseList : case + ;
-case : 'case' ( proposition | conditions ) ';' reasoning 'end' ';' ;
+caseList : caseItem + ;
+caseItem : 'case' ( proposition | conditions ) ';' reasoning 'end' ';' ;
 supposeList : suppose + ;
 suppose : 'suppose' ( proposition | conditions ) ';' reasoning 'end' ';' ;
 reasoningItem : auxiliaryItem | skeletonItem ;
@@ -239,8 +239,7 @@ SELECTOR_SYMBOL : '__U' [!-~] + ;
 ATTRIBUTE_SYMBOL : '__V' [!-~] + ;
 LEFT_FUNCTOR_SYMBOL : '__K' [!-~] + ;
 RIGHT_FUNCTOR_SYMBOL : '__L' [!-~] + ;
-FILE_NAME :  [A-Z] [_A-Z0-9] [_A-Z0-9] [_A-Z0-9] [_A-Z0-9] ( [_A-Z0-9] ? ) ( [_A-Z0-9] ? ) ( [_A-Z0-9] ? ) ;
+FILE_NAME :  ([A-Z] [_A-Z0-9] [_A-Z0-9] [_A-Z0-9] [_A-Z0-9] ( [_A-Z0-9] ? ) ( [_A-Z0-9] ? ) ( [_A-Z0-9] ? )) | 'REAL' ;
 IDENTIFIER : [_'a-zA-Z] ['a-zA-Z0-9] * ;
 NUMERAL : '0' | ( [1-9] [0-9] * ) ;
 WHITE_SPACE : ('\r' | '\n' | '\t' | ' ') -> skip ;
-

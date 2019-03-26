@@ -2,7 +2,7 @@
 import pytest
 from tests import common
 
-@pytest.fixture(scope='module', autouse=True)
+@pytest.fixture(scope='session', autouse=True)
 def maintain_directory():
     common.create_output_dir()
     common.create_output2_dir()

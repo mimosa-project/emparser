@@ -2,13 +2,19 @@
 Extended Mizar parser
 
 ## Development
+### Git clone
+> git clone –recursive https://github.com/mimosa-project/emparser.git  
+
 ### Antlr4
   * We assume developers use vscode and its extension "ANTLR4 grammar syntax support".
   * Oen folder "${project_root}/emparser/antlr" with vscode
   * Touch "mizar.g4", then antlr4 processing will start and generate Mizar*.py in the folder.
 
-### Setup
+### Setup development environment
 > pipenv install
+
+### Build
+> python setup.py build
 
 ### Test execution
 > pipenv install --dev -e .  

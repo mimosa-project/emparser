@@ -88,6 +88,7 @@ class TestCSTHandler:
         self.handler.remove_prefix(root)
         output_xmlstr = util.pretty_xml(root)
         output_path = common.OUTPUT_DIR + '/all_post_process.xml'
+        # output_path = common.EXPECT_DIR + '/post/all_post_process.xml'
         with open(output_path, 'w') as file:
             file.write(output_xmlstr)
 
