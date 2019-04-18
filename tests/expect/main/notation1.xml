@@ -1,0 +1,93 @@
+<?xml version="1.0"?>
+<notationItem>
+ <notationBlock>
+  <keyword spelling="notation" />
+  <lociDeclaration>
+   <keyword spelling="let" />
+   <qualifiedVariables>
+    <explicitlyQualifiedVariables>
+     <qualifiedSegment>
+      <variables>
+       <variableIdentifier spelling="R" />
+      </variables>
+      <qualification>
+       <keyword spelling="be" />
+       <typeExpression>
+        <adjectiveCluster />
+        <radixTypeExpression>
+         <radixType>
+          <modeSymbol spelling="__M_Ring" />
+         </radixType>
+        </radixTypeExpression>
+       </typeExpression>
+      </qualification>
+     </qualifiedSegment>
+     <keyword spelling="," />
+     <qualifiedSegment>
+      <variables>
+       <variableIdentifier spelling="I" />
+      </variables>
+      <qualification>
+       <keyword spelling="be" />
+       <typeExpression>
+        <adjectiveCluster />
+        <radixTypeExpression>
+         <radixType>
+          <modeSymbol spelling="__M_Ideal" />
+          <keyword spelling="of" />
+          <termExpressionList>
+           <termExpression>
+            <unitaryTerm>
+             <variableIdentifier spelling="R" />
+            </unitaryTerm>
+           </termExpression>
+          </termExpressionList>
+         </radixType>
+        </radixTypeExpression>
+       </typeExpression>
+      </qualification>
+     </qualifiedSegment>
+    </explicitlyQualifiedVariables>
+   </qualifiedVariables>
+   <keyword spelling=";" />
+  </lociDeclaration>
+  <notationDeclaration>
+   <functorSynonym>
+    <keyword spelling="synonym" />
+    <functorPattern>
+     <functorLoci>
+      <locus>
+       <variableIdentifier spelling="R" />
+      </locus>
+     </functorLoci>
+     <functorSymbol spelling="__O_/" />
+     <functorLoci>
+      <locus>
+       <variableIdentifier spelling="I" />
+      </locus>
+     </functorLoci>
+    </functorPattern>
+    <keyword spelling="for" />
+    <functorPattern>
+     <functorSymbol spelling="__O_QuotientRing" />
+     <functorLoci>
+      <keyword spelling="(" />
+      <loci>
+       <locus>
+        <variableIdentifier spelling="R" />
+       </locus>
+       <keyword spelling="," />
+       <locus>
+        <variableIdentifier spelling="I" />
+       </locus>
+      </loci>
+      <keyword spelling=")" />
+     </functorLoci>
+    </functorPattern>
+    <keyword spelling=";" />
+   </functorSynonym>
+  </notationDeclaration>
+  <keyword spelling="end" />
+ </notationBlock>
+ <keyword spelling=";" />
+</notationItem>

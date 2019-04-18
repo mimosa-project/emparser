@@ -1,0 +1,190 @@
+<?xml version="1.0"?>
+<definitionalItem>
+ <definitionalBlock>
+  <keyword spelling="definition" />
+  <definitionItem>
+   <lociDeclaration>
+    <keyword spelling="let" />
+    <qualifiedVariables>
+     <explicitlyQualifiedVariables>
+      <qualifiedSegment>
+       <variables>
+        <variableIdentifier spelling="K" />
+       </variables>
+       <qualification>
+        <keyword spelling="be" />
+        <typeExpression>
+         <adjectiveCluster>
+          <adjective>
+           <keyword spelling="non" />
+           <attributeSymbol spelling="__V_empty" />
+          </adjective>
+         </adjectiveCluster>
+         <radixTypeExpression>
+          <radixType>
+           <structureSymbol spelling="__G_multMagma" />
+          </radixType>
+         </radixTypeExpression>
+        </typeExpression>
+       </qualification>
+      </qualifiedSegment>
+      <keyword spelling="," />
+      <qualifiedSegment>
+       <variables>
+        <variableIdentifier spelling="S" />
+       </variables>
+       <qualification>
+        <keyword spelling="be" />
+        <typeExpression>
+         <adjectiveCluster />
+         <radixTypeExpression>
+          <radixType>
+           <modeSymbol spelling="__M_Subset" />
+           <keyword spelling="of" />
+           <termExpressionList>
+            <termExpression>
+             <unitaryTerm>
+              <variableIdentifier spelling="K" />
+             </unitaryTerm>
+            </termExpression>
+           </termExpressionList>
+          </radixType>
+         </radixTypeExpression>
+        </typeExpression>
+       </qualification>
+      </qualifiedSegment>
+     </explicitlyQualifiedVariables>
+    </qualifiedVariables>
+    <keyword spelling=";" />
+   </lociDeclaration>
+  </definitionItem>
+  <definition>
+   <attributeDefinition>
+    <keyword spelling="attr" />
+    <attributePattern>
+     <locus>
+      <variableIdentifier spelling="S" />
+     </locus>
+     <keyword spelling="is" />
+     <attributeSymbol spelling="__V_quasi-prime" />
+    </attributePattern>
+    <keyword spelling="means" />
+    <definiens>
+     <simpleDefiniens>
+      <sentence>
+       <formulaExpression>
+        <quantifiedFormulaExpression>
+         <keyword spelling="for" />
+         <qualifiedVariables>
+          <explicitlyQualifiedVariables>
+           <qualifiedSegment>
+            <variables>
+             <variableIdentifier spelling="a" />
+             <keyword spelling="," />
+             <variableIdentifier spelling="b" />
+            </variables>
+            <qualification>
+             <keyword spelling="being" />
+             <typeExpression>
+              <adjectiveCluster />
+              <radixTypeExpression>
+               <radixType>
+                <modeSymbol spelling="__M_Element" />
+                <keyword spelling="of" />
+                <termExpressionList>
+                 <termExpression>
+                  <unitaryTerm>
+                   <variableIdentifier spelling="K" />
+                  </unitaryTerm>
+                 </termExpression>
+                </termExpressionList>
+               </radixType>
+              </radixTypeExpression>
+             </typeExpression>
+            </qualification>
+           </qualifiedSegment>
+          </explicitlyQualifiedVariables>
+         </qualifiedVariables>
+         <keyword spelling="st" />
+         <formulaExpression>
+          <atomicFormulaExpression>
+           <termExpressionList>
+            <termExpression>
+             <arguments>
+              <unitaryTerm>
+               <variableIdentifier spelling="a" />
+              </unitaryTerm>
+             </arguments>
+             <functorSymbol spelling="__O_*" />
+             <arguments>
+              <unitaryTerm>
+               <variableIdentifier spelling="b" />
+              </unitaryTerm>
+             </arguments>
+            </termExpression>
+           </termExpressionList>
+           <predicateSymbol spelling="__R_in" />
+           <termExpressionList>
+            <termExpression>
+             <unitaryTerm>
+              <variableIdentifier spelling="S" />
+             </unitaryTerm>
+            </termExpression>
+           </termExpressionList>
+          </atomicFormulaExpression>
+         </formulaExpression>
+         <keyword spelling="holds" />
+         <formulaExpression>
+          <formulaExpression>
+           <atomicFormulaExpression>
+            <termExpressionList>
+             <termExpression>
+              <unitaryTerm>
+               <variableIdentifier spelling="a" />
+              </unitaryTerm>
+             </termExpression>
+            </termExpressionList>
+            <predicateSymbol spelling="__R_in" />
+            <termExpressionList>
+             <termExpression>
+              <unitaryTerm>
+               <variableIdentifier spelling="S" />
+              </unitaryTerm>
+             </termExpression>
+            </termExpressionList>
+           </atomicFormulaExpression>
+          </formulaExpression>
+          <keyword spelling="or" />
+          <formulaExpression>
+           <atomicFormulaExpression>
+            <termExpressionList>
+             <termExpression>
+              <unitaryTerm>
+               <variableIdentifier spelling="b" />
+              </unitaryTerm>
+             </termExpression>
+            </termExpressionList>
+            <predicateSymbol spelling="__R_in" />
+            <termExpressionList>
+             <termExpression>
+              <unitaryTerm>
+               <variableIdentifier spelling="S" />
+              </unitaryTerm>
+             </termExpression>
+            </termExpressionList>
+           </atomicFormulaExpression>
+          </formulaExpression>
+         </formulaExpression>
+        </quantifiedFormulaExpression>
+       </formulaExpression>
+      </sentence>
+     </simpleDefiniens>
+    </definiens>
+    <keyword spelling=";" />
+    <correctnessConditions />
+   </attributeDefinition>
+  </definition>
+  <keyword spelling="end" />
+ </definitionalBlock>
+ <keyword spelling=";" />
+</definitionalItem>

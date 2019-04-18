@@ -245,3 +245,79 @@ class TestLexer:
 
         text4, pos_map4 = self.lexer.lex(case4)
         assert expect4 == text4
+
+
+        case5 = [
+            "definition",
+            "  let K be non empty multMagma, S be Subset of K;",
+            "  attr S is quasi-prime means",
+            "for a, b being Element of K st a*b in S holds a in S or b in S;",
+            "end;"
+        ]
+
+        expect5 = [
+            "definition",
+            "let K be non __V_empty __G_multMagma , S be __M_Subset of K ;",
+            "attr S is __V_quasi-prime means",
+            "for a , b being __M_Element of K st a __O_* b __R_in S holds a __R_in S or b __R_in S ;",
+            "end ;"
+        ]
+
+        text5, pos_map5 = self.lexer.lex(case5)
+        assert expect5 == text5
+
+        case6 = [
+            "registration",
+            "let K be non empty multLoopStr;",
+            "cluster prime -> proper quasi-prime for Subset of K;",
+            "cluster proper quasi-prime -> prime for Subset of K;",
+            "end;",
+        ]
+
+        expect6 = [
+            "registration",
+            "let K be non __V_empty __G_multLoopStr ;",
+            "cluster __V_prime -> __V_proper __V_quasi-prime for __M_Subset of K ;",
+            "cluster __V_proper __V_quasi-prime -> __V_prime for __M_Subset of K ;",
+            "end ;",
+        ]
+
+        text6, pos_map6 = self.lexer.lex(case6)
+        assert expect6 == text6
+
+        case7 = [
+            "notation",
+            "let R be Ring, I be Ideal of R;",
+            "synonym R/I for QuotientRing(R,I);",
+            "end;",
+        ]
+
+        expect7 = [
+            "notation",
+            "let R be __M_Ring , I be __M_Ideal of R ;",
+            "synonym R __O_/ I for __O_QuotientRing ( R , I ) ;",
+            "end ;",
+        ]
+
+        text7, pos_map7 = self.lexer.lex(case7)
+        assert expect7 == text7
+
+
+        case8 = [
+            "scheme",
+            "NatInd { P[Nat] } : for k being Nat holds P[k]",
+            "provided",
+            "P[0] and",
+            "for k be Nat st P[k] holds P[k + 1];",
+        ]
+
+        expect8 = [
+            "scheme",
+            "NatInd { P [ __M_Nat ] } : for k being __M_Nat holds P [ k ]",
+            "provided",
+            "P [ __O_0 ] and",
+            "for k be __M_Nat st P [ k ] holds P [ k __O32_+ 1 ] ;",
+        ]
+
+        text8, pos_map8 = self.lexer.lex(case8)
+        assert expect8 == text8

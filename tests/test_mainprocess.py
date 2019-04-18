@@ -110,6 +110,89 @@ class TestParser:
         expect_path = common.EXPECT_DIR + '/main/theorem3.xml'
         assert filecmp.cmp(expect_path, output_path, shallow=False)
 
+    def test_parse_definition(self):
+        case = [
+            "definition",
+            "let K be non __V_empty __G_multMagma , S be __M_Subset of K ;",
+            "attr S is __V_quasi-prime means",
+            "for a , b being __M_Element of K st a __O_* b __R_in S holds a __R_in S or b __R_in S ;",
+            "end ;"
+        ]
+
+        xmlstr = self.parser.parse_definition('\n'.join(case))
+        # xml_root = self.parser.parse_definition('\n'.join(case))
+        # xmlstr = util.pretty_xml(xml_root)
+
+        output_path = common.OUTPUT_DIR + '/definition1.xml'
+        # output_path = common.EXPECT_DIR + '/main/definition1.xml'
+        with open(output_path, 'w') as file:
+            file.write(xmlstr)
+
+        expect_path = common.EXPECT_DIR + '/main/definition1.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
+
+    def test_parse_registration(self):
+        case = [
+            "registration",
+            "let K be non __V_empty __G_multLoopStr ;",
+            "cluster __V_prime -> __V_proper __V_quasi-prime for __M_Subset of K ;",
+            "cluster __V_proper __V_quasi-prime -> __V_prime for __M_Subset of K ;",
+            "end ;",
+        ]
+
+        xmlstr = self.parser.parse_registration('\n'.join(case))
+        # xml_root = self.parser.parse_registration('\n'.join(case))
+        # xmlstr = util.pretty_xml(xml_root)
+
+        output_path = common.OUTPUT_DIR + '/registration1.xml'
+        # output_path = common.EXPECT_DIR + '/main/registration1.xml'
+        with open(output_path, 'w') as file:
+            file.write(xmlstr)
+
+        expect_path = common.EXPECT_DIR + '/main/registration1.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
+
+    def test_parse_notation(self):
+        case = [
+            "notation",
+            "let R be __M_Ring , I be __M_Ideal of R ;",
+            "synonym R __O_/ I for __O_QuotientRing ( R , I ) ;",
+            "end ;",
+        ]
+
+        xmlstr = self.parser.parse_notation('\n'.join(case))
+        # xml_root = self.parser.parse_notation('\n'.join(case))
+        # xmlstr = util.pretty_xml(xml_root)
+
+        output_path = common.OUTPUT_DIR + '/notation1.xml'
+        # output_path = common.EXPECT_DIR + '/main/notation1.xml'
+        with open(output_path, 'w') as file:
+            file.write(xmlstr)
+
+        expect_path = common.EXPECT_DIR + '/main/notation1.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
+
+    def test_parse_scheme(self):
+        case = [
+            "scheme",
+            "NatInd { P [ __M_Nat ] } : for k being __M_Nat holds P [ k ]",
+            "provided",
+            "P [ __O_0 ] and",
+            "for k be __M_Nat st P [ k ] holds P [ k __O32_+ 1 ] ;",
+        ]
+
+        xmlstr = self.parser.parse_scheme('\n'.join(case))
+        # xml_root = self.parser.parse_scheme(case)
+        # xmlstr = util.pretty_xml(xml_root)
+
+        output_path = common.OUTPUT_DIR + '/scheme1.xml'
+        # output_path = common.EXPECT_DIR + '/main/scheme1.xml'
+        with open(output_path, 'w') as file:
+            file.write(xmlstr)
+
+        expect_path = common.EXPECT_DIR + '/main/scheme1.xml'
+        assert filecmp.cmp(expect_path, output_path, shallow=False)
+
     @pytest.mark.slow
     def test_parse_ring_1_miz(self):
         """This function is too heavy to call every time

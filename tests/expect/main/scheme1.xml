@@ -1,0 +1,163 @@
+<?xml version="1.0"?>
+<schemeItem>
+ <schemeBlock>
+  <keyword spelling="scheme" />
+  <schemeIdentifier spelling="NatInd" />
+  <keyword spelling="{" />
+  <schemeParameters>
+   <schemeSegment>
+    <predicateSegment>
+     <predicateIdentifier spelling="P" />
+     <keyword spelling="[" />
+     <typeExpressionList>
+      <typeExpression>
+       <adjectiveCluster />
+       <radixTypeExpression>
+        <radixType>
+         <modeSymbol spelling="__M_Nat" />
+        </radixType>
+       </radixTypeExpression>
+      </typeExpression>
+     </typeExpressionList>
+     <keyword spelling="]" />
+    </predicateSegment>
+   </schemeSegment>
+  </schemeParameters>
+  <keyword spelling="}" />
+  <keyword spelling=":" />
+  <schemeConclusion>
+   <sentence>
+    <formulaExpression>
+     <quantifiedFormulaExpression>
+      <keyword spelling="for" />
+      <qualifiedVariables>
+       <explicitlyQualifiedVariables>
+        <qualifiedSegment>
+         <variables>
+          <variableIdentifier spelling="k" />
+         </variables>
+         <qualification>
+          <keyword spelling="being" />
+          <typeExpression>
+           <adjectiveCluster />
+           <radixTypeExpression>
+            <radixType>
+             <modeSymbol spelling="__M_Nat" />
+            </radixType>
+           </radixTypeExpression>
+          </typeExpression>
+         </qualification>
+        </qualifiedSegment>
+       </explicitlyQualifiedVariables>
+      </qualifiedVariables>
+      <keyword spelling="holds" />
+      <formulaExpression>
+       <atomicFormulaExpression>
+        <predicateIdentifier spelling="P" />
+        <keyword spelling="[" />
+        <termExpressionList>
+         <termExpression>
+          <unitaryTerm>
+           <variableIdentifier spelling="k" />
+          </unitaryTerm>
+         </termExpression>
+        </termExpressionList>
+        <keyword spelling="]" />
+       </atomicFormulaExpression>
+      </formulaExpression>
+     </quantifiedFormulaExpression>
+    </formulaExpression>
+   </sentence>
+  </schemeConclusion>
+  <keyword spelling="provided" />
+  <schemePremise>
+   <proposition>
+    <sentence>
+     <formulaExpression>
+      <atomicFormulaExpression>
+       <predicateIdentifier spelling="P" />
+       <keyword spelling="[" />
+       <termExpressionList>
+        <termExpression>
+         <functorSymbol spelling="__O_0" />
+        </termExpression>
+       </termExpressionList>
+       <keyword spelling="]" />
+      </atomicFormulaExpression>
+     </formulaExpression>
+    </sentence>
+   </proposition>
+  </schemePremise>
+  <keyword spelling="and" />
+  <schemePremise>
+   <proposition>
+    <sentence>
+     <formulaExpression>
+      <quantifiedFormulaExpression>
+       <keyword spelling="for" />
+       <qualifiedVariables>
+        <explicitlyQualifiedVariables>
+         <qualifiedSegment>
+          <variables>
+           <variableIdentifier spelling="k" />
+          </variables>
+          <qualification>
+           <keyword spelling="be" />
+           <typeExpression>
+            <adjectiveCluster />
+            <radixTypeExpression>
+             <radixType>
+              <modeSymbol spelling="__M_Nat" />
+             </radixType>
+            </radixTypeExpression>
+           </typeExpression>
+          </qualification>
+         </qualifiedSegment>
+        </explicitlyQualifiedVariables>
+       </qualifiedVariables>
+       <keyword spelling="st" />
+       <formulaExpression>
+        <atomicFormulaExpression>
+         <predicateIdentifier spelling="P" />
+         <keyword spelling="[" />
+         <termExpressionList>
+          <termExpression>
+           <unitaryTerm>
+            <variableIdentifier spelling="k" />
+           </unitaryTerm>
+          </termExpression>
+         </termExpressionList>
+         <keyword spelling="]" />
+        </atomicFormulaExpression>
+       </formulaExpression>
+       <keyword spelling="holds" />
+       <formulaExpression>
+        <atomicFormulaExpression>
+         <predicateIdentifier spelling="P" />
+         <keyword spelling="[" />
+         <termExpressionList>
+          <termExpression>
+           <arguments>
+            <unitaryTerm>
+             <variableIdentifier spelling="k" />
+            </unitaryTerm>
+           </arguments>
+           <functorSymbol spelling="__O32_+" />
+           <arguments>
+            <unitaryTerm spelling="1" />
+           </arguments>
+          </termExpression>
+         </termExpressionList>
+         <keyword spelling="]" />
+        </atomicFormulaExpression>
+       </formulaExpression>
+      </quantifiedFormulaExpression>
+     </formulaExpression>
+    </sentence>
+   </proposition>
+  </schemePremise>
+  <keyword spelling=";" />
+  <reasoning />
+ </schemeBlock>
+ <error spelling="&lt;missing ';'&gt;" />
+</schemeItem>

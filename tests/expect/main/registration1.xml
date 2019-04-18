@@ -1,0 +1,113 @@
+<?xml version="1.0"?>
+<registrationItem>
+ <registrationBlock>
+  <keyword spelling="registration" />
+  <lociDeclaration>
+   <keyword spelling="let" />
+   <qualifiedVariables>
+    <explicitlyQualifiedVariables>
+     <qualifiedSegment>
+      <variables>
+       <variableIdentifier spelling="K" />
+      </variables>
+      <qualification>
+       <keyword spelling="be" />
+       <typeExpression>
+        <adjectiveCluster>
+         <adjective>
+          <keyword spelling="non" />
+          <attributeSymbol spelling="__V_empty" />
+         </adjective>
+        </adjectiveCluster>
+        <radixTypeExpression>
+         <radixType>
+          <structureSymbol spelling="__G_multLoopStr" />
+         </radixType>
+        </radixTypeExpression>
+       </typeExpression>
+      </qualification>
+     </qualifiedSegment>
+    </explicitlyQualifiedVariables>
+   </qualifiedVariables>
+   <keyword spelling=";" />
+  </lociDeclaration>
+  <clusterRegistration>
+   <conditionalRegistration>
+    <keyword spelling="cluster" />
+    <adjectiveCluster>
+     <adjective>
+      <attributeSymbol spelling="__V_prime" />
+     </adjective>
+    </adjectiveCluster>
+    <keyword spelling="-&gt;" />
+    <adjectiveCluster>
+     <adjective>
+      <attributeSymbol spelling="__V_proper" />
+     </adjective>
+     <adjective>
+      <attributeSymbol spelling="__V_quasi-prime" />
+     </adjective>
+    </adjectiveCluster>
+    <keyword spelling="for" />
+    <typeExpression>
+     <adjectiveCluster />
+     <radixTypeExpression>
+      <radixType>
+       <modeSymbol spelling="__M_Subset" />
+       <keyword spelling="of" />
+       <termExpressionList>
+        <termExpression>
+         <unitaryTerm>
+          <variableIdentifier spelling="K" />
+         </unitaryTerm>
+        </termExpression>
+       </termExpressionList>
+      </radixType>
+     </radixTypeExpression>
+    </typeExpression>
+    <keyword spelling=";" />
+    <correctnessConditions />
+   </conditionalRegistration>
+  </clusterRegistration>
+  <clusterRegistration>
+   <conditionalRegistration>
+    <keyword spelling="cluster" />
+    <adjectiveCluster>
+     <adjective>
+      <attributeSymbol spelling="__V_proper" />
+     </adjective>
+     <adjective>
+      <attributeSymbol spelling="__V_quasi-prime" />
+     </adjective>
+    </adjectiveCluster>
+    <keyword spelling="-&gt;" />
+    <adjectiveCluster>
+     <adjective>
+      <attributeSymbol spelling="__V_prime" />
+     </adjective>
+    </adjectiveCluster>
+    <keyword spelling="for" />
+    <typeExpression>
+     <adjectiveCluster />
+     <radixTypeExpression>
+      <radixType>
+       <modeSymbol spelling="__M_Subset" />
+       <keyword spelling="of" />
+       <termExpressionList>
+        <termExpression>
+         <unitaryTerm>
+          <variableIdentifier spelling="K" />
+         </unitaryTerm>
+        </termExpression>
+       </termExpressionList>
+      </radixType>
+     </radixTypeExpression>
+    </typeExpression>
+    <keyword spelling=";" />
+    <correctnessConditions />
+   </conditionalRegistration>
+  </clusterRegistration>
+  <keyword spelling="end" />
+ </registrationBlock>
+ <keyword spelling=";" />
+</registrationItem>

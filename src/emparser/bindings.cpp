@@ -28,6 +28,14 @@ PYBIND11_MODULE(emparser, m) {
       .def("parse_text_proper", &ParserProcess::parse_text_proper,
           py::arg("text"), py::arg("position_map") = PositionMap::ptr())
       .def("parse_theorem", &ParserProcess::parse_theorem,
+          py::arg("text"), py::arg("position_map") = PositionMap::ptr())
+      .def("parse_definition", &ParserProcess::parse_definition,
+          py::arg("text"), py::arg("position_map") = PositionMap::ptr())
+      .def("parse_registration", &ParserProcess::parse_registration,
+          py::arg("text"), py::arg("position_map") = PositionMap::ptr())
+      .def("parse_notation", &ParserProcess::parse_notation,
+          py::arg("text"), py::arg("position_map") = PositionMap::ptr())
+      .def("parse_scheme", &ParserProcess::parse_scheme,
           py::arg("text"), py::arg("position_map") = PositionMap::ptr());
 
 }
