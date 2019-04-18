@@ -97,7 +97,7 @@ with open("README.md", "r") as fh:
 
 setup(
     name = "emparser",
-    version = "0.0.2",
+    version = "0.1.0",
     author = "Kazuhisa Nakasho",
     author_email = "kazuhisa.nakasho@gmail.com",
     description = "Extended Mizar parser",
