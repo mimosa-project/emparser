@@ -41,6 +41,14 @@ string ParserProcess::parse(
         tree = parser.textProper();
     } else if (rule == "theorem") {
         tree = parser.theorem();
+    } else if (rule == "definition") {
+        tree = parser.definitionalItem();
+    } else if (rule == "registration") {
+        tree = parser.registrationItem();
+    } else if (rule == "notation") {
+        tree = parser.notationItem();
+    } else if (rule == "scheme") {
+        tree = parser.schemeItem();
     } else {
         throw invalid_argument("Specified rule is not implemented.");
     }
@@ -60,4 +68,20 @@ string ParserProcess::parse_text_proper(const string& text, PositionMap::ptr pos
 
 string ParserProcess::parse_theorem(const string& text, PositionMap::ptr position_map) {
     return parse(text, position_map, string("theorem"));
+}
+
+string ParserProcess::parse_definition(const string& text, PositionMap::ptr position_map) {
+    return parse(text, position_map, string("definition"));
+}
+
+string ParserProcess::parse_registration(const string& text, PositionMap::ptr position_map) {
+    return parse(text, position_map, string("registration"));
+}
+
+string ParserProcess::parse_notation(const string& text, PositionMap::ptr position_map) {
+    return parse(text, position_map, string("notation"));
+}
+
+string ParserProcess::parse_scheme(const string& text, PositionMap::ptr position_map) {
+    return parse(text, position_map, string("scheme"));
 }
