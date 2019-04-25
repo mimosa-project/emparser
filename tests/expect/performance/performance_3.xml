@@ -1,0 +1,625 @@
+<theorem>
+ <keyword spelling="theorem" line="1" col="1"/>
+ <compactStatement>
+  <proposition>
+   <sentence>
+    <formulaExpression>
+     <formulaExpression>
+      <atomicFormulaExpression>
+       <termExpressionList>
+        <termExpression>
+         <leftFunctorBracket spelling="|[" line="2" col="3"/>
+          <termExpressionList>
+           <termExpression>
+            <functorSymbol spelling="-" line="2" col="5"/>
+            <arguments>
+             <termExpression spelling="1" line="2" col="6"/>
+            </arguments>
+           </termExpression>
+           <keyword spelling="," line="2" col="7"/>
+           <termExpression>
+            <functorSymbol spelling="0" line="2" col="8"/>
+           </termExpression>
+          </termExpressionList>
+          <rightFunctorBracket spelling="]|" line="2" col="9"/>
+         </termExpression>
+        <keyword spelling="," line="2" col="11"/>
+        <termExpression>
+         <leftFunctorBracket spelling="|[" line="2" col="12"/>
+          <termExpressionList>
+           <termExpression>
+            </termExpression>
+           <keyword spelling="," line="2" col="15"/>
+           <termExpression>
+            <functorSymbol spelling="0" line="2" col="16"/>
+           </termExpression>
+          </termExpressionList>
+          <rightFunctorBracket spelling="]|" line="2" col="17"/>
+         </termExpression>
+       </termExpressionList>
+       <predicateSymbol spelling="realize-max-dist-in" line="2" col="20"/>
+       <termExpressionList>
+        <termExpression>
+         <variableIdentifier spelling="C" line="2" col="40"/>
+         </termExpression>
+       </termExpressionList>
+      </atomicFormulaExpression>
+     </formulaExpression>
+     <keyword spelling="implies" line="2" col="42"/>
+     <formulaExpression>
+      <quantifiedFormulaExpression>
+       <keyword spelling="for" line="3" col="3"/>
+       <qualifiedVariables>
+        <explicitlyQualifiedVariables>
+         <qualifiedSegment>
+          <variables>
+           <variableIdentifier spelling="Jc" line="3" col="7"/>
+           <keyword spelling="," line="3" col="9"/>
+           <variableIdentifier spelling="Jd" line="3" col="11"/>
+          </variables>
+          <qualification>
+           <keyword spelling="being" line="3" col="14"/>
+           <typeExpression>
+            <adjectiveCluster>
+             <adjective>
+              <attributeSymbol spelling="compact" line="3" col="20"/>
+             </adjective>
+             <adjective>
+              <attributeSymbol spelling="with_the_max_arc" line="3" col="28"/>
+             </adjective>
+            </adjectiveCluster>
+            <radixType>
+              <modeSymbol spelling="Subset" line="3" col="45"/>
+              <keyword spelling="of" line="3" col="52"/>
+              <termExpressionList>
+               <termExpression>
+                <functorSymbol spelling="TOP-REAL" line="3" col="55"/>
+                <arguments>
+                 <termExpression spelling="2" line="3" col="64"/>
+                </arguments>
+               </termExpression>
+              </termExpressionList>
+             </radixType>
+            </typeExpression>
+          </qualification>
+         </qualifiedSegment>
+        </explicitlyQualifiedVariables>
+       </qualifiedVariables>
+       <keyword spelling="st" line="3" col="66"/>
+       <formulaExpression>
+        <formulaExpression>
+         <formulaExpression>
+          <formulaExpression>
+           <formulaExpression>
+            <formulaExpression>
+             <formulaExpression>
+              <formulaExpression>
+               <atomicFormulaExpression>
+                <termExpressionList>
+                 <termExpression>
+                  <variableIdentifier spelling="Jc" line="4" col="3"/>
+                  </termExpression>
+                </termExpressionList>
+                <predicateSymbol spelling="is_an_arc_of" line="4" col="6"/>
+                <termExpressionList>
+                 <termExpression>
+                  <leftFunctorBracket spelling="|[" line="4" col="19"/>
+                   <termExpressionList>
+                    <termExpression>
+                     <functorSymbol spelling="-" line="4" col="21"/>
+                     <arguments>
+                      <termExpression spelling="1" line="4" col="22"/>
+                     </arguments>
+                    </termExpression>
+                    <keyword spelling="," line="4" col="23"/>
+                    <termExpression>
+                     <functorSymbol spelling="0" line="4" col="24"/>
+                    </termExpression>
+                   </termExpressionList>
+                   <rightFunctorBracket spelling="]|" line="4" col="25"/>
+                  </termExpression>
+                 <keyword spelling="," line="4" col="27"/>
+                 <termExpression>
+                  <leftFunctorBracket spelling="|[" line="4" col="28"/>
+                   <termExpressionList>
+                    <termExpression>
+                     </termExpression>
+                    <keyword spelling="," line="4" col="31"/>
+                    <termExpression>
+                     <functorSymbol spelling="0" line="4" col="32"/>
+                    </termExpression>
+                   </termExpressionList>
+                   <rightFunctorBracket spelling="]|" line="4" col="33"/>
+                  </termExpression>
+                </termExpressionList>
+               </atomicFormulaExpression>
+              </formulaExpression>
+              <keyword spelling="&amp;" line="4" col="36"/>
+              <formulaExpression>
+               <atomicFormulaExpression>
+                <termExpressionList>
+                 <termExpression>
+                  <variableIdentifier spelling="Jd" line="4" col="38"/>
+                  </termExpression>
+                </termExpressionList>
+                <predicateSymbol spelling="is_an_arc_of" line="4" col="41"/>
+                <termExpressionList>
+                 <termExpression>
+                  <leftFunctorBracket spelling="|[" line="4" col="54"/>
+                   <termExpressionList>
+                    <termExpression>
+                     <functorSymbol spelling="-" line="4" col="56"/>
+                     <arguments>
+                      <termExpression spelling="1" line="4" col="57"/>
+                     </arguments>
+                    </termExpression>
+                    <keyword spelling="," line="4" col="58"/>
+                    <termExpression>
+                     <functorSymbol spelling="0" line="4" col="59"/>
+                    </termExpression>
+                   </termExpressionList>
+                   <rightFunctorBracket spelling="]|" line="4" col="60"/>
+                  </termExpression>
+                 <keyword spelling="," line="4" col="62"/>
+                 <termExpression>
+                  <leftFunctorBracket spelling="|[" line="4" col="63"/>
+                   <termExpressionList>
+                    <termExpression>
+                     </termExpression>
+                    <keyword spelling="," line="4" col="66"/>
+                    <termExpression>
+                     <functorSymbol spelling="0" line="4" col="67"/>
+                    </termExpression>
+                   </termExpressionList>
+                   <rightFunctorBracket spelling="]|" line="4" col="68"/>
+                  </termExpression>
+                </termExpressionList>
+               </atomicFormulaExpression>
+              </formulaExpression>
+             </formulaExpression>
+             <keyword spelling="&amp;" line="4" col="71"/>
+             <formulaExpression>
+              <atomicFormulaExpression>
+               <termExpressionList>
+                <termExpression>
+                 <variableIdentifier spelling="C" line="5" col="3"/>
+                 </termExpression>
+               </termExpressionList>
+               <predicateSymbol>
+                <keyword spelling="=" line="5" col="5"/>
+               </predicateSymbol>
+               <termExpressionList>
+                <termExpression>
+                 <arguments>
+                  <termExpression>
+                   <variableIdentifier spelling="Jc" line="5" col="7"/>
+                  </termExpression>
+                 </arguments>
+                 <functorSymbol spelling="\/" line="5" col="10"/>
+                 <arguments>
+                  <termExpression>
+                   <variableIdentifier spelling="Jd" line="5" col="13"/>
+                  </termExpression>
+                 </arguments>
+                </termExpression>
+               </termExpressionList>
+              </atomicFormulaExpression>
+             </formulaExpression>
+            </formulaExpression>
+            <keyword spelling="&amp;" line="5" col="16"/>
+            <formulaExpression>
+             <atomicFormulaExpression>
+              <termExpressionList>
+               <termExpression>
+                <arguments>
+                 <termExpression>
+                  <variableIdentifier spelling="Jc" line="5" col="18"/>
+                 </termExpression>
+                </arguments>
+                <functorSymbol spelling="/\" line="5" col="21"/>
+                <arguments>
+                 <termExpression>
+                  <variableIdentifier spelling="Jd" line="5" col="24"/>
+                 </termExpression>
+                </arguments>
+               </termExpression>
+              </termExpressionList>
+              <predicateSymbol>
+               <keyword spelling="=" line="5" col="27"/>
+              </predicateSymbol>
+              <termExpressionList>
+               <termExpression>
+                <leftFunctorBracket spelling="{|" line="5" col="29"/>
+                 <termExpressionList>
+                  <termExpression>
+                   <leftFunctorBracket>
+                     <keyword spelling="[" line="5" col="31"/>
+                    </leftFunctorBracket>
+                    <termExpressionList>
+                     <termExpression>
+                      <functorSymbol spelling="-" line="5" col="32"/>
+                      <arguments>
+                       <termExpression spelling="1" line="5" col="33"/>
+                      </arguments>
+                     </termExpression>
+                     <keyword spelling="," line="5" col="34"/>
+                     <termExpression>
+                      <functorSymbol spelling="0" line="5" col="35"/>
+                     </termExpression>
+                    </termExpressionList>
+                    <rightFunctorBracket spelling="]|" line="5" col="36"/>
+                   </termExpression>
+                  <keyword spelling="," line="5" col="38"/>
+                  <termExpression>
+                   <leftFunctorBracket spelling="|[" line="5" col="39"/>
+                    <termExpressionList>
+                     <termExpression>
+                      </termExpression>
+                     <keyword spelling="," line="5" col="42"/>
+                     <termExpression>
+                      <functorSymbol spelling="0" line="5" col="43"/>
+                     </termExpression>
+                    </termExpressionList>
+                    <rightFunctorBracket spelling="]|" line="5" col="44"/>
+                   </termExpression>
+                 </termExpressionList>
+                 <rightFunctorBracket>
+                  <keyword spelling="}" line="5" col="46"/>
+                 </rightFunctorBracket>
+                </termExpression>
+              </termExpressionList>
+             </atomicFormulaExpression>
+            </formulaExpression>
+           </formulaExpression>
+           <keyword spelling="&amp;" line="5" col="48"/>
+           <formulaExpression>
+            <atomicFormulaExpression>
+             <termExpressionList>
+              <termExpression>
+               <functorSymbol spelling="UMP" line="5" col="50"/>
+               <arguments>
+                <termExpression>
+                 <variableIdentifier spelling="C" line="5" col="54"/>
+                </termExpression>
+               </arguments>
+              </termExpression>
+             </termExpressionList>
+             <predicateSymbol spelling="in" line="5" col="56"/>
+             <termExpressionList>
+              <termExpression>
+               <variableIdentifier spelling="Jc" line="5" col="59"/>
+               </termExpression>
+             </termExpressionList>
+            </atomicFormulaExpression>
+           </formulaExpression>
+          </formulaExpression>
+          <keyword spelling="&amp;" line="5" col="62"/>
+          <formulaExpression>
+           <atomicFormulaExpression>
+            <termExpressionList>
+             <termExpression>
+              <functorSymbol spelling="LMP" line="5" col="64"/>
+              <arguments>
+               <termExpression>
+                <variableIdentifier spelling="C" line="5" col="68"/>
+               </termExpression>
+              </arguments>
+             </termExpression>
+            </termExpressionList>
+            <predicateSymbol spelling="in" line="5" col="70"/>
+            <termExpressionList>
+             <termExpression>
+              <variableIdentifier spelling="Jd" line="5" col="73"/>
+              </termExpression>
+            </termExpressionList>
+           </atomicFormulaExpression>
+          </formulaExpression>
+         </formulaExpression>
+         <keyword spelling="&amp;" line="5" col="76"/>
+         <formulaExpression>
+          <atomicFormulaExpression>
+           <termExpressionList>
+            <termExpression>
+             <functorSymbol spelling="W-bound" line="6" col="3"/>
+             <arguments>
+              <termExpression>
+               <variableIdentifier spelling="C" line="6" col="11"/>
+              </termExpression>
+             </arguments>
+            </termExpression>
+           </termExpressionList>
+           <predicateSymbol>
+            <keyword spelling="=" line="6" col="13"/>
+           </predicateSymbol>
+           <termExpressionList>
+            <termExpression>
+             <functorSymbol spelling="W-bound" line="6" col="15"/>
+             <arguments>
+              <termExpression>
+               <variableIdentifier spelling="Jc" line="6" col="23"/>
+              </termExpression>
+             </arguments>
+            </termExpression>
+           </termExpressionList>
+          </atomicFormulaExpression>
+         </formulaExpression>
+        </formulaExpression>
+        <keyword spelling="&amp;" line="6" col="26"/>
+        <formulaExpression>
+         <atomicFormulaExpression>
+          <termExpressionList>
+           <termExpression>
+            <functorSymbol spelling="E-bound" line="6" col="28"/>
+            <arguments>
+             <termExpression>
+              <variableIdentifier spelling="C" line="6" col="36"/>
+             </termExpression>
+            </arguments>
+           </termExpression>
+          </termExpressionList>
+          <predicateSymbol>
+           <keyword spelling="=" line="6" col="38"/>
+          </predicateSymbol>
+          <termExpressionList>
+           <termExpression>
+            <functorSymbol spelling="E-bound" line="6" col="40"/>
+            <arguments>
+             <termExpression>
+              <variableIdentifier spelling="Jc" line="6" col="48"/>
+             </termExpression>
+            </arguments>
+           </termExpression>
+          </termExpressionList>
+         </atomicFormulaExpression>
+        </formulaExpression>
+       </formulaExpression>
+       <quantifiedFormulaExpression>
+        <keyword spelling="for" line="7" col="3"/>
+        <qualifiedVariables>
+         <explicitlyQualifiedVariables>
+          <qualifiedSegment>
+           <variables>
+            <variableIdentifier spelling="Ux" line="7" col="7"/>
+           </variables>
+           <qualification>
+            <keyword spelling="being" line="7" col="10"/>
+            <typeExpression>
+             <adjectiveCluster/>
+             <radixType>
+               <modeSymbol spelling="Subset" line="7" col="16"/>
+               <keyword spelling="of" line="7" col="23"/>
+               <termExpressionList>
+                <termExpression>
+                 <functorSymbol spelling="TOP-REAL" line="7" col="26"/>
+                 <arguments>
+                  <termExpression spelling="2" line="7" col="35"/>
+                 </arguments>
+                </termExpression>
+               </termExpressionList>
+              </radixType>
+             </typeExpression>
+           </qualification>
+          </qualifiedSegment>
+         </explicitlyQualifiedVariables>
+        </qualifiedVariables>
+        <keyword spelling="st" line="7" col="37"/>
+        <formulaExpression>
+         <atomicFormulaExpression>
+          <termExpressionList>
+           <termExpression>
+            <variableIdentifier spelling="Ux" line="7" col="40"/>
+            </termExpression>
+          </termExpressionList>
+          <predicateSymbol>
+           <keyword spelling="=" line="7" col="43"/>
+          </predicateSymbol>
+          <termExpressionList>
+           <termExpression>
+            <arguments><termExpression><functorSymbol spelling="Component_of" line="7" col="45"/>
+            </termExpression></arguments><functorSymbol spelling="Down" line="7" col="58"/>
+            <arguments>
+             <keyword spelling="(" line="7" col="63"/>
+             <termExpressionList>
+              <termExpression>
+               <arguments>
+                <termExpression>
+                 <keyword spelling="(" line="7" col="64"/>
+                 <termExpression>
+                  <arguments>
+                   <termExpression spelling="1" line="7" col="65"/>
+                  </arguments>
+                  <functorSymbol spelling="/" line="7" col="66"/>
+                  <arguments>
+                   <termExpression spelling="2" line="7" col="67"/>
+                  </arguments>
+                 </termExpression>
+                 <keyword spelling=")" line="7" col="68"/>
+                </termExpression>
+               </arguments>
+               <functorSymbol spelling="*" line="7" col="70"/>
+               <arguments>
+                <termExpression>
+                 <keyword spelling="(" line="8" col="3"/>
+                 <termExpression>
+                  <arguments>
+                   <termExpression>
+                    <keyword spelling="(" line="8" col="4"/>
+                    <termExpression>
+                     <functorSymbol spelling="UMP" line="8" col="5"/>
+                     <arguments>
+                      <termExpression>
+                       <keyword spelling="(" line="8" col="9"/>
+                       <termExpression>
+                        <arguments><termExpression><functorSymbol spelling="LSeg" line="8" col="10"/>
+                        <arguments>
+                         <keyword spelling="(" line="8" col="14"/>
+                         <termExpressionList>
+                          <termExpression>
+                           <functorSymbol spelling="LMP" line="8" col="15"/>
+                           <arguments>
+                            <termExpression>
+                             <variableIdentifier spelling="Jc" line="8" col="19"/>
+                            </termExpression>
+                           </arguments>
+                          </termExpression>
+                          <keyword spelling="," line="8" col="21"/>
+                          <termExpression>
+                           <leftFunctorBracket spelling="|[" line="8" col="22"/>
+                            <termExpressionList>
+                             <termExpression>
+                              <functorSymbol spelling="0" line="8" col="24"/>
+                             </termExpression>
+                             <keyword spelling="," line="8" col="25"/>
+                             <termExpression>
+                              <functorSymbol spelling="-" line="8" col="26"/>
+                              <arguments>
+                               <termExpression spelling="3" line="8" col="27"/>
+                              </arguments>
+                             </termExpression>
+                            </termExpressionList>
+                            <rightFunctorBracket spelling="]|" line="8" col="28"/>
+                           </termExpression>
+                         </termExpressionList>
+                         <keyword spelling=")" line="8" col="30"/>
+                        </arguments>
+                        </termExpression></arguments><functorSymbol spelling="/\" line="8" col="32"/>
+                        <arguments>
+                         <termExpression>
+                          <variableIdentifier spelling="Jd" line="8" col="35"/>
+                         </termExpression>
+                        </arguments>
+                       </termExpression>
+                       <keyword spelling=")" line="8" col="37"/>
+                      </termExpression>
+                     </arguments>
+                    </termExpression>
+                    <keyword spelling=")" line="8" col="38"/>
+                   </termExpression>
+                  </arguments>
+                  <functorSymbol spelling="+" line="8" col="40"/>
+                  <arguments><termExpression><functorSymbol spelling="LMP" line="8" col="42"/>
+                  <arguments>
+                   <termExpression>
+                    <variableIdentifier spelling="Jc" line="8" col="46"/>
+                   </termExpression>
+                  </arguments>
+                 </termExpression></arguments></termExpression>
+                 <keyword spelling=")" line="8" col="48"/>
+                </termExpression>
+               </arguments>
+              </termExpression>
+              <keyword spelling="," line="8" col="49"/>
+              <termExpression>
+               <arguments>
+                <termExpression>
+                 <variableIdentifier spelling="C" line="8" col="51"/>
+                </termExpression>
+               </arguments>
+               <functorSymbol spelling="`" line="8" col="52"/>
+              </termExpression>
+             </termExpressionList>
+             <keyword spelling=")" line="8" col="53"/>
+            </arguments>
+           </termExpression>
+          </termExpressionList>
+         </atomicFormulaExpression>
+        </formulaExpression>
+        <keyword spelling="holds" line="9" col="3"/>
+        <formulaExpression>
+         <formulaExpression>
+          <atomicFormulaExpression>
+           <termExpressionList>
+            <termExpression>
+             <variableIdentifier spelling="Ux" line="9" col="9"/>
+             </termExpression>
+           </termExpressionList>
+           <predicateSymbol spelling="is_inside_component_of" line="9" col="12"/>
+           <termExpressionList>
+            <termExpression>
+             <variableIdentifier spelling="C" line="9" col="35"/>
+             </termExpression>
+           </termExpressionList>
+          </atomicFormulaExpression>
+         </formulaExpression>
+         <keyword spelling="&amp;" line="9" col="37"/>
+         <formulaExpression>
+          <quantifiedFormulaExpression>
+           <keyword spelling="for" line="9" col="39"/>
+           <qualifiedVariables>
+            <explicitlyQualifiedVariables>
+             <qualifiedSegment>
+              <variables>
+               <variableIdentifier spelling="V" line="9" col="43"/>
+              </variables>
+              <qualification>
+               <keyword spelling="being" line="9" col="45"/>
+               <typeExpression>
+                <adjectiveCluster/>
+                <radixType>
+                  <modeSymbol spelling="Subset" line="9" col="51"/>
+                  <keyword spelling="of" line="9" col="58"/>
+                  <termExpressionList>
+                   <termExpression>
+                    <functorSymbol spelling="TOP-REAL" line="9" col="61"/>
+                    <arguments>
+                     <termExpression spelling="2" line="9" col="70"/>
+                    </arguments>
+                   </termExpression>
+                  </termExpressionList>
+                 </radixType>
+                </typeExpression>
+              </qualification>
+             </qualifiedSegment>
+            </explicitlyQualifiedVariables>
+           </qualifiedVariables>
+           <keyword spelling="st" line="9" col="72"/>
+           <formulaExpression>
+            <atomicFormulaExpression>
+             <termExpressionList>
+              <termExpression>
+               <variableIdentifier spelling="V" line="10" col="3"/>
+               </termExpression>
+             </termExpressionList>
+             <predicateSymbol spelling="is_inside_component_of" line="10" col="5"/>
+             <termExpressionList>
+              <termExpression>
+               <variableIdentifier spelling="C" line="10" col="28"/>
+               </termExpression>
+             </termExpressionList>
+            </atomicFormulaExpression>
+           </formulaExpression>
+           <keyword spelling="holds" line="10" col="30"/>
+           <formulaExpression>
+            <atomicFormulaExpression>
+             <termExpressionList>
+              <termExpression>
+               <variableIdentifier spelling="V" line="10" col="36"/>
+               </termExpression>
+             </termExpressionList>
+             <predicateSymbol>
+              <keyword spelling="=" line="10" col="38"/>
+             </predicateSymbol>
+             <termExpressionList>
+              <termExpression>
+               <variableIdentifier spelling="Ux" line="10" col="40"/>
+               </termExpression>
+             </termExpressionList>
+            </atomicFormulaExpression>
+           </formulaExpression>
+          </quantifiedFormulaExpression>
+         </formulaExpression>
+        </formulaExpression>
+       </quantifiedFormulaExpression>
+      </quantifiedFormulaExpression>
+     </formulaExpression>
+    </formulaExpression>
+   </sentence>
+  </proposition>
+  <justification>
+   <simpleJustification>
+    <straightforwardJustification/>
+   </simpleJustification>
+  </justification>
+  <keyword spelling=";" line="10" col="42"/>
+ </compactStatement>
+</theorem>
